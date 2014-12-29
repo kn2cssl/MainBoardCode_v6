@@ -1,21 +1,15 @@
-Running: C:\Xilinx\14.2\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/maincodev6/test_1_isim_beh.exe -prj D:/maincodev6/test_1_beh.prj work.test_1 
-ISim P.28xd (signature 0xa0883be4)
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o F:/GitHub/FPGA/driver1/maincodev6/tm1_isim_beh.exe -prj F:/GitHub/FPGA/driver1/maincodev6/tm1_beh.prj work.tm1 
+ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "D:/maincodev6/test.vhd" into library work
-Parsing VHDL file "D:/maincodev6/test_1.vhd" into library work
-Starting static elaboration
-Completed static elaboration
-Compiling package standard
-Compiling package std_logic_1164
-Compiling package std_logic_arith
-Compiling package std_logic_unsigned
-Compiling architecture behavioral of entity maincodev6 [maincodev6_default]
-Compiling architecture behavior of entity test_1
-Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 7 VHDL Units
-Built simulation executable D:/maincodev6/test_1_isim_beh.exe
-Fuse Memory Usage: 32888 KB
-Fuse CPU Usage: 1107 ms
+Parsing VHDL file "F:/GitHub/FPGA/driver1/maincodev6/pwm.vhd" into library work
+Parsing VHDL file "F:/GitHub/FPGA/driver1/maincodev6/Write_to_USB.vhd" into library work
+Parsing VHDL file "F:/GitHub/FPGA/driver1/maincodev6/micro_com2.vhd" into library work
+Parsing VHDL file "F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" into library work
+ERROR:HDLCompiler:1731 - "F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" Line 393: found '3' definitions of operator ">", cannot determine exact overloaded matching definition for ">"
+ERROR:HDLCompiler:1731 - "F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" Line 396: found '3' definitions of operator ">", cannot determine exact overloaded matching definition for ">"
+ERROR:HDLCompiler:1731 - "F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" Line 400: found '3' definitions of operator ">", cannot determine exact overloaded matching definition for ">"
+ERROR:HDLCompiler:1731 - "F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" Line 412: found '3' definitions of operator "<", cannot determine exact overloaded matching definition for "<"
+ERROR:HDLCompiler:854 - "F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" Line 29: Unit <behavioral> ignored due to previous errors.
+VHDL file F:/GitHub/FPGA/driver1/maincodev6/driver.vhd ignored due to errors

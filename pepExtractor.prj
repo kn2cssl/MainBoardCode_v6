@@ -1,1 +1,2 @@
-work	"maincodev6.vhd"
+work	"driver.vhd"
+work	"pwm.vhd"

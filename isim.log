@@ -1,6 +1,6 @@
 ISim log file
-Running: D:\maincodev6\test_1_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/maincodev6/test_1_isim_beh.wdb 
-ISim P.28xd (signature 0xa0883be4)
+Running: F:\GitHub\FPGA\driver1\maincodev6\tm1_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/GitHub/FPGA/driver1/maincodev6/tm1_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
 Time resolution is 1 ps
 # onerror resume
@@ -8,3 +8,9 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 1000030 ns, Instance /tm1/uut/driver1/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+The simulator has terminated in an unexpected manner.  Please review the ISim log (isim.log) for details.

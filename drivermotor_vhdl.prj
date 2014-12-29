@@ -1,2 +1,3 @@
-vhdl work "C:\Users\Fatemeh\Desktop\maincodev6\maincodev6\pwm.vhd"
-vhdl work "C:\Users\Fatemeh\Desktop\maincodev6\maincodev6\driver.vhd"
+vhdl work "F:\GitHub\FPGA\driver1\maincodev6\pwm.vhd"
+vhdl work "F:\GitHub\FPGA\driver1\maincodev6\ipcore_dir\mul.vhd"
+vhdl work "F:\GitHub\FPGA\driver1\maincodev6\driver.vhd"

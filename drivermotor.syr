@@ -42,7 +42,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "drivermotor"
 Output Format                      : NGC
-Target Device                      : xc3s400-5-tq144
+Target Device                      : xc3s400-4-tq144
 
 ---- Source Options
 Top Module Name                    : drivermotor
@@ -98,15 +98,20 @@ Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
 =========================================================================
 
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Fatemeh/Desktop/maincodev6/maincodev6/pwm.vhd" in Library work.
+Compiling vhdl file "F:/GitHub/FPGA/driver1/maincodev6/pwm.vhd" in Library work.
 Architecture behavioral of Entity pwm is up to date.
-Compiling vhdl file "C:/Users/Fatemeh/Desktop/maincodev6/maincodev6/driver.vhd" in Library work.
+Compiling vhdl file "F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/mul.vhd" in Library work.
+Architecture mul_a of Entity mul is up to date.
+Compiling vhdl file "F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" in Library work.
 Entity <drivermotor> compiled.
 Entity <drivermotor> (Architecture <behavioral>) compiled.
 
@@ -114,28 +119,23 @@ Entity <drivermotor> (Architecture <behavioral>) compiled.
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <drivermotor> in library <work> (architecture <behavioral>) with generics.
-	n = 8
+	n = 11
 
 Analyzing hierarchy for entity <PWM> in library <work> (architecture <behavioral>) with generics.
-	n = 8
+	n = 11
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing generic Entity <drivermotor> in library <work> (Architecture <behavioral>).
-	n = 8
-WARNING:Xst:819 - "C:/Users/Fatemeh/Desktop/maincodev6/maincodev6/driver.vhd" line 59: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <STATE1>, <PWM_S>
-WARNING:Xst:819 - "C:/Users/Fatemeh/Desktop/maincodev6/maincodev6/driver.vhd" line 135: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <CLK_TIMER>
-WARNING:Xst:1610 - "C:/Users/Fatemeh/Desktop/maincodev6/maincodev6/driver.vhd" line 155: Width mismatch. <M_RPMTEMP> has a width of 16 bits but assigned expression is 18-bit wide.
-INFO:Xst:2679 - Register <CLK_TIMER> in unit <drivermotor> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <TIMER_COUNT> in unit <drivermotor> has a constant value of 00000000000000000000 during circuit operation. The register is replaced by logic.
+	n = 11
+WARNING:Xst:2211 - "F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" line 145: Instantiating black box module <mul>.
+INFO:Xst:2679 - Register <DIR> in unit <drivermotor> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <drivermotor> analyzed. Unit <drivermotor> generated.
 
 Analyzing generic Entity <PWM> in library <work> (Architecture <behavioral>).
-	n = 8
+	n = 11
 Entity <PWM> analyzed. Unit <PWM> generated.
 
 
@@ -146,55 +146,74 @@ Entity <PWM> analyzed. Unit <PWM> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <PWM>.
-    Related source file is "C:/Users/Fatemeh/Desktop/maincodev6/maincodev6/pwm.vhd".
-WARNING:Xst:646 - Signal <oc_ins> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "F:/GitHub/FPGA/driver1/maincodev6/pwm.vhd".
     Found 1-bit register for signal <oc_out>.
-    Found 8-bit adder for signal <Cnt>.
-    Found 8-bit up counter for signal <Cnt_1>.
-    Found 8-bit up counter for signal <Cnt_2>.
-    Found 8-bit comparator greatequal for signal <oc_out$cmp_ge0000> created at line 24.
+    Found 11-bit up counter for signal <Cnt_1>.
+    Found 11-bit up counter for signal <Cnt_2>.
+    Found 11-bit comparator greatequal for signal <oc_out$cmp_ge0000> created at line 29.
     Summary:
 	inferred   2 Counter(s).
 	inferred   1 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
 Unit <PWM> synthesized.
 
 
 Synthesizing Unit <drivermotor>.
-    Related source file is "C:/Users/Fatemeh/Desktop/maincodev6/maincodev6/driver.vhd".
-WARNING:Xst:737 - Found 1-bit latch for signal <M1n>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <M1p>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <M2n>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <M2p>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <M3n>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <M3p>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 20-bit adder for signal <TIMER_COUNT>.
+    Related source file is "F:/GitHub/FPGA/driver1/maincodev6/driver.vhd".
+WARNING:Xst:1306 - Output <M_show> is never assigned.
+WARNING:Xst:1780 - Signal <SPEED_ABS> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <SETPOINT_LAST1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <SETPOINT_LAST> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <SETPOINT> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <OUTPUT_MUL> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <M_RPMTEMP_s> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <M_RPMPAST_S> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <M_RPMF1_s> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <M_RPMF> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+WARNING:Xst:1780 - Signal <M_Kp_fp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <M_Kd> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <M_FILTER2_s> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <M_FILTER1_s> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <M_D_LAST> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <M_D_ABS> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <M_D> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <INPUT_MUL> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000000000000000.
+WARNING:Xst:1780 - Signal <ERR_SETPOINT_ABS> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ERR_SETPOINT> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ERROR_ABS> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <CLK_TIMER>.
+    Found 5-bit register for signal <HALL1_COUNT>.
+    Found 5-bit adder for signal <HALL1_COUNT$share0000>.
+    Found 1-bit register for signal <hall1_past>.
+    Found 5-bit register for signal <HALL2_COUNT>.
+    Found 5-bit adder for signal <HALL2_COUNT$share0000>.
+    Found 1-bit register for signal <hall2_past>.
+    Found 5-bit register for signal <HALL3_COUNT>.
+    Found 5-bit adder for signal <HALL3_COUNT$share0000>.
+    Found 1-bit register for signal <hall3_past>.
+    Found 11-bit register for signal <M_PID>.
+    Found 1-bit register for signal <RPM_DIR>.
+    Found 17-bit up counter for signal <TIMER_COUNT>.
     Summary:
-	inferred   1 Adder/Subtractor(s).
+	inferred   1 Counter(s).
+	inferred  31 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
 Unit <drivermotor> synthesized.
 
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
- 8-bit adder                                           : 1
 # Counters                                             : 2
- 8-bit up counter                                      : 2
-# Registers                                            : 1
- 1-bit register                                        : 1
-# Latches                                              : 6
- 1-bit latch                                           : 6
+ 11-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 3
+ 1-bit register                                        : 2
+ 11-bit register                                       : 1
 # Comparators                                          : 1
- 8-bit comparator greatequal                           : 1
+ 11-bit comparator greatequal                          : 1
 
 =========================================================================
 
@@ -202,27 +221,56 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Reading core <ipcore_dir/mul.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <mul> for timing and area information for instance <MULTIPLIER>.
+WARNING:Xst:1426 - The value init of the FF/Latch M_PID_5 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_PID_7 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_PID_8 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <M_PID_0> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_1> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_2> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_3> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_4> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_6> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_9> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_10> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
- 8-bit adder                                           : 1
 # Counters                                             : 2
- 8-bit up counter                                      : 2
-# Registers                                            : 1
- Flip-Flops                                            : 1
-# Latches                                              : 6
- 1-bit latch                                           : 6
+ 11-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 13
+ Flip-Flops                                            : 13
 # Comparators                                          : 1
- 8-bit comparator greatequal                           : 1
+ 11-bit comparator greatequal                          : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch M_PID_8 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_PID_7 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch M_PID_5 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <M_PID_0> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_1> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_2> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_3> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_4> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_6> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_9> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_PID_10> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <M_PID_5> in Unit <drivermotor> is equivalent to the following 2 FFs/Latches, which will be removed : <M_PID_7> <M_PID_8> 
 
 Optimizing unit <drivermotor> ...
 
@@ -236,8 +284,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 17
- Flip-Flops                                            : 17
+# Registers                                            : 31
+ Flip-Flops                                            : 31
 
 =========================================================================
 
@@ -263,41 +311,41 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 39
+# IOs                              : 46
 
 Cell Usage :
-# BELS                             : 95
+# BELS                             : 103
 #      GND                         : 1
 #      INV                         : 3
-#      LUT1                        : 14
-#      LUT2                        : 16
+#      LUT1                        : 27
+#      LUT2                        : 3
 #      LUT3                        : 3
-#      LUT4                        : 4
-#      MUXCY                       : 29
+#      LUT4                        : 5
+#      LUT4_L                      : 1
+#      MUXCY                       : 31
 #      VCC                         : 1
-#      XORCY                       : 24
-# FlipFlops/Latches                : 23
-#      FD                          : 16
-#      FDR                         : 1
-#      LD                          : 6
+#      XORCY                       : 28
+# FlipFlops/Latches                : 31
+#      FD                          : 11
+#      FDE                         : 1
+#      FDR                         : 19
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 38
-#      IBUF                        : 12
-#      OBUF                        : 26
+# IO Buffers                       : 13
+#      IBUF                        : 3
+#      OBUF                        : 10
 =========================================================================
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s400tq144-5 
+Selected Device : 3s400tq144-4 
 
  Number of Slices:                       23  out of   3584     0%  
- Number of Slice Flip Flops:             17  out of   7168     0%  
- Number of 4 input LUTs:                 40  out of   7168     0%  
- Number of IOs:                          39
- Number of bonded IOBs:                  39  out of     97    40%  
-    IOB Flip Flops:                       6
+ Number of Slice Flip Flops:             31  out of   7168     0%  
+ Number of 4 input LUTs:                 42  out of   7168     0%  
+ Number of IOs:                          46
+ Number of bonded IOBs:                  14  out of     97    14%  
  Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
@@ -321,13 +369,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-M1n_or0000(M1n_or00001:O)          | NONE(*)(M3p)           | 6     |
-clk                                | BUFGP                  | 17    |
+clk                                | BUFGP                  | 31    |
 -----------------------------------+------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -335,12 +378,12 @@ No asynchronous control signals found in this design
 
 Timing Summary:
 ---------------
-Speed Grade: -5
+Speed Grade: -4
 
-   Minimum period: 14.204ns (Maximum Frequency: 70.401MHz)
-   Minimum input arrival time before clock: 4.756ns
-   Maximum output required time after clock: 6.141ns
-   Maximum combinational path delay: 6.545ns
+   Minimum period: 7.255ns (Maximum Frequency: 137.836MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 8.962ns
+   Maximum combinational path delay: 9.077ns
 
 Timing Detail:
 --------------
@@ -348,132 +391,82 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 14.204ns (frequency: 70.401MHz)
-  Total number of paths / destination ports: 272 / 17
+  Clock period: 7.255ns (frequency: 137.836MHz)
+  Total number of paths / destination ports: 533 / 48
 -------------------------------------------------------------------------
-Delay:               7.102ns (Levels of Logic = 11)
-  Source:            PWM_1/Cnt_2_0 (FF)
-  Destination:       PWM_1/oc_out (FF)
-  Source Clock:      clk falling
+Delay:               7.255ns (Levels of Logic = 7)
+  Source:            TIMER_COUNT_4 (FF)
+  Destination:       CLK_TIMER (FF)
+  Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: PWM_1/Cnt_2_0 to PWM_1/oc_out
+  Data Path: TIMER_COUNT_4 to CLK_TIMER
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.626   0.915  PWM_1/Cnt_2_0 (PWM_1/Cnt_2_0)
-     LUT2:I1->O            1   0.479   0.000  PWM_1/Madd_Cnt_lut<0> (PWM_1/Madd_Cnt_lut<0>)
-     MUXCY:S->O            1   0.435   0.000  PWM_1/Madd_Cnt_cy<0> (PWM_1/Madd_Cnt_cy<0>)
-     MUXCY:CI->O           1   0.056   0.000  PWM_1/Madd_Cnt_cy<1> (PWM_1/Madd_Cnt_cy<1>)
-     MUXCY:CI->O           1   0.056   0.000  PWM_1/Madd_Cnt_cy<2> (PWM_1/Madd_Cnt_cy<2>)
-     MUXCY:CI->O           1   0.056   0.000  PWM_1/Madd_Cnt_cy<3> (PWM_1/Madd_Cnt_cy<3>)
-     MUXCY:CI->O           1   0.056   0.000  PWM_1/Madd_Cnt_cy<4> (PWM_1/Madd_Cnt_cy<4>)
-     MUXCY:CI->O           1   0.056   0.000  PWM_1/Madd_Cnt_cy<5> (PWM_1/Madd_Cnt_cy<5>)
-     MUXCY:CI->O           0   0.056   0.000  PWM_1/Madd_Cnt_cy<6> (PWM_1/Madd_Cnt_cy<6>)
-     XORCY:CI->O           1   0.786   0.851  PWM_1/Madd_Cnt_xor<7> (PWM_1/Cnt<7>)
-     LUT2:I1->O            1   0.479   0.000  PWM_1/Mcompar_oc_out_cmp_ge0000_lut<7> (PWM_1/Mcompar_oc_out_cmp_ge0000_lut<7>)
-     MUXCY:S->O            1   0.625   0.681  PWM_1/Mcompar_oc_out_cmp_ge0000_cy<7> (PWM_1/oc_out_cmp_ge0000)
-     FDR:R                     0.892          PWM_1/oc_out
+     FDR:C->Q              2   0.720   1.216  TIMER_COUNT_4 (TIMER_COUNT_4)
+     LUT1:I0->O            1   0.551   0.000  TIMER_COUNT_cmp_eq0000_wg_cy<0>_rt (TIMER_COUNT_cmp_eq0000_wg_cy<0>_rt)
+     MUXCY:S->O            1   0.500   0.000  TIMER_COUNT_cmp_eq0000_wg_cy<0> (TIMER_COUNT_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  TIMER_COUNT_cmp_eq0000_wg_cy<1> (TIMER_COUNT_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  TIMER_COUNT_cmp_eq0000_wg_cy<2> (TIMER_COUNT_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  TIMER_COUNT_cmp_eq0000_wg_cy<3> (TIMER_COUNT_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O          18   0.281   1.417  TIMER_COUNT_cmp_eq0000_wg_cy<4> (TIMER_COUNT_cmp_eq0000)
+     INV:I->O              1   0.551   0.801  CLK_TIMER_not00011_INV_0 (CLK_TIMER_not0001)
+     FDR:R                     1.026          CLK_TIMER
     ----------------------------------------
-    Total                      7.102ns (4.655ns logic, 2.447ns route)
-                                       (65.5% logic, 34.5% route)
+    Total                      7.255ns (3.821ns logic, 3.434ns route)
+                                       (52.7% logic, 47.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'M1n_or0000'
-  Total number of paths / destination ports: 18 / 6
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
-Offset:              2.586ns (Levels of Logic = 2)
-  Source:            DIR (PAD)
-  Destination:       M3p (LATCH)
-  Destination Clock: M1n_or0000 falling
-
-  Data Path: DIR to M3p
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             8   0.715   1.216  DIR_IBUF (LED_3_OBUF)
-     LUT3:I0->O            1   0.479   0.000  M3p_or00001 (M3p_or0000)
-     LD:D                      0.176          M3p
-    ----------------------------------------
-    Total                      2.586ns (1.370ns logic, 1.216ns route)
-                                       (53.0% logic, 47.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 8 / 1
--------------------------------------------------------------------------
-Offset:              4.756ns (Levels of Logic = 10)
-  Source:            SPEED<0> (PAD)
-  Destination:       PWM_1/oc_out (FF)
-  Destination Clock: clk rising
-
-  Data Path: SPEED<0> to PWM_1/oc_out
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   0.715   0.976  SPEED_0_IBUF (SPEED_0_IBUF)
-     LUT2:I0->O            1   0.479   0.000  PWM_1/Mcompar_oc_out_cmp_ge0000_lut<0> (PWM_1/Mcompar_oc_out_cmp_ge0000_lut<0>)
-     MUXCY:S->O            1   0.435   0.000  PWM_1/Mcompar_oc_out_cmp_ge0000_cy<0> (PWM_1/Mcompar_oc_out_cmp_ge0000_cy<0>)
-     MUXCY:CI->O           1   0.056   0.000  PWM_1/Mcompar_oc_out_cmp_ge0000_cy<1> (PWM_1/Mcompar_oc_out_cmp_ge0000_cy<1>)
-     MUXCY:CI->O           1   0.056   0.000  PWM_1/Mcompar_oc_out_cmp_ge0000_cy<2> (PWM_1/Mcompar_oc_out_cmp_ge0000_cy<2>)
-     MUXCY:CI->O           1   0.055   0.000  PWM_1/Mcompar_oc_out_cmp_ge0000_cy<3> (PWM_1/Mcompar_oc_out_cmp_ge0000_cy<3>)
-     MUXCY:CI->O           1   0.056   0.000  PWM_1/Mcompar_oc_out_cmp_ge0000_cy<4> (PWM_1/Mcompar_oc_out_cmp_ge0000_cy<4>)
-     MUXCY:CI->O           1   0.056   0.000  PWM_1/Mcompar_oc_out_cmp_ge0000_cy<5> (PWM_1/Mcompar_oc_out_cmp_ge0000_cy<5>)
-     MUXCY:CI->O           1   0.056   0.000  PWM_1/Mcompar_oc_out_cmp_ge0000_cy<6> (PWM_1/Mcompar_oc_out_cmp_ge0000_cy<6>)
-     MUXCY:CI->O           1   0.245   0.681  PWM_1/Mcompar_oc_out_cmp_ge0000_cy<7> (PWM_1/oc_out_cmp_ge0000)
-     FDR:R                     0.892          PWM_1/oc_out
-    ----------------------------------------
-    Total                      4.756ns (3.100ns logic, 1.657ns route)
-                                       (65.2% logic, 34.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'M1n_or0000'
-  Total number of paths / destination ports: 6 / 6
--------------------------------------------------------------------------
-Offset:              6.141ns (Levels of Logic = 1)
-  Source:            M1n (LATCH)
+Offset:              8.962ns (Levels of Logic = 2)
+  Source:            PWM_1/oc_out (FF)
   Destination:       M1n (PAD)
-  Source Clock:      M1n_or0000 falling
+  Source Clock:      clk rising
 
-  Data Path: M1n to M1n
+  Data Path: PWM_1/oc_out to M1n
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               1   0.551   0.681  M1n (M1n_OBUF)
-     OBUF:I->O                 4.909          M1n_OBUF (M1n)
+     FDR:C->Q              3   0.720   1.246  PWM_1/oc_out (PWM_1/oc_out)
+     LUT3:I0->O            1   0.551   0.801  M3n1 (M3n_OBUF)
+     OBUF:I->O                 5.644          M3n_OBUF (M3n)
     ----------------------------------------
-    Total                      6.141ns (5.460ns logic, 0.681ns route)
-                                       (88.9% logic, 11.1% route)
+    Total                      8.962ns (6.915ns logic, 2.047ns route)
+                                       (77.2% logic, 22.8% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 15 / 9
 -------------------------------------------------------------------------
-Delay:               6.545ns (Levels of Logic = 2)
-  Source:            DIR (PAD)
-  Destination:       LED<3> (PAD)
+Delay:               9.077ns (Levels of Logic = 3)
+  Source:            HALL3 (PAD)
+  Destination:       M1p (PAD)
 
-  Data Path: DIR to LED<3>
+  Data Path: HALL3 to M1p
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             8   0.715   0.921  DIR_IBUF (LED_3_OBUF)
-     OBUF:I->O                 4.909          LED_3_OBUF (LED<3>)
+     IBUF:I->O             5   0.821   1.260  HALL3_IBUF (LED_3_OBUF)
+     LUT2:I0->O            1   0.551   0.801  M1p_or00001 (M1p_OBUF)
+     OBUF:I->O                 5.644          M1p_OBUF (M1p)
     ----------------------------------------
-    Total                      6.545ns (5.624ns logic, 0.921ns route)
-                                       (85.9% logic, 14.1% route)
+    Total                      9.077ns (7.016ns logic, 2.061ns route)
+                                       (77.3% logic, 22.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.43 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.25 secs
  
 --> 
 
-Total memory usage is 254208 kilobytes
+Total memory usage is 260696 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   10 (   0 filtered)
-Number of infos    :    9 (   0 filtered)
+Number of warnings :   44 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

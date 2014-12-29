@@ -3,42 +3,41 @@ Xilinx Mapping Report File for Design 'drivermotor'
 
 Design Information
 ------------------
-Command Line   : map -intstyle ise -p xc3s400-tq144-5 -cm area -ir off -pr off
+Command Line   : map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off
 -c 100 -o drivermotor_map.ncd drivermotor.ngd drivermotor.pcf 
 Target Device  : xc3s400
 Target Package : tq144
-Target Speed   : -5
+Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Sun Sep 07 10:25:36 2014
+Mapped Date    : Sun Dec 07 10:35:02 2014
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:            17 out of   7,168    1%
-  Number of 4 input LUTs:                25 out of   7,168    1%
+  Number of Slice Flip Flops:            31 out of   7,168    1%
+  Number of 4 input LUTs:                14 out of   7,168    1%
 Logic Distribution:
-  Number of occupied Slices:             21 out of   3,584    1%
-    Number of Slices containing only related logic:      21 out of      21 100%
-    Number of Slices containing unrelated logic:          0 out of      21   0%
+  Number of occupied Slices:             25 out of   3,584    1%
+    Number of Slices containing only related logic:      25 out of      25 100%
+    Number of Slices containing unrelated logic:          0 out of      25   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          39 out of   7,168    1%
-    Number used as logic:                25
-    Number used as a route-thru:         14
+  Total Number of 4 input LUTs:          41 out of   7,168    1%
+    Number used as logic:                14
+    Number used as a route-thru:         27
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 39 out of      97   40%
-    IOB Latches:                          6
+  Number of bonded IOBs:                 14 out of      97   14%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                1.71
+Average Fanout of Non-Clock Nets:                1.95
 
-Peak Memory Usage:  241 MB
-Total REAL time to MAP completion:  7 secs 
-Total CPU time to MAP completion:   3 secs 
+Peak Memory Usage:  245 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -79,12 +78,18 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:372 - Gated clock. Clock net M1n_or0000 is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
+INFO:LIT:243 - Logical network M_show<15> has no load.
+INFO:LIT:395 - The above info message is repeated 32 more times for the
+   following (max. 5 shown):
+   M_show<14>,
+   M_show<13>,
+   M_show<12>,
+   M_show<11>,
+   M_show<10>
+   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -92,10 +97,25 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
+   1 block(s) removed
    2 block(s) optimized away
+   1 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "MULTIPLIER/p<0>" is sourceless and has been removed.
+Unused block "MULTIPLIER/blk00000001/blk00000002" (ZERO) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -112,7 +132,6 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| DIR                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | HALL1                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | HALL2                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | HALL3                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
@@ -120,36 +139,12 @@ Section 6 - IOB Properties
 | LED<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | LED<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | LED<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M1n                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH1      |          |          |
-| M1p                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH1      |          |          |
-| M2n                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH1      |          |          |
-| M2p                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH1      |          |          |
-| M3n                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH1      |          |          |
-| M3p                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH1      |          |          |
-| M_RPM<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<4>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<8>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<9>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<10>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<11>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<12>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<13>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<14>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| M_RPM<15>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| SPEED<0>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SPEED<1>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SPEED<2>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SPEED<3>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SPEED<4>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SPEED<5>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SPEED<6>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SPEED<7>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| M1n                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| M1p                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| M2n                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| M2p                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| M3n                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| M3p                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 

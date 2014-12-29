@@ -1,0 +1,5 @@
+vhdl work "F:\GitHub\FPGA\driver1\maincodev6\pwm.vhd"
+vhdl work "F:\GitHub\FPGA\driver1\maincodev6\Write_to_USB.vhd"
+vhdl work "F:\GitHub\FPGA\driver1\maincodev6\micro_com2.vhd"
+vhdl work "F:\GitHub\FPGA\driver1\maincodev6\driver.vhd"
+vhdl work "F:\GitHub\FPGA\driver1\maincodev6\m.vhd"

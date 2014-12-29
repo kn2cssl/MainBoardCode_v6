@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE            12/22/2014 - 11:52
+SOURCE          F:\GitHub\FPGA\driver1\maincodev6\M.mcs
+DEVICE          XCF04S
+DATA_WIDTH      8
+FILL_DATA       0xFF
+SIGNATURE       0x04DB682F
+START_ADDRESS   0x00000000 END_ADDRESS 0x00033DA7 DIRECTION_UP   "F:/GitHub/FPGA/driver1/maincodev6/m.bit" 3s400tq144

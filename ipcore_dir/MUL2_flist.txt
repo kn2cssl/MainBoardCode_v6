@@ -1,0 +1,15 @@
+# Output products list for <MUL2>
+MUL2.asy
+MUL2.gise
+MUL2.ngc
+MUL2.sym
+MUL2.vhd
+MUL2.vho
+MUL2.xco
+MUL2.xise
+MUL2\doc\mult_gen_ds255.pdf
+MUL2\doc\mult_gen_v11_2_readme.txt
+MUL2\doc\mult_gen_v11_2_vinfo.html
+MUL2_flist.txt
+MUL2_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

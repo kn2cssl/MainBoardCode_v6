@@ -1,0 +1,8 @@
+vhdl isim_temp "ipcore_dir/mul.vhd"
+vhdl isim_temp "ipcore_dir/MUL2.vhd"
+vhdl isim_temp "pwm.vhd"
+vhdl isim_temp "Write_to_USB.vhd"
+vhdl isim_temp "micro_com2.vhd"
+vhdl isim_temp "driver.vhd"
+vhdl isim_temp "m.vhd"
+vhdl isim_temp "tm1.vhd"
