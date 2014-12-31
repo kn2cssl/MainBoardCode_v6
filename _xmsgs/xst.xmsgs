@@ -5,45 +5,45 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">147</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
+<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">147</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">150</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">M_show</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">150</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">M_show</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">150</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LED</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">150</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LED</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">150</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
+<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">150</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">153</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">M_show</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">153</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">M_show</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">153</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LED</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">153</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LED</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">153</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
+<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">153</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">M_show</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">M_show</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LED</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LED</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
+<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/m.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/driver.vhd</arg>&quot; line <arg fmt="%d" index="2">140</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd</arg>&quot; line <arg fmt="%d" index="2">128</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;FREE_WHEEL&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/driver.vhd</arg>&quot; line <arg fmt="%d" index="2">382</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd</arg>&quot; line <arg fmt="%d" index="2">370</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;M_Kp_fp&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/driver.vhd</arg>&quot; line <arg fmt="%d" index="2">576</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">M_PD</arg>&gt; has a width of <arg fmt="%d" index="4">31</arg> bits but assigned expression is <arg fmt="%d" index="5">28</arg>-bit wide.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd</arg>&quot; line <arg fmt="%d" index="2">564</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">M_PD</arg>&gt; has a width of <arg fmt="%d" index="4">31</arg> bits but assigned expression is <arg fmt="%d" index="5">28</arg>-bit wide.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">cnt</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.

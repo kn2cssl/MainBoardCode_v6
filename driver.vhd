@@ -48,6 +48,7 @@
 	signal M_RPMF    : std_logic_vector(15 DOWNTO 0) :=(others=>'0'); 
    signal RPM_DIR   : std_logic :='0';	  --meghdar avalie pak beshe faghat vase shabih sazi
    signal M_ERR_LAST: signed(15 downto 0);
+   signal  RPM_DIFF        : signed (23 DOWNTO 0)  :=(others=>'0');
 	constant K_FILTER: signed(7 downto 0) :="00000010";--0.8
    
 	signal TIMER_COUNT : std_logic_vector(16 downto 0):=(others=>'0');
@@ -110,22 +111,9 @@
 --	 constant KD3 : std_logic_vector(15 DOWNTO 0) := "00000010000";--16
 --	 constant KD4 : std_logic_vector(15 DOWNTO 0) := "00000001000";--8
 	 
+	 
+	 
 
-    
-	 
---	 	
---	 signal ERROR_ABS        : std_logic_vector (15 DOWNTO 0)  :=(others=>'0');
---	 signal ERR_SETPOINT_ABS : std_logic_vector (15 DOWNTO 0)  :=(others=>'0');
---	 signal SPEED_ABS        : std_logic_vector (15 DOWNTO 0)  :=(others=>'0');
---	
---	 signal SETPOINT       : signed (15 DOWNTO 0)  :=(others=>'0');
---  	 signal SETPOINT_LAST  : signed (15 DOWNTO 0)  :=(others=>'0');
---	 signal SETPOINT_LAST1 : signed (15 DOWNTO 0)  :=(others=>'0');
---	 signal ERR_SETPOINT   : signed (15 DOWNTO 0)  :=(others=>'0');
-	 
-	 
-	 signal  RPM_DIFF        : signed (23 DOWNTO 0)  :=(others=>'0');
---	 signal  M_D_ABS         : std_logic_vector  (15 DOWNTO 0)  :=(others=>'0');
 
 	 
 	 			 
