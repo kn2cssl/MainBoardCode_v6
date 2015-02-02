@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: m.prj
 
@@ -109,6 +109,8 @@ Architecture behavioral of Entity pwm is up to date.
 Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" in Library work.
 Entity <drivermotor> compiled.
 Entity <drivermotor> (Architecture <behavioral>) compiled.
+Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd" in Library work.
+Architecture behavioral of Entity write_to_usb is up to date.
 Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd" in Library work.
 Architecture behavioral of Entity micro_com2 is up to date.
 Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" in Library work.
@@ -122,6 +124,8 @@ Analyzing hierarchy for entity <m> in library <work> (architecture <behavioral>)
 
 Analyzing hierarchy for entity <drivermotor> in library <work> (architecture <behavioral>) with generics.
 	n = 11
+
+Analyzing hierarchy for entity <Write_to_USB> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <micro_com2> in library <work> (architecture <behavioral>).
 
@@ -158,6 +162,9 @@ Analyzing generic Entity <PWM> in library <work> (Architecture <behavioral>).
 	n = 11
 Entity <PWM> analyzed. Unit <PWM> generated.
 
+Analyzing Entity <Write_to_USB> in library <work> (Architecture <behavioral>).
+Entity <Write_to_USB> analyzed. Unit <Write_to_USB> generated.
+
 Analyzing Entity <micro_com2> in library <work> (Architecture <behavioral>).
 Entity <micro_com2> analyzed. Unit <micro_com2> generated.
 
@@ -168,10 +175,34 @@ Entity <micro_com2> analyzed. Unit <micro_com2> generated.
 
 Performing bidirectional port resolution...
 
+Synthesizing Unit <Write_to_USB>.
+    Related source file is "F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd".
+    Found finite state machine <FSM_0> for signal <cnt1>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 6                                              |
+    | Clock              | CLK_USB                   (rising_edge)        |
+    | Clock enable       | cnt1$not0000              (positive)           |
+    | Power Up State     | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <USB_WR>.
+    Found 8-bit register for signal <DATA_USB>.
+    Found 16-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   9 D-type flip-flop(s).
+Unit <Write_to_USB> synthesized.
+
+
 Synthesizing Unit <micro_com2>.
     Related source file is "F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd".
 WARNING:Xst:1780 - Signal <cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-    Found finite state machine <FSM_0> for signal <state>.
+    Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 7                                              |
     | Transitions        | 12                                             |
@@ -303,10 +334,6 @@ Unit <drivermotor> synthesized.
 
 Synthesizing Unit <m>.
     Related source file is "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd".
-WARNING:Xst:647 - Input <TXE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1306 - Output <USB_WR> is never assigned.
-WARNING:Xst:1306 - Output <DATA_USB> is never assigned.
-WARNING:Xst:646 - Signal <M1_show> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <m> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -326,17 +353,18 @@ Macro Statistics
  28-bit subtractor                                     : 4
  31-bit adder                                          : 4
  5-bit adder                                           : 20
-# Counters                                             : 8
+# Counters                                             : 9
  11-bit up counter                                     : 4
+ 16-bit up counter                                     : 1
  17-bit up counter                                     : 4
 # Accumulators                                         : 4
  24-bit up accumulator                                 : 4
-# Registers                                            : 98
- 1-bit register                                        : 53
+# Registers                                            : 100
+ 1-bit register                                        : 54
  11-bit register                                       : 4
  16-bit register                                       : 20
  5-bit register                                        : 12
- 8-bit register                                        : 9
+ 8-bit register                                        : 10
 # Comparators                                          : 117
  11-bit comparator greatequal                          : 4
  16-bit comparator greatequal                          : 28

@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Mon Feb 02 14:43:49 2015">
+  <application stringID="Xst" timeStamp="Mon Feb 02 15:11:46 2015">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -118,16 +118,16 @@
         <item dataType="int" stringID="XST_16BIT_ADDER" value="24"/>
         <item dataType="int" stringID="XST_16BIT_SUBTRACTOR" value="12"/>
       </item>
-      <item dataType="int" stringID="XST_COUNTERS" value="8">
+      <item dataType="int" stringID="XST_COUNTERS" value="9">
         <item dataType="int" stringID="XST_11BIT_UP_COUNTER" value="4"/>
       </item>
       <item dataType="int" stringID="XST_ACCUMULATORS" value="4"></item>
-      <item dataType="int" stringID="XST_REGISTERS" value="98">
-        <item dataType="int" stringID="XST_1BIT_REGISTER" value="53"/>
+      <item dataType="int" stringID="XST_REGISTERS" value="100">
+        <item dataType="int" stringID="XST_1BIT_REGISTER" value="54"/>
         <item dataType="int" stringID="XST_11BIT_REGISTER" value="4"/>
         <item dataType="int" stringID="XST_16BIT_REGISTER" value="20"/>
         <item dataType="int" stringID="XST_5BIT_REGISTER" value="12"/>
-        <item dataType="int" stringID="XST_8BIT_REGISTER" value="9"/>
+        <item dataType="int" stringID="XST_8BIT_REGISTER" value="10"/>
       </item>
       <item dataType="int" stringID="XST_COMPARATORS" value="117">
         <item dataType="int" stringID="XST_16BIT_COMPARATOR_GREATER" value="20"/>
