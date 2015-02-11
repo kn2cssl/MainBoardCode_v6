@@ -12,14 +12,12 @@
          <ClosedNode>/m - Behavioral F:|GitHub|FPGA|driver1|maincodev6|m.vhd/driver3 - drivermotor - Behavioral</ClosedNode>
          <ClosedNode>/m - Behavioral F:|GitHub|FPGA|driver1|maincodev6|m.vhd/driver4 - drivermotor - Behavioral</ClosedNode>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>m - Behavioral (F:/GitHub/FPGA/MainBoardCode_v6/m.vhd)</SelectedItem>
-      </SelectedItems>
+      <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001bc000000020000000000000000000000000200000064ffffffff000000810000000300000002000001bc0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>m - Behavioral (F:/GitHub/FPGA/MainBoardCode_v6/m.vhd)</CurrentItem>
+      <CurrentItem>driver1 - drivermotor - Behavioral (C:/Users/Fatemeh/Desktop/MainBoardCode_v6/driver.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -27,13 +25,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000150000000010000000100000000000000000000000064ffffffff000000810000000000000001000001500000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012b0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -71,13 +69,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000168000000010000000100000000000000000000000064ffffffff000000810000000000000001000001680000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012b0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001390000011b01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
@@ -138,7 +136,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000168000000010000000100000000000000000000000064ffffffff000000810000000000000001000001680000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012b0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>

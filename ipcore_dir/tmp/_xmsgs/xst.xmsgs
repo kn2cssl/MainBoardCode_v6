@@ -5,532 +5,535 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">621</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="HDLCompiler" num="746" delta="new" >"C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" Line 499: Range is empty (null range)
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">622</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="HDLCompiler" num="746" delta="new" >"C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" Line 500: Range is empty (null range)
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">629</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="HDLCompiler" num="220" delta="new" >"C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\xbip_utils_v2_0\bip_utils_pkg_v2_0.vhd" Line 502: Assignment ignored
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">643</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\twos_comp\c_twos_comp_xst.vhd" Line 213: Net &lt;<arg fmt="%s" index="1">sclr_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">650</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\twos_comp\c_twos_comp_xst.vhd" Line 214: Net &lt;<arg fmt="%s" index="1">sset_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">660</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\twos_comp\c_twos_comp_xst.vhd" Line 215: Net &lt;<arg fmt="%s" index="1">sinit_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">669</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="HDLCompiler" num="746" delta="new" >"C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\xbip_pipe_v2_0\xbip_pipe_v2_0_xst.vhd" Line 207: Range is empty (null range)
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">674</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd" Line 216: Net &lt;<arg fmt="%s" index="1">numer_o[1][11]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">693</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">706</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./xbip_utils_v2_0/bip_utils_pkg_v2_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1842</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ND</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">2162</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">RDY</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">div_gen_synth</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="821" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">2593</arg>: Loop body will iterate zero times
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">DIVIDE_BY_ZERO</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">div_gen_synth</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="752" delta="new" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/mul.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">clk</arg>&apos; of component &apos;<arg fmt="%s" index="4">mult_gen_v11_2</arg>&apos; is tied to default value.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="752" delta="new" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/mul.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">b</arg>&apos; of component &apos;<arg fmt="%s" index="4">mult_gen_v11_2</arg>&apos; is tied to default value.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="752" delta="new" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/mul.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">ce</arg>&apos; of component &apos;<arg fmt="%s" index="4">mult_gen_v11_2</arg>&apos; is tied to default value.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\bip_sdivider_synth.vhd</arg>&quot; line <arg fmt="%s" index="2">471</arg>: Output port &lt;<arg fmt="%s" index="3">rdy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">divider_blk</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="752" delta="new" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/mul.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">sclr</arg>&apos; of component &apos;<arg fmt="%s" index="4">mult_gen_v11_2</arg>&apos; is tied to default value.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\cmp2s_v.vhd</arg>&quot; line <arg fmt="%s" index="2">110</arg>: Output port &lt;<arg fmt="%s" index="3">s</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">twos_comp</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/mul.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">zero_detect</arg>&apos; of component &apos;<arg fmt="%s" index="4">mult_gen_v11_2</arg>&apos;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ce</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/mul.vhd</arg>&quot; line <arg fmt="%d" index="2">106</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">pcasc</arg>&apos; of component &apos;<arg fmt="%s" index="4">mult_gen_v11_2</arg>&apos;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">621</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">622</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ainit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">629</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">643</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">650</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sinit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">660</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">669</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sclr_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_1</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">674</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sset_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_1</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">693</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sinit_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_1</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">706</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\cmp2s_v.vhd</arg>&quot; line <arg fmt="%s" index="2">110</arg>: Output port &lt;<arg fmt="%s" index="3">s</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">twos_comp</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="795" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./xbip_utils_v2_0/bip_utils_pkg_v2_0.vhd</arg>&quot; line <arg fmt="%d" index="2">1842</arg>: Size of operands are different : result is &lt;false&gt;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ce</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1748" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">2162</arg>: VHDL Assertion Statement with non constant condition is ignored.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="821" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/mult_gen_pkg_v11_2.vhd</arg>&quot; line <arg fmt="%d" index="2">2593</arg>: Loop body will iterate zero times
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_operation.vhd</arg>&quot; line <arg fmt="%d" index="2">2869</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">OB</arg>&apos; of component &apos;<arg fmt="%s" index="4">ccm_syncmem</arg>&apos;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ainit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_operation.vhd</arg>&quot; line <arg fmt="%d" index="2">2869</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">OB</arg>&apos; of component &apos;<arg fmt="%s" index="4">ccm_syncmem</arg>&apos;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="752" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_operation.vhd</arg>&quot; line <arg fmt="%d" index="2">3002</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">ADD_IN_CE</arg>&apos; of component &apos;<arg fmt="%s" index="4">ccm_scaled_adder</arg>&apos; is tied to default value.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_operation.vhd</arg>&quot; line <arg fmt="%d" index="2">2869</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">OB</arg>&apos; of component &apos;<arg fmt="%s" index="4">ccm_syncmem</arg>&apos;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sinit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_operation.vhd</arg>&quot; line <arg fmt="%d" index="2">2869</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">OB</arg>&apos; of component &apos;<arg fmt="%s" index="4">ccm_syncmem</arg>&apos;.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="752" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_operation.vhd</arg>&quot; line <arg fmt="%d" index="2">3002</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">ADD_IN_CE</arg>&apos; of component &apos;<arg fmt="%s" index="4">ccm_scaled_adder</arg>&apos; is tied to default value.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sclr_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_2</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="752" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_operation.vhd</arg>&quot; line <arg fmt="%d" index="2">3002</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">ADD_IN_CE</arg>&apos; of component &apos;<arg fmt="%s" index="4">ccm_scaled_adder</arg>&apos; is tied to default value.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sset_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_2</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_operation.vhd</arg>&quot; line <arg fmt="%d" index="2">2869</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">OB</arg>&apos; of component &apos;<arg fmt="%s" index="4">ccm_syncmem</arg>&apos;.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sinit_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_2</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_operation.vhd</arg>&quot; line <arg fmt="%d" index="2">2869</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">OB</arg>&apos; of component &apos;<arg fmt="%s" index="4">ccm_syncmem</arg>&apos;.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="752" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_operation.vhd</arg>&quot; line <arg fmt="%d" index="2">3002</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">ADD_IN_CE</arg>&apos; of component &apos;<arg fmt="%s" index="4">ccm_scaled_adder</arg>&apos; is tied to default value.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2096" delta="old" >&quot;<arg fmt="%s" index="1">F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/tmp/./_cg/_dbg/./mult_gen_v11_2/ccm_syncmem.vhd</arg>&quot; line <arg fmt="%d" index="2">107</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">int_addr_a0</arg>&gt; is not supported.
+<msg type="info" file="Xst" num="2774" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">KEEP</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">opt_has_pipe.first_q</arg> may hinder XST clustering optimizations.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">nd</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADD_IN_CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADD</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[0].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ROM_CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[1].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[2].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rfd_in</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[3].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rfd</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[4].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rdy</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[5].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">q_i</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[6].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">o_tmp</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[7].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">nd_out</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[8].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">nd</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[9].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ce_int</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[10].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">c_out&lt;1&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">inv_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[11].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">c_out&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">839</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">div_loop[11].adder_gen.reg_req.adsu_mod</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_s&lt;0&gt;&lt;7&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">1169</arg>: Output port &lt;<arg fmt="%s" index="3">inv_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">remd_output.adsu_sel2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">adder_q</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\dividervdc_v.vhd</arg>&quot; line <arg fmt="%s" index="2">1169</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">remd_output.adsu_sel2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">adder_out_q</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">numer_o&lt;1&gt;&lt;11&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">dividervdc</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">add_delayed</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">numer_o&lt;2&gt;&lt;11:10&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">dividervdc</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">numer_o&lt;3&gt;&lt;11:9&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">dividervdc</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">numer_o&lt;4&gt;&lt;11:8&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">dividervdc</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADD_IN_CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">numer_o&lt;5&gt;&lt;11:7&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">dividervdc</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADD</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">numer_o&lt;6&gt;&lt;11:6&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">dividervdc</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ROM_CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">numer_o&lt;7&gt;&lt;11:5&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">dividervdc</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000000</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">numer_o&lt;8&gt;&lt;11:4&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">dividervdc</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rfd_in</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">numer_o&lt;9&gt;&lt;11:3&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">dividervdc</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rfd</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">numer_o&lt;10&gt;&lt;11:2&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">dividervdc</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000000000</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rdy</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">rdy</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">q_i</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">o_tmp</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">nd_out</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">s</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">nd</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">ovfl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ce_int</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">c_out&lt;1&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">b_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">c_out&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">q_ovfl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_s&lt;0&gt;&lt;12&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">q_b_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">adder_q</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">b_in</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">adder_out_q</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">a_signed</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">add_delayed</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">b_signed</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsub\c_addsub_xst.vhd</arg>&quot; line <arg fmt="%s" index="2">373</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">no_pipelining.the_addsub</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">c_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">b_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">q_b_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">sclr_i</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ce</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ce_i</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">bypass</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADD_IN_CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADD</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ainit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ROM_CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rfd_in</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sinit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rfd</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rdy</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">ovfl</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">q_i</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">c_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">o_tmp</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">q_ovfl</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">nd_out</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">nd</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ce_int</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">c_out&lt;1&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">c_out&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_s&lt;0&gt;&lt;12&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">adder_q</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">adder_out_q</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">add_delayed</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">sclr_i</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ce_i</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">D</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">OB</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">00000</arg>.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDR_B0</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">o0</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">s</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">B</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">ovfl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">swapb</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">rom_q_output4</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">b_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">rom_q_output3</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">q_ovfl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">rom_q_output2</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsubreg_v.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">q_b_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">add1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">rom_q_output1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">b_in</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rom_q_output0</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">a_signed</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rom_q_output</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">b_signed</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">rom_ce</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\addsub\c_addsub_xst.vhd</arg>&quot; line <arg fmt="%s" index="2">373</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">no_pipelining.the_addsub</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rfd</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">c_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rdy</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">b_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">output_o_bus&lt;27:26&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">q_b_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">o_msb_sig</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ce</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">neg_lastpp_n</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">nd</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">mem_data</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ainit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">loadb1</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">loadb0</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">loadb</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sinit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">load_done_tmp</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">load_done</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">ovfl</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">bank_sel</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">c_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_b_input&lt;0&gt;&lt;19:6&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">q_ovfl</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_b_input&lt;1&gt;&lt;19:6&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_b_input&lt;2&gt;&lt;19:11&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\cmp2s_v.vhd</arg>&quot; line <arg fmt="%s" index="2">110</arg>: Output port &lt;<arg fmt="%s" index="3">s</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">twos_comp</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_b_input&lt;3&gt;&lt;19:6&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ce</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_b_input&lt;4&gt;&lt;19:11&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_a_input&lt;0&gt;&lt;19:6&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_a_input&lt;1&gt;&lt;19:6&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ainit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_a_input&lt;2&gt;&lt;19:11&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">adder_a_input&lt;3&gt;&lt;19:6&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">add_out_o&lt;0&gt;&lt;27:11&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000000000000</arg>.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sinit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">add_out_o&lt;1&gt;&lt;27:11&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000000000000</arg>.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">add_out_o&lt;2&gt;&lt;27:20&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sclr_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_3</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">add_out_o&lt;3&gt;&lt;27:11&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000000000000</arg>.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sset_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_3</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">add_out&lt;0&gt;&lt;27:11&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sinit_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_3</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">add_out&lt;1&gt;&lt;27:11&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Fatemeh\Desktop\New controller 2\MainBoardCode_v6\ipcore_dir\tmp\_cg\_bbx\sdivider_v6_0\cmp2s_v.vhd</arg>&quot; line <arg fmt="%s" index="2">110</arg>: Output port &lt;<arg fmt="%s" index="3">s</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">twos_comp</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">add_out&lt;2&gt;&lt;27:20&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ce</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">add_out&lt;3&gt;&lt;27:11&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">add_out&lt;4&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">aclr</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ainit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">a_signed</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sclr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">a1_slice4</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">a1_slice3</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">sinit</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">a1_slice2</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">a1_slice1</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sclr_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_4</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">a1_slice0</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sset_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_4</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">a1_slice</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">sinit_i</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">c_twos_comp_xst_4</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">a1_input</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2774" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">KEEP</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">opt_has_pipe.first_q</arg> may hinder XST clustering optimizations.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">a1</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">q_i_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c_twos_comp_xst_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">q_i_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">c_twos_comp_xst_2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1305" delta="old" >Output &lt;<arg fmt="%s" index="1">ZERO_DETECT</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">00</arg>.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/signed_output.cmp_quot/twos_comp/q_i_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DIVIDER_div_gen_v3_0_xst_1</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/signed_output.cmp_quot/twos_comp/q_i_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DIVIDER_div_gen_v3_0_xst_1</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">pcasci</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">000000000000000000000000000000000000000000000000</arg>.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/signed_output.remd_not_fract.cmp_remd/twos_comp/q_i_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DIVIDER_div_gen_v3_0_xst_1</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">max_product&lt;127:26&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/signed_output.remd_not_fract.cmp_remd/twos_comp/q_i_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DIVIDER_div_gen_v3_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

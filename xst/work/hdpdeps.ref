@@ -1,4 +1,49 @@
-V3 30
+V3 40
+FL C:/Users/Fatemeh/Desktop/MainBoardCode_v6/driver.vhd 2015/02/09.15:02:28 P.20131013
+FL C:/Users/Fatemeh/Desktop/MainBoardCode_v6/m.vhd 2015/02/09.15:21:53 P.20131013
+FL C:/Users/Fatemeh/Desktop/MainBoardCode_v6/micro_com2.vhd 2014/12/24.17:01:31 P.20131013
+FL C:/Users/Fatemeh/Desktop/MainBoardCode_v6/pwm.vhd 2014/12/06.12:51:05 P.20131013
+FL C:/Users/Fatemeh/Desktop/MainBoardCode_v6/Write_to_USB.vhd 2014/11/29.23:41:01 P.20131013
+FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/driver.vhd" 2015/02/10.19:39:06 P.20131013
+EN work/drivermotor 1423584553 \
+      FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/driver.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/drivermotor/Behavioral 1423584554 \
+      FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/driver.vhd" \
+      EN work/drivermotor 1423584553 CP PWM
+FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/m.vhd" 2015/02/10.12:00:17 P.20131013
+EN work/m 1423584559 \
+      FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/m.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/m/Behavioral 1423584560 \
+      FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/m.vhd" \
+      EN work/m 1423584559 CP drivermotor CP Write_to_USB CP micro_com2
+FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/micro_com2.vhd" 2014/12/24.17:01:31 P.20131013
+EN work/micro_com2 1423584557 \
+      FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/micro_com2.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/micro_com2/Behavioral 1423584558 \
+      FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/micro_com2.vhd" \
+      EN work/micro_com2 1423584557
+FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/pwm.vhd" 2014/12/06.12:51:05 P.20131013
+EN work/pwm 1423584551 \
+      FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/pwm.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/pwm/Behavioral 1423584552 \
+      FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/pwm.vhd" \
+      EN work/pwm 1423584551
+FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/Write_to_USB.vhd" 2014/11/29.23:41:01 P.20131013
+EN work/Write_to_USB 1423584555 \
+      FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/Write_to_USB.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Write_to_USB/Behavioral 1423584556 \
+      FL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/Write_to_USB.vhd" \
+      EN work/Write_to_USB 1423584555
 FL F:/GitHub/FPGA/driver1/maincodev6/driver.vhd 2014/12/28.19:27:11 P.20131013
 FL F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/mul.vhd 2014/12/09.17:25:34 P.20131013
 EN work/mul 1419077093 FL F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/mul.vhd \
@@ -14,35 +59,8 @@ FL F:/GitHub/FPGA/driver1/maincodev6/m.vhd 2014/12/22.17:12:50 P.20131013
 FL F:/GitHub/FPGA/driver1/maincodev6/micro_com2.vhd 2014/12/24.17:01:31 P.20131013
 FL F:/GitHub/FPGA/driver1/maincodev6/pwm.vhd 2014/12/06.12:51:05 P.20131013
 FL F:/GitHub/FPGA/driver1/maincodev6/Write_to_USB.vhd 2014/11/29.23:41:01 P.20131013
-FL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd 2015/02/02.15:11:43 P.20131013
-EN work/drivermotor 1422877310 FL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB ieee/std_logic_arith 1381692177
-AR work/drivermotor/Behavioral 1422877311 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd EN work/drivermotor 1422877310 \
-      CP PWM
-FL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd 2015/02/02.15:08:27 P.20131013
-EN work/m 1422877316 FL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB ieee/std_logic_arith 1381692177
-AR work/m/Behavioral 1422877317 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd EN work/m 1422877316 CP drivermotor \
-      CP Write_to_USB CP micro_com2
+FL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd 2014/12/29.15:46:49 P.20131013
+FL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd 2014/12/22.17:12:50 P.20131013
 FL F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd 2014/12/24.17:01:31 P.20131013
-EN work/micro_com2 1422877314 FL F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/micro_com2/Behavioral 1422877315 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd EN work/micro_com2 1422877314
 FL F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd 2014/12/06.12:51:05 P.20131013
-EN work/pwm 1422877308 FL F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB ieee/std_logic_arith 1381692177
-AR work/pwm/Behavioral 1422877309 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd EN work/pwm 1422877308
 FL F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd 2014/11/29.23:41:01 P.20131013
-EN work/Write_to_USB 1422877312 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd PB ieee/std_logic_1164 1381692176 \
-      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/Write_to_USB/Behavioral 1422877313 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd EN work/Write_to_USB 1422877312

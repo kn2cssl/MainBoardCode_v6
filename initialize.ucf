@@ -100,10 +100,19 @@ NET "USB_WR"            LOC = "P95";
 ##NET "SEG1DP"         LOC = "P21";
 
 #LED
-NET "led[0]"         LOC = "P140";
-NET "led[1]"         LOC = "P141";
+NET "led[0]"         LOC = "P40";
+NET "led[1]"         LOC = "P36";
 NET "led[2]"         LOC = "P35";
 NET "led[3]"         LOC = "P33";
+
+
+#MENU
+NET "TEST_KEY[3]"    LOC = "P141";
+NET "TEST_KEY[2]"    LOC = "P140";
+NET "TEST_KEY[1]"    LOC = "P131";
+NET "TEST_KEY[0]"    LOC = "P130";
+
+
 
 #IO
 ##NET "IO1"                 LOC = "P137";
