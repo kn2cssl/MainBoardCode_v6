@@ -30,13 +30,24 @@
 	architecture Behavioral of drivermotor is
    
 		
-      component PWM is
-		generic (n:integer range 1 to 11 := 11);
-   	port (
-      	  CLK   : in std_logic;
-		     OC_IN : in std_logic_vector (n-1 downto 0);
-			  OC_OUT: out std_logic
-			 );
+	component PWM is
+	generic (n:integer range 1 to 11 := 11);
+	port (
+		  CLK   : in std_logic;
+		  OC_IN : in std_logic_vector (n-1 downto 0);
+		  OC_OUT: out std_logic
+		  );
+   end component;
+	
+	component DIVIDER is
+	port (
+			clk: in std_logic;
+			rfd: out std_logic;
+			dividend: in std_logic_vector(31 downto 0);
+			divisor: in std_logic_vector(15 downto 0);
+			quotient: out std_logic_vector(31 downto 0);
+			fractional: out std_logic_vector(15 downto 0)
+	     );
    end component;
 	
 		
@@ -49,20 +60,20 @@
    signal M_RPM_DIR_LAST : signed(15 DOWNTO 0)  :=(others=>'0'); 
 	
  	
-	signal  M_RPMF    : std_logic_vector(15 DOWNTO 0) :=(others=>'0'); 
+	--signal  M_RPMF    : std_logic_vector(15 DOWNTO 0) :=(others=>'0'); 
    signal  RPM_DIR   : std_logic :='0';	  --meghdar avalie pak beshe faghat vase shabih sazi
    signal  M_ERR_LAST: signed(15 downto 0);
 
--- signal  RPM_DIFF        : signed (15 DOWNTO 0)  :=(others=>'0');
+   signal  RPM_DIFF_show   : signed (15 DOWNTO 0)  :=(others=>'0');
 --	signal  RPM_DIFF_LAST   : signed (15 DOWNTO 0)  :=(others=>'0');
 	
 	constant K_FILTER: signed(7 downto 0) :="00000010";--0.8
    
 	signal TIMER_COUNT : std_logic_vector(16 downto 0):=(others=>'0');
 	
-	signal HALL1_COUNT : std_logic_vector(4 downto 0):=(others=>'0');
-	signal HALL2_COUNT : std_logic_vector(4 downto 0):=(others=>'0');
-	signal HALL3_COUNT : std_logic_vector(4 downto 0):=(others=>'0');
+	signal HALL1_COUNT : std_logic_vector(5 downto 0):=(others=>'0');
+	signal HALL2_COUNT : std_logic_vector(5 downto 0):=(others=>'0');
+	signal HALL3_COUNT : std_logic_vector(5 downto 0):=(others=>'0');
  
 	
 	signal hall1_past  : std_logic;
@@ -83,14 +94,16 @@
 	
 	constant MAX_PWM             : std_logic_vector(10 downto 0):= "11111111111";  
 	
+	constant MAX                 : std_logic_vector(31 downto 0):= "00000000001111111111100000000000";  
+	
 	constant MAX_P               : integer range 0 to 2047 := 2047; 
 	constant MAX_P_MINUS         : integer range -2047 to 0:= -2047;
 	
 	constant MAX_D               : integer range 0 to 2400 := 2400;
 	constant MAX_D_MINUS         : integer range -2400 to 0:= -2400;
 	
-	constant MAX_PD               : integer range 0 to 2047 := 2047;
-	constant MAX_PD_MINUS         : integer range -2047 to 0:= -2047;
+	constant MAX_PD              : integer range 0 to 2047 := 2047;
+	constant MAX_PD_MINUS        : integer range -2047 to 0:= -2047;
 	
 	constant T_1MS     : std_logic_vector(15 downto 0):= "1100001101010000";  
 	constant T_2MS     : std_logic_vector(16 downto 0):= "11000011010100000";
@@ -108,6 +121,8 @@
 	 constant lim10  : signed(15 DOWNTO 0) := "0000000000001010";--10  
 	 constant lim15  : signed(15 DOWNTO 0) := "0000000000001111";--15  
 	 constant lim80  : signed(15 DOWNTO 0) := "0000000001010000";--80
+	 constant lim5   : signed(15 DOWNTO 0) := "0000000000000101";--3
+	 constant lim21  : signed(15 DOWNTO 0) := "0000000000010101";--21
 	 
 	 constant KP1_fp         : signed(16 DOWNTO 0):= "00000011010000000";--7.10 --1.625
 	 constant KP2_fp         : signed(16 DOWNTO 0):= "00010000000000000";--7.10 --8
@@ -125,7 +140,13 @@
 	 constant KD_400 : signed(15 DOWNTO 0) := "0001100100000000";--400 --12.4 
 	 constant KD_16  : signed(15 DOWNTO 0) := "0000000100000000";--16  --12.4 
 	 constant KD_8   : signed(15 DOWNTO 0) := "0000000010000000";--8   --12.4 
-	 	
+	 
+    signal dividend   : std_logic_vector(31 downto 0):=(others=>'0');
+	 signal divisor    : std_logic_vector(15 downto 0):=(others=>'0');
+	 signal quotient   : std_logic_vector(31 downto 0):=(others=>'0');	 
+	 signal fractional : std_logic_vector(15 downto 0):=(others=>'0');
+	 signal rfd        : std_logic:='0';
+		
 		signal  M_ERROR   : signed(15 DOWNTO 0) :=(others=>'0'); --for show
 	   signal  LIM   : signed(15 DOWNTO 0) :=(others=>'0'); --for show
 	 
@@ -138,7 +159,7 @@
 	begin
 	
 	PWM_1:PWM port map (OC_IN =>M_PID ,CLK =>CLK  ,OC_OUT=>PWM_S  );
-	
+	DIVIDE:DIVIDER port map (clk => clk,rfd => rfd,dividend => dividend,divisor => divisor,quotient => quotient,fractional => fractional);
 	
 	
 free_read_sensors:process(clk,HALL1,HALL2,HALL3,DIR)
@@ -150,7 +171,7 @@ free_read_sensors:process(clk,HALL1,HALL2,HALL3,DIR)
 					  STATE1 <=(DIR & HALL3 & HALL2 & HALL1) ;
 					  end if;
 					  
-					 -- LED(3 downto 1) <=  (HALL3 & HALL2 & HALL1);
+					  LED(3 downto 1) <=  (HALL3 & HALL2 & HALL1);
 					  end process;
 					  
 	motor_update :process(clk,HALL1,HALL2,HALL3,DIR,SPEED,STATE1,PWM_S)
@@ -200,7 +221,7 @@ free_read_sensors:process(clk,HALL1,HALL2,HALL3,DIR)
 					else
 					HALL1_COUNT <= HALL1_COUNT;
 					if CLK_TIMER='1' then
-					HALL1_COUNT <= (others=>'0');
+				   HALL1_COUNT <= (others=>'0');
 					end if;
 					end if; 
 					
@@ -276,9 +297,9 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 	   variable RPM_LAST  : signed (23 downto 0) :=(others=>'0');
 	   variable RPM_H     : signed (23 downto 0) :=(others=>'0');
 	   variable RPM_F     : signed (23 downto 0) :=(others=>'0');
-	   variable RPM_ABS   :  std_logic_vector (23 downto 0) :=(others=>'0');
-		variable HALL_COUNT:  std_logic_vector(4 downto 0);
-		
+	   variable RPM_ABS   : std_logic_vector (23 downto 0) :=(others=>'0');
+		variable HALL_COUNT: std_logic_vector(5 downto 0);
+		variable M_RPMF    : std_logic_vector(15 DOWNTO 0) :=(others=>'0'); 
 					 
 					  begin
                 if rising_edge (clk) then
@@ -291,10 +312,10 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					   RPM_F    := RPM_LAST + RPM_S(31 downto 8);
                   
 				      RPM_ABS  := ABS (RPM_F);
-						M_RPMF   <= RPM_ABS(23 DOWNTO 8);
+						M_RPMF   := RPM_ABS(23 DOWNTO 8);
+						
 						
 						M_RPM_DIR_LAST  <= M_RPM_DIR;	
-						
 						if(RPM_DIR='1')then
 						M_RPM_DIR <= signed('0'- M_RPMF) ;
                   elsif(RPM_DIR='0')then						
@@ -302,7 +323,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 						end if;
 						
 						
-						--M_SHOW <= M_RPM_DIR;
+						--M_SHOW <= signed( hall_count);
 
 					 end if;
 				    end if;
@@ -326,8 +347,14 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					 if CLK_TIMER ='1'  then
 					 
 				    SETPOINT := signed(SPEED);
-					 M_ERR    := signed(SPEED)- M_RPM_DIR ;
-                RPM_DIFF_LAST   := RPM_DIFF;
+					 --M_ERR    := signed(SPEED)- M_RPM_DIR ;
+                 if(SETPOINT>lim0)then
+					   M_ERR     :=  SETPOINT -  M_RPM_DIR + lim20 ;
+                 elsif(SETPOINT<lim0)then
+                  M_ERR     :=  SETPOINT -  M_RPM_DIR - lim20 ; 					  
+					  end if;
+					  
+					 RPM_DIFF_LAST   := RPM_DIFF;
 					 RPM_DIFF        := M_RPM_DIR - M_RPM_DIR_LAST;
                 
 
@@ -393,25 +420,30 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 				  begin
 				  if rising_edge (clk) then
 				  if CLK_TIMER ='1'  then
-				     SETPOINT       := signed( SPEED);
-					  --M_ERR_LAST     :=  M_ERR;
-   				  M_ERR          :=  SIGNED(SPEED) -  M_RPM_DIR ; 
-					 SETPOINT_DIFF   := setpoint - setpoint_last;
+				    SETPOINT        :=  signed( SPEED);
+   			    --M_ERR           :=  SIGNED(SPEED) -  M_RPM_DIR ;
+                if(SETPOINT>lim0)then
+					   M_ERR     :=  SETPOINT -  M_RPM_DIR + lim20 ;
+                elsif(SETPOINT<lim0)then
+                  M_ERR     :=  SETPOINT -  M_RPM_DIR - lim20 ; 					  
+					 end if;
+					  
 					 RPM_DIFF_LAST   := RPM_DIFF;
 					 RPM_DIFF        := M_RPM_DIR - M_RPM_DIR_LAST;
-                
-					 LIMIT_KP_fp    := M_KP_fp*M_ERR; --6.10 * 16.0 = 22.10  (31 DOWNTO 10)  BIT HAYE SAHIH
+                SETPOINT_DIFF   := setpoint - setpoint_last;
+					 
+					 LIMIT_KP_fp    := M_KP_fp*M_ERR; --7.10 * 16.0 = 22.10  (31 DOWNTO 10)  BIT HAYE SAHIH
 					 LIMIT_KP       := LIMIT_KP_fp(31 DOWNTO 10);
 					 
 					 LIM             <= LIMIT_KP(15 DOWNTO 0);--FOR SHOW
 
          if (M_p_overflow = '0')	then
 	
-			if( abs(RPM_DIFF)<lim15 and abs(M_ERR)>lim400 and abs(M_RPM_DIR)>lim10 and abs(LIMIT_KP)<MAX_PWM) then
+			if( abs(RPM_DIFF)<lim15 and abs(M_ERR)>lim400 and abs(M_RPM_DIR)>lim10 ) then--and abs(LIMIT_KP)<MAX_PWM) then
 			M_KP_fp <= M_KP_fp + KP2_PLUS_fp;
 			end if;
 			
-		   if( abs(RPM_DIFF)<lim15 and abs(M_ERR)< lim400 and abs(M_RPM_DIR)>lim10 and abs(M_ERR)>lim15 and abs(LIMIT_KP)<MAX_PWM ) then
+		   if( abs(RPM_DIFF)<lim15 and abs(M_ERR)< lim400 and abs(M_RPM_DIR)>lim10 and abs(M_ERR)>lim21 ) then -- and abs(LIMIT_KP)<MAX_PWM ) then
 			M_KP_fp <= M_KP_fp + KP1_PLUS_fp;
 			end if; 
 
@@ -419,11 +451,11 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 			
          if (abs(M_RPM_DIR) > abs(SETPOINT)) then
 		
-		   if (abs(RPM_DIFF) < lim10 and abs(M_ERR) < lim400 and abs(M_ERR)  > lim10 and abs(M_RPM_DIR)>lim10  and abs(SETPOINT) > lim499 ) then
+		   if (abs(RPM_DIFF) < lim10 and abs(M_ERR) < lim400 and abs(M_ERR)  > lim5 and abs(M_RPM_DIR)>lim10  and abs(SETPOINT) > lim499 ) then
 			M_KP_fp <= M_KP_fp - KP1_MINUS_fp;
 			end if;
 			
-			if (abs(RPM_DIFF) < lim10 and abs(M_Err) < lim400 and abs(M_Err) > lim10 and abs(SETPOINT) < lim499 ) then
+			if (abs(RPM_DIFF) < lim10 and abs(M_Err) < lim400 and abs(M_Err) > lim5 and abs(SETPOINT) < lim499 ) then
 			M_KP_fp <= M_KP_fp - KP2_MINUS_fp;
 			end if;
 			
@@ -433,9 +465,14 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 			
          end if;	
 
---		  if (abs(M_KP_fp * M_Err) > MAX_PWM) then --6.10 * 16.0 = 22.10  
+		  if (abs(limit_kp) > CONV_std_logic_vector(MAX_P,12 ) ) then   
 --		   M_KP_fp <= (CONV_INTEGER(MAX_P )+ LIM10) / M_Err ;
---		  end if;	
+         
+			dividend  <= max ;
+			divisor   <= abs (M_ERR);
+			M_KP_fp   <= signed ( quotient(16 downto 0)) ; 
+       
+		  end if;	
 				
 			if (abs(M_RPM_DIR)<lim50) then
 			
@@ -459,14 +496,13 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 				SETPOINT_LAST  :=  SETPOINT;
 				   end if;
 				   end if;
-					--M_SHOW <= M_Kp_fp;
+					RPM_DIFF_show <= RPM_DIFF; 
 				  end process;
    
                
  PD_CONTROLLER: 	 process(clk)
 					   
-				       variable M_SETPOINT  : signed (15 DOWNTO 0)  :=(others=>'0');								 
-                   variable M_RPM       : signed (15 DOWNTO 0)  :=(others=>'0');   
+				       variable M_SETPOINT  : signed (15 DOWNTO 0)  :=(others=>'0');								    
 						 variable M_ERR       : signed (15 DOWNTO 0)  :=(others=>'0');	
 						 variable M_ERR_fp    : signed (16 DOWNTO 0)  :=(others=>'0');	--16.1
 						 
@@ -487,10 +523,12 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					  if CLK_TIMER ='1' 	then
 					  
 					  M_SETPOINT :=  signed( SPEED );
-					  M_RPM      :=  M_RPM_DIR ;
-   				  M_ERR      :=  M_SETPOINT -  M_RPM ; 
    				  RPM_DIFF   := M_RPM_DIR - M_RPM_DIR_LAST; 
-					  
+					  if(M_SETPOINT>lim0)then
+					   M_ERR     :=  M_SETPOINT -  M_RPM_DIR + lim20 ;
+                 elsif(M_SETPOINT<lim0)then
+                  M_ERR     :=  M_SETPOINT -  M_RPM_DIR - lim20 ; 					  
+					  end if;
 					  
   					  M_P_fp  := (M_ERR * M_KP_fp) ; --16.0 * 7.10 =23.10 
                  M_P     := M_P_fp(32 downto 10);
@@ -536,9 +574,9 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					  end if;
 					  --M_SHOW <= m_err;--M_SETPOINT;--signed("00000"& M_pid);
 					  
-					  --M_PID <= "00111111100";
-					  --DIR <= '0';
-					  M_ERROR <= M_ERR;
+					  --M_PID <= "11111111100";
+					 -- DIR <= '0';
+					  M_ERROR <= M_ERR;  --for show
 					  end if;
 					  end if;					  
 					  end process;
@@ -546,11 +584,12 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 --					  led <= test_key; 		 
                
 				     M_SHOW  <= 
-										 M_RPM_DIR   when TEST_KEY="0011" else --3
-										 M_ERROR     when TEST_KEY="0110" else --6
-										 LIM        when TEST_KEY="1100" else --12
-			                      M_KP_fp(16 DOWNTO 1)    when TEST_KEY="1001" ;    --9
-                 
+										 M_RPM_DIR     when TEST_KEY="0011" else --3
+										 M_ERROR       when TEST_KEY="0110" else --6
+										 LIM           when TEST_KEY="1100" else --12
+			                      signed("000000000"& M_KP_fp(16 DOWNTO 10))    when TEST_KEY="1001" else    --9
+                               signed ("0000"& M_KD_fp(15 downto 4))       when TEST_KEY="0101" else 
+										 RPM_DIFF_show when TEST_KEY="1010" ;
 						
 					
 				

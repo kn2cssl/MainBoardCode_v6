@@ -135,9 +135,9 @@ component drivermotor is
 	
 
    signal SPEED1 : std_logic_vector(15 downto 0):="0000111110100000";--(others=>'0'); 
-	signal SPEED2 : std_logic_vector(15 downto 0):=(others=>'0'); 
-	signal SPEED3 : std_logic_vector(15 downto 0):=(others=>'0'); 
-	signal SPEED4 : std_logic_vector(15 downto 0):=(others=>'0'); 
+	signal SPEED2 : std_logic_vector(15 downto 0):="0000111110100000";--(others=>'0'); 
+	signal SPEED3 : std_logic_vector(15 downto 0):="0000000000101000";--(others=>'0'); 
+	signal SPEED4 : std_logic_vector(15 downto 0):="0000000000000000";--(others=>'0'); 
  
    signal M1_show: std_logic_vector(15 downto 0):=(others=>'0'); 
    signal FREE_WHEELS_S: std_logic := '0'; 
@@ -163,11 +163,11 @@ begin
   FT245:Write_to_USB port map(DATA1_IN =>M1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
 
 --micro_com2
-  prl_com:micro_com2 port map(CLK=>CLK,RPM_IN=>RPM_IN,CLK_PAR=>CLK_PAR,PARITY_IN=>PARITY_IN,MOTOR_NUM=>MOTOR_NUM,FREE_WHEELS => FREE_WHEELS_S,
+  prl_com:micro_com2 port map(CLK=>CLK,RPM_IN=>RPM_IN,CLK_PAR=>CLK_PAR,PARITY_IN=>PARITY_IN,MOTOR_NUM=>MOTOR_NUM,FREE_WHEELS => FREE_WHEELS_S
   --  RPM1(15 downto 0)=>SPEED1,
-    RPM2(15 downto 0)=>SPEED2,
-    RPM3(15 downto 0)=>SPEED3,
-    RPM4(15 downto 0)=>SPEED4
+  --  RPM2(15 downto 0)=>SPEED2,
+   -- RPM3(15 downto 0)=>SPEED3,
+   -- RPM4(15 downto 0)=>SPEED4
 );
 
 

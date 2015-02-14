@@ -1,14 +1,14 @@
-AR micro_com2 behavioral "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/micro_com2.vhd" sub00/vhpl07 1423584558
-EN pwm NULL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/pwm.vhd" sub00/vhpl00 1423584551
+AR micro_com2 behavioral F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd sub00/vhpl07 1423912953
+EN pwm NULL F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd sub00/vhpl00 1423912946
 AR mul2 mul2_a F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/MUL2.vhd sub00/vhpl14 1419077096
-AR drivermotor behavioral "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/driver.vhd" sub00/vhpl03 1423584554
-AR m behavioral "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/m.vhd" sub00/vhpl09 1423584560
-EN drivermotor NULL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/driver.vhd" sub00/vhpl02 1423584553
-AR pwm behavioral "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/pwm.vhd" sub00/vhpl01 1423584552
-EN m NULL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/m.vhd" sub00/vhpl08 1423584559
-EN micro_com2 NULL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/micro_com2.vhd" sub00/vhpl06 1423584557
+AR drivermotor behavioral F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd sub00/vhpl03 1423912949
+AR m behavioral F:/GitHub/FPGA/MainBoardCode_v6/m.vhd sub00/vhpl09 1423912955
+EN drivermotor NULL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd sub00/vhpl02 1423912948
+AR pwm behavioral F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd sub00/vhpl01 1423912947
+EN m NULL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd sub00/vhpl08 1423912954
+EN micro_com2 NULL F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd sub00/vhpl06 1423912952
 EN mul NULL F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/mul.vhd sub00/vhpl12 1419077093
 EN mul2 NULL F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/MUL2.vhd sub00/vhpl13 1419077095
-EN write_to_usb NULL "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/Write_to_USB.vhd" sub00/vhpl04 1423584555
+EN write_to_usb NULL F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd sub00/vhpl04 1423912950
 AR mul mul_a F:/GitHub/FPGA/driver1/maincodev6/ipcore_dir/mul.vhd sub00/vhpl11 1419077094
-AR write_to_usb behavioral "C:/Users/Fatemeh/Desktop/New controller 2/MainBoardCode_v6/Write_to_USB.vhd" sub00/vhpl05 1423584556
+AR write_to_usb behavioral F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd sub00/vhpl05 1423912951

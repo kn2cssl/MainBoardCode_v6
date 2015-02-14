@@ -52,13 +52,13 @@
 -- The following code must appear in the VHDL architecture header:
 
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
-component DIVIDER
+component divider
 	port (
 	clk: in std_logic;
 	rfd: out std_logic;
-	dividend: in std_logic_vector(11 downto 0);
+	dividend: in std_logic_vector(31 downto 0);
 	divisor: in std_logic_vector(15 downto 0);
-	quotient: out std_logic_vector(11 downto 0);
+	quotient: out std_logic_vector(31 downto 0);
 	fractional: out std_logic_vector(15 downto 0));
 end component;
 
@@ -68,7 +68,7 @@ end component;
 -- body. Substitute your own instance name and net names.
 
 ------------- Begin Cut here for INSTANTIATION Template ----- INST_TAG
-your_instance_name : DIVIDER
+your_instance_name : divider
 		port map (
 			clk => clk,
 			rfd => rfd,
@@ -78,8 +78,8 @@ your_instance_name : DIVIDER
 			fractional => fractional);
 -- INST_TAG_END ------ End INSTANTIATION Template ------------
 
--- You must compile the wrapper file DIVIDER.vhd when simulating
--- the core, DIVIDER. When compiling the wrapper file, be sure to
+-- You must compile the wrapper file divider.vhd when simulating
+-- the core, divider. When compiling the wrapper file, be sure to
 -- reference the XilinxCoreLib VHDL simulation library. For detailed
 -- instructions, please refer to the "CORE Generator Help".
 

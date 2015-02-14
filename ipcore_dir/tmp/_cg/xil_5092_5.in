@@ -11,7 +11,7 @@ SET_PREFERENCE asysymbol true
 SET_PREFERENCE addpads false
 SET_PREFERENCE implementationfiletype Ngc
 SET_PREFERENCE device xc3s400
-SET_PREFERENCE projectname DIVIDER
+SET_PREFERENCE projectname divider
 SET_PREFERENCE foundationsym false
 SET_PREFERENCE devicefamily spartan3
 SET_PREFERENCE busformat BusFormatAngleBracketNotRipped
@@ -22,15 +22,15 @@ SET_PREFERENCE outputdirectory ./
 SET_PREFERENCE designentry VHDL
 SET_PREFERENCE workingdirectory .\tmp\
 SET_PREFERENCE removerpms false
-SET_PARAMETER component_name DIVIDER
+SET_PARAMETER component_name divider
 SET_PARAMETER ce false
 SET_PARAMETER clocks_per_division 1
 SET_PARAMETER remainder_type Remainder
 SET_PARAMETER operand_sign Signed
 SET_PARAMETER divisor_width 16
 SET_PARAMETER divide_by_zero_detect false
-SET_PARAMETER latency 16
-SET_PARAMETER dividend_and_quotient_width 12
+SET_PARAMETER latency 36
+SET_PARAMETER dividend_and_quotient_width 32
 SET_PARAMETER sclr false
 SET_PARAMETER latency_configuration Automatic
 SET_PARAMETER sclr_ce_priority SCLR_overrides_CE

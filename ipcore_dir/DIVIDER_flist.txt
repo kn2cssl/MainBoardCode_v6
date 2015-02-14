@@ -1,13 +1,13 @@
-# Output products list for <DIVIDER>
-DIVIDER.asy
-DIVIDER.gise
-DIVIDER.ngc
-DIVIDER.sym
-DIVIDER.vhd
-DIVIDER.vho
-DIVIDER.xco
-DIVIDER.xise
-DIVIDER_flist.txt
-DIVIDER_readme.txt
-DIVIDER_xmdf.tcl
+# Output products list for <divider>
 _xmsgs\pn_parser.xmsgs
+divider.asy
+divider.gise
+divider.ngc
+divider.sym
+divider.vhd
+divider.vho
+divider.xco
+divider.xise
+divider_flist.txt
+divider_readme.txt
+divider_xmdf.tcl

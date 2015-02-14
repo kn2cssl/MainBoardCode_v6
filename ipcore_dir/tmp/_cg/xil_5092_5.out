@@ -4,9 +4,9 @@ SET_PARAMETER remainder_type Remainder
 SET_PARAMETER operand_sign Signed
 SET_PARAMETER divisor_width 16
 SET_PARAMETER divide_by_zero_detect false
-SET_PARAMETER latency 16
-SET_PARAMETER component_name DIVIDER
-SET_PARAMETER dividend_and_quotient_width 12
+SET_PARAMETER latency 36
+SET_PARAMETER component_name divider
+SET_PARAMETER dividend_and_quotient_width 32
 SET_PARAMETER sclr false
 SET_PARAMETER latency_configuration Automatic
 SET_PARAMETER sclr_ce_priority SCLR_overrides_CE

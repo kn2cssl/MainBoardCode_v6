@@ -9,12 +9,13 @@ Target Device  : xc3s400
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Wed Feb 11 10:15:07 2015
+Mapped Date    : Sat Feb 14 14:41:55 2015
 
 Mapping design into LUTs...
 Running directed packing...
 Running delay-based LUT packing...
 Running related packing...
+Running unrelated packing...
 Updating timing models...
 WARNING:PhysDesignRules:372 - Gated clock. Clock net driver1/M_show_not0001 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
@@ -27,32 +28,32 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Total Number Slice Registers:         897 out of   7,168   12%
-    Number used as Flip Flops:          881
+  Total Number Slice Registers:       4,157 out of   7,168   57%
+    Number used as Flip Flops:        4,141
     Number used as Latches:              16
-  Number of 4 input LUTs:             3,242 out of   7,168   45%
+  Number of 4 input LUTs:             3,808 out of   7,168   53%
 Logic Distribution:
-  Number of occupied Slices:          1,907 out of   3,584   53%
-    Number of Slices containing only related logic:   1,907 out of   1,907 100%
-    Number of Slices containing unrelated logic:          0 out of   1,907   0%
+  Number of occupied Slices:          3,582 out of   3,584   99%
+    Number of Slices containing only related logic:   3,582 out of   3,582 100%
+    Number of Slices containing unrelated logic:          0 out of   3,582   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       3,429 out of   7,168   47%
-    Number used as logic:             3,241
-    Number used as a route-thru:        187
-    Number used as Shift registers:       1
+  Total Number of 4 input LUTs:       4,060 out of   7,168   56%
+    Number used as logic:             3,703
+    Number used as a route-thru:        252
+    Number used as Shift registers:     105
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
   Number of bonded IOBs:                 67 out of      97   69%
-  Number of MULT18X18s:                  16 out of      16  100%
+  Number of MULT18X18s:                  13 out of      16   81%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.63
+Average Fanout of Non-Clock Nets:                2.02
 
-Peak Memory Usage:  286 MB
-Total REAL time to MAP completion:  9 secs 
-Total CPU time to MAP completion:   8 secs 
+Peak Memory Usage:  356 MB
+Total REAL time to MAP completion:  17 secs 
+Total CPU time to MAP completion:   17 secs 
 
 NOTES:
 
