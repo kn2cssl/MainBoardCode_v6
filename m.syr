@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: m.prj
 
@@ -111,7 +111,8 @@ WARNING:HDLParsers:3498 - No primary, secondary unit in the file "F:/GitHub/FPGA
 Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd" in Library work.
 Architecture behavioral of Entity pwm is up to date.
 Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" in Library work.
-Architecture behavioral of Entity drivermotor is up to date.
+Entity <drivermotor> compiled.
+Entity <drivermotor> (Architecture <behavioral>) compiled.
 Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd" in Library work.
 Architecture behavioral of Entity write_to_usb is up to date.
 Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd" in Library work.
@@ -162,12 +163,13 @@ Analyzing generic Entity <drivermotor> in library <work> (Architecture <behavior
 WARNING:Xst:2211 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 162: Instantiating black box module <DIVIDER>.
 WARNING:Xst:819 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 165: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <FREE_WHEEL>
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 310: Width mismatch. <RPM_H> has a width of 24 bits but assigned expression is 25-bit wide.
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 435: Width mismatch. <LIMIT_KP_fp> has a width of 32 bits but assigned expression is 33-bit wide.
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 492: Width mismatch. <M_Kp_fp> has a width of 17 bits but assigned expression is 33-bit wide.
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 538: Width mismatch. <M_P> has a width of 23 bits but assigned expression is 22-bit wide.
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 541: Width mismatch. <M_P> has a width of 23 bits but assigned expression is 22-bit wide.
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 555: Width mismatch. <M_PD> has a width of 31 bits but assigned expression is 28-bit wide.
+WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 312: Width mismatch. <RPM_H> has a width of 24 bits but assigned expression is 25-bit wide.
+WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 472: Width mismatch. <LIMIT_KP_fp> has a width of 35 bits but assigned expression is 36-bit wide.
+WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 530: Width mismatch. <M_Kp_fp> has a width of 20 bits but assigned expression is 36-bit wide.
+WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 576: Width mismatch. <M_P> has a width of 26 bits but assigned expression is 22-bit wide.
+WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 579: Width mismatch. <M_P> has a width of 26 bits but assigned expression is 22-bit wide.
+WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 593: Width mismatch. <M_PD> has a width of 31 bits but assigned expression is 28-bit wide.
+WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 624: Width mismatch. <M_show> has a width of 16 bits but assigned expression is 18-bit wide.
 Entity <drivermotor> analyzed. Unit <drivermotor> generated.
 
 Analyzing generic Entity <PWM> in library <work> (Architecture <behavioral>).
@@ -258,30 +260,29 @@ Unit <PWM> synthesized.
 Synthesizing Unit <drivermotor>.
     Related source file is "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd".
 WARNING:Xst:1305 - Output <LED<0>> is never assigned. Tied to value 0.
-WARNING:Xst:646 - Signal <rfd> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <quotient<31:17>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <quotient<31:20>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <fractional> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <RPM_DIFF<14:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <M_ERR_LAST> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <LIM> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <KP4_fp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Register <M_ERROR> equivalent to <M_ERR1> has been removed
     Register <SETPOINT_LAST0> equivalent to <SETPOINT_LAST> has been removed
-WARNING:Xst:643 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 492: The result of a 16x17-bit multiplication is partially used. Only the 17 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 530: The result of a 16x20-bit multiplication is partially used. Only the 20 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 WARNING:Xst:737 - Found 16-bit latch for signal <M_show>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 16-bit subtractor for signal <$sub0000> created at line 433.
+    Found 16-bit subtractor for signal <$sub0000> created at line 471.
     Found 1-bit register for signal <BRIDGE>.
     Found 16-bit adder for signal <BRIDGE$addsub0000>.
-    Found 16-bit comparator greatequal for signal <BRIDGE$cmp_ge0000> created at line 366.
-    Found 16-bit comparator greater for signal <BRIDGE$cmp_gt0000> created at line 362.
-    Found 16-bit comparator lessequal for signal <BRIDGE$cmp_le0000> created at line 362.
+    Found 16-bit comparator greater for signal <BRIDGE$cmp_gt0000> created at line 366.
     Found 1-bit register for signal <CHANGE>.
-    Found 16-bit comparator not equal for signal <CHANGE$cmp_ne0000> created at line 395.
+    Found 16-bit comparator not equal for signal <CHANGE$cmp_ne0000> created at line 399.
     Found 1-bit register for signal <CLK_TIMER>.
     Found 1-bit register for signal <DIR>.
     Found 32-bit register for signal <dividend>.
     Found 16-bit register for signal <divisor>.
-    Found 22-bit adder for signal <divisor$addsub0000>.
-    Found 22-bit comparator lessequal for signal <divisor$cmp_le0000> created at line 468.
+    Found 25-bit adder for signal <divisor$addsub0000>.
+    Found 25-bit comparator greater for signal <divisor$cmp_gt0000> created at line 505.
     Found 6-bit register for signal <HALL1_COUNT>.
     Found 6-bit adder for signal <HALL1_COUNT$share0000>.
     Found 1-bit register for signal <hall1_past>.
@@ -291,91 +292,82 @@ INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and 
     Found 6-bit register for signal <HALL3_COUNT>.
     Found 6-bit adder for signal <HALL3_COUNT$share0000>.
     Found 1-bit register for signal <hall3_past>.
-    Found 16-bit register for signal <LIM>.
-    Found 17x16-bit multiplier for signal <LIMIT_KP_fp$mult0000> created at line 435.
-    Found 16x16-bit multiplier for signal <M_D_fp$mult0000> created at line 545.
+    Found 20x16-bit multiplier for signal <LIMIT_KP_fp$mult0000> created at line 472.
+    Found 16x16-bit multiplier for signal <M_D_fp$mult0000> created at line 583.
     Found 16-bit register for signal <M_ERR>.
-    Found 16-bit adder for signal <M_ERR$add0000> created at line 352.
-    Found 16-bit comparator greater for signal <M_ERR$cmp_gt0000> created at line 351.
-    Found 16-bit comparator less for signal <M_ERR$cmp_lt0000> created at line 352.
-    Found 16-bit subtractor for signal <M_ERR$sub0000> created at line 354.
+    Found 16-bit adder for signal <M_ERR$add0000> created at line 356.
+    Found 16-bit comparator greater for signal <M_ERR$cmp_gt0000> created at line 355.
+    Found 16-bit comparator less for signal <M_ERR$cmp_lt0000> created at line 356.
+    Found 16-bit subtractor for signal <M_ERR$sub0000> created at line 358.
     Found 16-bit register for signal <M_ERR0>.
-    Found 16-bit subtractor for signal <M_ERR0$sub0000> created at line 428.
+    Found 16-bit subtractor for signal <M_ERR0$sub0000> created at line 466.
     Found 16-bit register for signal <M_ERR1>.
     Found 16-bit register for signal <M_Kd_fp>.
     Found 16-bit adder for signal <M_Kd_fp$addsub0000>.
-    Found 16-bit comparator less for signal <M_Kd_fp$cmp_lt0000> created at line 389.
-    Found 17-bit register for signal <M_Kp_fp>.
-    Found 16-bit adder for signal <M_Kp_fp$add0000>.
+    Found 16-bit comparator less for signal <M_Kd_fp$cmp_lt0000> created at line 393.
+    Found 20-bit register for signal <M_Kp_fp>.
     Found 16-bit adder for signal <M_Kp_fp$addsub0000>.
     Found 16-bit adder for signal <M_Kp_fp$addsub0001>.
     Found 16-bit adder for signal <M_Kp_fp$addsub0002>.
     Found 16-bit adder for signal <M_Kp_fp$addsub0003>.
-    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0000> created at line 442.
-    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0001> created at line 446.
-    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0002> created at line 454.
-    Found 17-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0003> created at line 462.
-    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0004> created at line 477.
-    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0005> created at line 487.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0000> created at line 452.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0001> created at line 491.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0002> created at line 491.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0003> created at line 479.
-    Found 22-bit comparator greater for signal <M_Kp_fp$cmp_gt0004> created at line 468.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0005> created at line 446.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0006> created at line 454.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0000> created at line 442.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0001> created at line 446.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0002> created at line 454.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0003> created at line 452.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0004> created at line 491.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0005> created at line 491.
-    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0000> created at line 477.
-    Found 17-bit comparator less for signal <M_Kp_fp$cmp_lt0001> created at line 462.
-    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0002> created at line 446.
-    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0003> created at line 446.
-    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0004> created at line 454.
-    Found 16x17-bit multiplier for signal <M_Kp_fp$mult0000> created at line 492.
-    Found 17-bit addsub for signal <M_Kp_fp$share0000>.
-    Found 16-bit subtractor for signal <M_Kp_fp$sub0000> created at line 492.
-    Found 23-bit comparator greatequal for signal <M_P$cmp_ge0000> created at line 537.
-    Found 23-bit comparator lessequal for signal <M_P$cmp_le0000> created at line 539.
-    Found 17x16-bit multiplier for signal <M_P_fp$mult0000> created at line 533.
+    Found 16-bit adder for signal <M_Kp_fp$addsub0004>.
+    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0000> created at line 479.
+    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0001> created at line 483.
+    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0002> created at line 491.
+    Found 20-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0003> created at line 499.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0000> created at line 489.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0001> created at line 529.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0002> created at line 529.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0003> created at line 516.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0004> created at line 483.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0005> created at line 491.
+    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0000> created at line 479.
+    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0001> created at line 483.
+    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0002> created at line 491.
+    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0003> created at line 489.
+    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0000> created at line 514.
+    Found 20-bit comparator less for signal <M_Kp_fp$cmp_lt0001> created at line 499.
+    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0002> created at line 483.
+    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0003> created at line 483.
+    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0004> created at line 491.
+    Found 16x20-bit multiplier for signal <M_Kp_fp$mult0000> created at line 530.
+    Found 20-bit addsub for signal <M_Kp_fp$share0000>.
+    Found 16-bit subtractor for signal <M_Kp_fp$sub0000> created at line 530.
+    Found 26-bit comparator greatequal for signal <M_P$cmp_ge0000> created at line 575.
+    Found 26-bit comparator lessequal for signal <M_P$cmp_le0000> created at line 577.
+    Found 20x16-bit multiplier for signal <M_P_fp$mult0000> created at line 571.
     Found 1-bit register for signal <M_P_OVERFLOW>.
-    Found 31-bit comparator greatequal for signal <M_PD$cmp_ge0000> created at line 557.
-    Found 31-bit comparator less for signal <M_PD$cmp_lt0000> created at line 558.
-    Found 28-bit subtractor for signal <M_PD$sub0000> created at line 555.
+    Found 28-bit subtractor for signal <M_PD$sub0000> created at line 593.
     Found 31-bit adder for signal <M_PD_ABS$addsub0000>.
     Found 11-bit register for signal <M_PID>.
-    Found 16-bit comparator lessequal for signal <M_PID$cmp_le0000> created at line 569.
+    Found 16-bit comparator lessequal for signal <M_PID$cmp_le0000> created at line 607.
     Found 16-bit register for signal <M_RPM_DIR>.
-    Found 16-bit adder for signal <M_RPM_DIR$addsub0000> created at line 320.
+    Found 16-bit adder for signal <M_RPM_DIR$addsub0000> created at line 322.
     Found 16-bit register for signal <M_RPM_DIR_LAST>.
     Found 1-bit register for signal <MISS>.
-    Found 16-bit comparator less for signal <MISS$cmp_lt0000> created at line 366.
-    Found 24-bit adder for signal <RPM_ABS$add0000> created at line 312.
+    Found 16-bit comparator less for signal <MISS$cmp_lt0000> created at line 370.
+    Found 24-bit adder for signal <RPM_ABS$add0000> created at line 314.
     Found 24-bit adder for signal <RPM_ABS$addsub0000>.
     Found 16-bit register for signal <RPM_DIFF>.
-    Found 16-bit subtractor for signal <RPM_DIFF$sub0000> created at line 358.
+    Found 16-bit subtractor for signal <RPM_DIFF$sub0000> created at line 362.
     Found 16-bit register for signal <RPM_DIFF0>.
     Found 1-bit register for signal <RPM_DIR>.
     Found 24-bit up accumulator for signal <RPM_F>.
-    Found 6-bit adder for signal <RPM_H$addsub0000> created at line 308.
-    Found 6-bit adder for signal <RPM_H$addsub0001> created at line 308.
-    Found 6x11-bit multiplier for signal <RPM_H$mult0000> created at line 310.
-    Found 24-bit subtractor for signal <RPM_s$sub0000> created at line 311.
+    Found 6-bit adder for signal <RPM_H$addsub0000> created at line 310.
+    Found 6-bit adder for signal <RPM_H$addsub0001> created at line 310.
+    Found 6x11-bit multiplier for signal <RPM_H$mult0000> created at line 312.
+    Found 24-bit subtractor for signal <RPM_s$sub0000> created at line 313.
     Found 16-bit register for signal <SETPOINT_LAST>.
     Found 17-bit up counter for signal <TIMER_COUNT>.
     Found 1-bit register for signal <TRACK>.
-    Found 16-bit comparator equal for signal <TRACK$cmp_eq0000> created at line 395.
-    Found 1-bit xor2 for signal <TRACK$xor0000> created at line 372.
+    Found 1-bit xor2 for signal <TRACK$xor0000> created at line 376.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 Accumulator(s).
-	inferred 265 D-type flip-flop(s).
+	inferred 252 D-type flip-flop(s).
 	inferred  26 Adder/Subtractor(s).
 	inferred   5 Multiplier(s).
-	inferred  39 Comparator(s).
+	inferred  29 Comparator(s).
 Unit <drivermotor> synthesized.
 
 
@@ -384,7 +376,7 @@ Synthesizing Unit <m>.
 WARNING:Xst:653 - Signal <SPEED4> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
 WARNING:Xst:653 - Signal <SPEED3> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000101000.
 WARNING:Xst:653 - Signal <SPEED2> is used but never assigned. This sourceless signal will be automatically connected to value 0000111110100000.
-WARNING:Xst:653 - Signal <SPEED1> is used but never assigned. This sourceless signal will be automatically connected to value 0000111110100000.
+WARNING:Xst:653 - Signal <SPEED1> is used but never assigned. This sourceless signal will be automatically connected to value 0000100111000100.
 Unit <m> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -395,16 +387,16 @@ HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 20
  16x16-bit multiplier                                  : 4
- 16x17-bit multiplier                                  : 4
- 17x16-bit multiplier                                  : 8
+ 16x20-bit multiplier                                  : 4
+ 20x16-bit multiplier                                  : 8
  6x11-bit multiplier                                   : 4
 # Adders/Subtractors                                   : 104
  16-bit adder                                          : 36
  16-bit subtractor                                     : 20
- 17-bit addsub                                         : 4
- 22-bit adder                                          : 4
+ 20-bit addsub                                         : 4
  24-bit adder                                          : 8
  24-bit subtractor                                     : 4
+ 25-bit adder                                          : 4
  28-bit subtractor                                     : 4
  31-bit adder                                          : 4
  6-bit adder                                           : 20
@@ -414,32 +406,28 @@ Macro Statistics
  17-bit up counter                                     : 4
 # Accumulators                                         : 4
  24-bit up accumulator                                 : 4
-# Registers                                            : 132
+# Registers                                            : 128
  1-bit register                                        : 50
  11-bit register                                       : 4
- 16-bit register                                       : 48
- 17-bit register                                       : 4
+ 16-bit register                                       : 44
+ 20-bit register                                       : 4
  32-bit register                                       : 4
  6-bit register                                        : 12
  8-bit register                                        : 10
 # Latches                                              : 4
  16-bit latch                                          : 4
-# Comparators                                          : 161
+# Comparators                                          : 121
  11-bit comparator greatequal                          : 4
- 16-bit comparator equal                               : 4
- 16-bit comparator greatequal                          : 24
+ 16-bit comparator greatequal                          : 12
  16-bit comparator greater                             : 32
  16-bit comparator less                                : 28
- 16-bit comparator lessequal                           : 32
+ 16-bit comparator lessequal                           : 20
  16-bit comparator not equal                           : 4
- 17-bit comparator greatequal                          : 4
- 17-bit comparator less                                : 4
- 22-bit comparator greater                             : 4
- 22-bit comparator lessequal                           : 4
- 23-bit comparator greatequal                          : 4
- 23-bit comparator lessequal                           : 4
- 31-bit comparator greatequal                          : 4
- 31-bit comparator less                                : 4
+ 20-bit comparator greatequal                          : 4
+ 20-bit comparator less                                : 4
+ 25-bit comparator greater                             : 4
+ 26-bit comparator greatequal                          : 4
+ 26-bit comparator lessequal                           : 4
  8-bit comparator equal                                : 1
 # Xors                                                 : 4
  1-bit xor2                                            : 4
@@ -477,36 +465,34 @@ Optimizing FSM <FT245/cnt1/FSM> on signal <cnt1[1:6]> with one-hot encoding.
 -------------------
 Reading core <ipcore_dir/DIVIDER.ngc>.
 Loading core <DIVIDER> for timing and area information for instance <DIVIDE>.
+INFO:Xst:2261 - The FF/Latch <RPM_DIFF0_15> in Unit <driver1> is equivalent to the following FF/Latch, which will be removed : <RPM_DIFF_15> 
 INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <driver1> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
 INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver1> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_6> <M_Kd_fp_9> <M_Kd_fp_10> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
-INFO:Xst:2261 - The FF/Latch <dividend_11> in Unit <driver1> is equivalent to the following 10 FFs/Latches, which will be removed : <dividend_12> <dividend_13> <dividend_14> <dividend_15> <dividend_16> <dividend_17> <dividend_18> <dividend_19> <dividend_20> <dividend_21> 
-INFO:Xst:2261 - The FF/Latch <dividend_0> in Unit <driver1> is equivalent to the following 20 FFs/Latches, which will be removed : <dividend_1> <dividend_2> <dividend_3> <dividend_4> <dividend_5> <dividend_6> <dividend_7> <dividend_8> <dividend_9> <dividend_10> <dividend_22> <dividend_23> <dividend_24> <dividend_25> <dividend_26> <dividend_27> <dividend_28> <dividend_29> <dividend_30> <dividend_31> 
-INFO:Xst:2261 - The FF/Latch <RPM_DIFF0_15> in Unit <driver1> is equivalent to the following FF/Latch, which will be removed : <RPM_DIFF_15> 
+INFO:Xst:2261 - The FF/Latch <divisor_3> in Unit <driver1> is equivalent to the following 15 FFs/Latches, which will be removed : <divisor_6> <divisor_7> <dividend_5> <dividend_7> <dividend_11> <dividend_12> <dividend_13> <dividend_14> <dividend_15> <dividend_16> <dividend_17> <dividend_18> <dividend_19> <dividend_20> <dividend_21> 
+INFO:Xst:2261 - The FF/Latch <divisor_0> in Unit <driver1> is equivalent to the following 31 FFs/Latches, which will be removed : <divisor_1> <divisor_2> <divisor_4> <divisor_5> <divisor_8> <divisor_9> <divisor_10> <divisor_11> <divisor_12> <divisor_13> <divisor_14> <divisor_15> <dividend_0> <dividend_1> <dividend_2> <dividend_3> <dividend_4> <dividend_6> <dividend_8> <dividend_9> <dividend_10> <dividend_22> <dividend_23> <dividend_24> <dividend_25> <dividend_26> <dividend_27> <dividend_28> <dividend_29> <dividend_30> <dividend_31> 
 INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <driver2> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
 INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver2> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_6> <M_Kd_fp_9> <M_Kd_fp_10> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
-INFO:Xst:2261 - The FF/Latch <dividend_11> in Unit <driver2> is equivalent to the following 10 FFs/Latches, which will be removed : <dividend_12> <dividend_13> <dividend_14> <dividend_15> <dividend_16> <dividend_17> <dividend_18> <dividend_19> <dividend_20> <dividend_21> 
-INFO:Xst:2261 - The FF/Latch <dividend_0> in Unit <driver2> is equivalent to the following 20 FFs/Latches, which will be removed : <dividend_1> <dividend_2> <dividend_3> <dividend_4> <dividend_5> <dividend_6> <dividend_7> <dividend_8> <dividend_9> <dividend_10> <dividend_22> <dividend_23> <dividend_24> <dividend_25> <dividend_26> <dividend_27> <dividend_28> <dividend_29> <dividend_30> <dividend_31> 
+INFO:Xst:2261 - The FF/Latch <divisor_3> in Unit <driver2> is equivalent to the following 15 FFs/Latches, which will be removed : <divisor_6> <divisor_7> <dividend_5> <dividend_7> <dividend_11> <dividend_12> <dividend_13> <dividend_14> <dividend_15> <dividend_16> <dividend_17> <dividend_18> <dividend_19> <dividend_20> <dividend_21> 
+INFO:Xst:2261 - The FF/Latch <divisor_0> in Unit <driver2> is equivalent to the following 31 FFs/Latches, which will be removed : <divisor_1> <divisor_2> <divisor_4> <divisor_5> <divisor_8> <divisor_9> <divisor_10> <divisor_11> <divisor_12> <divisor_13> <divisor_14> <divisor_15> <dividend_0> <dividend_1> <dividend_2> <dividend_3> <dividend_4> <dividend_6> <dividend_8> <dividend_9> <dividend_10> <dividend_22> <dividend_23> <dividend_24> <dividend_25> <dividend_26> <dividend_27> <dividend_28> <dividend_29> <dividend_30> <dividend_31> 
 INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <driver3> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
 INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver3> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_6> <M_Kd_fp_9> <M_Kd_fp_10> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
-INFO:Xst:2261 - The FF/Latch <dividend_11> in Unit <driver3> is equivalent to the following 10 FFs/Latches, which will be removed : <dividend_12> <dividend_13> <dividend_14> <dividend_15> <dividend_16> <dividend_17> <dividend_18> <dividend_19> <dividend_20> <dividend_21> 
-INFO:Xst:2261 - The FF/Latch <dividend_0> in Unit <driver3> is equivalent to the following 20 FFs/Latches, which will be removed : <dividend_1> <dividend_2> <dividend_3> <dividend_4> <dividend_5> <dividend_6> <dividend_7> <dividend_8> <dividend_9> <dividend_10> <dividend_22> <dividend_23> <dividend_24> <dividend_25> <dividend_26> <dividend_27> <dividend_28> <dividend_29> <dividend_30> <dividend_31> 
+INFO:Xst:2261 - The FF/Latch <divisor_3> in Unit <driver3> is equivalent to the following 15 FFs/Latches, which will be removed : <divisor_6> <divisor_7> <dividend_5> <dividend_7> <dividend_11> <dividend_12> <dividend_13> <dividend_14> <dividend_15> <dividend_16> <dividend_17> <dividend_18> <dividend_19> <dividend_20> <dividend_21> 
+INFO:Xst:2261 - The FF/Latch <divisor_0> in Unit <driver3> is equivalent to the following 31 FFs/Latches, which will be removed : <divisor_1> <divisor_2> <divisor_4> <divisor_5> <divisor_8> <divisor_9> <divisor_10> <divisor_11> <divisor_12> <divisor_13> <divisor_14> <divisor_15> <dividend_0> <dividend_1> <dividend_2> <dividend_3> <dividend_4> <dividend_6> <dividend_8> <dividend_9> <dividend_10> <dividend_22> <dividend_23> <dividend_24> <dividend_25> <dividend_26> <dividend_27> <dividend_28> <dividend_29> <dividend_30> <dividend_31> 
 INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <driver4> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
 INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver4> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_6> <M_Kd_fp_9> <M_Kd_fp_10> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
-INFO:Xst:2261 - The FF/Latch <dividend_11> in Unit <driver4> is equivalent to the following 10 FFs/Latches, which will be removed : <dividend_12> <dividend_13> <dividend_14> <dividend_15> <dividend_16> <dividend_17> <dividend_18> <dividend_19> <dividend_20> <dividend_21> 
-INFO:Xst:2261 - The FF/Latch <dividend_0> in Unit <driver4> is equivalent to the following 20 FFs/Latches, which will be removed : <dividend_1> <dividend_2> <dividend_3> <dividend_4> <dividend_5> <dividend_6> <dividend_7> <dividend_8> <dividend_9> <dividend_10> <dividend_22> <dividend_23> <dividend_24> <dividend_25> <dividend_26> <dividend_27> <dividend_28> <dividend_29> <dividend_30> <dividend_31> 
-WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_5 hinder the constant cleaning in the block driver1.
+INFO:Xst:2261 - The FF/Latch <divisor_3> in Unit <driver4> is equivalent to the following 15 FFs/Latches, which will be removed : <divisor_6> <divisor_7> <dividend_5> <dividend_7> <dividend_11> <dividend_12> <dividend_13> <dividend_14> <dividend_15> <dividend_16> <dividend_17> <dividend_18> <dividend_19> <dividend_20> <dividend_21> 
+INFO:Xst:2261 - The FF/Latch <divisor_0> in Unit <driver4> is equivalent to the following 31 FFs/Latches, which will be removed : <divisor_1> <divisor_2> <divisor_4> <divisor_5> <divisor_8> <divisor_9> <divisor_10> <divisor_11> <divisor_12> <divisor_13> <divisor_14> <divisor_15> <dividend_0> <dividend_1> <dividend_2> <dividend_3> <dividend_4> <dividend_6> <dividend_8> <dividend_9> <dividend_10> <dividend_22> <dividend_23> <dividend_24> <dividend_25> <dividend_26> <dividend_27> <dividend_28> <dividend_29> <dividend_30> <dividend_31> 
+WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_2 hinder the constant cleaning in the block driver1.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_6 hinder the constant cleaning in the block driver1.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_7 hinder the constant cleaning in the block driver1.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_8 hinder the constant cleaning in the block driver1.
    You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_9 hinder the constant cleaning in the block driver1.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_10 hinder the constant cleaning in the block driver1.
-   You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_11 hinder the constant cleaning in the block driver1.
    You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch dividend_11 hinder the constant cleaning in the block driver1.
+WARNING:Xst:1426 - The value init of the FF/Latch divisor_3 hinder the constant cleaning in the block driver1.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_5 hinder the constant cleaning in the block driver2.
    You should achieve better results by setting this init to 1.
@@ -520,15 +506,15 @@ WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_10 hinder the co
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_11 hinder the constant cleaning in the block driver2.
    You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch dividend_11 hinder the constant cleaning in the block driver2.
+WARNING:Xst:1426 - The value init of the FF/Latch divisor_3 hinder the constant cleaning in the block driver2.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_3 hinder the constant cleaning in the block driver3.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch SETPOINT_LAST_5 hinder the constant cleaning in the block driver3.
    You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch dividend_11 hinder the constant cleaning in the block driver3.
+WARNING:Xst:1426 - The value init of the FF/Latch divisor_3 hinder the constant cleaning in the block driver3.
    You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch dividend_11 hinder the constant cleaning in the block driver4.
+WARNING:Xst:1426 - The value init of the FF/Latch divisor_3 hinder the constant cleaning in the block driver4.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_4> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_6> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
@@ -542,7 +528,7 @@ WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_13> has a constant value of 0 in bloc
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_14> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_15> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <driver4>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <dividend_0> has a constant value of 0 in block <driver4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <divisor_0> has a constant value of 0 in block <driver4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_0> has a constant value of 0 in block <driver4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_1> has a constant value of 0 in block <driver4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_2> has a constant value of 0 in block <driver4>. This FF/Latch will be trimmed during the optimization process.
@@ -560,19 +546,20 @@ WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_13> has a constant value of 0 in bloc
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_14> has a constant value of 0 in block <driver4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_15> has a constant value of 0 in block <driver4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <dividend_0> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <divisor_0> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_0> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_1> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_2> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_3> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_4> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_6> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_5> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_9> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_10> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_12> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_13> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_14> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_15> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <dividend_0> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <divisor_0> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_0> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_1> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_2> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
@@ -584,7 +571,7 @@ WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_13> has a constant value of 0 in bloc
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_14> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_15> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <dividend_0> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <divisor_0> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_0> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_1> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_2> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
@@ -671,17 +658,17 @@ Macro Statistics
 # FSMs                                                 : 2
 # Multipliers                                          : 20
  16x16-bit multiplier                                  : 4
- 16x17-bit multiplier                                  : 4
- 17x16-bit multiplier                                  : 8
+ 16x20-bit multiplier                                  : 4
+ 20x16-bit multiplier                                  : 8
  6x11-bit multiplier                                   : 4
 # Adders/Subtractors                                   : 104
  11-bit adder                                          : 4
  16-bit adder                                          : 36
  16-bit subtractor                                     : 20
- 17-bit addsub                                         : 4
- 22-bit adder                                          : 4
+ 20-bit addsub                                         : 4
  24-bit adder                                          : 8
  24-bit subtractor                                     : 4
+ 25-bit adder                                          : 4
  28-bit subtractor                                     : 4
  6-bit adder                                           : 20
 # Counters                                             : 9
@@ -690,26 +677,22 @@ Macro Statistics
  17-bit up counter                                     : 4
 # Accumulators                                         : 4
  24-bit up accumulator                                 : 4
-# Registers                                            : 1150
- Flip-Flops                                            : 1150
+# Registers                                            : 1098
+ Flip-Flops                                            : 1098
 # Latches                                              : 4
  16-bit latch                                          : 4
-# Comparators                                          : 161
+# Comparators                                          : 121
  11-bit comparator greatequal                          : 4
- 16-bit comparator equal                               : 4
- 16-bit comparator greatequal                          : 24
+ 16-bit comparator greatequal                          : 12
  16-bit comparator greater                             : 32
  16-bit comparator less                                : 28
- 16-bit comparator lessequal                           : 32
+ 16-bit comparator lessequal                           : 20
  16-bit comparator not equal                           : 4
- 17-bit comparator greatequal                          : 4
- 17-bit comparator less                                : 4
- 22-bit comparator greater                             : 4
- 22-bit comparator lessequal                           : 4
- 23-bit comparator greatequal                          : 4
- 23-bit comparator lessequal                           : 4
- 31-bit comparator greatequal                          : 4
- 31-bit comparator less                                : 4
+ 20-bit comparator greatequal                          : 4
+ 20-bit comparator less                                : 4
+ 25-bit comparator greater                             : 4
+ 26-bit comparator greatequal                          : 4
+ 26-bit comparator lessequal                           : 4
  8-bit comparator equal                                : 1
 # Xors                                                 : 4
  1-bit xor2                                            : 4
@@ -719,6 +702,10 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch dividend_5 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch dividend_7 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch dividend_11 hinder the constant cleaning in the block drivermotor.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch dividend_12 hinder the constant cleaning in the block drivermotor.
@@ -741,22 +728,34 @@ WARNING:Xst:1426 - The value init of the FF/Latch dividend_20 hinder the constan
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch dividend_21 hinder the constant cleaning in the block drivermotor.
    You should achieve better results by setting this init to 1.
-WARNING:Xst:1293 - FF/Latch <dividend_31> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_30> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_29> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_28> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_27> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_26> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_25> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_24> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_23> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_22> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_10> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_9> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_8> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_7> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch divisor_3 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch divisor_6 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch divisor_7 hinder the constant cleaning in the block drivermotor.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <divisor_13> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_14> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_15> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_0> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_1> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_2> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_3> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_4> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_6> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_5> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_8> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_9> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_10> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_22> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_23> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_24> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_25> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_26> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_27> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_28> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_29> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_30> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_31> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_1> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_2> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
@@ -769,14 +768,19 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_10> has a c
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_13> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_14> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_15> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_0> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_1> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_2> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_3> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dividend_4> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
-INFO:Xst:2261 - The FF/Latch <dividend_11> in Unit <drivermotor> is equivalent to the following 10 FFs/Latches, which will be removed : <dividend_12> <dividend_13> <dividend_14> <dividend_15> <dividend_16> <dividend_17> <dividend_18> <dividend_19> <dividend_20> <dividend_21> 
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_0> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_1> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_2> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_4> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_5> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_8> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_9> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_10> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_11> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <divisor_12> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <RPM_DIFF0_15> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <RPM_DIFF_15> 
+INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
+INFO:Xst:2261 - The FF/Latch <divisor_3> in Unit <drivermotor> is equivalent to the following 15 FFs/Latches, which will be removed : <divisor_6> <divisor_7> <dividend_5> <dividend_7> <dividend_11> <dividend_12> <dividend_13> <dividend_14> <dividend_15> <dividend_16> <dividend_17> <dividend_18> <dividend_19> <dividend_20> <dividend_21> 
 
 Optimizing unit <m> ...
 
@@ -785,15 +789,13 @@ Optimizing unit <Write_to_USB> ...
 Optimizing unit <micro_com2> ...
 
 Optimizing unit <drivermotor> ...
-WARNING:Xst:1426 - The value init of the FF/Latch driver1/SETPOINT_LAST_5 hinder the constant cleaning in the block m.
+WARNING:Xst:1426 - The value init of the FF/Latch driver1/SETPOINT_LAST_2 hinder the constant cleaning in the block m.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch driver1/SETPOINT_LAST_6 hinder the constant cleaning in the block m.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch driver1/SETPOINT_LAST_7 hinder the constant cleaning in the block m.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch driver1/SETPOINT_LAST_8 hinder the constant cleaning in the block m.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch driver1/SETPOINT_LAST_9 hinder the constant cleaning in the block m.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch driver1/SETPOINT_LAST_10 hinder the constant cleaning in the block m.
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch driver1/SETPOINT_LAST_11 hinder the constant cleaning in the block m.
    You should achieve better results by setting this init to 1.
@@ -819,8 +821,7 @@ WARNING:Xst:1426 - The value init of the FF/Latch driver3/SETPOINT_LAST_5 hinder
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1426 - The value init of the FF/Latch driver4/TRACK hinder the constant cleaning in the block m.
    You should achieve better results by setting this init to 1.
-WARNING:Xst:1293 - FF/Latch <driver3/SETPOINT_LAST_4> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver3/SETPOINT_LAST_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <driver3/SETPOINT_LAST_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver3/SETPOINT_LAST_1> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver3/SETPOINT_LAST_0> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver2/SETPOINT_LAST_15> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
@@ -838,10 +839,11 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LA
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_14> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_13> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_12> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_6> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_10> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_9> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_5> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_4> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_3> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_1> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/SETPOINT_LAST_0> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/M_Kd_fp_7> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
@@ -871,7 +873,7 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver3/SETPOINT_LA
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver3/SETPOINT_LAST_8> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver3/SETPOINT_LAST_7> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver3/SETPOINT_LAST_6> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/CHANGE> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver3/SETPOINT_LAST_4> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <prl_com/motor_rpm_high_3_7> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/motor_rpm_high_3_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/motor_rpm_high_3_5> of sequential type is unconnected in block <m>.
@@ -999,22 +1001,6 @@ WARNING:Xst:2677 - Node <driver4/RPM_DIFF0_3> of sequential type is unconnected 
 WARNING:Xst:2677 - Node <driver4/RPM_DIFF0_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver4/RPM_DIFF0_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver4/RPM_DIFF0_0> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_7> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver4/LIM_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_show_15> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_show_14> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_show_13> of sequential type is unconnected in block <m>.
@@ -1046,22 +1032,6 @@ WARNING:Xst:2677 - Node <driver3/RPM_DIFF0_3> of sequential type is unconnected 
 WARNING:Xst:2677 - Node <driver3/RPM_DIFF0_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/RPM_DIFF0_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/RPM_DIFF0_0> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_7> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/LIM_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_show_15> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_show_14> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_show_13> of sequential type is unconnected in block <m>.
@@ -1093,22 +1063,8 @@ WARNING:Xst:2677 - Node <driver2/RPM_DIFF0_3> of sequential type is unconnected 
 WARNING:Xst:2677 - Node <driver2/RPM_DIFF0_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/RPM_DIFF0_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/RPM_DIFF0_0> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_7> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/LIM_0> of sequential type is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_P_OVERFLOW> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver3/M_P_OVERFLOW> is unconnected in block <m>.
 WARNING:Xst:1426 - The value init of the FF/Latch driver4/M_Kp_fp_7 hinder the constant cleaning in the block m.
    You should achieve better results by setting this init to 0.
 WARNING:Xst:1426 - The value init of the FF/Latch driver4/M_Kp_fp_9 hinder the constant cleaning in the block m.
@@ -1117,13 +1073,25 @@ WARNING:Xst:1426 - The value init of the FF/Latch driver4/M_Kp_fp_10 hinder the 
    You should achieve better results by setting this init to 0.
 WARNING:Xst:1426 - The value init of the FF/Latch driver4/M_Kp_fp_13 hinder the constant cleaning in the block m.
    You should achieve better results by setting this init to 1.
-WARNING:Xst:1293 - FF/Latch <driver4/M_Kp_fp_6> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_8> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_11> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_12> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_14> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_15> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_16> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <driver4/M_ERR_3> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_4> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_5> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_6> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_7> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_8> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_9> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_10> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_11> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_12> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_13> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_14> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_15> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/BRIDGE> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/MISS> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_0> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_1> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_3> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR0_0> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR0_1> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR0_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
@@ -1139,39 +1107,18 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR0_11> 
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR0_12> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR0_13> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR0_14> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_0> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_1> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_3> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_4> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_5> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_6> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_7> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_8> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_9> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_10> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_11> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_12> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_13> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_14> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/divisor_15> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_0> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_1> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_3> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_4> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_5> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_5> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_6> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_7> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_8> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_9> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_10> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_11> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_12> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_13> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_14> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_15> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR0_15> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_0> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_1> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_8> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_9> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_10> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_11> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_12> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_13> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_14> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_15> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_PID_0> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_PID_1> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_PID_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
@@ -1183,7 +1130,18 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_PID_7> ha
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_PID_8> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_PID_9> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_PID_10> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR0_15> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_4> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_5> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_6> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_8> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_11> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_12> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_14> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_15> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_16> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_17> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_18> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kp_fp_19> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_0> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_1> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
@@ -1192,37 +1150,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_4> h
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_5> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_6> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_7> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_8> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_9> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_10> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_11> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_12> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_13> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_14> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR1_15> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_0> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_1> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_2> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_3> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_ERR_4> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <driver4/M_P_OVERFLOW> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_P_OVERFLOW> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_7> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver3/M_ERR_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_ERR1_15> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_ERR1_14> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_ERR1_13> of sequential type is unconnected in block <m>.
@@ -1239,6 +1166,22 @@ WARNING:Xst:2677 - Node <driver3/M_ERR1_3> of sequential type is unconnected in 
 WARNING:Xst:2677 - Node <driver3/M_ERR1_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_ERR1_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_ERR1_0> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_15> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_14> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_13> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_12> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_11> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_10> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_9> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_8> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_7> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_6> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_5> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_4> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_3> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_2> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_1> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver3/M_ERR_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_ERR0_15> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_ERR0_14> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_ERR0_13> of sequential type is unconnected in block <m>.
@@ -1255,22 +1198,6 @@ WARNING:Xst:2677 - Node <driver3/M_ERR0_3> of sequential type is unconnected in 
 WARNING:Xst:2677 - Node <driver3/M_ERR0_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_ERR0_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/M_ERR0_0> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_7> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <driver2/M_ERR_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_ERR1_15> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_ERR1_14> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_ERR1_13> of sequential type is unconnected in block <m>.
@@ -1287,6 +1214,22 @@ WARNING:Xst:2677 - Node <driver2/M_ERR1_3> of sequential type is unconnected in 
 WARNING:Xst:2677 - Node <driver2/M_ERR1_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_ERR1_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_ERR1_0> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_15> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_14> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_13> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_12> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_11> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_10> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_9> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_8> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_7> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_6> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_5> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_4> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_3> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_2> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_1> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver2/M_ERR_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_ERR0_15> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_ERR0_14> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/M_ERR0_13> of sequential type is unconnected in block <m>.
@@ -1335,15 +1278,401 @@ WARNING:Xst:2677 - Node <driver1/M_ERR0_3> of sequential type is unconnected in 
 WARNING:Xst:2677 - Node <driver1/M_ERR0_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver1/M_ERR0_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver1/M_ERR0_0> of sequential type is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/CHANGE> is unconnected in block <m>.
+WARNING:Xst:1426 - The value init of the FF/Latch driver4/M_Kd_fp_8 hinder the constant cleaning in the block m.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch driver4/M_Kd_fp_11 hinder the constant cleaning in the block m.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <driver4/TRACK> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kd_fp_11> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kd_fp_8> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/M_Kd_fp_7> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/RPM_DIFF0_15> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_15> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_15> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_14> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_14> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_13> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_13> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_12> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_12> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_11> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_11> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_10> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_10> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_9> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_9> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_8> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_8> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_7> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_7> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_6> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_6> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_4> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_4> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_5> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_5> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_3> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_3> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_2> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_2> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_1> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_1> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/RPM_DIR> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_0> is unconnected in block <m>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <driver4/M_RPM_DIR_LAST_0> is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_23> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_22> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_21> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_20> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_19> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_18> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_17> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_16> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_15> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_14> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_13> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_12> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_11> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_10> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_9> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_8> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_7> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_6> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_5> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_4> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_3> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_2> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_1> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/RPM_F_0> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/hall3_past> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/hall2_past> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/hall1_past> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL1_COUNT_5> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL1_COUNT_4> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL1_COUNT_3> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL1_COUNT_2> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL1_COUNT_1> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL1_COUNT_0> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL2_COUNT_5> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL2_COUNT_4> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL2_COUNT_3> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL2_COUNT_2> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL2_COUNT_1> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL2_COUNT_0> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL3_COUNT_5> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL3_COUNT_4> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL3_COUNT_3> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL3_COUNT_2> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL3_COUNT_1> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <driver4/HALL3_COUNT_0> of sequential type is unconnected in block <m>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <driver1/SETPOINT_LAST_11> in Unit <m> is equivalent to the following 5 FFs/Latches, which will be removed : <driver1/SETPOINT_LAST_10> <driver1/SETPOINT_LAST_9> <driver1/SETPOINT_LAST_8> <driver1/SETPOINT_LAST_7> <driver1/SETPOINT_LAST_5> 
-INFO:Xst:2261 - The FF/Latch <driver2/SETPOINT_LAST_11> in Unit <m> is equivalent to the following 5 FFs/Latches, which will be removed : <driver2/SETPOINT_LAST_10> <driver2/SETPOINT_LAST_9> <driver2/SETPOINT_LAST_8> <driver2/SETPOINT_LAST_7> <driver2/SETPOINT_LAST_5> 
-INFO:Xst:2261 - The FF/Latch <driver4/M_Kd_fp_11> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver4/M_Kd_fp_8> 
+INFO:Xst:2261 - The FF/Latch <driver3/SETPOINT_LAST_5> in Unit <m> is equivalent to the following 12 FFs/Latches, which will be removed : <driver3/SETPOINT_LAST_3> <driver2/SETPOINT_LAST_11> <driver2/SETPOINT_LAST_10> <driver2/SETPOINT_LAST_9> <driver2/SETPOINT_LAST_8> <driver2/SETPOINT_LAST_7> <driver2/SETPOINT_LAST_5> <driver1/SETPOINT_LAST_11> <driver1/SETPOINT_LAST_8> <driver1/SETPOINT_LAST_7> <driver1/SETPOINT_LAST_6> <driver1/SETPOINT_LAST_2> 
 INFO:Xst:2261 - The FF/Latch <driver4/M_Kp_fp_10> in Unit <m> is equivalent to the following 2 FFs/Latches, which will be removed : <driver4/M_Kp_fp_9> <driver4/M_Kp_fp_7> 
-INFO:Xst:2261 - The FF/Latch <driver3/SETPOINT_LAST_5> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver3/SETPOINT_LAST_3> 
 INFO:Xst:2261 - The FF/Latch <driver3/M_Kd_fp_11> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver3/M_Kd_fp_8> 
-Found area constraint ratio of 100 (+ 5) on block m, actual ratio is 183.
+Found area constraint ratio of 100 (+ 5) on block m, actual ratio is 185.
 Optimizing block <m> to meet ratio 100 (+ 5) of 3584 slices :
-WARNING:Xst:2254 - Area constraint could not be met for block <m>, final ratio is 180.
+WARNING:Xst:2254 - Area constraint could not be met for block <m>, final ratio is 181.
+INFO:Xst:2260 - The FF/Latch <blk0000006a> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00001041> 
+INFO:Xst:2260 - The FF/Latch <blk0000006a> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00001041> 
+INFO:Xst:2260 - The FF/Latch <blk0000006a> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00001041> 
+INFO:Xst:2260 - The FF/Latch <blk0000006a> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00001041> 
+INFO:Xst:2260 - The FF/Latch <blk0000006a> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00001041> 
+INFO:Xst:2260 - The FF/Latch <blk0000006a> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00001041> 
+INFO:Xst:2260 - The FF/Latch <blk0000006a> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00001041> 
+INFO:Xst:2260 - The FF/Latch <blk0000006a> in Unit <blk00000003> is equivalent to the following FF/Latch : <blk00001041> 
+
+Final Macro Processing ...
+
+Processing Unit <m> :
+	Found 2-bit shift register for signal <FT245/cnt1_FSM_FFd6>.
+Unit <m> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 589
+ Flip-Flops                                            : 589
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : m.ngr
+Top Level Output File Name         : m
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 67
+
+Cell Usage :
+# BELS                             : 14719
+#      GND                         : 5
+#      INV                         : 856
+#      LUT1                        : 238
+#      LUT2                        : 1051
+#      LUT2_D                      : 3
+#      LUT2_L                      : 8
+#      LUT3                        : 2874
+#      LUT3_D                      : 15
+#      LUT3_L                      : 51
+#      LUT4                        : 734
+#      LUT4_D                      : 3
+#      LUT4_L                      : 42
+#      MULT_AND                    : 107
+#      MUXCY                       : 4624
+#      MUXF5                       : 7
+#      VCC                         : 5
+#      XORCY                       : 4096
+# FlipFlops/Latches                : 9426
+#      FD                          : 8892
+#      FDE                         : 414
+#      FDR                         : 95
+#      FDRE                        : 9
+#      LD                          : 16
+# Shift Registers                  : 209
+#      SRL16                       : 200
+#      SRL16E                      : 1
+#      SRLC16                      : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 66
+#      IBUF                        : 29
+#      OBUF                        : 37
+# MULTs                            : 16
+#      MULT18X18                   : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400tq144-4 
+
+ Number of Slices:                     6539  out of   3584   182% (*) 
+ Number of Slice Flip Flops:           9426  out of   7168   131% (*) 
+ Number of 4 input LUTs:               6084  out of   7168    84%  
+    Number used as logic:              5875
+    Number used as Shift registers:     209
+ Number of IOs:                          67
+ Number of bonded IOBs:                  67  out of     97    69%  
+ Number of MULT18X18s:                   16  out of     16   100%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------+---------------------------+-------+
+Clock Signal                                     | Clock buffer(FF name)     | Load  |
+-------------------------------------------------+---------------------------+-------+
+clk                                              | BUFGP                     | 9619  |
+driver1/M_show_not0001(driver1/M_show_not00011:O)| NONE(*)(driver1/M_show_15)| 16    |
+-------------------------------------------------+---------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 30.557ns (Maximum Frequency: 32.726MHz)
+   Minimum input arrival time before clock: 8.266ns
+   Maximum output required time after clock: 10.632ns
+   Maximum combinational path delay: 9.182ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 30.557ns (frequency: 32.726MHz)
+  Total number of paths / destination ports: 1652540235 / 9996
+-------------------------------------------------------------------------
+Delay:               30.557ns (Levels of Logic = 30)
+  Source:            driver1/M_RPM_DIR_2 (FF)
+  Destination:       driver1/M_PID_10 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: driver1/M_RPM_DIR_2 to driver1/M_PID_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.720   1.342  driver1/M_RPM_DIR_2 (driver1/M_RPM_DIR_2)
+     LUT1:I0->O            1   0.551   0.000  driver1/Msub_M_ERR0_sub0000_cy<2>_rt (driver1/Msub_M_ERR0_sub0000_cy<2>_rt)
+     MUXCY:S->O            1   0.500   0.000  driver1/Msub_M_ERR0_sub0000_cy<2> (driver1/Msub_M_ERR0_sub0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<3> (driver1/Msub_M_ERR0_sub0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<4> (driver1/Msub_M_ERR0_sub0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<5> (driver1/Msub_M_ERR0_sub0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<6> (driver1/Msub_M_ERR0_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<7> (driver1/Msub_M_ERR0_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<8> (driver1/Msub_M_ERR0_sub0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<9> (driver1/Msub_M_ERR0_sub0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<10> (driver1/Msub_M_ERR0_sub0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<11> (driver1/Msub_M_ERR0_sub0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<12> (driver1/Msub_M_ERR0_sub0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR0_sub0000_cy<13> (driver1/Msub_M_ERR0_sub0000_cy<13>)
+     XORCY:CI->O           1   0.904   1.140  driver1/Msub_M_ERR0_sub0000_xor<14> (driver1/M_ERR0_sub0000<14>)
+     LUT1:I0->O            1   0.551   0.000  driver1/Madd_M_ERR_add0000_cy<14>_rt (driver1/Madd_M_ERR_add0000_cy<14>_rt)
+     MUXCY:S->O            0   0.500   0.000  driver1/Madd_M_ERR_add0000_cy<14> (driver1/Madd_M_ERR_add0000_cy<14>)
+     XORCY:CI->O          70   0.904   2.071  driver1/Madd_M_ERR_add0000_xor<15> (driver1/M_ERR_add0000<15>)
+     MULT18X18:B15->P28    1   4.639   0.996  driver1/Mmult_M_P_fp_mult0000_submult_0 (driver1/Mmult_M_P_fp_mult0000_submult_0_28)
+     LUT2:I1->O            1   0.551   0.000  driver1/Mmult_M_P_fp_mult00000_Madd_lut<28> (driver1/Mmult_M_P_fp_mult00000_Madd_lut<28>)
+     MUXCY:S->O            1   0.500   0.000  driver1/Mmult_M_P_fp_mult00000_Madd_cy<28> (driver1/Mmult_M_P_fp_mult00000_Madd_cy<28>)
+     XORCY:CI->O           4   0.904   1.256  driver1/Mmult_M_P_fp_mult00000_Madd_xor<29> (driver1/M_P_fp_mult0000<29>)
+     LUT4:I0->O            1   0.551   0.000  driver1/Mcompar_M_P_cmp_ge0000_lut<5> (driver1/Mcompar_M_P_cmp_ge0000_lut<5>)
+     MUXCY:S->O            1   0.739   0.869  driver1/Mcompar_M_P_cmp_ge0000_cy<5> (driver1/Mcompar_M_P_cmp_ge0000_cy<5>)
+     LUT3:I2->O           51   0.551   2.030  driver1/Mcompar_M_P_cmp_ge0000_cy<7>1 (driver1/M_P_cmp_ge0000)
+     LUT3:I2->O            1   0.551   0.801  driver1/M_P_mux0001<3>1 (driver1/M_P_mux0001<3>)
+     INV:I->O              1   0.551   0.000  driver1/Msub_M_PD_sub0000_lut<3>1_INV_0 (driver1/Msub_M_PD_sub0000_lut<3>)
+     XORCY:LI->O           4   0.622   0.943  driver1/Msub_M_PD_sub0000_xor<3> (driver1/M_PD_sub0000<3>)
+     LUT4:I3->O            1   0.551   0.827  driver1/Madd_M_PD_ABS_addsub0000_Madd_cy<4>11_SW0 (N306)
+     LUT4_D:I3->O          3   0.551   0.933  driver1/Madd_M_PD_ABS_addsub0000_Madd_cy<6>11 (driver1/Madd_M_PD_ABS_addsub0000_Madd_cy<6>)
+     LUT4:I3->O            1   0.551   0.000  driver1/M_PID_mux0001<2>1 (driver1/M_PID_mux0001<2>)
+     FDE:D                     0.203          driver1/M_PID_8
+    ----------------------------------------
+    Total                     30.557ns (17.349ns logic, 13.208ns route)
+                                       (56.8% logic, 43.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 498 / 232
+-------------------------------------------------------------------------
+Offset:              8.266ns (Levels of Logic = 5)
+  Source:            RPM_IN<3> (PAD)
+  Destination:       prl_com/motor_rpm_tmp_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: RPM_IN<3> to prl_com/motor_rpm_tmp_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.821   1.198  RPM_IN_3_IBUF (RPM_IN_3_IBUF)
+     LUT4:I1->O            1   0.551   1.140  prl_com/state_cmp_eq0000826 (prl_com/state_cmp_eq0000826)
+     LUT4:I0->O            8   0.551   1.422  prl_com/state_cmp_eq00008136 (prl_com/state_cmp_eq0000)
+     LUT4:I0->O            8   0.551   1.278  prl_com/motor_rpm_tmp_mux0000<0>2 (prl_com/N02)
+     LUT4:I1->O            1   0.551   0.000  prl_com/motor_rpm_tmp_mux0000<7>1 (prl_com/motor_rpm_tmp_mux0000<7>)
+     FDE:D                     0.203          prl_com/motor_rpm_tmp_7
+    ----------------------------------------
+    Total                      8.266ns (3.228ns logic, 5.038ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'driver1/M_show_not0001'
+  Total number of paths / destination ports: 288 / 16
+-------------------------------------------------------------------------
+Offset:              6.798ns (Levels of Logic = 4)
+  Source:            TEST_KEY<0> (PAD)
+  Destination:       driver1/M_show_10 (LATCH)
+  Destination Clock: driver1/M_show_not0001 falling
+
+  Data Path: TEST_KEY<0> to driver1/M_show_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.821   1.405  TEST_KEY_0_IBUF (TEST_KEY_0_IBUF)
+     LUT4:I0->O           16   0.551   1.576  driver1/M_show_cmp_eq00051 (driver1/M_show_cmp_eq0005)
+     LUT4:I0->O            1   0.551   1.140  driver1/M_show_mux0000<10>4 (driver1/M_show_mux0000<10>4)
+     LUT2:I0->O            1   0.551   0.000  driver1/M_show_mux0000<10>10 (driver1/M_show_mux0000<10>)
+     LD:D                      0.203          driver1/M_show_10
+    ----------------------------------------
+    Total                      6.798ns (2.677ns logic, 4.121ns route)
+                                       (39.4% logic, 60.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 69 / 33
+-------------------------------------------------------------------------
+Offset:              10.632ns (Levels of Logic = 3)
+  Source:            prl_com/FREE_WHEELS (FF)
+  Destination:       M1n1 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: prl_com/FREE_WHEELS to M1n1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             16   0.720   1.432  prl_com/FREE_WHEELS (prl_com/FREE_WHEELS)
+     LUT2:I1->O            3   0.551   0.933  driver4/M3n1_SW0 (N2)
+     LUT4:I3->O            1   0.551   0.801  driver4/M3n1 (M3n4_OBUF)
+     OBUF:I->O                 5.644          M3n4_OBUF (M3n4)
+    ----------------------------------------
+    Total                     10.632ns (7.466ns logic, 3.166ns route)
+                                       (70.2% logic, 29.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 51 / 27
+-------------------------------------------------------------------------
+Delay:               9.182ns (Levels of Logic = 3)
+  Source:            HALL11 (PAD)
+  Destination:       M1n1 (PAD)
+
+  Data Path: HALL11 to M1n1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.821   1.365  HALL11_IBUF (HALL11_IBUF)
+     LUT4:I1->O            1   0.551   0.801  driver1/M3p1 (M3p1_OBUF)
+     OBUF:I->O                 5.644          M3p1_OBUF (M3p1)
+    ----------------------------------------
+    Total                      9.182ns (7.016ns logic, 2.166ns route)
+                                       (76.4% logic, 23.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 90.00 secs
+Total CPU time to Xst completion: 90.06 secs
+ 
+--> 
+
+Total memory usage is 404184 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  806 (   0 filtered)
+Number of infos    :   34 (   0 filtered)
+

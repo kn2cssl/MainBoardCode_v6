@@ -134,7 +134,7 @@ component drivermotor is
 	 
 	
 
-   signal SPEED1 : std_logic_vector(15 downto 0):="0000111110100000";--(others=>'0'); 
+   signal SPEED1 : std_logic_vector(15 downto 0):="0000100111000100";--(others=>'0'); 
 	signal SPEED2 : std_logic_vector(15 downto 0):="0000111110100000";--(others=>'0'); 
 	signal SPEED3 : std_logic_vector(15 downto 0):="0000000000101000";--(others=>'0'); 
 	signal SPEED4 : std_logic_vector(15 downto 0):="0000000000000000";--(others=>'0'); 
