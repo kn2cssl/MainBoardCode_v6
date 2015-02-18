@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Feb 17 13:54:14 2015
+// Written by: Map P.20131013 on Wed Feb 18 17:13:42 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -70,6 +70,6 @@ COMP "LED<3>" LOCATE = SITE "P33" LEVEL 1;
 COMP "USB_WR" LOCATE = SITE "P95" LEVEL 1;
 COMP "PARITY_IN" LOCATE = SITE "P44" LEVEL 1;
 COMP "CLK_PAR" LOCATE = SITE "P46" LEVEL 1;
-NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "clk_IBUFG1" BEL "clk_IBUFG_BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 

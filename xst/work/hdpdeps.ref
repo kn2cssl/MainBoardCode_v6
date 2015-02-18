@@ -1,4 +1,4 @@
-V3 41
+V3 48
 FL C:/Users/Fatemeh/Desktop/MainBoardCode_v6/driver.vhd 2015/02/09.15:02:28 P.20131013
 FL C:/Users/Fatemeh/Desktop/MainBoardCode_v6/m.vhd 2015/02/09.15:21:53 P.20131013
 FL C:/Users/Fatemeh/Desktop/MainBoardCode_v6/micro_com2.vhd 2014/12/24.17:01:31 P.20131013
@@ -24,35 +24,42 @@ FL F:/GitHub/FPGA/driver1/maincodev6/m.vhd 2014/12/22.17:12:50 P.20131013
 FL F:/GitHub/FPGA/driver1/maincodev6/micro_com2.vhd 2014/12/24.17:01:31 P.20131013
 FL F:/GitHub/FPGA/driver1/maincodev6/pwm.vhd 2014/12/06.12:51:05 P.20131013
 FL F:/GitHub/FPGA/driver1/maincodev6/Write_to_USB.vhd 2014/11/29.23:41:01 P.20131013
-FL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd 2015/02/17.13:50:42 P.20131013
-EN work/drivermotor 1424168449 FL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd \
+FL F:/GitHub/FPGA/MainBoardCode_v6/clk_200M.vhd 2015/02/17.14:34:32 P.20131013
+EN work/clk_200M 1424266887 FL F:/GitHub/FPGA/MainBoardCode_v6/clk_200M.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/clk_200M/BEHAVIORAL 1424266888 \
+      FL F:/GitHub/FPGA/MainBoardCode_v6/clk_200M.vhd EN work/clk_200M 1424266887 \
+      CP BUFG CP DCM
+FL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd 2015/02/18.17:11:14 P.20131013
+EN work/drivermotor 1424266881 FL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/drivermotor/Behavioral 1424168450 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd EN work/drivermotor 1424168449 \
+AR work/drivermotor/Behavioral 1424266882 \
+      FL F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd EN work/drivermotor 1424266881 \
       CP PWM CP DIVIDER
-FL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd 2015/02/16.16:39:13 P.20131013
-EN work/m 1424168455 FL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd \
+FL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd 2015/02/17.16:43:07 P.20131013
+EN work/m 1424266889 FL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/m/Behavioral 1424168456 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd EN work/m 1424168455 CP drivermotor \
-      CP Write_to_USB CP micro_com2
+AR work/m/Behavioral 1424266890 \
+      FL F:/GitHub/FPGA/MainBoardCode_v6/m.vhd EN work/m 1424266889 CP drivermotor \
+      CP Write_to_USB CP micro_com2 CP clk_200M
 FL F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd 2014/12/24.17:01:31 P.20131013
-EN work/micro_com2 1424168453 FL F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd \
+EN work/micro_com2 1424266885 FL F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/micro_com2/Behavioral 1424168454 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd EN work/micro_com2 1424168453
+AR work/micro_com2/Behavioral 1424266886 \
+      FL F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd EN work/micro_com2 1424266885
 FL F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd 2014/12/06.12:51:05 P.20131013
-EN work/pwm 1424168447 FL F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd \
+EN work/pwm 1424266879 FL F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/pwm/Behavioral 1424168448 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd EN work/pwm 1424168447
+AR work/pwm/Behavioral 1424266880 \
+      FL F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd EN work/pwm 1424266879
 FL F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd 2014/11/29.23:41:01 P.20131013
-EN work/Write_to_USB 1424168451 \
+EN work/Write_to_USB 1424266883 \
       FL F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/Write_to_USB/Behavioral 1424168452 \
-      FL F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd EN work/Write_to_USB 1424168451
+AR work/Write_to_USB/Behavioral 1424266884 \
+      FL F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd EN work/Write_to_USB 1424266883
