@@ -509,7 +509,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 				
 				dividend  <= max ;
 				divisor   <= abs (M_ERR);--
-				KP4_fp    <= signed ( quotient(19 downto 0)) ; 
+				M_KP_fp    <= signed ( quotient(19 downto 0)) ; 
 			   
 --				if(abs(KP4_FP) >KP5_FP)then
 --				M_KP_fp <= KP5_FP;
