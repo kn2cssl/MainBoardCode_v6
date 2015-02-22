@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : xaw2vhdl
 --  /   /         Filename : clk_200M.vhd
--- /___/   /\     Timestamp : 02/17/2015 14:34:32
+-- /___/   /\     Timestamp : 02/22/2015 22:00:21
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: xaw2vhdl-intstyle F:/GitHub/FPGA/MainBoardCode_v6/ipcore_dir/clk_200M.xaw -st clk_200M.vhd
+--Command: xaw2vhdl-intstyle C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/ipcore_dir/clk_200M.xaw -st clk_200M.vhd
 --Design Name: clk_200M
 --Device: xc3s400-4tq144
 --

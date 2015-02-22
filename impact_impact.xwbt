@@ -1,8 +1,0 @@
-INTSTYLE=impact
-INFILE=F:\GitHub\FPGA\driver1\maincodev6\impact.xsl
-OUTFILE=F:\GitHub\FPGA\driver1\maincodev6\impact.xsl
-FAMILY=Multiple
-PART=Multiple
-WORKINGDIR=F:\GitHub\FPGA\driver1\maincodev6
-LICENSE=iMPACT
-USER_INFO=iMPACT

@@ -1,3 +1,0 @@
-vhdl work "pwm.vhd"
-vhdl work "ipcore_dir/mul.vhd"
-vhdl work "driver.vhd"

@@ -1,5 +1,5 @@
 
--- VHDL Instantiation Created from source file clk_200M.vhd -- 14:34:34 02/17/2015
+-- VHDL Instantiation Created from source file clk_200M.vhd -- 21:24:48 02/22/2015
 --
 -- Notes: 
 -- 1) This instantiation template has been automatically generated using types
