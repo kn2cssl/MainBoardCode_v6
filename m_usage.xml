@@ -4,8 +4,8 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="84">
-<DesignStatistics TimeStamp="Sun Feb 22 23:12:39 2015"><group name="NetStatistics">
+<DeviceUsageSummary rev="85">
+<DesignStatistics TimeStamp="Sun Feb 22 23:18:23 2015"><group name="NetStatistics">
 <item name="NumNets_Active" rev="84">
 <attrib name="value" value="3672"/></item>
 <item name="NumNets_Gnd" rev="84">
@@ -88,109 +88,42 @@
 <attrib name="value" value="907"/></item>
 </group>
 <group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="83">
-<attrib name="value" value="40"/></item>
-<item name="AGG_IO" rev="83">
-<attrib name="value" value="40"/></item>
-<item name="AGG_SLICE" rev="83">
-<attrib name="value" value="1820"/></item>
-<item name="NUM_4_INPUT_LUT" rev="83">
-<attrib name="value" value="1755"/></item>
-<item name="NUM_BONDED_IOB" rev="83">
-<attrib name="value" value="40"/></item>
-<item name="NUM_BUFGMUX" rev="83">
+<item name="AGG_BONDED_IO" rev="85">
+<attrib name="value" value="67"/></item>
+<item name="AGG_IO" rev="85">
+<attrib name="value" value="67"/></item>
+<item name="AGG_SLICE" rev="85">
+<attrib name="value" value="5457"/></item>
+<item name="NUM_4_INPUT_LUT" rev="85">
+<attrib name="value" value="7115"/></item>
+<item name="NUM_BONDED_IOB" rev="85">
+<attrib name="value" value="67"/></item>
+<item name="NUM_BUFGMUX" rev="85">
 <attrib name="value" value="1"/></item>
-<item name="NUM_CYMUX" rev="83">
-<attrib name="value" value="1214"/></item>
-<item name="NUM_LUT_RT" rev="83">
-<attrib name="value" value="87"/></item>
-<item name="NUM_MULT18X18" rev="83">
-<attrib name="value" value="7"/></item>
-<item name="NUM_MULTAND" rev="83">
-<attrib name="value" value="8"/></item>
-<item name="NUM_SHIFT" rev="83">
-<attrib name="value" value="53"/></item>
-<item name="NUM_SLICEL" rev="83">
-<attrib name="value" value="1774"/></item>
-<item name="NUM_SLICEM" rev="83">
-<attrib name="value" value="46"/></item>
-<item name="NUM_SLICE_FF" rev="83">
-<attrib name="value" value="2105"/></item>
-<item name="NUM_SLICE_LATCH" rev="83">
+<item name="NUM_CYMUX" rev="85">
+<attrib name="value" value="5235"/></item>
+<item name="NUM_LUT_RT" rev="85">
+<attrib name="value" value="319"/></item>
+<item name="NUM_MULT18X18" rev="85">
 <attrib name="value" value="16"/></item>
-<item name="NUM_XOR" rev="83">
-<attrib name="value" value="1034"/></item>
-<item name="Xilinx Core div_gen_v3_0, Xilinx CORE Generator 14.7" rev="83">
-<attrib name="value" value="1"/></item>
+<item name="NUM_MULTAND" rev="85">
+<attrib name="value" value="92"/></item>
+<item name="NUM_SHIFT" rev="85">
+<attrib name="value" value="209"/></item>
+<item name="NUM_SLICEL" rev="85">
+<attrib name="value" value="4458"/></item>
+<item name="NUM_SLICEM" rev="85">
+<attrib name="value" value="999"/></item>
+<item name="NUM_SLICE_FF" rev="85">
+<attrib name="value" value="8210"/></item>
+<item name="NUM_SLICE_LATCH" rev="85">
+<attrib name="value" value="16"/></item>
+<item name="NUM_XOR" rev="85">
+<attrib name="value" value="4568"/></item>
+<item name="Xilinx Core div_gen_v3_0, Xilinx CORE Generator 14.7" rev="85">
+<attrib name="value" value="4"/></item>
 </group>
 </DesignStatistics>
-<DeviceUsage TimeStamp="Sun Feb 22 23:12:39 2015"><group name="SiteSummary">
-<item name="BUFGMUX" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="BUFGMUX_GCLKMUX" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="BUFGMUX_GCLK_BUFFER" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="IOB" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="40"/></item>
-<item name="IOB_INBUF" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="21"/></item>
-<item name="IOB_OUTBUF" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="19"/></item>
-<item name="IOB_PAD" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="40"/></item>
-<item name="MULT18X18" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="7"/></item>
-<item name="MULT18X18_BLACKBOX" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="7"/></item>
-<item name="SLICEL" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="1774"/></item>
-<item name="SLICEL_C1VDD" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="37"/></item>
-<item name="SLICEL_C2VDD" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="44"/></item>
-<item name="SLICEL_CYMUXF" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="626"/></item>
-<item name="SLICEL_CYMUXG" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="588"/></item>
-<item name="SLICEL_F" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="878"/></item>
-<item name="SLICEL_F5MUX" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
-<item name="SLICEL_FAND" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
-<item name="SLICEL_FFX" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="838"/></item>
-<item name="SLICEL_FFY" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="1232"/></item>
-<item name="SLICEL_G" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="824"/></item>
-<item name="SLICEL_GAND" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="5"/></item>
-<item name="SLICEL_GNDF" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="206"/></item>
-<item name="SLICEL_GNDG" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="176"/></item>
-<item name="SLICEL_XORF" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="534"/></item>
-<item name="SLICEL_XORG" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="500"/></item>
-<item name="SLICEM" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="46"/></item>
-<item name="SLICEM_F" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="7"/></item>
-<item name="SLICEM_FFX" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="7"/></item>
-<item name="SLICEM_FFY" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="44"/></item>
-<item name="SLICEM_G" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="46"/></item>
-<item name="SLICEM_GMC15_BLACKBOX" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="2"/></item>
-<item name="SLICEM_WSGEN" rev="84">
-<attrib name="total" value="1000000"/><attrib name="used" value="46"/></item>
-</group>
-</DeviceUsage>
 <ReportConfigData TimeStamp="Sun Feb 22 23:12:39 2015"><group name="SLICEL_CYMUXF">
 <item name="0" rev="84">
 <attrib name="0" value="626"/><attrib name="0_INV" value="0"/></item>
@@ -830,14 +763,6 @@
 <item name="1" rev="84">
 <attrib name="value" value="44"/></item>
 </group>
-<group name="SLICEL_XORF">
-<item name="0" rev="84">
-<attrib name="value" value="534"/></item>
-<item name="1" rev="84">
-<attrib name="value" value="534"/></item>
-<item name="O" rev="84">
-<attrib name="value" value="534"/></item>
-</group>
 <group name="SLICEL_FFX">
 <item name="CE" rev="84">
 <attrib name="value" value="162"/></item>
@@ -849,6 +774,14 @@
 <attrib name="value" value="838"/></item>
 <item name="SR" rev="84">
 <attrib name="value" value="25"/></item>
+</group>
+<group name="SLICEL_XORF">
+<item name="0" rev="84">
+<attrib name="value" value="534"/></item>
+<item name="1" rev="84">
+<attrib name="value" value="534"/></item>
+<item name="O" rev="84">
+<attrib name="value" value="534"/></item>
 </group>
 <group name="SLICEL_FFY">
 <item name="CE" rev="84">

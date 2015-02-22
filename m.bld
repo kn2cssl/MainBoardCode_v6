@@ -19,6 +19,15 @@ Done...
 
 Checking expanded design ...
 WARNING:NgdBuild:483 - Attribute "INIT" on
+   "driver4/DIVIDE/blk00000003/sig0000017e" is on the wrong type of object. 
+   Please see the Constraints Guide for more information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on
+   "driver3/DIVIDE/blk00000003/sig0000017e" is on the wrong type of object. 
+   Please see the Constraints Guide for more information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on
+   "driver2/DIVIDE/blk00000003/sig0000017e" is on the wrong type of object. 
+   Please see the Constraints Guide for more information on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on
    "driver1/DIVIDE/blk00000003/sig0000017e" is on the wrong type of object. 
    Please see the Constraints Guide for more information on this attribute.
 
@@ -31,12 +40,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   1
+  Number of warnings:   4
 
-Total memory usage is 179044 kilobytes
+Total memory usage is 234468 kilobytes
 
 Writing NGD file "m.ngd" ...
-Total REAL time to NGDBUILD completion:  9 sec
-Total CPU time to NGDBUILD completion:   9 sec
+Total REAL time to NGDBUILD completion:  33 sec
+Total CPU time to NGDBUILD completion:   33 sec
 
 Writing NGDBUILD log file "m.bld"...

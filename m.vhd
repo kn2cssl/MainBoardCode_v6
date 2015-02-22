@@ -26,43 +26,43 @@
 					HALL3_COUNT :in std_logic_vector(4 downto 0);
 					HALL4_COUNT :in std_logic_vector(4 downto 0);
 				
---					--MOTOR2	
---					HALL12:in std_logic;
---					HALL22:in std_logic;
---					HALL32:in std_logic;
---					
---					M1p2:out std_logic;
---					M1n2:out std_logic;
---					M2p2:out std_logic;
---					M2n2:out std_logic;
---					M3p2:out std_logic;
---					M3n2:out std_logic;
---					
---			
---				--MOTOR3	
---					HALL13:in std_logic;
---					HALL23:in std_logic;
---					HALL33:in std_logic;
---				
---					M1p3:out std_logic;
---					M1n3:out std_logic;
---					M2p3:out std_logic;
---					M2n3:out std_logic;
---					M3p3:out std_logic;
---					M3n3:out std_logic;
---				
---				
---				--MOTOR4	
---					HALL14:in std_logic;
---					HALL24:in std_logic;
---					HALL34:in std_logic;
---					
---					M1p4:out std_logic;
---					M1n4:out std_logic;
---					M2p4:out std_logic;
---					M2n4:out std_logic;
---					M3p4:out std_logic;
---					M3n4:out std_logic;	
+					--MOTOR2	
+					HALL12:in std_logic;
+					HALL22:in std_logic;
+					HALL32:in std_logic;
+					
+					M1p2:out std_logic;
+					M1n2:out std_logic;
+					M2p2:out std_logic;
+					M2n2:out std_logic;
+					M3p2:out std_logic;
+					M3n2:out std_logic;
+					
+			
+				--MOTOR3	
+					HALL13:in std_logic;
+					HALL23:in std_logic;
+					HALL33:in std_logic;
+				
+					M1p3:out std_logic;
+					M1n3:out std_logic;
+					M2p3:out std_logic;
+					M2n3:out std_logic;
+					M3p3:out std_logic;
+					M3n3:out std_logic;
+				
+				
+				--MOTOR4	
+					HALL14:in std_logic;
+					HALL24:in std_logic;
+					HALL34:in std_logic;
+					
+					M1p4:out std_logic;
+					M1n4:out std_logic;
+					M2p4:out std_logic;
+					M2n4:out std_logic;
+					M3p4:out std_logic;
+					M3n4:out std_logic;	
 --				 
 				 --FT245  	
 					DATA_USB	 :	out std_logic_vector(7 downto 0);
@@ -189,15 +189,15 @@
 			--M1		
 				driver1:drivermotor port map(HALL1=>HALL11,HALL2=>HALL21,HALL3=>HALL31,CLK=>CLK,--hall_count=>hall1_count,
 				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1, LED=>LED,M_show=>M1_show,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY );
---			--M2	
---				driver2:drivermotor port map(HALL1=>HALL12,HALL2=>HALL22,HALL3=>HALL32,CLK=>CLK,TEST_KEY => TEST_KEY,
---				M1P=>M1P2,M1N=>M1N2,M2P=>M2P2,M2N=>M2N2,M3P=>M3P2,M3N=>M3N2,SPEED=>SPEED2,FREE_WHEEL => FREE_WHEELS_S);	
---			--M3	
---				driver3:drivermotor port map(HALL1=>HALL13,HALL2=>HALL23,HALL3=>HALL33,CLK=>CLK,TEST_KEY => TEST_KEY,
---				M1P=>M1P3,M1N=>M1N3,M2P=>M2P3,M2N=>M2N3,M3P=>M3P3,M3N=>M3N3,SPEED=>SPEED3,FREE_WHEEL => FREE_WHEELS_S);
---			--M4	
---				driver4:drivermotor port map(HALL1=>HALL14,HALL2=>HALL24,HALL3=>HALL34,CLK=>CLK,TEST_KEY => TEST_KEY,
---				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S);
+			--M2	
+				driver2:drivermotor port map(HALL1=>HALL12,HALL2=>HALL22,HALL3=>HALL32,CLK=>CLK,TEST_KEY => TEST_KEY,
+				M1P=>M1P2,M1N=>M1N2,M2P=>M2P2,M2N=>M2N2,M3P=>M3P2,M3N=>M3N2,SPEED=>SPEED2,FREE_WHEEL => FREE_WHEELS_S);	
+			--M3	
+				driver3:drivermotor port map(HALL1=>HALL13,HALL2=>HALL23,HALL3=>HALL33,CLK=>CLK,TEST_KEY => TEST_KEY,
+				M1P=>M1P3,M1N=>M1N3,M2P=>M2P3,M2N=>M2N3,M3P=>M3P3,M3N=>M3N3,SPEED=>SPEED3,FREE_WHEEL => FREE_WHEELS_S);
+			--M4	
+				driver4:drivermotor port map(HALL1=>HALL14,HALL2=>HALL24,HALL3=>HALL34,CLK=>CLK,TEST_KEY => TEST_KEY,
+				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S);
 
 		--	--FT245
 			  FT245:Write_to_USB port map(DATA1_IN =>M1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
