@@ -5,16 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="NgdBuild" num="483" delta="new" >Attribute &quot;<arg fmt="%s" index="1">INIT</arg>&quot; on &quot;<arg fmt="%s" index="2">driver4/DIVIDE/blk00000003/sig0000017e</arg>&quot; is on the wrong type of object.  Please see the Constraints Guide for more information on this attribute.
-</msg>
-
-<msg type="warning" file="NgdBuild" num="483" delta="new" >Attribute &quot;<arg fmt="%s" index="1">INIT</arg>&quot; on &quot;<arg fmt="%s" index="2">driver3/DIVIDE/blk00000003/sig0000017e</arg>&quot; is on the wrong type of object.  Please see the Constraints Guide for more information on this attribute.
-</msg>
-
-<msg type="warning" file="NgdBuild" num="483" delta="new" >Attribute &quot;<arg fmt="%s" index="1">INIT</arg>&quot; on &quot;<arg fmt="%s" index="2">driver2/DIVIDE/blk00000003/sig0000017e</arg>&quot; is on the wrong type of object.  Please see the Constraints Guide for more information on this attribute.
-</msg>
-
-<msg type="warning" file="NgdBuild" num="483" delta="old" >Attribute &quot;<arg fmt="%s" index="1">INIT</arg>&quot; on &quot;<arg fmt="%s" index="2">driver1/DIVIDE/blk00000003/sig0000017e</arg>&quot; is on the wrong type of object.  Please see the Constraints Guide for more information on this attribute.
+<msg type="warning" file="NgdBuild" num="483" delta="old" >Attribute &quot;<arg fmt="%s" index="1">INIT</arg>&quot; on &quot;<arg fmt="%s" index="2">DIVIDER1/blk00000003/sig0000017e</arg>&quot; is on the wrong type of object.  Please see the Constraints Guide for more information on this attribute.
 </msg>
 
 </messages>

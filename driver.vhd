@@ -17,10 +17,11 @@
 			M2n:out std_logic;
 			M3p:out std_logic;
 			M3n:out std_logic;
-			--CLK_200:in std_logic;
 			HALL_OUT:out std_logic;
 			SPEED :in std_logic_vector(15 downto 0);
 			M_show:out signed (15 downto 0);
+			ERR_M  :out std_logic_vector(15 downto 0);
+			kp_M   :in std_logic_vector(19 downto 0);	
 		   --HALL_COUNT :in std_logic_vector(4 downto 0);
 			LED   :out std_logic_vector(3 downto 0);
 			FREE_WHEEL : in std_logic;
@@ -41,16 +42,16 @@
 		  );
    end component;
 	
-	component DIVIDER is
-	port (
-			clk: in std_logic;
-			rfd: out std_logic;
-			dividend: in std_logic_vector(31 downto 0);
-			divisor: in std_logic_vector(15 downto 0);
-			quotient: out std_logic_vector(31 downto 0);
-			fractional: out std_logic_vector(15 downto 0)
-	     );
-   end component;
+--	component DIVIDER is
+--	port (
+--			clk: in std_logic;
+--			rfd: out std_logic;
+--			dividend: in std_logic_vector(31 downto 0);
+--			divisor: in std_logic_vector(15 downto 0);
+--			quotient: out std_logic_vector(31 downto 0);
+--			fractional: out std_logic_vector(15 downto 0)
+--	     );
+--   end component;
 	
 		
    signal PWM_S       : std_logic;
@@ -125,8 +126,8 @@
 	 constant lim400 : signed(15 DOWNTO 0) := "0000000110010000";--400  	
 	 constant lim10  : signed(15 DOWNTO 0) := "0000000000001010";--10  
 	 constant lim15  : signed(15 DOWNTO 0) := "0000000000001111";--15  
-	 constant lim80  : signed(15 DOWNTO 0) := "0000000001010000";--80
-	 constant lim5   : signed(15 DOWNTO 0) := "0000000000000101";--3
+	-- constant lim80  : signed(15 DOWNTO 0) := "0000000001010000";--80
+	-- constant lim5   : signed(15 DOWNTO 0) := "0000000000000101";--3
 	 --constant lim10  : signed(15 DOWNTO 0) := "0000000000001010";--10
 	 
 	 constant KP1_fp         : signed(19 DOWNTO 0):= "00000000011010000000";--10.10 --1.625
@@ -134,8 +135,8 @@
 	 constant KP3_fp         : signed(19 DOWNTO 0):= "00000000000001010000";--10.10 --0.078
     --constant KP5_fp         : signed(19 DOWNTO 0):= "00000110100000000000";--10.10	 
 	 
-	 constant lim_KP1_fp     : signed(19 DOWNTO 0):= "00000101001100000000";--10.10 --20.75
-	 constant lim_KP2_fp     : signed(19 DOWNTO 0):= "00000110011010000000";--7.10 --25.625
+	 --constant lim_KP1_fp     : signed(19 DOWNTO 0):= "00000101001100000000";--10.10 --20.75
+	 --constant lim_KP2_fp     : signed(19 DOWNTO 0):= "00000110011010000000";--7.10 --25.625
 	
   	 constant KP1_PLUS_fp    : signed(19 DOWNTO 0):= "00000000000000001000";--10.10 --0.0078
     constant KP2_PLUS_fp    : signed(19 DOWNTO 0):= "00000000000100000000";--10.10 --0.025
@@ -147,17 +148,17 @@
 	 constant KD_16  : signed(15 DOWNTO 0) := "0000000100000000";--16  --12.4 
 	 constant KD_8   : signed(15 DOWNTO 0) := "0000000010000000";--8   --12.4 
 	 
-    signal dividend   : std_logic_vector(31 downto 0):=(others=>'0');
-	 signal divisor    : std_logic_vector(15 downto 0):=(others=>'0');
-	 signal quotient   : std_logic_vector(31 downto 0):=(others=>'0');	 
-	 signal fractional : std_logic_vector(15 downto 0):=(others=>'0');
-	 signal rfd        : std_logic:='0';
+--  signal dividend   : std_logic_vector(31 downto 0):=(others=>'0');
+--	 signal divisor    : std_logic_vector(15 downto 0):=(others=>'0');
+--	 signal quotient   : std_logic_vector(31 downto 0):=(others=>'0');	 
+--	 signal fractional : std_logic_vector(15 downto 0):=(others=>'0');
+--	 signal rfd        : std_logic:='0';
 		
---		signal  M_ERROR   : signed(15 DOWNTO 0) :=(others=>'0'); --for show
+		signal  M_ERROR   : signed(15 DOWNTO 0) :=(others=>'0'); --for show
 --	   signal  LIM       : signed(15 DOWNTO 0) :=(others=>'0'); --for show
 --	   signal  M_PD_S    : signed(30 DOWNTO 0)  :=(others=>'0'); --for show28+20
---      signal  RPM_DIFF_show   : signed (15 DOWNTO 0)  :=(others=>'0');  --for show
---      signal  RPM_h_show   : signed (15 DOWNTO 0)  :=(others=>'0');  --for show
+--    signal  RPM_DIFF_show   : signed (15 DOWNTO 0)  :=(others=>'0');  --for show
+--    signal  RPM_h_show   : signed (15 DOWNTO 0)  :=(others=>'0');  --for show
 	 
 	 			 
 
@@ -165,7 +166,7 @@
 	begin
 	
 	PWM_1:PWM port map (OC_IN =>M_PID ,CLK =>CLK  ,OC_OUT=>PWM_S  );
-	DIVIDE:DIVIDER port map (clk => clk,rfd => rfd,dividend => dividend,divisor => divisor,quotient => quotient,fractional => fractional);
+	--DIVIDE:DIVIDER port map (clk => clk,rfd => rfd,dividend => dividend,divisor => divisor,quotient => quotient,fractional => fractional);
 	
 	
 
@@ -463,9 +464,14 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 			  	if (abs(limit_kp) > conv_std_logic_vector(MAX_P,12 ))then-- and rfd='1' ) then   
 		--	----   M_KP_fp <= (CONV_INTEGER(MAX_P )+ LIM10) / M_Err ;
 				
-				dividend  <= max ;
-				divisor   <= abs (M_ERR);
-				M_KP_fp   <= signed ( quotient(19 downto 0)) ; 
+--				dividend  <= max ;
+--				divisor   <= abs (M_ERR);
+--				M_KP_fp   <= signed ( quotient(19 downto 0)) ; 
+--			   
+
+
+				ERR_M     <= abs (M_ERR);
+				M_KP_fp   <= SIGNED(KP_M) ; 
 			   
 			   
 				end if;
@@ -584,7 +590,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					  
 					 -- M_PID <= "11001111100";
 					 -- DIR <= '1';
-					  --M_ERROR <= M_ERR;  --for show
+					  M_ERROR <= M_ERR;  --for show
 					 -- M_PD_S <= M_PD; 
 					  end if;
 					  end if;					  
@@ -597,7 +603,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					 -- signed("000000"& M_KP_fp(19 DOWNTO 10));
 										 M_RPM_DIR                                  when TEST_KEY="0011" else --3
 									    signed("00000" & M_PID )                   when TEST_KEY="0110" else --6
-										-- (m_error)                                  when TEST_KEY="1100" else --12
+										 (m_error)                                  when TEST_KEY="1100" else --12
 			                      signed("000000"& M_KP_fp(19 DOWNTO 10))    when TEST_KEY="1001" else    --9
                                signed("0000"& M_KD_fp(15 downto 4))       when TEST_KEY="0101" ;--else 
 										-- signed(rpm_diff_show)                      when TEST_KEY="1010" ;

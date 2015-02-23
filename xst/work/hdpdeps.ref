@@ -1,49 +1,50 @@
 V3 27
-FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/clk_200M.vhd 2015/02/22.22:00:21 P.20131013
-EN work/clk_200M 1424634350 \
+FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/clk_200M.vhd 2015/02/23.12:35:24 P.20131013
+EN work/clk_200M 1424686980 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/clk_200M.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/clk_200M/BEHAVIORAL 1424634351 \
+AR work/clk_200M/BEHAVIORAL 1424686981 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/clk_200M.vhd \
-      EN work/clk_200M 1424634350 CP BUFG CP DCM
-FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/driver.vhd 2015/02/22.23:06:16 P.20131013
-EN work/drivermotor 1424634344 \
+      EN work/clk_200M 1424686980 CP BUFG CP DCM
+FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/driver.vhd 2015/02/23.13:52:47 P.20131013
+EN work/drivermotor 1424686974 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/driver.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/drivermotor/Behavioral 1424634345 \
+AR work/drivermotor/Behavioral 1424686975 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/driver.vhd \
-      EN work/drivermotor 1424634344 CP PWM CP DIVIDER
-FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/m.vhd 2015/02/22.23:15:36 P.20131013
-EN work/m 1424634352 \
+      EN work/drivermotor 1424686974 CP PWM
+FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/m.vhd 2015/02/23.13:44:35 P.20131013
+EN work/m 1424686982 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/m.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/m/Behavioral 1424634353 \
+AR work/m/Behavioral 1424686983 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/m.vhd \
-      EN work/m 1424634352 CP drivermotor CP Write_to_USB CP micro_com2 CP clk_200M
+      EN work/m 1424686982 CP drivermotor CP Write_to_USB CP micro_com2 CP DIVIDER \
+      CP clk_200M
 FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/micro_com2.vhd 2014/12/24.17:01:31 P.20131013
-EN work/micro_com2 1424634348 \
+EN work/micro_com2 1424686978 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/micro_com2.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/micro_com2/Behavioral 1424634349 \
+AR work/micro_com2/Behavioral 1424686979 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/micro_com2.vhd \
-      EN work/micro_com2 1424634348
+      EN work/micro_com2 1424686978
 FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/pwm.vhd 2014/12/06.12:51:05 P.20131013
-EN work/pwm 1424634342 \
+EN work/pwm 1424686972 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/pwm.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/pwm/Behavioral 1424634343 \
+AR work/pwm/Behavioral 1424686973 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/pwm.vhd \
-      EN work/pwm 1424634342
+      EN work/pwm 1424686972
 FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/Write_to_USB.vhd 2014/11/29.23:41:01 P.20131013
-EN work/Write_to_USB 1424634346 \
+EN work/Write_to_USB 1424686976 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/Write_to_USB.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/Write_to_USB/Behavioral 1424634347 \
+AR work/Write_to_USB/Behavioral 1424686977 \
       FL C:/Users/Fatemeh/Desktop/khodaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/main_fpga/Write_to_USB.vhd \
-      EN work/Write_to_USB 1424634346
+      EN work/Write_to_USB 1424686976
