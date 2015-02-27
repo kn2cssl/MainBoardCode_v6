@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (nt64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Mon Feb 23 13:57:01 2015
+#Fri Feb 27 13:33:38 2015
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -131,13 +131,13 @@ P109,,,TDO,,,,,,,,,,,,
 P110,,,TCK,,,,,,,,,,,,
 P111,,,TMS,,,,,,,,,,,,
 P112,HALL22,IOB,IO_L01P_1/VRN_1,INPUT,LVCMOS25*,1,,,,NONE,,LOCATED,NO,NONE,
-P113,,DIFFS,IO_L01N_1/VRP_1,UNUSED,,1,,,,,,,,,
+P113,CLK_1MS,IOB,IO_L01N_1/VRP_1,OUTPUT,LVCMOS25*,1,12,SLOW,NONE**,,,LOCATED,NO,NONE,
 P114,,,GND,,,,,,,,,,,,
 P115,,,VCCO_1,,,0,,,,,2.50,,,,
-P116,,DIFFS,IO,UNUSED,,1,,,,,,,,,
+P116,HALL_OUT,IOB,IO,OUTPUT,LVCMOS25*,1,12,SLOW,NONE**,,,LOCATED,NO,NONE,
 P117,,,GND,,,,,,,,,,,,
 P118,,DIFFM,IO_L28P_1,UNUSED,,1,,,,,,,,,
-P119,,DIFFS,IO_L28N_1,UNUSED,,1,,,,,,,,,
+P119,CHECK_OUT,IOB,IO_L28N_1,OUTPUT,LVCMOS25*,1,12,SLOW,NONE**,,,LOCATED,NO,NONE,
 P120,,,VCCAUX,,,,,,,,2.5,,,,
 P121,,,VCCINT,,,,,,,,1.2,,,,
 P122,,DIFFM,IO_L31P_1,UNUSED,,1,,,,,,,,,

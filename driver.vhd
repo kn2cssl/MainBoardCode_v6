@@ -18,6 +18,8 @@
 			M3p:out std_logic;
 			M3n:out std_logic;
 			HALL_OUT:out std_logic;
+			CLK_1MS:out std_logic;
+			CHECK_OUT:out std_logic;
 			SPEED :in std_logic_vector(15 downto 0);
 			M_show:out signed (15 downto 0);
 			ERR_M  :out std_logic_vector(15 downto 0);
@@ -57,7 +59,7 @@
    signal PWM_S       : std_logic;
 	signal CLK_TIMER   : std_logic:='0';
 	signal RPM_DIR     : std_logic :='0';
-	--signal hall_out_s  : std_logic:='0';
+	signal hall_out_s  : std_logic:='0';
    signal STATE1      : std_logic_vector(3 downto 0); 
 	signal hall_state  : std_logic_vector(2 downto 0); 
    signal hall_state_past  : std_logic_vector(2 downto 0); 
@@ -71,7 +73,7 @@
  
 --	signal  RPM_DIFF_LAST   : signed (15 DOWNTO 0)  :=(others=>'0');
 	
-	constant K_FILTER: signed(7 downto 0) :="00000010";--0.8
+	constant K_FILTER: signed(10 downto 0) :="00000001111";--0.00595 11 BIT ASHAR
    
 	signal TIMER_COUNT : std_logic_vector(16 downto 0):=(others=>'0');
 	
@@ -87,8 +89,8 @@
    signal DIR         : std_logic;
 	signal M_P_OVERFLOW: std_logic;
 	--signal led_S       : std_logic:='0';
-	--signal CLK_LED     : std_logic:='0';
-	
+	signal CLK_S     : std_logic:='0';
+	signal CHECK     : std_logic:='0';
 	
 	
 	signal M_PID       : std_logic_vector(n-1 DOWNTO 0)  :=(others=>'0');	
@@ -112,6 +114,7 @@
 	--constant MAX_PD_MINUS        : integer range -2047 to 0:= -2047;
 	
 	constant T_1MS     : std_logic_vector(15 downto 0):= "1100001101010000";  
+	constant T_500US   : std_logic_vector(15 downto 0):= "0110000110101000"; 
 	--constant T_2MS     : std_logic_vector(16 downto 0):= "11000011010100000";
 	--constant T_20MS    : std_logic_vector(16 downto 0):= "11000011010100000";
 	--constant T_1S      : std_logic_vector(31 downto 0):= "10110010110100000101111000000000";--1S --timer count bayad ziad beshe age 1s khastin!!
@@ -126,9 +129,10 @@
 	 constant lim400 : signed(15 DOWNTO 0) := "0000000110010000";--400  	
 	 constant lim10  : signed(15 DOWNTO 0) := "0000000000001010";--10  
 	 constant lim15  : signed(15 DOWNTO 0) := "0000000000001111";--15  
-	-- constant lim80  : signed(15 DOWNTO 0) := "0000000001010000";--80
-	-- constant lim5   : signed(15 DOWNTO 0) := "0000000000000101";--3
-	 --constant lim10  : signed(15 DOWNTO 0) := "0000000000001010";--10
+	 constant lim100 : signed(15 DOWNTO 0) := "0000000001100100";--100
+	 constant lim40  : signed(15 DOWNTO 0) := "0000000000101000";--40
+	 constant lim1250: std_logic_vector(15 DOWNTO 0) := "0000010011100010";--1250
+	 constant lim150 : signed(15 DOWNTO 0) := "0000000010010110";--150
 	 
 	 constant KP1_fp         : signed(19 DOWNTO 0):= "00000000011010000000";--10.10 --1.625
 	 constant KP2_fp         : signed(19 DOWNTO 0):= "00000010000000000000";--10.10 --8
@@ -176,10 +180,11 @@
 					  hall_state <= (HALL3 & HALL2 & HALL1);
 					  if(hall_state /= hall_state_past) then
 					  hall_count <= hall_count+1;
-					  --hall_out_S<= not hall_out_s;
+					  hall_out_S<= not hall_out_s;
 					  end if;
 					  
 					  if(clk_timer='1')then
+					  --if(rising_edge (clk_s))then
 					  --M_SHOW <= signed(hall_count);
 					  hall_count <= (others=>'0');
 					  end if;
@@ -196,7 +201,7 @@
 					  end process;
 					  
 					  
-					  --HALL_OUT <= HALL_OUT_S;--FOR TEST
+					  HALL_OUT <= HALL_OUT_S;--FOR TEST
 					  
 	motor_update :process(clk,HALL1,HALL2,HALL3,DIR,SPEED,STATE1,PWM_S)
 					  begin
@@ -249,6 +254,44 @@ SPEED_DIRECTION:	process(clk)
           					
 				   	
 
+--TIMER:			process(clk)  
+--					begin	
+--					if rising_edge (clk) then 
+--					TIMER_COUNT <=  TIMER_COUNT+'1';
+--					CLK_TIMER <= '0';
+----					if(TIMER_COUNT >= T_1MS) then
+--               if(TIMER_COUNT >= T_500US) then
+----					CLK_TIMER <= '1';
+----					elsif(TIMER_COUNT >= T_1_1MS)then
+----					CLK_TIMER <= '0';
+--					CLK_S<=NOT CLK_S;
+--					TIMER_COUNT <= (others=>'0');
+--					CLK_TIMER <= '1';
+--					end if;	
+--					end if;				 
+--					end process;
+
+				   clk_1ms <= CLK_S;--TIMER;
+					
+--TIMER:			process(clk)  
+--					begin	
+--					if rising_edge (clk) then 
+--					TIMER_COUNT <=  TIMER_COUNT+'1';
+--					CLK_TIMER <= '0'; --oon yeki
+--					if(TIMER_COUNT >= T_1MS) then
+----               if(TIMER_COUNT >= T_500US) then
+--					CLK_TIMER <= '1';
+----					elsif(TIMER_COUNT >= T_1_1MS)then
+----					CLK_TIMER <= '0';
+----					CLK_S<=NOT CLK_S;
+--		         else
+--					CLK_TIMER <= '0';
+--		         TIMER_COUNT <= (others=>'0');
+----					CLK_TIMER <= '1'; --oon yeki
+--					end if;	
+--					end if;				 
+--					end process;
+
 TIMER:			process(clk)  
 					begin	
 					if rising_edge (clk) then 
@@ -261,52 +304,79 @@ TIMER:			process(clk)
 					end if;	
 					end if;				 
 					end process;
-
-				--   LED(0) <= CLK_TIMER;
 			
 			
-			
-			
-         
+--         	   process(clk,clk_s)  
+--					begin	
+--					if rising_edge (clk_s) and clk='1' then 
+----					TIMER_COUNT <=  TIMER_COUNT+'1';
+----					if(TIMER_COUNT >= T_1MS) then
+----               if(TIMER_COUNT >= T_500US) then
+--					CLK_TIMER <= '1';
+----					elsif(TIMER_COUNT >= T_1_1MS)then
+----					CLK_TIMER <= '1';
+----					CLK_S<=NOT CLK_S;
+----					TIMER_COUNT <= (others=>'0');
+--					else
+--					CLK_TIMER <= '0';
+----					end if;	
+--					end if;				 
+--					end process;
+--         
 CALCULATE_SPEED:process(clk,CLK_TIMER)
 
 					 
-	   variable RPM_s     : signed (31 DOWNTO 0) :=(others=>'0');
-	   variable RPM_LAST  : signed (23 downto 0) :=(others=>'0');
-	   variable RPM_H     : signed (23 downto 0) :=(others=>'0');
-	   variable RPM_F     : signed (23 downto 0) :=(others=>'0');
-	   variable RPM_ABS   : std_logic_vector (23 downto 0) :=(others=>'0');
+	   variable RPM_s     : signed (37 DOWNTO 0) :=(others=>'0');
+	   variable RPM_LAST  : signed (26 downto 0) :=(others=>'0');--16.11
+	   variable RPM_H     : std_logic_vector (26 downto 0) :=(others=>'0');
+		variable RPM_HS    : signed (26 downto 0) :=(others=>'0');
+	   variable RPM_F     : signed (26 downto 0) :=(others=>'0');
+	   variable RPM_ABS   : std_logic_vector (26 downto 0) :=(others=>'0');
 		--variable HALL_COUNT: std_logic_vector(5 downto 0);
-		variable M_RPMF    : std_logic_vector(15 DOWNTO 0) :=(others=>'0'); 
+		variable M_RPMF    : signed (15 DOWNTO 0) :=(others=>'0'); 
       --variable M_RPMF    : signed(15 DOWNTO 0) :=(others=>'0'); 		
 		
 					  begin
-                if rising_edge (clk) then
+               if rising_edge (clk) then
                 if CLK_TIMER ='1' then
-						
-                  --HALL_COUNT := HALL1_COUNT + HALL2_COUNT + HALL3_COUNT;						
+					-- if rising_edge (clk_s) then
+                  --HALL_COUNT := HALL1_COUNT + HALL2_COUNT + HALL3_COUNT;		
+                   CHECK <= NOT CHECK;
+                   CHECK_OUT <= CHECK;						 
 						RPM_LAST := RPM_F;
-						RPM_H    := signed(HALL_COUNT * "10011100010")& "00000000";
-						RPM_S    :=(K_FILTER*(RPM_H - RPM_LAST));
-					   RPM_F    := RPM_LAST + RPM_S(31 downto 8);
+						RPM_H    := ((HALL_COUNT * lim1250)& "00000000000");
+						
+						if(RPM_DIR='1')then
+						RPM_HS   :=signed('0'-RPM_H);
+						elsif(RPM_DIR='0')then
+						RPM_HS   :=signed(RPM_H);
+						end if;
+						
+						RPM_S    :=(K_FILTER*(RPM_HS - RPM_LAST));--0.11 * 16.11
+					   RPM_F    := RPM_LAST + RPM_S(37 downto 11 );
                   
 				     -- RPM_ABS  := ABS (RPM_F);
-					--	M_RPMF   <= RPM_ABS(23 DOWNTO 8);
+						M_RPMF   := RPM_F(26 DOWNTO 11);
 					  -- M_RPMF   := RPM_F(23 DOWNTO 8);
 					  -- m_show <= signed (m_rpmf);
 						
-						RPM_ABS  := ABS (RPM_F);
-						M_RPMF   := RPM_ABS(23 DOWNTO 8);
+						--RPM_ABS  := ABS (RPM_F);
+						--M_RPMF   := RPM_ABS(26 DOWNTO 11);
 						
 						
-						M_RPM_DIR_LAST  <= M_RPM_DIR;	
-						if(RPM_DIR='1')then
-						M_RPM_DIR <= signed('0'- M_RPMF) ;
-						--M_RPM_DIR <= '0'- M_RPMF ;
-                  elsif(RPM_DIR='0')then						
-						M_RPM_DIR <= signed(M_RPMF);
-						--M_RPM_DIR <= M_RPMF;
-						end if;
+						M_RPM_DIR_LAST  <= M_RPM_DIR;
+					   M_RPM_DIR  <= M_RPMF;
+                  						
+--						if(RPM_DIR='1')then
+--						M_RPM_DIR <= signed('0'- M_RPMF) ;
+--						--M_RPM_DIR <= '0'- M_RPMF ;
+--                  elsif(RPM_DIR='0')then						
+--						M_RPM_DIR <= signed(M_RPMF);
+--						--M_RPM_DIR <= M_RPMF;
+--						end if;
+						
+						
+						
 					   
 					---	rpm_h_show <= rpm_h(23 downto 8); --for show 
 						
@@ -336,7 +406,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
                 begin
                 if rising_edge (clk) then
 					 if CLK_TIMER ='1'  then
-					 
+					 --if rising_edge (clk_s) then
 				    SETPOINT := signed(SPEED);
 --					 M_ERR    := signed(SPEED)- M_RPM_DIR ;
                  if(SETPOINT>lim0)then
@@ -412,7 +482,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 				  begin
 				  if rising_edge (clk) then
 				  if CLK_TIMER ='1'  then
-				  
+				 --  if rising_edge (clk_s) then
 				--  led(1) <= led_s;--FOR TEST
 				  
 				    SETPOINT        :=  signed( SPEED);
@@ -526,7 +596,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					  begin 
 					  if rising_edge (clk) then
 					  if CLK_TIMER ='1' 	then
-					  
+					 -- if rising_edge (clk_s) then
 					  M_SETPOINT :=  signed( SPEED );
    				  RPM_DIFF   := M_RPM_DIR - M_RPM_DIR_LAST;
 --					  M_ERR           :=  SIGNED(SPEED) -  M_RPM_DIR ;  
@@ -581,15 +651,16 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					  DIR<='0'; 
 					  end if;
                  
-					  if((m_setpoint=lim0) and (abs(m_err) < lim20 )) then
-					  M_PID  <= "00000000000"; 
+					 -- if((abs (m_setpoint)<lim100) ) then--and (abs(m_rpm_dir) < lim100 )
+                if((m_setpoint=lim0) and (m_rpm_dir <lim40)) then					 
+					 M_PID  <= "00000000000"; 
 					  else
 					  M_PD_ABS := ABS(M_PD);
 					  M_PID  <=  M_PD_ABS(10 downto 0); 
 					  end if;
 					  
-					 -- M_PID <= "11001111100";
-					 -- DIR <= '1';
+					-- M_PID <= "00011110000";
+					-- DIR <= '1';
 					  M_ERROR <= M_ERR;  --for show
 					 -- M_PD_S <= M_PD; 
 					  end if;
@@ -604,9 +675,10 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 										 M_RPM_DIR                                  when TEST_KEY="0011" else --3
 									    signed("00000" & M_PID )                   when TEST_KEY="0110" else --6
 										 (m_error)                                  when TEST_KEY="1100" else --12
-			                      signed("000000"& M_KP_fp(19 DOWNTO 10))    when TEST_KEY="1001" else    --9
-                               signed("0000"& M_KD_fp(15 downto 4))       when TEST_KEY="0101" ;--else 
-										-- signed(rpm_diff_show)                      when TEST_KEY="1010" ;
+			                      signed("000000"& M_KP_fp(19 DOWNTO 10))    when TEST_KEY="1001" else --9
+                               signed("0000"& M_KD_fp(15 downto 4))       when TEST_KEY="0101" else 
+										 signed(speed)                              when TEST_KEY="1010" else 
+										 signed(HALL_COUNT)                      when TEST_KEY="1111" ;
 						
 					
 				

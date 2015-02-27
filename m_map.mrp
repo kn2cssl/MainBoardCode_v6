@@ -9,39 +9,39 @@ Target Device  : xc3s400
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Mon Feb 23 13:54:25 2015
+Mapped Date    : Fri Feb 27 13:31:52 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Total Number Slice Registers:       1,010 out of   7,168   14%
-    Number used as Flip Flops:          994
+  Total Number Slice Registers:       1,090 out of   7,168   15%
+    Number used as Flip Flops:        1,074
     Number used as Latches:              16
-  Number of 4 input LUTs:             4,029 out of   7,168   56%
+  Number of 4 input LUTs:             4,419 out of   7,168   61%
 Logic Distribution:
-  Number of occupied Slices:          2,413 out of   3,584   67%
-    Number of Slices containing only related logic:   2,413 out of   2,413 100%
-    Number of Slices containing unrelated logic:          0 out of   2,413   0%
+  Number of occupied Slices:          2,641 out of   3,584   73%
+    Number of Slices containing only related logic:   2,641 out of   2,641 100%
+    Number of Slices containing unrelated logic:          0 out of   2,641   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       4,355 out of   7,168   60%
-    Number used as logic:             4,028
-    Number used as a route-thru:        326
+  Total Number of 4 input LUTs:       4,758 out of   7,168   66%
+    Number used as logic:             4,418
+    Number used as a route-thru:        339
     Number used as Shift registers:       1
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 67 out of      97   69%
+  Number of bonded IOBs:                 70 out of      97   72%
   Number of MULT18X18s:                  16 out of      16  100%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.52
+Average Fanout of Non-Clock Nets:                2.53
 
-Peak Memory Usage:  318 MB
-Total REAL time to MAP completion:  11 secs 
-Total CPU time to MAP completion:   11 secs 
+Peak Memory Usage:  320 MB
+Total REAL time to MAP completion:  12 secs 
+Total CPU time to MAP completion:   12 secs 
 
 NOTES:
 
@@ -82,20 +82,20 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:372 - Gated clock. Clock net driver1/M_show_not0001 is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net driver4/M_show_not0001 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network HALL_OUT has no load.
-INFO:LIT:395 - The above info message is repeated 84 more times for the
+INFO:LIT:243 - Logical network HALL4_COUNT<4> has no load.
+INFO:LIT:395 - The above info message is repeated 83 more times for the
    following (max. 5 shown):
-   HALL4_COUNT<4>,
    HALL4_COUNT<3>,
    HALL4_COUNT<2>,
    HALL4_COUNT<1>,
-   HALL4_COUNT<0>
+   HALL4_COUNT<0>,
+   HALL3_COUNT<4>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -104,9 +104,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-4516 block(s) removed
- 107 block(s) optimized away
-4536 signal(s) removed
+4497 block(s) removed
+ 106 block(s) optimized away
+4517 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -12975,15 +12975,15 @@ The signal "N10" is unused and has been removed.
      Unused block "kp_M4_cmp_eq000011" (ROM) removed.
 The signal "N11" is unused and has been removed.
  Unused block "divisor1_mux0000<0>1" (ROM) removed.
-  The signal "N55" is unused and has been removed.
+  The signal "N53" is unused and has been removed.
    Unused block "divisor1_mux0000<0>1_SW1" (ROM) removed.
-  The signal "N54" is unused and has been removed.
+  The signal "N52" is unused and has been removed.
    Unused block "divisor1_mux0000<0>1_SW0" (ROM) removed.
-The signal "N277" is unused and has been removed.
+The signal "N187" is unused and has been removed.
  Unused block "kp_M4_cmp_eq0000_SW1" (ROM) removed.
 The signal "N5" is unused and has been removed.
  Unused block "divisor1_mux0000<0>21" (ROM) removed.
-The signal "N52" is unused and has been removed.
+The signal "N50" is unused and has been removed.
  Unused block "divisor1_mux0000<0>3_SW0" (ROM) removed.
 The signal "N8" is unused and has been removed.
  Unused block "divisor1_mux0000<0>3" (ROM) removed.
@@ -13261,57 +13261,6 @@ The signal "divisor1<9>" is unused and has been removed.
    Unused block "divisor1_mux0000<9>4" (ROM) removed.
     The signal "driver3/ERR_M<9>" is unused and has been removed.
      Unused block "driver3/ERR_M_9" (FF) removed.
-The signal "driver1/M_Kp_fp_mux0001<15>_mand" is unused and has been removed.
- Unused block "driver1/Madd_M_Kp_fp_addsub0000_xor<15>" (XOR) removed.
-  The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<14>" is unused and has been
-removed.
-   Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<14>" (MUX) removed.
-    The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<13>" is unused and has been
-removed.
-     Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<13>" (MUX) removed.
-      The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<12>" is unused and has been
-removed.
-       Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<12>" (MUX) removed.
-        The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<11>" is unused and has been
-removed.
-         Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<11>" (MUX) removed.
-          The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<10>" is unused and has been
-removed.
-           Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<10>" (MUX) removed.
-            The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<9>" is unused and has been
-removed.
-             Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<9>" (MUX) removed.
-              The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<8>" is unused and has been
-removed.
-               Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<8>" (MUX) removed.
-                The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<7>" is unused and has been
-removed.
-                 Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<7>" (MUX) removed.
-                  The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<6>" is unused and has been
-removed.
-                   Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<6>" (MUX) removed.
-                    The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<5>" is unused and has been
-removed.
-                     Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<5>" (MUX) removed.
-                      The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<4>" is unused and has been
-removed.
-                       Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<4>" (MUX) removed.
-                        The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<3>" is unused and has been
-removed.
-                         Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<3>" (MUX) removed.
-                          The signal "driver1/Madd_M_Kp_fp_addsub0000_cy<2>" is unused and has been
-removed.
-                           Unused block "driver1/Madd_M_Kp_fp_addsub0000_cy<2>" (MUX) removed.
-                            The signal "driver1/Madd_M_Kp_fp_not0001<2>" is unused and has been removed.
-                             Unused block "driver1/Madd_M_Kp_fp_not0001<2>1_INV_0" (BUF) removed.
-                        The signal "driver1/Madd_M_Kp_fp_not0001<4>" is unused and has been removed.
-                         Unused block "driver1/Madd_M_Kp_fp_not0001<4>1_INV_0" (BUF) removed.
-                  The signal "driver1/Madd_M_Kp_fp_not0001<7>" is unused and has been removed.
-                   Unused block "driver1/Madd_M_Kp_fp_not0001<7>1_INV_0" (BUF) removed.
-                The signal "driver1/Madd_M_Kp_fp_not0001<8>" is unused and has been removed.
-                 Unused block "driver1/Madd_M_Kp_fp_not0001<8>1_INV_0" (BUF) removed.
-        The signal "driver1/Madd_M_Kp_fp_not0001<12>" is unused and has been removed.
-         Unused block "driver1/Madd_M_Kp_fp_not0001<12>1_INV_0" (BUF) removed.
 The signal "driver1/N7" is unused and has been removed.
  Unused block "driver1/M_Kp_fp_mux0005<10>31" (ROM) removed.
 The signal "driver2/N7" is unused and has been removed.
@@ -13548,8 +13497,8 @@ FD 		DIVIDER1/blk00000003/blk00000d90
    optimized to 0
 GND 		XST_GND
 VCC 		XST_VCC
-LUT3 		driver1/M_Kp_fp_mux0005<13>25_SW0
-   optimized to 1
+LUT2 		driver1/M_Kp_fp_mux0005<13>22
+   optimized to 0
 LUT2 		driver2/M_Kp_fp_mux0005<13>22
    optimized to 0
 LUT2 		driver3/M_Kp_fp_mux0005<13>22
@@ -13716,7 +13665,6 @@ FDE 		kp_M4_8
    optimized to 0
 FDE 		kp_M4_9
    optimized to 0
-MUXCY 		driver1/Mmult_M_D_fp_mult0000_Madd3_cy<7>
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -13728,6 +13676,8 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CHECK_OUT                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| CLK_1MS                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | CLK_PAR                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | DATA_USB<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | DATA_USB<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
@@ -13749,6 +13699,7 @@ Section 6 - IOB Properties
 | HALL32                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | HALL33                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | HALL34                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| HALL_OUT                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | LED<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | LED<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | LED<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
