@@ -65,7 +65,7 @@
 					M2n4:out std_logic;
 					M3p4:out std_logic;
 					M3n4:out std_logic;	
---				 
+			 
 				 --FT245  	
 					DATA_USB	 :	out std_logic_vector(7 downto 0);
 					USB_WR 	 : out std_logic;	
@@ -209,7 +209,7 @@
 		 
 			--M1		
 				driver1:drivermotor port map(HALL1=>HALL11,HALL2=>HALL21,HALL3=>HALL31,CLK=>CLK,hall_OUT=>hall_OUT,CHECK_OUT=> CHECK_OUT,
-				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY,ERR_M=>ERR_M1,kp_M=>kp_M1 , CLK_1MS=>CLK_1MS);
+				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY,ERR_M=>ERR_M1,kp_M=>kp_M1 , CLK_1MS=>CLK_1MS,M_show=>M1_show, LED=>LED);
 			--M2	
 				driver2:drivermotor port map(HALL1=>HALL12,HALL2=>HALL22,HALL3=>HALL32,CLK=>CLK,TEST_KEY => TEST_KEY,
 				M1P=>M1P2,M1N=>M1N2,M2P=>M2P2,M2N=>M2N2,M3P=>M3P2,M3N=>M3N2,SPEED=>SPEED2,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M2,kp_M=>kp_M2);	
@@ -218,7 +218,7 @@
 				M1P=>M1P3,M1N=>M1N3,M2P=>M2P3,M2N=>M2N3,M3P=>M3P3,M3N=>M3N3,SPEED=>SPEED3,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M3,kp_M=>kp_M3);
 			--M4	
 				driver4:drivermotor port map(HALL1=>HALL14,HALL2=>HALL24,HALL3=>HALL34,CLK=>CLK,TEST_KEY => TEST_KEY,
-				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M4,kp_M=>kp_M4,M_show=>M1_show, LED=>LED);
+				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M4,kp_M=>kp_M4);
 
 		--	--FT245
 			  FT245:Write_to_USB port map(DATA1_IN =>M1_SHOW,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
@@ -231,44 +231,44 @@
 				 RPM4(15 downto 0)=>SPEED4
 				);
 				
-				
-		 --DIVIDER
-			 DIVIDER1:DIVIDER port map (clk => clk_280,rfd => rfd1,dividend => dividend1,divisor => divisor1,quotient => quotient1,fractional => fractional1);
-		 
-			
-			
-		--CLK_200M
-			Inst_clk_200M: clk_200M port map(CLKIN_IN =>clk ,RST_IN => RST_IN ,CLKFX_OUT =>CLKFX_OUT ,CLK0_OUT =>CLK0_OUT  );
-		
-		
-
- 
- TIMER:			process(clk)  
-					begin	
-					if rising_edge (clk) then 
-					TIME_COUNT <=  TIME_COUNT+'1';
-					if(TIME_COUNT = T_20ns) then
-					
-					divisor1  <=  ERR_M1;
-					
-					elsif(TIME_COUNT = T_200ns) then
-					kp_M1 <= quotient1(19 downto 0); 
-					divisor1  <=  ERR_M2;
-					
-					elsif(TIME_COUNT = T_400ns) then
-					kp_M2 <= quotient1(19 downto 0);  
-					divisor1  <=   ERR_M3;
-					
-					elsif(TIME_COUNT = T_600ns) then
-					kp_M3 <= quotient1(19 downto 0); 
-					divisor1  <=   ERR_M4;
-					
-					elsif(TIME_COUNT = T_800ns) then
-				   kp_M4 <= quotient1(19 downto 0);    
-               TIME_COUNT <= (others=>'0');
-					end if;	
-					end if;				 
-					end process;		
+--				
+--		 --DIVIDER
+--			 DIVIDER1:DIVIDER port map (clk => clk_280,rfd => rfd1,dividend => dividend1,divisor => divisor1,quotient => quotient1,fractional => fractional1);
+--		 
+--			
+--			
+--		--CLK_200M
+--			Inst_clk_200M: clk_200M port map(CLKIN_IN =>clk ,RST_IN => RST_IN ,CLKFX_OUT =>CLKFX_OUT ,CLK0_OUT =>CLK0_OUT  );
+--		
+--		
+--
+-- 
+-- TIMER:			process(clk)  
+--					begin	
+--					if rising_edge (clk) then 
+--					TIME_COUNT <=  TIME_COUNT+'1';
+--					if(TIME_COUNT = T_20ns) then
+--					
+--					divisor1  <=  ERR_M1;
+--					
+--					elsif(TIME_COUNT = T_200ns) then
+--					kp_M1 <= quotient1(19 downto 0); 
+--					divisor1  <=  ERR_M2;
+--					
+--					elsif(TIME_COUNT = T_400ns) then
+--					kp_M2 <= quotient1(19 downto 0);  
+--					divisor1  <=   ERR_M3;
+--					
+--					elsif(TIME_COUNT = T_600ns) then
+--					kp_M3 <= quotient1(19 downto 0); 
+--					divisor1  <=   ERR_M4;
+--					
+--					elsif(TIME_COUNT = T_800ns) then
+--				   kp_M4 <= quotient1(19 downto 0);    
+--               TIME_COUNT <= (others=>'0');
+--					end if;	
+--					end if;				 
+--					end process;		
 		  
 			
 		  end Behavioral;

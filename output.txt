@@ -2,12 +2,16 @@ Storage Target: Xilinx Flash/PROM
 Storage Family: Platform Flash
 xcf04s          [4 M]
 FF
-last_version
+1
 C:/Users/Fatemeh/Desktop
 
 MCS
 No
-aaaaaaaaaaaaaaaaaaaaaaaaaa\main_fpga\
+Desktop
+
+MCS
+No
+aaaaaaaaaaaaaaaaaaaaa\main_fpga\
 
 MCS
 No

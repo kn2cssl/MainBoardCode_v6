@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Feb 27 13:32:02 2015
+// Written by: Map P.20131013 on Sat Feb 28 17:44:11 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -73,6 +73,6 @@ COMP "HALL_OUT" LOCATE = SITE "P116" LEVEL 1;
 COMP "PARITY_IN" LOCATE = SITE "P44" LEVEL 1;
 COMP "CLK_1MS" LOCATE = SITE "P113" LEVEL 1;
 COMP "CLK_PAR" LOCATE = SITE "P46" LEVEL 1;
-NET "clk_IBUFG1" BEL "clk_IBUFG_BUFG.GCLKMUX" USELOCALCONNECT;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 
