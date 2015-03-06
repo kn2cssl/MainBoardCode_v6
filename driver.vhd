@@ -434,7 +434,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					 --if rising_edge (clk_s) then
 				    SETPOINT := signed(SPEED);
 --					 M_ERR    := signed(SPEED)- M_RPM_DIR ;
-                 if(SETPOINT>lim0)then
+                 if(SETPOINT(15)='0')then
 					   M_ERR     :=  SETPOINT -  M_RPM_DIR + lim20 ;
                  elsif(SETPOINT(15)='1')then
                   M_ERR     :=  SETPOINT -  M_RPM_DIR - lim20 ; 					  
@@ -512,7 +512,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 				  
 				    SETPOINT        :=  signed( SPEED);
 --   			    M_ERR           :=  SIGNED(SPEED) -  M_RPM_DIR ;
-                if(SETPOINT>lim0)then
+                if(SETPOINT(15)='0')then
 					   M_ERR     :=  SETPOINT -  M_RPM_DIR + lim20 ;
                 elsif(SETPOINT(15)='1')then
                   M_ERR     :=  SETPOINT -  M_RPM_DIR - lim20 ; 					  
@@ -632,7 +632,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
    				  RPM_DIFF   := M_RPM_DIR - M_RPM_DIR_LAST;
 --					  M_ERR           :=  SIGNED(SPEED) -  M_RPM_DIR ;  
 					  
-					  if(M_SETPOINT>lim0)then
+					  if(M_SETPOINT(15)='0')then
 					   M_ERR     := (M_SETPOINT -  M_RPM_DIR) + lim20 ;
                 elsif(M_SETPOINT(15)='1')then
                   M_ERR     := (M_SETPOINT -  M_RPM_DIR) - lim20 ; 					  
