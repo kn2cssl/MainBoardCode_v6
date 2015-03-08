@@ -140,7 +140,7 @@
 	 constant KP2_fp         : signed(19 DOWNTO 0):= "00000010000000000000";--10.10 --8
 	 constant KP3_fp         : signed(19 DOWNTO 0):= "00000000000001010000";--10.10 --0.078
     --constant KP5_fp         : signed(19 DOWNTO 0):= "00000110100000000000";--10.10	 
-	 constant KP_50         : signed(19 DOWNTO 0):= "00001100000000000000";--10.10
+	 constant KP_50         : signed(19 DOWNTO 0):= "00001100100000000000";--10.10
 	  
 	  
 	 --constant lim_KP1_fp     : signed(19 DOWNTO 0):= "00000101001100000000";--10.10 --20.75
@@ -683,7 +683,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					  end if;
                  
 					 -- if((abs (m_setpoint)<lim100) ) then--and (abs(m_rpm_dir) < lim100 )
-                if(abs(m_setpoint)<lim5) and (abs(m_rpm_dir) <lim15) then					 
+                if(abs(m_setpoint)=lim0) and (abs(m_rpm_dir) <lim15) then					 
 					  M_PID  <= "00000000000"; 
 					  else
 					  M_PD_ABS := ABS(M_PD);

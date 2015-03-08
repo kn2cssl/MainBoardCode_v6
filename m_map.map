@@ -9,7 +9,7 @@ Target Device  : xc3s400
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Fri Mar 06 16:45:18 2015
+Mapped Date    : Sun Mar 08 22:38:34 2015
 
 Mapping design into LUTs...
 Running directed packing...
@@ -30,15 +30,15 @@ Logic Utilization:
   Total Number Slice Registers:         918 out of   7,168   12%
     Number used as Flip Flops:          902
     Number used as Latches:              16
-  Number of 4 input LUTs:             3,460 out of   7,168   48%
+  Number of 4 input LUTs:             3,416 out of   7,168   47%
 Logic Distribution:
-  Number of occupied Slices:          2,065 out of   3,584   57%
-    Number of Slices containing only related logic:   2,065 out of   2,065 100%
-    Number of Slices containing unrelated logic:          0 out of   2,065   0%
+  Number of occupied Slices:          2,042 out of   3,584   56%
+    Number of Slices containing only related logic:   2,042 out of   2,042 100%
+    Number of Slices containing unrelated logic:          0 out of   2,042   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       3,695 out of   7,168   51%
-    Number used as logic:             3,459
-    Number used as a route-thru:        235
+  Total Number of 4 input LUTs:       3,655 out of   7,168   50%
+    Number used as logic:             3,415
+    Number used as a route-thru:        239
     Number used as Shift registers:       1
 
   The Slice Logic Distribution report is not meaningful if the design is
@@ -48,11 +48,11 @@ Logic Distribution:
   Number of MULT18X18s:                  16 out of      16  100%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.62
+Average Fanout of Non-Clock Nets:                2.60
 
-Peak Memory Usage:  286 MB
-Total REAL time to MAP completion:  7 secs 
-Total CPU time to MAP completion:   7 secs 
+Peak Memory Usage:  294 MB
+Total REAL time to MAP completion:  12 secs 
+Total CPU time to MAP completion:   9 secs 
 
 NOTES:
 
