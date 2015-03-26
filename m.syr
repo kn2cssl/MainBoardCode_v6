@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: m.prj
 
@@ -98,25 +98,22 @@ Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
----- Other Options
-Cores Search Directories           : {"ipcore_dir"  }
-
 =========================================================================
 
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd" in Library work.
+Compiling vhdl file "C:/Users/Fatemeh/Desktop/nesfe zarayeb/pwm.vhd" in Library work.
 Architecture behavioral of Entity pwm is up to date.
-Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" in Library work.
+Compiling vhdl file "C:/Users/Fatemeh/Desktop/nesfe zarayeb/driver.vhd" in Library work.
 Entity <drivermotor> compiled.
 Entity <drivermotor> (Architecture <behavioral>) compiled.
-Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd" in Library work.
+Compiling vhdl file "C:/Users/Fatemeh/Desktop/nesfe zarayeb/Write_to_USB.vhd" in Library work.
 Architecture behavioral of Entity write_to_usb is up to date.
-Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd" in Library work.
+Compiling vhdl file "C:/Users/Fatemeh/Desktop/nesfe zarayeb/micro_com2.vhd" in Library work.
 Architecture behavioral of Entity micro_com2 is up to date.
-Compiling vhdl file "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" in Library work.
+Compiling vhdl file "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" in Library work.
 Architecture behavioral of Entity m is up to date.
 
 =========================================================================
@@ -141,34 +138,34 @@ Analyzing hierarchy for entity <PWM> in library <work> (architecture <behavioral
 =========================================================================
 Analyzing generic Entity <m> in library <work> (Architecture <behavioral>).
 	n = 11
-WARNING:Xst:1541 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 211: Different binding for component: <drivermotor>. Port <M_show> does not match.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 214: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 214: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 214: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 214: Unconnected output port 'M_show' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 214: Unconnected output port 'LED' of component 'drivermotor'.
-WARNING:Xst:1541 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 214: Different binding for component: <drivermotor>. Port <M_show> does not match.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 217: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 217: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 217: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 217: Unconnected output port 'M_show' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 217: Unconnected output port 'LED' of component 'drivermotor'.
-WARNING:Xst:1541 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 217: Different binding for component: <drivermotor>. Port <M_show> does not match.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 220: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 220: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 220: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 220: Unconnected output port 'M_show' of component 'drivermotor'.
-WARNING:Xst:753 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 220: Unconnected output port 'LED' of component 'drivermotor'.
-WARNING:Xst:1541 - "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd" line 220: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:1541 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 212: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 215: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 215: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 215: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 215: Unconnected output port 'M_show' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 215: Unconnected output port 'LED' of component 'drivermotor'.
+WARNING:Xst:1541 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 215: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 218: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 218: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 218: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 218: Unconnected output port 'M_show' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 218: Unconnected output port 'LED' of component 'drivermotor'.
+WARNING:Xst:1541 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 218: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 221: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 221: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 221: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 221: Unconnected output port 'M_show' of component 'drivermotor'.
+WARNING:Xst:753 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 221: Unconnected output port 'LED' of component 'drivermotor'.
+WARNING:Xst:1541 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd" line 221: Different binding for component: <drivermotor>. Port <M_show> does not match.
 Entity <m> analyzed. Unit <m> generated.
 
 Analyzing generic Entity <drivermotor> in library <work> (Architecture <behavioral>).
 	n = 11
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 367: Width mismatch. <RPM_H> has a width of 27 bits but assigned expression is 43-bit wide.
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 595: Width mismatch. <M_Kp_fp> has a width of 20 bits but assigned expression is 36-bit wide.
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 646: Width mismatch. <M_P> has a width of 26 bits but assigned expression is 22-bit wide.
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 649: Width mismatch. <M_P> has a width of 26 bits but assigned expression is 22-bit wide.
-WARNING:Xst:1610 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 671: Width mismatch. <M_PD> has a width of 31 bits but assigned expression is 28-bit wide.
+WARNING:Xst:1610 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/driver.vhd" line 380: Width mismatch. <RPM_H> has a width of 27 bits but assigned expression is 43-bit wide.
+WARNING:Xst:1610 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/driver.vhd" line 608: Width mismatch. <M_Kp_fp> has a width of 20 bits but assigned expression is 36-bit wide.
+WARNING:Xst:1610 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/driver.vhd" line 661: Width mismatch. <M_P> has a width of 26 bits but assigned expression is 22-bit wide.
+WARNING:Xst:1610 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/driver.vhd" line 664: Width mismatch. <M_P> has a width of 26 bits but assigned expression is 22-bit wide.
+WARNING:Xst:1610 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/driver.vhd" line 686: Width mismatch. <M_PD> has a width of 31 bits but assigned expression is 28-bit wide.
 Entity <drivermotor> analyzed. Unit <drivermotor> generated.
 
 Analyzing generic Entity <PWM> in library <work> (Architecture <behavioral>).
@@ -189,7 +186,7 @@ Entity <micro_com2> analyzed. Unit <micro_com2> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <Write_to_USB>.
-    Related source file is "F:/GitHub/FPGA/MainBoardCode_v6/Write_to_USB.vhd".
+    Related source file is "C:/Users/Fatemeh/Desktop/nesfe zarayeb/Write_to_USB.vhd".
     Found finite state machine <FSM_0> for signal <cnt1>.
     -----------------------------------------------------------------------
     | States             | 6                                              |
@@ -213,7 +210,7 @@ Unit <Write_to_USB> synthesized.
 
 
 Synthesizing Unit <micro_com2>.
-    Related source file is "F:/GitHub/FPGA/MainBoardCode_v6/micro_com2.vhd".
+    Related source file is "C:/Users/Fatemeh/Desktop/nesfe zarayeb/micro_com2.vhd".
 WARNING:Xst:1780 - Signal <cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
@@ -244,7 +241,7 @@ Unit <micro_com2> synthesized.
 
 
 Synthesizing Unit <PWM>.
-    Related source file is "F:/GitHub/FPGA/MainBoardCode_v6/pwm.vhd".
+    Related source file is "C:/Users/Fatemeh/Desktop/nesfe zarayeb/pwm.vhd".
     Found 1-bit register for signal <oc_out>.
     Found 11-bit up counter for signal <Cnt_1>.
     Found 11-bit up counter for signal <Cnt_2>.
@@ -257,7 +254,7 @@ Unit <PWM> synthesized.
 
 
 Synthesizing Unit <drivermotor>.
-    Related source file is "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd".
+    Related source file is "C:/Users/Fatemeh/Desktop/nesfe zarayeb/driver.vhd".
 WARNING:Xst:1305 - Output <ERR_M> is never assigned. Tied to value 0000000000000000.
 WARNING:Xst:647 - Input <kp_M> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1305 - Output <CHECK_OUT> is never assigned. Tied to value 0.
@@ -267,104 +264,105 @@ WARNING:Xst:646 - Signal <RPM_DIFF<14:0>> is assigned but never used. This uncon
 WARNING:Xst:653 - Signal <CLK_S> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 WARNING:Xst:1780 - Signal <CHECK> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Register <SETPOINT_LAST0> equivalent to <SETPOINT_LAST> has been removed
-WARNING:Xst:643 - "F:/GitHub/FPGA/MainBoardCode_v6/driver.vhd" line 595: The result of a 16x20-bit multiplication is partially used. Only the 20 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/Fatemeh/Desktop/nesfe zarayeb/driver.vhd" line 608: The result of a 16x20-bit multiplication is partially used. Only the 20 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 WARNING:Xst:737 - Found 16-bit latch for signal <M_show>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
     Found 3-bit register for signal <LED<3:1>>.
-    Found 16-bit subtractor for signal <$sub0000> created at line 523.
+    Found 16-bit subtractor for signal <$sub0000> created at line 536.
     Found 1-bit register for signal <BRIDGE>.
     Found 16-bit adder for signal <BRIDGE$addsub0000>.
-    Found 16-bit comparator greatequal for signal <BRIDGE$cmp_ge0000> created at line 452.
-    Found 16-bit comparator greater for signal <BRIDGE$cmp_gt0000> created at line 448.
-    Found 16-bit comparator lessequal for signal <BRIDGE$cmp_le0000> created at line 448.
-    Found 16-bit comparator less for signal <BRIDGE$cmp_lt0000> created at line 452.
+    Found 16-bit comparator greatequal for signal <BRIDGE$cmp_ge0000> created at line 465.
+    Found 16-bit comparator greater for signal <BRIDGE$cmp_gt0000> created at line 461.
+    Found 16-bit comparator lessequal for signal <BRIDGE$cmp_le0000> created at line 461.
+    Found 16-bit comparator less for signal <BRIDGE$cmp_lt0000> created at line 465.
     Found 1-bit register for signal <CHANGE>.
-    Found 16-bit comparator not equal for signal <CHANGE$cmp_ne0000> created at line 481.
+    Found 16-bit comparator not equal for signal <CHANGE$cmp_ne0000> created at line 494.
     Found 1-bit register for signal <CLK_TIMER>.
     Found 1-bit register for signal <DIR>.
+    Found 16-bit adder for signal <DIR$addsub0000>.
+    Found 16-bit comparator less for signal <DIR$cmp_lt0000> created at line 701.
     Found 1-bit register for signal <hall1_past>.
     Found 16-bit up counter for signal <HALL_COUNT>.
     Found 1-bit register for signal <hall_out_s>.
-    Found 3-bit comparator not equal for signal <hall_out_s$cmp_ne0000> created at line 185.
+    Found 3-bit comparator not equal for signal <hall_out_s$cmp_ne0000> created at line 198.
     Found 3-bit register for signal <hall_state>.
     Found 3-bit register for signal <hall_state_past>.
-    Found 20x16-bit multiplier for signal <LIMIT_KP_fp$mult0000> created at line 524.
-    Found 16x16-bit multiplier for signal <M_D_fp$mult0000> created at line 659.
-    Found 16-bit subtractor for signal <M_ERR$addsub0000> created at line 437.
-    Found 16-bit addsub for signal <M_ERR$mux0000> created at line 437.
+    Found 20x16-bit multiplier for signal <LIMIT_KP_fp$mult0000> created at line 537.
+    Found 16x16-bit multiplier for signal <M_D_fp$mult0000> created at line 674.
+    Found 16-bit subtractor for signal <M_ERR$addsub0000> created at line 450.
+    Found 16-bit addsub for signal <M_ERR$mux0000> created at line 450.
     Found 16-bit register for signal <M_ERROR>.
     Found 16-bit register for signal <M_Kd_fp>.
     Found 16-bit adder for signal <M_Kd_fp$addsub0000>.
-    Found 16-bit comparator less for signal <M_Kd_fp$cmp_lt0000> created at line 475.
+    Found 16-bit comparator less for signal <M_Kd_fp$cmp_lt0000> created at line 488.
     Found 20-bit register for signal <M_Kp_fp>.
     Found 16-bit adder for signal <M_Kp_fp$addsub0000>.
     Found 16-bit adder for signal <M_Kp_fp$addsub0001>.
     Found 16-bit adder for signal <M_Kp_fp$addsub0002>.
-    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0000> created at line 531.
-    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0001> created at line 537.
-    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0002> created at line 545.
-    Found 20-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0003> created at line 553.
-    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0004> created at line 579.
-    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0005> created at line 590.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0000> created at line 543.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0001> created at line 594.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0002> created at line 594.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0003> created at line 581.
-    Found 20-bit comparator greater for signal <M_Kp_fp$cmp_gt0004> created at line 559.
-    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0005> created at line 545.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0000> created at line 531.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0001> created at line 545.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0002> created at line 543.
-    Found 20-bit comparator lessequal for signal <M_Kp_fp$cmp_le0003> created at line 559.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0004> created at line 594.
-    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0005> created at line 594.
-    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0000> created at line 579.
-    Found 20-bit comparator less for signal <M_Kp_fp$cmp_lt0001> created at line 553.
-    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0002> created at line 537.
-    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0003> created at line 537.
-    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0004> created at line 545.
-    Found 16x20-bit multiplier for signal <M_Kp_fp$mult0000> created at line 595.
+    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0000> created at line 544.
+    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0001> created at line 550.
+    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0002> created at line 558.
+    Found 20-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0003> created at line 566.
+    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0004> created at line 592.
+    Found 16-bit comparator greatequal for signal <M_Kp_fp$cmp_ge0005> created at line 603.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0000> created at line 556.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0001> created at line 607.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0002> created at line 607.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0003> created at line 594.
+    Found 20-bit comparator greater for signal <M_Kp_fp$cmp_gt0004> created at line 572.
+    Found 16-bit comparator greater for signal <M_Kp_fp$cmp_gt0005> created at line 558.
+    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0000> created at line 544.
+    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0001> created at line 558.
+    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0002> created at line 556.
+    Found 20-bit comparator lessequal for signal <M_Kp_fp$cmp_le0003> created at line 572.
+    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0004> created at line 607.
+    Found 16-bit comparator lessequal for signal <M_Kp_fp$cmp_le0005> created at line 607.
+    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0000> created at line 592.
+    Found 20-bit comparator less for signal <M_Kp_fp$cmp_lt0001> created at line 566.
+    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0002> created at line 550.
+    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0003> created at line 550.
+    Found 16-bit comparator less for signal <M_Kp_fp$cmp_lt0004> created at line 558.
+    Found 16x20-bit multiplier for signal <M_Kp_fp$mult0000> created at line 608.
     Found 20-bit addsub for signal <M_Kp_fp$share0000>.
-    Found 16-bit subtractor for signal <M_Kp_fp$sub0000> created at line 595.
-    Found 26-bit comparator greatequal for signal <M_P$cmp_ge0000> created at line 645.
-    Found 26-bit comparator lessequal for signal <M_P$cmp_le0000> created at line 647.
+    Found 16-bit subtractor for signal <M_Kp_fp$sub0000> created at line 608.
+    Found 26-bit comparator greatequal for signal <M_P$cmp_ge0000> created at line 660.
+    Found 26-bit comparator lessequal for signal <M_P$cmp_le0000> created at line 662.
     Found 1-bit register for signal <M_P_OVERFLOW>.
-    Found 28-bit subtractor for signal <M_PD$sub0000> created at line 671.
+    Found 28-bit subtractor for signal <M_PD$sub0000> created at line 686.
     Found 31-bit adder for signal <M_PD_ABS$addsub0000>.
     Found 11-bit register for signal <M_PID>.
-    Found 16-bit adder for signal <M_PID$addsub0000>.
-    Found 16-bit comparator less for signal <M_PID$cmp_lt0000> created at line 686.
     Found 16-bit register for signal <M_RPM_DIR>.
+    Found 16-bit adder for signal <M_RPM_DIR$add0000> created at line 405.
     Found 16-bit register for signal <M_RPM_DIR_LAST>.
     Found 1-bit register for signal <MISS>.
     Found 16-bit register for signal <RPM_DIFF>.
-    Found 16-bit subtractor for signal <RPM_DIFF$sub0000> created at line 444.
+    Found 16-bit subtractor for signal <RPM_DIFF$sub0000> created at line 457.
     Found 16-bit register for signal <RPM_DIFF0>.
     Found 1-bit register for signal <RPM_DIR>.
     Found 27-bit up accumulator for signal <RPM_F>.
-    Found 27-bit adder for signal <RPM_F$add0000> created at line 376.
-    Found 16x16-bit multiplier for signal <RPM_H$mult0000> created at line 367.
-    Found 27-bit adder for signal <RPM_HS$addsub0000> created at line 370.
-    Found 27-bit subtractor for signal <RPM_s$addsub0000> created at line 375.
-    Found 27x11-bit multiplier for signal <RPM_s$mult0000> created at line 375.
+    Found 27-bit adder for signal <RPM_F$add0000> created at line 389.
+    Found 16x16-bit multiplier for signal <RPM_H$mult0000> created at line 380.
+    Found 27-bit adder for signal <RPM_HS$addsub0000> created at line 383.
+    Found 27-bit subtractor for signal <RPM_s$addsub0000> created at line 388.
+    Found 27x11-bit multiplier for signal <RPM_s$mult0000> created at line 388.
     Found 16-bit register for signal <SETPOINT_LAST>.
     Found 4-bit register for signal <STATE1>.
     Found 17-bit up counter for signal <TIMER_COUNT>.
     Found 1-bit register for signal <TRACK>.
-    Found 16-bit comparator equal for signal <TRACK$cmp_eq0000> created at line 481.
-    Found 1-bit xor2 for signal <TRACK$xor0000> created at line 458.
+    Found 16-bit comparator equal for signal <TRACK$cmp_eq0000> created at line 494.
+    Found 1-bit xor2 for signal <TRACK$xor0000> created at line 471.
     Summary:
 	inferred   2 Counter(s).
 	inferred   1 Accumulator(s).
 	inferred 166 D-type flip-flop(s).
-	inferred  17 Adder/Subtractor(s).
+	inferred  18 Adder/Subtractor(s).
 	inferred   5 Multiplier(s).
 	inferred  34 Comparator(s).
 Unit <drivermotor> synthesized.
 
 
 Synthesizing Unit <m>.
-    Related source file is "F:/GitHub/FPGA/MainBoardCode_v6/m.vhd".
+    Related source file is "C:/Users/Fatemeh/Desktop/nesfe zarayeb/m.vhd".
 WARNING:Xst:647 - Input <HALL4_COUNT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <HALL3_COUNT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <HALL2_COUNT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -400,8 +398,8 @@ Macro Statistics
  16x20-bit multiplier                                  : 4
  20x16-bit multiplier                                  : 4
  27x11-bit multiplier                                  : 4
-# Adders/Subtractors                                   : 68
- 16-bit adder                                          : 24
+# Adders/Subtractors                                   : 72
+ 16-bit adder                                          : 28
  16-bit addsub                                         : 4
  16-bit subtractor                                     : 16
  20-bit addsub                                         : 4
@@ -476,21 +474,21 @@ Optimizing FSM <FT245/cnt1/FSM> on signal <cnt1[1:6]> with one-hot encoding.
  101   | 100000
 -------------------
 INFO:Xst:2261 - The FF/Latch <hall1_past> in Unit <driver1> is equivalent to the following FF/Latch, which will be removed : <hall_state_0> 
-INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <driver1> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
-INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver1> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_6> <M_Kd_fp_9> <M_Kd_fp_10> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
+INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver1> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_8> <M_Kd_fp_9> <M_Kd_fp_12> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
+INFO:Xst:2261 - The FF/Latch <M_Kd_fp_10> in Unit <driver1> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_11> 
 INFO:Xst:2261 - The FF/Latch <hall_state_past_0> in Unit <driver1> is equivalent to the following FF/Latch, which will be removed : <LED_1> 
 INFO:Xst:2261 - The FF/Latch <hall_state_past_1> in Unit <driver1> is equivalent to the following FF/Latch, which will be removed : <LED_2> 
 INFO:Xst:2261 - The FF/Latch <RPM_DIFF0_15> in Unit <driver1> is equivalent to the following FF/Latch, which will be removed : <RPM_DIFF_15> 
 INFO:Xst:2261 - The FF/Latch <hall_state_past_2> in Unit <driver1> is equivalent to the following FF/Latch, which will be removed : <LED_3> 
 INFO:Xst:2261 - The FF/Latch <hall1_past> in Unit <driver2> is equivalent to the following FF/Latch, which will be removed : <hall_state_0> 
-INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <driver2> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
-INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver2> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_6> <M_Kd_fp_9> <M_Kd_fp_10> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
+INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver2> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_8> <M_Kd_fp_9> <M_Kd_fp_12> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
+INFO:Xst:2261 - The FF/Latch <M_Kd_fp_10> in Unit <driver2> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_11> 
 INFO:Xst:2261 - The FF/Latch <hall1_past> in Unit <driver3> is equivalent to the following FF/Latch, which will be removed : <hall_state_0> 
-INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <driver3> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
-INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver3> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_6> <M_Kd_fp_9> <M_Kd_fp_10> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
+INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver3> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_8> <M_Kd_fp_9> <M_Kd_fp_12> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
+INFO:Xst:2261 - The FF/Latch <M_Kd_fp_10> in Unit <driver3> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_11> 
 INFO:Xst:2261 - The FF/Latch <hall1_past> in Unit <driver4> is equivalent to the following FF/Latch, which will be removed : <hall_state_0> 
-INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <driver4> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
-INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver4> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_6> <M_Kd_fp_9> <M_Kd_fp_10> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
+INFO:Xst:2261 - The FF/Latch <M_Kd_fp_0> in Unit <driver4> is equivalent to the following 11 FFs/Latches, which will be removed : <M_Kd_fp_1> <M_Kd_fp_2> <M_Kd_fp_3> <M_Kd_fp_4> <M_Kd_fp_5> <M_Kd_fp_8> <M_Kd_fp_9> <M_Kd_fp_12> <M_Kd_fp_13> <M_Kd_fp_14> <M_Kd_fp_15> 
+INFO:Xst:2261 - The FF/Latch <M_Kd_fp_10> in Unit <driver4> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_11> 
 WARNING:Xst:1293 - FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <driver1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
@@ -581,9 +579,9 @@ Macro Statistics
  16x20-bit multiplier                                  : 4
  20x16-bit multiplier                                  : 4
  27x11-bit multiplier                                  : 4
-# Adders/Subtractors                                   : 68
+# Adders/Subtractors                                   : 72
  11-bit adder                                          : 4
- 16-bit adder                                          : 24
+ 16-bit adder                                          : 28
  16-bit addsub                                         : 4
  16-bit subtractor                                     : 16
  20-bit addsub                                         : 4
@@ -630,14 +628,14 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_2> has a co
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_3> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_4> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_5> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_6> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_8> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_9> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_10> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_12> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_13> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_14> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_15> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <hall1_past> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <hall_state_0> 
-INFO:Xst:2261 - The FF/Latch <M_Kd_fp_11> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_12> 
+INFO:Xst:2261 - The FF/Latch <M_Kd_fp_10> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_11> 
 INFO:Xst:2261 - The FF/Latch <hall_state_past_0> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <LED_1> 
 INFO:Xst:2261 - The FF/Latch <hall_state_past_1> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <LED_2> 
 INFO:Xst:2261 - The FF/Latch <RPM_DIFF0_15> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <RPM_DIFF_15> 
@@ -797,7 +795,11 @@ WARNING:Xst:2677 - Node <driver2/hall_out_s> of sequential type is unconnected i
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block m, actual ratio is 57.
+Found area constraint ratio of 100 (+ 5) on block m, actual ratio is 59.
+FlipFlop driver1/M_RPM_DIR_15 has been replicated 1 time(s)
+FlipFlop driver2/M_RPM_DIR_15 has been replicated 1 time(s)
+FlipFlop driver3/M_RPM_DIR_15 has been replicated 1 time(s)
+FlipFlop driver4/M_RPM_DIR_15 has been replicated 1 time(s)
 FlipFlop prl_com/RPM1_15 has been replicated 1 time(s)
 FlipFlop prl_com/RPM2_15 has been replicated 1 time(s)
 FlipFlop prl_com/RPM3_15 has been replicated 1 time(s)
@@ -813,8 +815,8 @@ Unit <m> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 901
- Flip-Flops                                            : 901
+# Registers                                            : 905
+ Flip-Flops                                            : 905
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -845,27 +847,26 @@ Design Statistics
 # IOs                              : 90
 
 Cell Usage :
-# BELS                             : 8087
+# BELS                             : 8375
 #      GND                         : 1
-#      INV                         : 527
-#      LUT1                        : 239
-#      LUT2                        : 1102
-#      LUT2_D                      : 4
+#      INV                         : 539
+#      LUT1                        : 295
+#      LUT2                        : 1082
+#      LUT2_D                      : 8
 #      LUT2_L                      : 12
-#      LUT3                        : 704
-#      LUT3_D                      : 20
-#      LUT3_L                      : 8
-#      LUT4                        : 1021
-#      LUT4_D                      : 16
-#      LUT4_L                      : 28
+#      LUT3                        : 736
+#      LUT3_D                      : 16
+#      LUT4                        : 1065
+#      LUT4_D                      : 24
+#      LUT4_L                      : 36
 #      MULT_AND                    : 28
-#      MUXCY                       : 2543
-#      MUXF5                       : 21
+#      MUXCY                       : 2627
+#      MUXF5                       : 25
 #      VCC                         : 1
-#      XORCY                       : 1812
-# FlipFlops/Latches                : 918
+#      XORCY                       : 1880
+# FlipFlops/Latches                : 922
 #      FD                          : 68
-#      FDE                         : 662
+#      FDE                         : 666
 #      FDR                         : 96
 #      FDRE                        : 64
 #      FDS                         : 12
@@ -886,10 +887,10 @@ Device utilization summary:
 
 Selected Device : 3s400tq144-4 
 
- Number of Slices:                     1939  out of   3584    54%  
- Number of Slice Flip Flops:            918  out of   7168    12%  
- Number of 4 input LUTs:               3682  out of   7168    51%  
-    Number used as logic:              3681
+ Number of Slices:                     2014  out of   3584    56%  
+ Number of Slice Flip Flops:            922  out of   7168    12%  
+ Number of 4 input LUTs:               3814  out of   7168    53%  
+    Number used as logic:              3813
     Number used as Shift registers:       1
  Number of IOs:                          90
  Number of bonded IOBs:                  70  out of     97    72%  
@@ -917,7 +918,7 @@ Clock Information:
 -------------------------------------------------+---------------------------+-------+
 Clock Signal                                     | Clock buffer(FF name)     | Load  |
 -------------------------------------------------+---------------------------+-------+
-clk                                              | BUFGP                     | 903   |
+clk                                              | BUFGP                     | 907   |
 driver1/M_show_not0001(driver1/M_show_not00011:O)| NONE(*)(driver1/M_show_15)| 16    |
 -------------------------------------------------+---------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
@@ -933,7 +934,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 31.385ns (Maximum Frequency: 31.863MHz)
+   Minimum period: 32.029ns (Maximum Frequency: 31.222MHz)
    Minimum input arrival time before clock: 8.974ns
    Maximum output required time after clock: 9.058ns
    Maximum combinational path delay: No path found
@@ -944,21 +945,21 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 31.385ns (frequency: 31.863MHz)
-  Total number of paths / destination ports: 14836971316 / 1630
+  Clock period: 32.029ns (frequency: 31.222MHz)
+  Total number of paths / destination ports: 21629712276 / 1638
 -------------------------------------------------------------------------
-Delay:               31.385ns (Levels of Logic = 36)
-  Source:            driver1/M_RPM_DIR_0 (FF)
-  Destination:       driver1/M_PID_10 (FF)
+Delay:               32.029ns (Levels of Logic = 58)
+  Source:            prl_com/RPM1_0 (FF)
+  Destination:       driver1/M_PID_7 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: driver1/M_RPM_DIR_0 to driver1/M_PID_10
+  Data Path: prl_com/RPM1_0 to driver1/M_PID_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              6   0.720   1.342  driver1/M_RPM_DIR_0 (driver1/M_RPM_DIR_0)
-     LUT2:I0->O            1   0.551   0.000  driver1/Msub_M_ERR_addsub0000_lut<0> (driver1/Msub_M_ERR_addsub0000_lut<0>)
+     FDE:C->Q              8   0.720   1.278  prl_com/RPM1_0 (prl_com/RPM1_0)
+     LUT2:I1->O            1   0.551   0.000  driver1/Msub_M_ERR_addsub0000_lut<0> (driver1/Msub_M_ERR_addsub0000_lut<0>)
      MUXCY:S->O            1   0.500   0.000  driver1/Msub_M_ERR_addsub0000_cy<0> (driver1/Msub_M_ERR_addsub0000_cy<0>)
      MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR_addsub0000_cy<1> (driver1/Msub_M_ERR_addsub0000_cy<1>)
      MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_ERR_addsub0000_cy<2> (driver1/Msub_M_ERR_addsub0000_cy<2>)
@@ -990,14 +991,36 @@ Delay:               31.385ns (Levels of Logic = 36)
      MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<1> (driver1/Msub_M_PD_sub0000_cy<1>)
      MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<2> (driver1/Msub_M_PD_sub0000_cy<2>)
      MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<3> (driver1/Msub_M_PD_sub0000_cy<3>)
-     XORCY:CI->O           6   0.904   1.342  driver1/Msub_M_PD_sub0000_xor<4> (driver1/M_PD_sub0000<4>)
-     LUT2:I0->O            1   0.551   0.869  driver1/Madd_M_PD_ABS_addsub0000_Madd_cy<4>11_SW0 (N146)
-     LUT4_L:I2->LO         1   0.551   0.126  driver1/M_PID_mux0002<0>_SW0 (N138)
-     LUT4:I3->O            1   0.551   0.000  driver1/M_PID_mux0002<0> (driver1/M_PID_mux0002<0>)
-     FDE:D                     0.203          driver1/M_PID_10
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<4> (driver1/Msub_M_PD_sub0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<5> (driver1/Msub_M_PD_sub0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<6> (driver1/Msub_M_PD_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<7> (driver1/Msub_M_PD_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<8> (driver1/Msub_M_PD_sub0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<9> (driver1/Msub_M_PD_sub0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<10> (driver1/Msub_M_PD_sub0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<11> (driver1/Msub_M_PD_sub0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<12> (driver1/Msub_M_PD_sub0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<13> (driver1/Msub_M_PD_sub0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<14> (driver1/Msub_M_PD_sub0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<15> (driver1/Msub_M_PD_sub0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<16> (driver1/Msub_M_PD_sub0000_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<17> (driver1/Msub_M_PD_sub0000_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<18> (driver1/Msub_M_PD_sub0000_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<19> (driver1/Msub_M_PD_sub0000_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<20> (driver1/Msub_M_PD_sub0000_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<21> (driver1/Msub_M_PD_sub0000_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<22> (driver1/Msub_M_PD_sub0000_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<23> (driver1/Msub_M_PD_sub0000_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<24> (driver1/Msub_M_PD_sub0000_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<25> (driver1/Msub_M_PD_sub0000_cy<25>)
+     MUXCY:CI->O           0   0.064   0.000  driver1/Msub_M_PD_sub0000_cy<26> (driver1/Msub_M_PD_sub0000_cy<26>)
+     XORCY:CI->O          14   0.904   1.255  driver1/Msub_M_PD_sub0000_xor<27> (driver1/M_PD_sub0000<27>)
+     LUT3:I2->O            1   0.551   0.869  driver1/M_PID_mux0002<0>31 (driver1/N29)
+     LUT4:I2->O            1   0.551   0.000  driver1/M_PID_mux0002<4>34 (driver1/M_PID_mux0002<4>)
+     FDE:D                     0.203          driver1/M_PID_6
     ----------------------------------------
-    Total                     31.385ns (18.451ns logic, 12.934ns route)
-                                       (58.8% logic, 41.2% route)
+    Total                     32.029ns (19.372ns logic, 12.657ns route)
+                                       (60.5% logic, 39.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -1036,10 +1059,10 @@ Offset:              8.974ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            42   0.821   2.249  TEST_KEY_0_IBUF (TEST_KEY_0_IBUF)
-     LUT2:I0->O           11   0.551   1.483  driver1/M_show_cmp_eq000111 (driver1/N40)
-     LUT3:I0->O            1   0.551   0.000  driver1/M_show_mux0000<9>11_F (N306)
+     LUT2:I0->O           11   0.551   1.483  driver1/M_show_mux0000<2>411 (driver1/N64)
+     LUT3:I0->O            1   0.551   0.000  driver1/M_show_mux0000<9>11_F (N310)
      MUXF5:I0->O           1   0.360   0.827  driver1/M_show_mux0000<9>11 (driver1/M_show_mux0000<9>11)
-     LUT4:I3->O            1   0.551   0.827  driver1/M_show_mux0000<9>71_SW0 (N294)
+     LUT4:I3->O            1   0.551   0.827  driver1/M_show_mux0000<9>71_SW0 (N298)
      LUT4:I3->O            1   0.551   0.000  driver1/M_show_mux0000<9>71 (driver1/M_show_mux0000<9>)
      LD:D                      0.203          driver1/M_show_9
     ----------------------------------------
@@ -1070,11 +1093,11 @@ Offset:              9.058ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 42.00 secs
-Total CPU time to Xst completion: 42.77 secs
+Total CPU time to Xst completion: 41.81 secs
  
 --> 
 
-Total memory usage is 344024 kilobytes
+Total memory usage is 345144 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  292 (   0 filtered)

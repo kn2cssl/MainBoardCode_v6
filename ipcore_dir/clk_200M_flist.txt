@@ -1,2 +1,0 @@
-# Output products list for <clk_200M>
-clk_200M_flist.txt
