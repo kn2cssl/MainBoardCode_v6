@@ -81,6 +81,7 @@ NET "USB_WR"            LOC = "P95";
 ##NET "MOSI1"           LOC = "P70";
 ##NET "MISO1"           LOC = "P69";
 ##NET "SCK1"            LOC = "P68";
+NET "STARTBIT_FLG"      LOC = "P68";
 ##
 ##
 ###SPI2

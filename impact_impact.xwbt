@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\github\MainBoardCode_v6\impact.xsl
+OUTFILE=D:\github\MainBoardCode_v6\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=D:\github\MainBoardCode_v6
+LICENSE=iMPACT
+USER_INFO=iMPACT

@@ -75,6 +75,7 @@
 					CLK_PAR   : in std_logic;
 					PARITY_IN : in std_logic;
 					MOTOR_NUM : in std_logic_vector(1 downto 0);
+					STARTBIT_FLG : in std_logic;
 				 --LED
 					LED:out std_logic_vector(3 downto 0);
 				--MEUNE
@@ -137,6 +138,7 @@
 						RPM2 : out std_logic_vector(15 downto 0);
 						RPM3 : out std_logic_vector(15 downto 0);
 						RPM4 : out std_logic_vector(15 downto 0);
+						STARTBIT_FLG : in std_logic;
 						FREE_WHEELS : out std_logic 
 						--LED  : out std_logic_vector(3 downto 0)
 						);
@@ -225,7 +227,7 @@
 			  FT245:Write_to_USB port map(DATA1_IN =>M1_SHOW,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
 
 			--micro_com2
-			  prl_com:micro_com2 port map(CLK=>CLK,RPM_IN=>RPM_IN,CLK_PAR=>CLK_PAR,PARITY_IN=>PARITY_IN,MOTOR_NUM=>MOTOR_NUM,FREE_WHEELS => FREE_WHEELS_S,
+			  prl_com:micro_com2 port map(CLK=>CLK,RPM_IN=>RPM_IN,CLK_PAR=>CLK_PAR,PARITY_IN=>PARITY_IN,MOTOR_NUM=>MOTOR_NUM,FREE_WHEELS=>FREE_WHEELS_S,STARTBIT_FLG=>STARTBIT_FLG,
 				 RPM1(15 downto 0)=>SPEED1,
 				 RPM2(15 downto 0)=>SPEED2,
 				 RPM3(15 downto 0)=>SPEED3,
