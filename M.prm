@@ -1,9 +1,9 @@
 PROMGEN: Xilinx Prom Generator P.20131013
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-promgen -w -p mcs -c FF -o F:\GitHub\FPGA\driver1\maincodev6//M -x xcf04s -u 00000000 F:/GitHub/FPGA/driver1/maincodev6/m.bit 
+promgen -w -p mcs -c FF -o D:\github\MainBoardCode_v6\//m -x xcf04s -u 00000000 D:/github/MainBoardCode_v6/m.bit 
 
-PROM F:\GitHub\FPGA\driver1\maincodev6\M.prm map: Mon Dec 22 11:52:34 2014
+PROM D:\github\MainBoardCode_v6\m.prm map: Sat Mar 28 15:45:21 2015
 
 Calculating PROM checksum with fill value ff
 
@@ -11,7 +11,7 @@ Format        Mcs86 (32-bit)
 Size          512K
 PROM start    0000:0000
 PROM end      0007:ffff
-PROM checksum 04db682f
+PROM checksum 04fbf476
 
         Addr1        Addr2                     Date File(s)
-    0000:0000    0003:3da7     Dec 22 11:32:21 2014 F:/GitHub/FPGA/driver1/maincodev6/m.bit
+    0000:0000    0003:3da7     Mar 28 15:32:48 2015 D:/github/MainBoardCode_v6/m.bit

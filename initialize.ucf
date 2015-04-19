@@ -11,7 +11,7 @@ NET "M2N1"   LOC="P77";
 NET "M2P1"   LOC="P76";
 NET "M1N1"   LOC="P74";
 NET "M1P1"   LOC="P73";
-
+#
 ##M2
 NET "HALL12" LOC="P108";
 NET "HALL22" LOC="P112";
@@ -36,7 +36,7 @@ NET "M1N3"   LOC="P2";
 NET "M1P3"   LOC="P1";
 #
 #
-#
+##
 ##M4
 NET "HALL14" LOC="P31";
 NET "HALL24" LOC="P32";
@@ -81,6 +81,7 @@ NET "USB_WR"            LOC = "P95";
 ##NET "MOSI1"           LOC = "P70";
 ##NET "MISO1"           LOC = "P69";
 ##NET "SCK1"            LOC = "P68";
+NET "STARTBIT_FLG"      LOC = "P68";
 ##
 ##
 ###SPI2
@@ -100,10 +101,19 @@ NET "USB_WR"            LOC = "P95";
 ##NET "SEG1DP"         LOC = "P21";
 
 #LED
-NET "led[0]"         LOC = "P140";
-NET "led[1]"         LOC = "P141";
+NET "led[0]"         LOC = "P40";
+NET "led[1]"         LOC = "P36";
 NET "led[2]"         LOC = "P35";
 NET "led[3]"         LOC = "P33";
+
+
+#MENU
+NET "TEST_KEY[3]"    LOC = "P141";
+NET "TEST_KEY[2]"    LOC = "P140";
+NET "TEST_KEY[1]"    LOC = "P131";
+NET "TEST_KEY[0]"    LOC = "P130";
+
+
 
 #IO
 ##NET "IO1"                 LOC = "P137";
@@ -122,4 +132,6 @@ NET "led[3]"         LOC = "P33";
 ##NET "IO14"                LOC = "P116";
 ##NET "IO15"                LOC = "P113";
 
-
+NET "HALL_OUT"                LOC ="P116";
+NET "CLK_1MS"                 LOC ="P113";
+NET "CHECK_OUT"                   LOC ="P119";

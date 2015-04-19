@@ -14,6 +14,7 @@ port (
 	RPM2 : out std_logic_vector(15 downto 0);
 	RPM3 : out std_logic_vector(15 downto 0);
 	RPM4 : out std_logic_vector(15 downto 0);
+	STARTBIT_FLG : in std_logic;
 	FREE_WHEELS : out std_logic 
    --LED  : out std_logic_vector(3 downto 0)
 	);
@@ -25,6 +26,7 @@ architecture Behavioral of micro_com2 is
 	signal motor_rpm_high : memory8 :=("00000000","00000000","00000000","00000000");
 	signal motor_rpm_low  : memory8 :=("00000000","00000000","00000000","00000000");
 	signal motor_rpm_tmp  : std_logic_vector(7 downto 0); 
+	signal startbyte_low	 : std_logic_vector(7 downto 0);
 	signal state : state_machine :=s0;
 	
 --	signal motor_rpm_low0_s  :  std_logic_vector(7 downto 0):="00000010"; 
@@ -89,11 +91,15 @@ architecture Behavioral of micro_com2 is
 					state <= s0;
 			  end if;
 		 when s6 =>
+			  if (STARTBIT_FLG = '1') then
+					startbyte_low  <= RPM_IN(7 downto 0);
+			elsif ((STARTBIT_FLG = '0')and (startbyte_low = "10101010")) then
 			  if (PARITY_IN = '0') then
 					motor_rpm_low (conv_integer(motor_num)) <= RPM_IN(7 downto 0);
 			  elsif (PARITY_IN = '1') then
 					motor_rpm_high (conv_integer(motor_num)) <= RPM_IN(7 downto 0);
 			  end if;
+			end if;
 					state <= s0;
 		  when others =>
 					state <= s0;		      
