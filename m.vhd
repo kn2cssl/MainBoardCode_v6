@@ -71,10 +71,14 @@
 					USB_WR 	 : out std_logic;	
 					TXE		 : in  std_logic;	
 		--		 micro_com
-					RPM_IN    : in std_logic_vector(7 downto 0);
-					CLK_PAR   : in std_logic;
-					PARITY_IN : in std_logic;
-					MOTOR_NUM : in std_logic_vector(1 downto 0);
+--					RPM_IN    : in std_logic_vector(7 downto 0);
+--					CLK_PAR   : in std_logic;
+--					PARITY_IN : in std_logic;
+--					MOTOR_NUM : in std_logic_vector(1 downto 0);
+					DATA_IN   : in std_logic_vector(6 downto 0);
+					DATA_CLK	 : in std_logic ;
+					DATA_OUT	 : out std_logic_vector(6 downto 0);
+
 					STARTBIT_FLG : in std_logic;
 				 --LED
 					LED:out std_logic_vector(3 downto 0);
@@ -129,18 +133,21 @@
 			 
 			 component micro_com2 is
 				port (
-						CLK : in std_logic;
-						RPM_IN : in std_logic_vector(7 downto 0);
-						CLK_PAR : in std_logic;
-						PARITY_IN : in std_logic;
-						MOTOR_NUM : in std_logic_vector(1 downto 0);
-						RPM1 : out std_logic_vector(15 downto 0);
-						RPM2 : out std_logic_vector(15 downto 0);
-						RPM3 : out std_logic_vector(15 downto 0);
-						RPM4 : out std_logic_vector(15 downto 0);
-						STARTBIT_FLG : in std_logic;
-						FREE_WHEELS : out std_logic 
+--						CLK : in std_logic;
+--						RPM_IN : in std_logic_vector(7 downto 0);
+--						CLK_PAR : in std_logic;
+--						PARITY_IN : in std_logic;
+--						MOTOR_NUM : in std_logic_vector(1 downto 0);
+--						RPM1 : out std_logic_vector(15 downto 0);
+--						RPM2 : out std_logic_vector(15 downto 0);
+--						RPM3 : out std_logic_vector(15 downto 0);
+--						RPM4 : out std_logic_vector(15 downto 0);
+--						STARTBIT_FLG : in std_logic;
+--						FREE_WHEELS : out std_logic 
 						--LED  : out std_logic_vector(3 downto 0)
+						CLK : in std_logic;
+						DATA_IN : in std_logic_vector(6 downto 0);
+						DATA_OUT: OUT std_logic_vector(6 downto 0)
 						);
 				end component;
 				
@@ -172,6 +179,16 @@
 			signal SPEED2 : std_logic_vector(15 downto 0):=(others=>'0'); --"0000111110100000";--
 			signal SPEED3 : std_logic_vector(15 downto 0):=(others=>'0'); --"0001000110010100";----"0000001111100100"; 
 			signal SPEED4 : std_logic_vector(15 downto 0):=(others=>'0'); --"1111110000011000";--
+			
+--       new controller & connection
+			signal VX     : std_logic_vector(15 downto 0):=(others=>'0');
+			signal VY     : std_logic_vector(15 downto 0):=(others=>'0');
+			signal W      : std_logic_vector(15 downto 0):=(others=>'0');
+			signal ALPHA  : std_logic_vector(15 downto 0):=(others=>'0');
+			signal JVX    : std_logic_vector(15 downto 0):=(others=>'0');
+			signal JVY    : std_logic_vector(15 downto 0):=(others=>'0');
+			signal JW     : std_logic_vector(15 downto 0):=(others=>'0');
+			
 			
 			signal MS_show: std_logic_vector(15 downto 0):=(others=>'0');
 			signal M1_show: std_logic_vector(15 downto 0):=(others=>'0'); 
@@ -237,12 +254,7 @@
 			  FT245:Write_to_USB port map(DATA1_IN =>MS_SHOW,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
 
 			--micro_com2
-			  prl_com:micro_com2 port map(CLK=>CLK,RPM_IN=>RPM_IN,CLK_PAR=>CLK_PAR,PARITY_IN=>PARITY_IN,MOTOR_NUM=>MOTOR_NUM,FREE_WHEELS => FREE_WHEELS_S,STARTBIT_FLG=>STARTBIT_FLG,
-				 RPM1(15 downto 0)=>SPEED1,
-				 RPM2(15 downto 0)=>SPEED2,
-				 RPM3(15 downto 0)=>SPEED3,
-				 RPM4(15 downto 0)=>SPEED4
-				);
+			  prl_com:micro_com2 port map(CLK=>DATA_CLK,DATA_IN=>DATA_IN,DATA_OUT=>DATA_OUT);
 				
 --				
 --		 --DIVIDER

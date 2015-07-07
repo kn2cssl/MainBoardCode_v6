@@ -5,17 +5,20 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity micro_com2 is
 port (
-   CLK : in std_logic;
-	RPM_IN : in std_logic_vector(7 downto 0);
-	CLK_PAR : in std_logic;
-	PARITY_IN : in std_logic;
-	MOTOR_NUM : in std_logic_vector(1 downto 0);
-	RPM1 : out std_logic_vector(15 downto 0);
-	RPM2 : out std_logic_vector(15 downto 0);
-	RPM3 : out std_logic_vector(15 downto 0);
-	RPM4 : out std_logic_vector(15 downto 0);
-	STARTBIT_FLG : in std_logic;
-	FREE_WHEELS : out std_logic 
+--   CLK : in std_logic;
+--	RPM_IN : in std_logic_vector(7 downto 0);
+--	CLK_PAR : in std_logic;
+--	PARITY_IN : in std_logic;
+--	MOTOR_NUM : in std_logic_vector(1 downto 0);
+--	RPM1 : out std_logic_vector(15 downto 0);
+--	RPM2 : out std_logic_vector(15 downto 0);
+--	RPM3 : out std_logic_vector(15 downto 0);
+--	RPM4 : out std_logic_vector(15 downto 0);
+--	STARTBIT_FLG : in std_logic;
+--	FREE_WHEELS : out std_logic 
+	CLK : in std_logic;
+	DATA_IN : in std_logic_vector(6 downto 0);
+	DATA_OUT: OUT std_logic_vector(6 downto 0)
    --LED  : out std_logic_vector(3 downto 0)
 	);
 end micro_com2;
@@ -104,34 +107,20 @@ architecture Behavioral of micro_com2 is
 		  when others =>
 					state <= s0;		      
 		end case;
---		end if;
---		end if;
---	   end process;
+
 		 
 	 rpm1 <= motor_rpm_high(0)& motor_rpm_low(0);
 	 rpm2 <= motor_rpm_high(1)& motor_rpm_low(1);
 	 rpm3 <= motor_rpm_high(2)& motor_rpm_low(2);
 	 rpm4 <= motor_rpm_high(3)& motor_rpm_low(3);
 	
-	-- process(CLK) 
-   -- begin
-   -- if (rising_edge(clk)) then
-    if ((motor_rpm_high(0)="00000001") and (motor_rpm_low(0)="00000010") and (motor_rpm_high(1)="00000011") and (motor_rpm_low(1)="00000100") ) then
-    FREE_WHEELS <= '1';
-		 rpm1 <= (others=>'0');
-		 rpm2 <= (others=>'0');
-		 rpm3 <= (others=>'0');
-		 rpm4 <= (others=>'0');
-    else
-    FREE_WHEELS <= '0';
-		 rpm1 <= motor_rpm_high(0)& motor_rpm_low(0);
-		 rpm2 <= motor_rpm_high(1)& motor_rpm_low(1);
-		 rpm3 <= motor_rpm_high(2)& motor_rpm_low(2);
-		 rpm4 <= motor_rpm_high(3)& motor_rpm_low(3);
-    end if;
+
 --	 end if;
 --	 end process;
 	   end if;
+		end if;
+		
+		if (falling_edge(clk))then
 		end if;
 	   end process;
 	 end Behavioral; 
