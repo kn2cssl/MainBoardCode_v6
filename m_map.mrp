@@ -9,37 +9,41 @@ Target Device  : xc3s400
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Sat Mar 28 15:31:11 2015
+Mapped Date    : Thu Jul 09 17:33:02 2015
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           883 out of   7,168   12%
-  Number of 4 input LUTs:             3,482 out of   7,168   48%
+  Total Number Slice Registers:         909 out of   7,168   12%
+    Number used as Flip Flops:          908
+    Number used as Latches:               1
+  Number of 4 input LUTs:             2,808 out of   7,168   39%
 Logic Distribution:
-  Number of occupied Slices:          2,108 out of   3,584   58%
-    Number of Slices containing only related logic:   2,108 out of   2,108 100%
-    Number of Slices containing unrelated logic:          0 out of   2,108   0%
+  Number of occupied Slices:          1,820 out of   3,584   50%
+    Number of Slices containing only related logic:   1,820 out of   1,820 100%
+    Number of Slices containing unrelated logic:          0 out of   1,820   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       3,781 out of   7,168   52%
-    Number used as logic:             3,481
-    Number used as a route-thru:        299
-    Number used as Shift registers:       1
+  Total Number of 4 input LUTs:       3,217 out of   7,168   44%
+    Number used as logic:             2,731
+    Number used as a route-thru:        409
+    Number used as Shift registers:      77
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 71 out of      97   73%
+  Number of bonded IOBs:                 73 out of      97   75%
+  Number of RAMB16s:                      2 out of      16   12%
   Number of MULT18X18s:                  16 out of      16  100%
-  Number of BUFGMUXs:                     1 out of       8   12%
+  Number of BUFGMUXs:                     3 out of       8   37%
+  Number of BSCANs:                       1 out of       1  100%
 
-Average Fanout of Non-Clock Nets:                2.61
+Average Fanout of Non-Clock Nets:                2.45
 
-Peak Memory Usage:  286 MB
-Total REAL time to MAP completion:  7 secs 
-Total CPU time to MAP completion:   7 secs 
+Peak Memory Usage:  345 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   4 secs 
 
 NOTES:
 
@@ -80,17 +84,20 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net CONTROL1<13> is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network HALL4_COUNT<4> has no load.
-INFO:LIT:395 - The above info message is repeated 19 more times for the
+INFO:LIT:243 - Logical network CONTROL1<10> has no load.
+INFO:LIT:395 - The above info message is repeated 45 more times for the
    following (max. 5 shown):
-   HALL4_COUNT<3>,
-   HALL4_COUNT<2>,
-   HALL4_COUNT<1>,
-   HALL4_COUNT<0>,
-   HALL3_COUNT<4>
+   CONTROL1<11>,
+   CONTROL1<15>,
+   CONTROL1<16>,
+   CONTROL1<17>,
+   CONTROL1<18>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -99,15 +106,158 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   2 block(s) optimized away
+  47 block(s) removed
+  28 block(s) optimized away
+  31 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
 
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[10].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[2].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[4].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[5].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[8].U_LUT" (ROM)
+removed.
+Loadless block "ICON1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[9].U_LUT" (ROM)
+removed.
+Loadless block "ILA1/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
+Loadless block "ILA1/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_B" (ROM)
+removed.
+The signal "CONTROL1<10>" is sourceless and has been removed.
+The signal "CONTROL1<11>" is sourceless and has been removed.
+The signal "CONTROL1<15>" is sourceless and has been removed.
+The signal "CONTROL1<16>" is sourceless and has been removed.
+The signal "CONTROL1<17>" is sourceless and has been removed.
+The signal "CONTROL1<18>" is sourceless and has been removed.
+The signal "CONTROL1<19>" is sourceless and has been removed.
+The signal "CONTROL1<21>" is sourceless and has been removed.
+The signal "CONTROL1<22>" is sourceless and has been removed.
+The signal "CONTROL1<23>" is sourceless and has been removed.
+The signal "CONTROL1<24>" is sourceless and has been removed.
+The signal "CONTROL1<25>" is sourceless and has been removed.
+The signal "CONTROL1<26>" is sourceless and has been removed.
+The signal "CONTROL1<27>" is sourceless and has been removed.
+The signal "CONTROL1<28>" is sourceless and has been removed.
+The signal "CONTROL1<29>" is sourceless and has been removed.
+The signal "CONTROL1<30>" is sourceless and has been removed.
+The signal "CONTROL1<31>" is sourceless and has been removed.
+The signal "CONTROL1<32>" is sourceless and has been removed.
+The signal "CONTROL1<33>" is sourceless and has been removed.
+The signal "CONTROL1<34>" is sourceless and has been removed.
+The signal "CONTROL1<35>" is sourceless and has been removed.
+The signal "CONTROL1<7>" is sourceless and has been removed.
+The signal "ICON1/U0/U_ICON/iCOMMAND_SEL<3>" is sourceless and has been removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_LCE" (ROM)
+removed.
+The signal "ICON1/U0/U_ICON/iCOMMAND_SEL<6>" is sourceless and has been removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_LCE" (ROM)
+removed.
+The signal "ICON1/U0/U_ICON/iCOMMAND_SEL<7>" is sourceless and has been removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_LCE" (ROM)
+removed.
+The signal "ICON1/U0/U_ICON/iCOMMAND_SEL<11>" is sourceless and has been
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_LCE" (ROM)
+removed.
+The signal "ICON1/U0/U_ICON/iCOMMAND_SEL<12>" is sourceless and has been
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_LCE" (ROM)
+removed.
+The signal "ICON1/U0/U_ICON/iCOMMAND_SEL<13>" is sourceless and has been
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_LCE" (ROM)
+removed.
+The signal "ICON1/U0/U_ICON/iCOMMAND_SEL<14>" is sourceless and has been
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_LCE" (ROM)
+removed.
+The signal "ICON1/U0/U_ICON/iCOMMAND_SEL<15>" is sourceless and has been
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_HCE" (ROM)
+removed.
+ Sourceless block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_LCE" (ROM)
+removed.
+Unused block "ICON1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Unused block "ICON1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Unused block "ICON1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Unused block "ICON1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Unused block "ICON1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[15].U_LUT" (ROM)
+removed.
+Unused block "ICON1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[3].U_LUT" (ROM) removed.
+Unused block "ICON1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[6].U_LUT" (ROM) removed.
+Unused block "ICON1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[7].U_LUT" (ROM) removed.
+Unused block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE" (ROM) removed.
+Unused block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_HCE" (ROM) removed.
+Unused block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_HCE" (ROM) removed.
+Unused block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_HCE" (ROM) removed.
+Unused block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE" (ROM) removed.
+Unused block "ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM) removed.
+
 Optimized Block(s):
 TYPE 		BLOCK
+GND 		ICON1/XST_GND
+VCC 		ICON1/XST_VCC
+LUT4 		ILA1/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+   optimized to 0
+GND 		ILA1/XST_GND
+VCC 		ILA1/XST_VCC
 GND 		XST_GND
 VCC 		XST_VCC
+MUXCY 		driver1/Maddsub_M_ERR_mux0000_cy<0>
+MUXCY 		driver2/Maddsub_M_ERR_mux0000_cy<0>
+MUXCY 		driver3/Maddsub_M_ERR_mux0000_cy<0>
+MUXCY 		driver4/Maddsub_M_ERR_mux0000_cy<0>
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -121,7 +271,21 @@ Section 6 - IOB Properties
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | CHECK_OUT                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | CLK_1MS                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| CLK_PAR                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA_CLK                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA_IN<0>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA_IN<1>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA_IN<2>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA_IN<3>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA_IN<4>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA_IN<5>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA_IN<6>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| DATA_OUT<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| DATA_OUT<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| DATA_OUT<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| DATA_OUT<3>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| DATA_OUT<4>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| DATA_OUT<5>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| DATA_OUT<6>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | DATA_USB<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | DATA_USB<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | DATA_USB<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
@@ -171,18 +335,6 @@ Section 6 - IOB Properties
 | M3p2                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | M3p3                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | M3p4                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MOTOR_NUM<0>                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MOTOR_NUM<1>                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| PARITY_IN                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| RPM_IN<0>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| RPM_IN<1>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| RPM_IN<2>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| RPM_IN<3>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| RPM_IN<4>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| RPM_IN<5>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| RPM_IN<6>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| RPM_IN<7>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| STARTBIT_FLG                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | TEST_KEY<0>                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | TEST_KEY<1>                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | TEST_KEY<2>                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |

@@ -1,3 +1,5 @@
+vhdl work "ipcore_dir/ila.vhd"
+vhdl work "ipcore_dir/ICON.vhd"
 vhdl work "pwm.vhd"
 vhdl work "Write_to_USB.vhd"
 vhdl work "micro_com2.vhd"

@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=D:\github\MainBoardCode_v6\m.ncd
-OUTFILE=D:\github\MainBoardCode_v6\m.bit
+INFILE=D:\GitHub\Yashil-fpga\m.ncd
+OUTFILE=D:\GitHub\Yashil-fpga\m.bit
 FAMILY=Spartan3
 PART=xc3s400-4tq144
-WORKINGDIR=D:\github\MainBoardCode_v6
+WORKINGDIR=D:\GitHub\Yashil-fpga
 LICENSE=WebPack
 USER_INFO=__0_0_0

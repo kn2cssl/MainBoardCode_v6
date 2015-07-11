@@ -171,6 +171,20 @@
 				CLK0_OUT : OUT std_logic
 				);
 			END COMPONENT;
+			
+					component ila IS
+		  PORT (
+			 CONTROL : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0);
+			 CLK : IN STD_LOGIC;
+			 TRIG0 : IN STD_LOGIC_VECTOR(15 DOWNTO 0));
+
+		end component;
+
+		component ICON
+		  PORT (
+			 CONTROL0 : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0));
+
+		end component;
 
 
 			
@@ -189,7 +203,7 @@
 			signal JVY    : std_logic_vector(15 downto 0):=(others=>'0');
 			signal JW     : std_logic_vector(15 downto 0):=(others=>'0');
 			
-			
+			signal MS1_show: std_logic_vector(15 downto 0):="1010101010101010";
 			signal MS_show: std_logic_vector(15 downto 0):=(others=>'0');
 			signal M1_show: std_logic_vector(15 downto 0):=(others=>'0'); 
 		   signal M2_show: std_logic_vector(15 downto 0):=(others=>'0'); 
@@ -231,11 +245,12 @@
 			signal  kp_M3   : std_logic_vector(19 downto 0):=(others=>'0');
 			signal ERR_M4   : std_logic_vector(15 downto 0):=(others=>'0');
 			signal  kp_M4   : std_logic_vector(19 downto 0):=(others=>'0');
-
+         signal  CONTROL1 : STD_LOGIC_VECTOR(35 DOWNTO 0);
+			signal DATA_INs :  std_logic_vector(15 downto 0);
 		begin
 		
 		
-		
+--	DATA_INs <= DATA_IN & "000000000";
 		 
 			--M1		
 				driver1:drivermotor port map(HALL1=>HALL11,HALL2=>HALL21,HALL3=>HALL31,CLK=>CLK,hall_OUT=>hall_OUT,CHECK_OUT=> CHECK_OUT,
@@ -251,12 +266,14 @@
 				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M4,kp_M=>kp_M4);
 
 		--	--FT245
-			  FT245:Write_to_USB port map(DATA1_IN =>MS_SHOW,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
+			  FT245:Write_to_USB port map(DATA1_IN =>ms1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
 
 			--micro_com2
 			  prl_com:micro_com2 port map(CLK=>DATA_CLK,DATA_IN=>DATA_IN,DATA_OUT=>DATA_OUT);
+			  
+			  ILA1 : ila port map ( CONTROL => CONTROL1, CLK => DATA_CLK,  TRIG0 => DATA_INs );
 				
---				
+          ICON1: ICON  port map (  CONTROL0 => CONTROL1);
 --		 --DIVIDER
 --			 DIVIDER1:DIVIDER port map (clk => clk_280,rfd => rfd1,dividend => dividend1,divisor => divisor1,quotient => quotient1,fractional => fractional1);
 --		 
@@ -265,10 +282,17 @@
 --		--CLK_200M
 --			Inst_clk_200M: clk_200M port map(CLKIN_IN =>clk ,RST_IN => RST_IN ,CLKFX_OUT =>CLKFX_OUT ,CLK0_OUT =>CLK0_OUT  );
 --		
---		
---
--- 
--- TIMER:			process(clk)  
+
+			   process(clk)  
+					begin
+               if rising_edge (clk) then 
+					data_ins <= data_ins + '1';
+					end if;
+					
+					end process;
+					
+					
+ --TIMER:			process(clk)  
 --					begin	
 --					if rising_edge (clk) then 
 --					TIME_COUNT <=  TIME_COUNT+'1';
