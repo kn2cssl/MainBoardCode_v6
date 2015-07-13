@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Jul 09 17:33:06 2015
+// Written by: Map P.20131013 on Mon Jul 13 15:48:38 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -74,11 +74,8 @@ COMP "LED<3>" LOCATE = SITE "P33" LEVEL 1;
 COMP "USB_WR" LOCATE = SITE "P95" LEVEL 1;
 COMP "CHECK_OUT" LOCATE = SITE "P119" LEVEL 1;
 COMP "DATA_CLK" LOCATE = SITE "P51" LEVEL 1;
-PIN DATA_CLK_pin<0> = BEL "DATA_CLK" PINNAME PAD;
-PIN "DATA_CLK_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 COMP "HALL_OUT" LOCATE = SITE "P116" LEVEL 1;
 COMP "CLK_1MS" LOCATE = SITE "P113" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
-NET "DATA_CLK_BUFGP/IBUFG" BEL "DATA_CLK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 

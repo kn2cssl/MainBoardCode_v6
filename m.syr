@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: m.prj
 
@@ -145,21 +145,21 @@ Analyzing hierarchy for entity <PWM> in library <work> (architecture <behavioral
 =========================================================================
 Analyzing generic Entity <m> in library <work> (Architecture <behavioral>).
 	n = 11
-WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 256: Different binding for component: <drivermotor>. Port <M_show> does not match.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 259: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 259: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 259: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
-WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 259: Different binding for component: <drivermotor>. Port <M_show> does not match.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 262: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 262: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 262: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
-WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 262: Different binding for component: <drivermotor>. Port <M_show> does not match.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 265: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 265: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 265: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
-WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 265: Different binding for component: <drivermotor>. Port <M_show> does not match.
-WARNING:Xst:2211 - "D:/GitHub/Yashil-fpga/m.vhd" line 274: Instantiating black box module <ila>.
-WARNING:Xst:2211 - "D:/GitHub/Yashil-fpga/m.vhd" line 276: Instantiating black box module <ICON>.
+WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 239: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 242: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 242: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 242: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
+WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 242: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 245: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 245: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 245: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
+WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 245: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 248: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 248: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 248: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
+WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 248: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:2211 - "D:/GitHub/Yashil-fpga/m.vhd" line 257: Instantiating black box module <ila>.
+WARNING:Xst:2211 - "D:/GitHub/Yashil-fpga/m.vhd" line 259: Instantiating black box module <ICON>.
 Entity <m> analyzed. Unit <m> generated.
 
 Analyzing generic Entity <drivermotor> in library <work> (Architecture <behavioral>).
@@ -214,35 +214,17 @@ Unit <Write_to_USB> synthesized.
 
 Synthesizing Unit <micro_com2>.
     Related source file is "D:/GitHub/Yashil-fpga/micro_com2.vhd".
-WARNING:Xst:1780 - Signal <temp_data_in1<62:56>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:647 - Input <DATA_IN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <state> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <startbyte_low> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <motor_rpm_tmp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <motor_rpm_low> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <motor_rpm_high> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <memory_in1<0:6>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <memory_in1<7><7>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <memory_in1<7><6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <memory_in1<8>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <memory_in0<0:6>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <memory_in0<7><7>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <memory_in0<7><6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <memory_in0<8>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-    Found finite state machine <FSM_1> for signal <state>.
-    -----------------------------------------------------------------------
-    | States             | 20                                             |
-    | Transitions        | 22                                             |
-    | Inputs             | 1                                              |
-    | Outputs            | 2                                              |
-    | Clock              | CLK                       (rising_edge)        |
-    | Power Up State     | s0                                             |
-    | Encoding           | automatic                                      |
-    | Implementation     | LUT                                            |
-    -----------------------------------------------------------------------
     Found 7-bit register for signal <DATA_OUT>.
+    Found 1-bit register for signal <data_clk_flag>.
     Summary:
-	inferred   1 Finite State Machine(s).
-	inferred   7 D-type flip-flop(s).
+	inferred   8 D-type flip-flop(s).
 Unit <micro_com2> synthesized.
 
 
@@ -406,10 +388,11 @@ WARNING:Xst:1780 - Signal <CLK_280> is never used or assigned. This unconnected 
 WARNING:Xst:1780 - Signal <CLKFX_OUT> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <CLK0_OUT> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <ALPHA> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 7-bit register for signal <DATA_OUT>.
     Found 4-bit 4-to-1 multiplexer for signal <LED>.
-    Found 16-bit up counter for signal <DATA_INs>.
+    Found 16-bit register for signal <DATA_INs>.
     Summary:
-	inferred   1 Counter(s).
+	inferred  23 D-type flip-flop(s).
 	inferred   4 Multiplexer(s).
 Unit <m> synthesized.
 
@@ -433,20 +416,20 @@ Macro Statistics
  27-bit subtractor                                     : 4
  28-bit subtractor                                     : 4
  31-bit adder                                          : 4
-# Counters                                             : 14
+# Counters                                             : 13
  11-bit up counter                                     : 4
- 16-bit up counter                                     : 6
+ 16-bit up counter                                     : 5
  17-bit up counter                                     : 4
 # Accumulators                                         : 4
  27-bit up accumulator                                 : 4
-# Registers                                            : 99
- 1-bit register                                        : 57
+# Registers                                            : 102
+ 1-bit register                                        : 58
  11-bit register                                       : 4
- 16-bit register                                       : 20
+ 16-bit register                                       : 21
  20-bit register                                       : 4
  3-bit register                                        : 8
  4-bit register                                        : 4
- 7-bit register                                        : 1
+ 7-bit register                                        : 2
  8-bit register                                        : 1
 # Comparators                                          : 140
  11-bit comparator greatequal                          : 4
@@ -475,32 +458,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-Analyzing FSM <FSM_1> for best encoding.
-Optimizing FSM <prl_com/state/FSM> on signal <state[1:20]> with one-hot encoding.
--------------------------------
- State | Encoding
--------------------------------
- s0    | 00000000000000000001
- s1    | 00000000000000000010
- s2    | 00000000000000000100
- s3    | 00000000000000001000
- s4    | 00000000000000010000
- s5    | 00000000000000100000
- s6    | 00000000000001000000
- s7    | 00000000000010000000
- s8    | 00000000000100000000
- s9    | 00000000001000000000
- s10   | 00000000010000000000
- s11   | 00000000100000000000
- s12   | 00000001000000000000
- s13   | 00000010000000000000
- s14   | 00000100000000000000
- s15   | 00001000000000000000
- s16   | 00010000000000000000
- s17   | 00100000000000000000
- s18   | 01000000000000000000
- s19   | 10000000000000000000
--------------------------------
 Analyzing FSM <FSM_0> for best encoding.
 Optimizing FSM <FT245/cnt1/FSM> on signal <cnt1[1:6]> with one-hot encoding.
 -------------------
@@ -541,6 +498,8 @@ INFO:Xst:2261 - The FF/Latch <M_Kd_fp_10> in Unit <driver4> is equivalent to the
 INFO:Xst:2261 - The FF/Latch <hall_state_past_0> in Unit <driver4> is equivalent to the following FF/Latch, which will be removed : <LED_1> 
 INFO:Xst:2261 - The FF/Latch <hall_state_past_1> in Unit <driver4> is equivalent to the following FF/Latch, which will be removed : <LED_2> 
 INFO:Xst:2261 - The FF/Latch <hall_state_past_2> in Unit <driver4> is equivalent to the following FF/Latch, which will be removed : <LED_3> 
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_1> in Unit <prl_com> is equivalent to the following 2 FFs/Latches, which will be removed : <DATA_OUT_3> <DATA_OUT_5> 
+INFO:Xst:2261 - The FF/Latch <data_clk_flag> in Unit <prl_com> is equivalent to the following 4 FFs/Latches, which will be removed : <DATA_OUT_0> <DATA_OUT_2> <DATA_OUT_4> <DATA_OUT_6> 
 WARNING:Xst:1293 - FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <driver4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_15> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_14> has a constant value of 0 in block <driver3>. This FF/Latch will be trimmed during the optimization process.
@@ -611,6 +570,8 @@ WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_2> has a constant value of 0 in block
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_1> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <SETPOINT_LAST_0> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <driver2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_INs_0> (without init value) has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_INs_1> (without init value) has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <RPM_DIFF_0> of sequential type is unconnected in block <driver1>.
 WARNING:Xst:2677 - Node <RPM_DIFF_1> of sequential type is unconnected in block <driver1>.
 WARNING:Xst:2677 - Node <RPM_DIFF_2> of sequential type is unconnected in block <driver1>.
@@ -691,7 +652,7 @@ WARNING:Xst:2677 - Node <RPM_DIFF_14> of sequential type is unconnected in block
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# FSMs                                                 : 2
+# FSMs                                                 : 1
 # Multipliers                                          : 20
  16x16-bit multiplier                                  : 8
  16x20-bit multiplier                                  : 4
@@ -706,14 +667,14 @@ Macro Statistics
  27-bit adder                                          : 8
  27-bit subtractor                                     : 4
  28-bit subtractor                                     : 4
-# Counters                                             : 14
+# Counters                                             : 13
  11-bit up counter                                     : 4
- 16-bit up counter                                     : 6
+ 16-bit up counter                                     : 5
  17-bit up counter                                     : 4
 # Accumulators                                         : 4
  27-bit up accumulator                                 : 4
-# Registers                                            : 496
- Flip-Flops                                            : 496
+# Registers                                            : 520
+ Flip-Flops                                            : 520
 # Comparators                                          : 140
  11-bit comparator greatequal                          : 4
  16-bit comparator equal                               : 4
@@ -752,11 +713,24 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_12> has a c
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_13> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_14> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_15> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DATA_INs_0> (without init value) has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_INs_1> (without init value) has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_1> in Unit <micro_com2> is equivalent to the following 2 FFs/Latches, which will be removed : <DATA_OUT_3> <DATA_OUT_5> 
+INFO:Xst:2261 - The FF/Latch <data_clk_flag> in Unit <micro_com2> is equivalent to the following 4 FFs/Latches, which will be removed : <DATA_OUT_0> <DATA_OUT_2> <DATA_OUT_4> <DATA_OUT_6> 
 INFO:Xst:2261 - The FF/Latch <hall1_past> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <hall_state_0> 
 INFO:Xst:2261 - The FF/Latch <M_Kd_fp_10> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <M_Kd_fp_11> 
 INFO:Xst:2261 - The FF/Latch <hall_state_past_0> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <LED_1> 
 INFO:Xst:2261 - The FF/Latch <hall_state_past_1> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <LED_2> 
 INFO:Xst:2261 - The FF/Latch <hall_state_past_2> in Unit <drivermotor> is equivalent to the following FF/Latch, which will be removed : <LED_3> 
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_0> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <DATA_INs_2> 
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_1> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <DATA_INs_3> 
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_2> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <DATA_INs_4> 
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_3> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <DATA_INs_5> 
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_4> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <DATA_INs_6> 
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_5> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <DATA_INs_7> 
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_6> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <DATA_INs_8> 
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_0> in Unit <m> is equivalent to the following 3 FFs/Latches, which will be removed : <DATA_OUT_2> <DATA_OUT_4> <DATA_OUT_6> 
+INFO:Xst:2261 - The FF/Latch <DATA_OUT_1> in Unit <m> is equivalent to the following 2 FFs/Latches, which will be removed : <DATA_OUT_3> <DATA_OUT_5> 
 WARNING:Xst:1710 - FF/Latch <DATA_USB_0> (without init value) has a constant value of 0 in block <Write_to_USB>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_USB_2> (without init value) has a constant value of 0 in block <Write_to_USB>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i of type RAMB16_S1_S18 has been replaced by RAMB16
@@ -767,8 +741,6 @@ Optimizing unit <m> ...
 Optimizing unit <Write_to_USB> ...
 WARNING:Xst:1710 - FF/Latch <DATA_USB_1> (without init value) has a constant value of 1 in block <Write_to_USB>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DATA_USB_3> (without init value) has a constant value of 1 in block <Write_to_USB>. This FF/Latch will be trimmed during the optimization process.
-
-Optimizing unit <micro_com2> ...
 
 Optimizing unit <drivermotor> ...
 WARNING:Xst:1426 - The value init of the FF/Latch driver1/TRACK hinder the constant cleaning in the block m.
@@ -873,23 +845,21 @@ INFO:Xst:2261 - The FF/Latch <driver1/STATE1_0> in Unit <m> is equivalent to the
 INFO:Xst:2261 - The FF/Latch <driver2/M_Kd_fp_10> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver2/M_Kd_fp_7> 
 INFO:Xst:2261 - The FF/Latch <driver3/STATE1_1> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver3/hall_state_past_1> 
 INFO:Xst:2261 - The FF/Latch <driver3/STATE1_2> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver3/hall_state_past_2> 
-Found area constraint ratio of 100 (+ 5) on block m, actual ratio is 53.
+Found area constraint ratio of 100 (+ 5) on block m, actual ratio is 52.
 
 Final Macro Processing ...
 
 Processing Unit <m> :
 	Found 2-bit shift register for signal <FT245/cnt1_FSM_FFd6>.
-	Found 17-bit shift register for signal <prl_com/state_FSM_FFd1>.
 Unit <m> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 656
- Flip-Flops                                            : 656
-# Shift Registers                                      : 2
- 17-bit shift register                                 : 1
+# Registers                                            : 641
+ Flip-Flops                                            : 641
+# Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
 =========================================================================
@@ -919,51 +889,50 @@ Design Statistics
 # IOs                              : 94
 
 Cell Usage :
-# BELS                             : 7280
+# BELS                             : 7232
 #      GND                         : 5
-#      INV                         : 542
-#      LUT1                        : 396
+#      INV                         : 541
+#      LUT1                        : 382
 #      LUT2                        : 750
 #      LUT2_D                      : 8
 #      LUT2_L                      : 9
 #      LUT3                        : 767
 #      LUT3_D                      : 16
 #      LUT3_L                      : 1
-#      LUT4                        : 695
+#      LUT4                        : 689
 #      LUT4_D                      : 8
-#      LUT4_L                      : 10
+#      LUT4_L                      : 14
 #      MULT_AND                    : 12
-#      MUXCY                       : 2198
+#      MUXCY                       : 2183
 #      MUXCY_L                     : 62
 #      MUXF5                       : 34
 #      MUXF6                       : 9
 #      VCC                         : 3
-#      XORCY                       : 1755
-# FlipFlops/Latches                : 909
-#      FD                          : 106
+#      XORCY                       : 1739
+# FlipFlops/Latches                : 893
+#      FD                          : 97
 #      FDC                         : 1
 #      FDCE                        : 24
-#      FDE                         : 437
-#      FDE_1                       : 7
+#      FDE                         : 436
 #      FDP                         : 17
 #      FDPE                        : 34
 #      FDR                         : 136
-#      FDRE                        : 131
+#      FDRE                        : 132
 #      FDRS                        : 4
 #      FDS                         : 10
 #      FDSE                        : 1
 #      LDC                         : 1
 # RAMS                             : 2
 #      RAMB16                      : 2
-# Shift Registers                  : 77
-#      SRL16                       : 17
+# Shift Registers                  : 76
+#      SRL16                       : 16
 #      SRL16E                      : 2
 #      SRLC16E                     : 58
-# Clock Buffers                    : 3
+# Clock Buffers                    : 2
 #      BUFG                        : 1
-#      BUFGP                       : 2
-# IO Buffers                       : 69
-#      IBUF                        : 22
+#      BUFGP                       : 1
+# IO Buffers                       : 70
+#      IBUF                        : 23
 #      OBUF                        : 47
 # MULTs                            : 16
 #      MULT18X18                   : 16
@@ -976,16 +945,16 @@ Device utilization summary:
 
 Selected Device : 3s400tq144-4 
 
- Number of Slices:                     1818  out of   3584    50%  
- Number of Slice Flip Flops:            909  out of   7168    12%  
- Number of 4 input LUTs:               3279  out of   7168    45%  
-    Number used as logic:              3202
-    Number used as Shift registers:      77
+ Number of Slices:                     1808  out of   3584    50%  
+ Number of Slice Flip Flops:            893  out of   7168    12%  
+ Number of 4 input LUTs:               3261  out of   7168    45%  
+    Number used as logic:              3185
+    Number used as Shift registers:      76
  Number of IOs:                          94
  Number of bonded IOBs:                  71  out of     97    73%  
  Number of BRAMs:                         2  out of     16    12%  
  Number of MULT18X18s:                   16  out of     16   100%  
- Number of GCLKs:                         3  out of      8    37%  
+ Number of GCLKs:                         2  out of      8    25%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1008,11 +977,10 @@ Clock Information:
 ------------------------------------------------------------------------+-------------------------------------------------+-------+
 Clock Signal                                                            | Clock buffer(FF name)                           | Load  |
 ------------------------------------------------------------------------+-------------------------------------------------+-------+
-DATA_CLK                                                                | BUFGP                                           | 201   |
+clk                                                                     | BUFGP                                           | 832   |
 ICON1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1                                  | BUFG                                            | 139   |
 ICON1/CONTROL0<13>(ICON1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(ILA1/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
 ICON1/U0/iUPDATE_OUT                                                    | NONE(ICON1/U0/U_ICON/U_iDATA_CMD)               | 1     |
-clk                                                                     | BUFGP                                           | 648   |
 ------------------------------------------------------------------------+-------------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -1041,7 +1009,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 31.655ns (Maximum Frequency: 31.591MHz)
+   Minimum period: 31.107ns (Maximum Frequency: 32.147MHz)
    Minimum input arrival time before clock: 9.886ns
    Maximum output required time after clock: 9.274ns
    Maximum combinational path delay: 9.519ns
@@ -1051,26 +1019,61 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'DATA_CLK'
-  Clock period: 8.310ns (frequency: 120.337MHz)
-  Total number of paths / destination ports: 511 / 313
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 31.107ns (frequency: 32.147MHz)
+  Total number of paths / destination ports: 7177885780 / 1549
 -------------------------------------------------------------------------
-Delay:               4.155ns (Levels of Logic = 1)
-  Source:            prl_com/state_FSM_FFd20 (FF)
-  Destination:       prl_com/DATA_OUT_6 (FF)
-  Source Clock:      DATA_CLK rising
-  Destination Clock: DATA_CLK falling
+Delay:               31.107ns (Levels of Logic = 36)
+  Source:            driver4/M_RPM_DIR_0 (FF)
+  Destination:       driver4/M_PID_8 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
 
-  Data Path: prl_com/state_FSM_FFd20 to prl_com/DATA_OUT_6
+  Data Path: driver4/M_RPM_DIR_0 to driver4/M_PID_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDSE:C->Q             2   0.720   1.216  prl_com/state_FSM_FFd20 (prl_com/state_FSM_FFd20)
-     LUT2:I0->O            7   0.551   1.066  prl_com/DATA_OUT_not00011 (prl_com/DATA_OUT_not0001)
-     FDE_1:CE                  0.602          prl_com/DATA_OUT_0
+     FDE:C->Q              4   0.720   0.917  driver4/M_RPM_DIR_0 (driver4/M_RPM_DIR_0)
+     INV:I->O              1   0.551   0.000  driver4/Msub_M_ERR_addsub0000_lut<0>1_INV_0 (driver4/Msub_M_ERR_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  driver4/Msub_M_ERR_addsub0000_cy<0> (driver4/Msub_M_ERR_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<1> (driver4/Msub_M_ERR_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<2> (driver4/Msub_M_ERR_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<3> (driver4/Msub_M_ERR_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<4> (driver4/Msub_M_ERR_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<5> (driver4/Msub_M_ERR_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<6> (driver4/Msub_M_ERR_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<7> (driver4/Msub_M_ERR_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<8> (driver4/Msub_M_ERR_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<9> (driver4/Msub_M_ERR_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<10> (driver4/Msub_M_ERR_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<11> (driver4/Msub_M_ERR_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<12> (driver4/Msub_M_ERR_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<13> (driver4/Msub_M_ERR_addsub0000_cy<13>)
+     XORCY:CI->O           1   0.904   1.140  driver4/Msub_M_ERR_addsub0000_xor<14> (driver4/Maddsub_M_ERR_mux0000_lut<14>)
+     LUT1:I0->O            1   0.551   0.000  driver4/Maddsub_M_ERR_mux0000_cy<14>_rt (driver4/Maddsub_M_ERR_mux0000_cy<14>_rt)
+     MUXCY:S->O            0   0.500   0.000  driver4/Maddsub_M_ERR_mux0000_cy<14> (driver4/Maddsub_M_ERR_mux0000_cy<14>)
+     XORCY:CI->O          38   0.904   1.887  driver4/Maddsub_M_ERR_mux0000_xor<15> (driver4/M_ERR_mux0000<15>)
+     MULT18X18:B15->P28    1   4.639   0.996  driver4/Mmult_LIMIT_KP_fp_mult0000_submult_0 (driver4/Mmult_LIMIT_KP_fp_mult0000_submult_0_28)
+     LUT2:I1->O            1   0.551   0.000  driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_lut<28> (driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_lut<28>)
+     MUXCY:S->O            1   0.500   0.000  driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_cy<28> (driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_cy<28>)
+     XORCY:CI->O           4   0.904   1.256  driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_xor<29> (driver4/LIMIT_KP_fp_mult0000<29>)
+     LUT4:I0->O            1   0.551   0.000  driver4/Mcompar_M_P_cmp_ge0000_lut<5> (driver4/Mcompar_M_P_cmp_ge0000_lut<5>)
+     MUXCY:S->O            1   0.739   0.869  driver4/Mcompar_M_P_cmp_ge0000_cy<5> (driver4/Mcompar_M_P_cmp_ge0000_cy<5>)
+     LUT3:I2->O           53   0.551   2.168  driver4/Mcompar_M_P_cmp_ge0000_cy<7>1 (driver4/M_P_cmp_ge0000)
+     LUT3:I1->O            1   0.551   0.996  driver4/M_P_mux0001<0>1 (driver4/M_P_mux0001<0>)
+     LUT2:I1->O            1   0.551   0.000  driver4/Msub_M_PD_sub0000_lut<0> (driver4/Msub_M_PD_sub0000_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  driver4/Msub_M_PD_sub0000_cy<0> (driver4/Msub_M_PD_sub0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<1> (driver4/Msub_M_PD_sub0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<2> (driver4/Msub_M_PD_sub0000_cy<2>)
+     XORCY:CI->O           6   0.904   1.029  driver4/Msub_M_PD_sub0000_xor<3> (driver4/M_PD_sub0000<3>)
+     LUT4_D:I3->LO         1   0.551   0.126  driver4/M_PID_mux0002<6>_SW0 (N196)
+     LUT4:I3->O            3   0.551   0.975  driver4/Madd_M_PD_ABS_addsub0000_Madd_cy<6>11 (driver4/Madd_M_PD_ABS_addsub0000_Madd_cy<6>)
+     LUT4:I2->O            1   0.551   0.000  driver4/M_PID_mux0002<2>1 (driver4/M_PID_mux0002<2>1)
+     MUXF5:I1->O           1   0.360   0.000  driver4/M_PID_mux0002<2>_f5 (driver4/M_PID_mux0002<2>)
+     FDE:D                     0.203          driver4/M_PID_8
     ----------------------------------------
-    Total                      4.155ns (1.873ns logic, 2.282ns route)
-                                       (45.1% logic, 54.9% route)
+    Total                     31.107ns (18.747ns logic, 12.360ns route)
+                                       (60.3% logic, 39.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ICON1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
@@ -1122,62 +1125,6 @@ Delay:               3.182ns (Levels of Logic = 1)
                                        (46.3% logic, 53.7% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 31.655ns (frequency: 31.591MHz)
-  Total number of paths / destination ports: 7177885404 / 1244
--------------------------------------------------------------------------
-Delay:               31.655ns (Levels of Logic = 35)
-  Source:            driver4/M_RPM_DIR_0 (FF)
-  Destination:       driver4/M_PID_10 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
-
-  Data Path: driver4/M_RPM_DIR_0 to driver4/M_PID_10
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE:C->Q              4   0.720   0.917  driver4/M_RPM_DIR_0 (driver4/M_RPM_DIR_0)
-     INV:I->O              1   0.551   0.000  driver4/Msub_M_ERR_addsub0000_lut<0>1_INV_0 (driver4/Msub_M_ERR_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.500   0.000  driver4/Msub_M_ERR_addsub0000_cy<0> (driver4/Msub_M_ERR_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<1> (driver4/Msub_M_ERR_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<2> (driver4/Msub_M_ERR_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<3> (driver4/Msub_M_ERR_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<4> (driver4/Msub_M_ERR_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<5> (driver4/Msub_M_ERR_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<6> (driver4/Msub_M_ERR_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<7> (driver4/Msub_M_ERR_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<8> (driver4/Msub_M_ERR_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<9> (driver4/Msub_M_ERR_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<10> (driver4/Msub_M_ERR_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<11> (driver4/Msub_M_ERR_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<12> (driver4/Msub_M_ERR_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_ERR_addsub0000_cy<13> (driver4/Msub_M_ERR_addsub0000_cy<13>)
-     XORCY:CI->O           1   0.904   1.140  driver4/Msub_M_ERR_addsub0000_xor<14> (driver4/Maddsub_M_ERR_mux0000_lut<14>)
-     LUT1:I0->O            1   0.551   0.000  driver4/Maddsub_M_ERR_mux0000_cy<14>_rt (driver4/Maddsub_M_ERR_mux0000_cy<14>_rt)
-     MUXCY:S->O            0   0.500   0.000  driver4/Maddsub_M_ERR_mux0000_cy<14> (driver4/Maddsub_M_ERR_mux0000_cy<14>)
-     XORCY:CI->O          38   0.904   1.887  driver4/Maddsub_M_ERR_mux0000_xor<15> (driver4/M_ERR_mux0000<15>)
-     MULT18X18:B15->P28    1   4.639   0.996  driver4/Mmult_LIMIT_KP_fp_mult0000_submult_0 (driver4/Mmult_LIMIT_KP_fp_mult0000_submult_0_28)
-     LUT2:I1->O            1   0.551   0.000  driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_lut<28> (driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_lut<28>)
-     MUXCY:S->O            1   0.500   0.000  driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_cy<28> (driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_cy<28>)
-     XORCY:CI->O           4   0.904   1.256  driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_xor<29> (driver4/LIMIT_KP_fp_mult0000<29>)
-     LUT4:I0->O            1   0.551   0.000  driver4/Mcompar_M_P_cmp_ge0000_lut<5> (driver4/Mcompar_M_P_cmp_ge0000_lut<5>)
-     MUXCY:S->O            1   0.739   0.869  driver4/Mcompar_M_P_cmp_ge0000_cy<5> (driver4/Mcompar_M_P_cmp_ge0000_cy<5>)
-     LUT3:I2->O           53   0.551   2.168  driver4/Mcompar_M_P_cmp_ge0000_cy<7>1 (driver4/M_P_cmp_ge0000)
-     LUT3:I1->O            1   0.551   0.996  driver4/M_P_mux0001<0>1 (driver4/M_P_mux0001<0>)
-     LUT2:I1->O            1   0.551   0.000  driver4/Msub_M_PD_sub0000_lut<0> (driver4/Msub_M_PD_sub0000_lut<0>)
-     MUXCY:S->O            1   0.500   0.000  driver4/Msub_M_PD_sub0000_cy<0> (driver4/Msub_M_PD_sub0000_cy<0>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<1> (driver4/Msub_M_PD_sub0000_cy<1>)
-     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<2> (driver4/Msub_M_PD_sub0000_cy<2>)
-     XORCY:CI->O           6   0.904   1.342  driver4/Msub_M_PD_sub0000_xor<3> (driver4/M_PD_sub0000<3>)
-     LUT2:I0->O            1   0.551   0.869  driver4/Madd_M_PD_ABS_addsub0000_Madd_cy<4>11_SW0 (N77)
-     LUT4:I2->O            1   0.551   0.827  driver4/M_PID_mux0002<0>_SW0 (N69)
-     LUT4:I3->O            1   0.551   0.000  driver4/M_PID_mux0002<0> (driver4/M_PID_mux0002<0>)
-     FDE:D                     0.203          driver4/M_PID_10
-    ----------------------------------------
-    Total                     31.655ns (18.387ns logic, 13.268ns route)
-                                       (58.1% logic, 41.9% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'ICON1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
   Total number of paths / destination ports: 182 / 158
 -------------------------------------------------------------------------
@@ -1204,49 +1151,27 @@ Offset:              9.886ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 31 / 31
+  Total number of paths / destination ports: 42 / 42
 -------------------------------------------------------------------------
-Offset:              4.258ns (Levels of Logic = 2)
-  Source:            TXE (PAD)
-  Destination:       FT245/cnt1_FSM_FFd2 (FF)
+Offset:              4.491ns (Levels of Logic = 2)
+  Source:            DATA_CLK (PAD)
+  Destination:       prl_com/data_clk_flag (FF)
   Destination Clock: clk rising
 
-  Data Path: TXE to FT245/cnt1_FSM_FFd2
+  Data Path: DATA_CLK to prl_com/data_clk_flag
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.821   1.140  TXE_IBUF (TXE_IBUF)
-     LUT2:I0->O           11   0.551   1.144  FT245/cnt1_not00012 (FT245/cnt1_not0001)
-     FDE:CE                    0.602          FT245/DATA_USB_4
+     IBUF:I->O             2   0.821   1.216  DATA_CLK_IBUF (DATA_CLK_IBUF)
+     LUT2:I0->O            2   0.551   0.877  prl_com/DATA_OUT_and00001 (prl_com/DATA_OUT_and0000)
+     FDSE:S                    1.026          prl_com/DATA_OUT_1
     ----------------------------------------
-    Total                      4.258ns (1.974ns logic, 2.284ns route)
-                                       (46.4% logic, 53.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'DATA_CLK'
-  Total number of paths / destination ports: 28 / 10
--------------------------------------------------------------------------
-Offset:              5.966ns (Levels of Logic = 4)
-  Source:            DATA_IN<2> (PAD)
-  Destination:       prl_com/state_FSM_FFd18 (FF)
-  Destination Clock: DATA_CLK rising
-
-  Data Path: DATA_IN<2> to prl_com/state_FSM_FFd18
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             2   0.821   1.216  DATA_IN_2_IBUF (DATA_IN_2_IBUF)
-     LUT4:I0->O            1   0.551   0.827  prl_com/state_cmp_eq0000_SW0 (N3)
-     LUT4:I3->O            3   0.551   1.246  prl_com/state_cmp_eq0000 (prl_com/state_cmp_eq0000)
-     LUT2:I0->O            1   0.551   0.000  prl_com/state_FSM_FFd18-In1 (prl_com/state_FSM_FFd18-In)
-     FD:D                      0.203          prl_com/state_FSM_FFd18
-    ----------------------------------------
-    Total                      5.966ns (2.677ns logic, 3.289ns route)
-                                       (44.9% logic, 55.1% route)
+    Total                      4.491ns (2.398ns logic, 2.093ns route)
+                                       (53.4% logic, 46.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 102 / 33
+  Total number of paths / destination ports: 109 / 40
 -------------------------------------------------------------------------
 Offset:              9.274ns (Levels of Logic = 3)
   Source:            driver1/STATE1_2 (FF)
@@ -1264,25 +1189,6 @@ Offset:              9.274ns (Levels of Logic = 3)
     ----------------------------------------
     Total                      9.274ns (7.275ns logic, 1.999ns route)
                                        (78.4% logic, 21.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'DATA_CLK'
-  Total number of paths / destination ports: 7 / 7
--------------------------------------------------------------------------
-Offset:              7.165ns (Levels of Logic = 1)
-  Source:            prl_com/DATA_OUT_6 (FF)
-  Destination:       DATA_OUT<6> (PAD)
-  Source Clock:      DATA_CLK falling
-
-  Data Path: prl_com/DATA_OUT_6 to DATA_OUT<6>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE_1:C->Q            1   0.720   0.801  prl_com/DATA_OUT_6 (prl_com/DATA_OUT_6)
-     OBUF:I->O                 5.644          DATA_OUT_6_OBUF (DATA_OUT<6>)
-    ----------------------------------------
-    Total                      7.165ns (6.364ns logic, 0.801ns route)
-                                       (88.8% logic, 11.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'ICON1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
@@ -1326,14 +1232,14 @@ Delay:               9.519ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 21.47 secs
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 27.97 secs
  
 --> 
 
-Total memory usage is 316936 kilobytes
+Total memory usage is 303464 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  322 (   0 filtered)
-Number of infos    :   49 (   0 filtered)
+Number of warnings :  319 (   0 filtered)
+Number of infos    :   62 (   0 filtered)
 

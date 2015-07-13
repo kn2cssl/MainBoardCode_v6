@@ -71,7 +71,6 @@ NET "DATA_IN[5]"       LOC = "P53";
 NET "DATA_IN[6]"       LOC = "P52";
 
 NET "DATA_CLK"       LOC = "P51";
-NET "DATA_CLK" CLOCK_DEDICATED_ROUTE = FALSE;
 
 NET "DATA_OUT[0]"       LOC = "P46";
 NET "DATA_OUT[1]"       LOC = "P44";

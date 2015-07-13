@@ -9,26 +9,26 @@ Target Device  : xc3s400
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 09 17:33:02 2015
+Mapped Date    : Mon Jul 13 15:48:33 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Total Number Slice Registers:         909 out of   7,168   12%
-    Number used as Flip Flops:          908
+  Total Number Slice Registers:         893 out of   7,168   12%
+    Number used as Flip Flops:          892
     Number used as Latches:               1
-  Number of 4 input LUTs:             2,808 out of   7,168   39%
+  Number of 4 input LUTs:             2,804 out of   7,168   39%
 Logic Distribution:
-  Number of occupied Slices:          1,820 out of   3,584   50%
-    Number of Slices containing only related logic:   1,820 out of   1,820 100%
-    Number of Slices containing unrelated logic:          0 out of   1,820   0%
+  Number of occupied Slices:          1,809 out of   3,584   50%
+    Number of Slices containing only related logic:   1,809 out of   1,809 100%
+    Number of Slices containing unrelated logic:          0 out of   1,809   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       3,217 out of   7,168   44%
-    Number used as logic:             2,731
-    Number used as a route-thru:        409
-    Number used as Shift registers:      77
+  Total Number of 4 input LUTs:       3,198 out of   7,168   44%
+    Number used as logic:             2,728
+    Number used as a route-thru:        394
+    Number used as Shift registers:      76
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -36,14 +36,14 @@ Logic Distribution:
   Number of bonded IOBs:                 73 out of      97   75%
   Number of RAMB16s:                      2 out of      16   12%
   Number of MULT18X18s:                  16 out of      16  100%
-  Number of BUFGMUXs:                     3 out of       8   37%
+  Number of BUFGMUXs:                     2 out of       8   25%
   Number of BSCANs:                       1 out of       1  100%
 
 Average Fanout of Non-Clock Nets:                2.45
 
-Peak Memory Usage:  345 MB
+Peak Memory Usage:  333 MB
 Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   4 secs 
+Total CPU time to MAP completion:   5 secs 
 
 NOTES:
 
@@ -107,7 +107,7 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 Section 4 - Removed Logic Summary
 ---------------------------------
   47 block(s) removed
-  28 block(s) optimized away
+  27 block(s) optimized away
   31 signal(s) removed
 
 Section 5 - Removed Logic

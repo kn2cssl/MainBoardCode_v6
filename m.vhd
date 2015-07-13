@@ -78,6 +78,7 @@
 					DATA_IN   : in std_logic_vector(6 downto 0);
 					DATA_CLK	 : in std_logic ;
 					DATA_OUT	 : out std_logic_vector(6 downto 0);
+					
 
 					STARTBIT_FLG : in std_logic;
 				 --LED
@@ -145,32 +146,13 @@
 --						STARTBIT_FLG : in std_logic;
 --						FREE_WHEELS : out std_logic 
 						--LED  : out std_logic_vector(3 downto 0)
+						data_clk : in std_logic ;
 						CLK : in std_logic;
 						DATA_IN : in std_logic_vector(6 downto 0);
-						DATA_OUT: OUT std_logic_vector(6 downto 0)
+						DATA_OUT: OUT std_logic_vector(6 downto 0) 
 						);
 				end component;
 				
-				component DIVIDER is
-			port (
-					clk: in std_logic;
-					rfd: out std_logic;
-					dividend: in std_logic_vector(31 downto 0);
-					divisor: in std_logic_vector(15 downto 0);
-					quotient: out std_logic_vector(31 downto 0);
-					fractional: out std_logic_vector(15 downto 0)
-				  );
-			END COMPONENT; 
-			
-			 COMPONENT clk_200M
-			PORT(
-				CLKIN_IN : IN std_logic;
-				RST_IN : IN std_logic;          
-				CLKFX_OUT : OUT std_logic;
-			--	CLKIN_IBUFG_OUT : OUT std_logic;
-				CLK0_OUT : OUT std_logic
-				);
-			END COMPONENT;
 			
 					component ila IS
 		  PORT (
@@ -247,6 +229,7 @@
 			signal  kp_M4   : std_logic_vector(19 downto 0):=(others=>'0');
          signal  CONTROL1 : STD_LOGIC_VECTOR(35 DOWNTO 0);
 			signal DATA_INs :  std_logic_vector(15 downto 0);
+			SIGNAL DATA_TEST: std_logic_vector(6 downto 0) ;
 		begin
 		
 		
@@ -269,9 +252,9 @@
 			  FT245:Write_to_USB port map(DATA1_IN =>ms1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
 
 			--micro_com2
-			  prl_com:micro_com2 port map(CLK=>DATA_CLK,DATA_IN=>DATA_IN,DATA_OUT=>DATA_OUT);
+			  prl_com:micro_com2 port map(DATA_CLK=>DATA_CLK,CLK=>clk,DATA_IN=>DATA_IN,DATA_OUT=>DATA_TEST);
 			  
-			  ILA1 : ila port map ( CONTROL => CONTROL1, CLK => DATA_CLK,  TRIG0 => DATA_INs );
+			  ILA1 : ila port map ( CONTROL => CONTROL1, CLK => CLK,  TRIG0 => DATA_INs );
 				
           ICON1: ICON  port map (  CONTROL0 => CONTROL1);
 --		 --DIVIDER
@@ -286,7 +269,8 @@
 			   process(clk)  
 					begin
                if rising_edge (clk) then 
-					data_ins <= data_ins + '1';
+					data_ins <= data_in & DATA_TEST & "00";
+					data_out <= data_test ;
 					end if;
 					
 					end process;
