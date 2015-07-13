@@ -252,7 +252,7 @@
 			  FT245:Write_to_USB port map(DATA1_IN =>ms1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
 
 			--micro_com2
-			  prl_com:micro_com2 port map(DATA_CLK=>DATA_CLK,CLK=>clk,DATA_IN=>DATA_IN,DATA_OUT=>DATA_TEST);
+			  prl_com:micro_com2 port map(DATA_CLK=>DATA_CLK,CLK=>clk,DATA_IN=>DATA_IN,DATA_OUT=>data_out);
 			  
 			  ILA1 : ila port map ( CONTROL => CONTROL1, CLK => CLK,  TRIG0 => DATA_INs );
 				
@@ -270,7 +270,6 @@
 					begin
                if rising_edge (clk) then 
 					data_ins <= data_in & DATA_TEST & "00";
-					data_out <= data_test ;
 					end if;
 					
 					end process;
