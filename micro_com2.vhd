@@ -19,8 +19,24 @@ port (
 	data_clk : in std_logic;
 	CLK : in std_logic;
 	DATA_IN : in std_logic_vector(6 downto 0);
-	DATA_OUT: OUT std_logic_vector(6 downto 0)
-   --LED  : out std_logic_vector(3 downto 0)
+	DATA_OUT: OUT std_logic_vector(6 downto 0);
+	--generated data in FPGA
+   calman_Vx : in std_logic_vector(15 downto 0);
+	calman_Vy : in std_logic_vector(15 downto 0);
+	calman_Wr : in std_logic_vector(15 downto 0);
+	calman_W0 : in std_logic_vector(15 downto 0);
+	calman_W1 : in std_logic_vector(15 downto 0);
+	calman_W2 : in std_logic_vector(15 downto 0);
+	calman_W3 : in std_logic_vector(15 downto 0);
+	--generated data in camera and gyro
+	Vx        : out std_logic_vector(15 downto 0);
+	Vy        : out std_logic_vector(15 downto 0);
+	Wr        : out std_logic_vector(15 downto 0);
+	alpha     : out std_logic_vector(15 downto 0);
+	GVx       : out std_logic_vector(15 downto 0);
+	GVy       : out std_logic_vector(15 downto 0);
+	GWr       : out std_logic_vector(15 downto 0)
+	
 	);
 end micro_com2;
 
@@ -43,19 +59,23 @@ architecture Behavioral of micro_com2 is
 
 	process(CLK) 
 		--------------new protocol
-	variable stage : integer := 0;
-	variable low_data_in : temp;
-	variable high_data_in : temp;
-	variable memory_low : memory ;
-	variable memory_high : memory ;
-	variable check_sum_low : std_logic_vector(7 downto 0);
-	variable check_sum_high : std_logic_vector(7 downto 0);
+	variable stage          : integer := 0;
+	variable low_data_out    : temp;
+	variable high_data_out   : temp;
+	variable low_data_in    : temp;
+	variable high_data_in   : temp;
+	variable memory_low     : memory ;
+	variable memory_high    : memory ;
+	variable check_sum_out_low  : std_logic_vector(7 downto 0);
+	variable check_sum_out_high : std_logic_vector(7 downto 0);
+	variable check_sum_in_low  : std_logic_vector(7 downto 0);
+	variable check_sum_in_high : std_logic_vector(7 downto 0);
 
 	    begin
 			
 		 if rising_edge (clk) then 
 
-	--====================================================== receiving data
+--=========================================================== receiving data
 	       if (data_clk = '1' and data_clk_flag = '0') then
 			 
 			 data_clk_flag <= '1' ;
@@ -144,7 +164,7 @@ architecture Behavioral of micro_com2 is
 				 when s19 => --check sum high 7 bits
 					  high_data_in (8) := DATA_IN;
 					  
-		--==============================================================generating check_sum
+--=======================================================================generating check_sum
 					  memory_low (0):= low_data_in (7) (0) & low_data_in (0) ;
 					  memory_low (1):= low_data_in (7) (1) & low_data_in (1) ;
 					  memory_low (2):= low_data_in (7) (2) & low_data_in (2) ;
@@ -164,20 +184,28 @@ architecture Behavioral of micro_com2 is
 					  memory_high (7):= '0' & high_data_in (8) ;
 					  
 					  
-					  check_sum_low :=  memory_low (0) + memory_low (1) + memory_low (2)
+					  check_sum_in_low :=  memory_low (0) + memory_low (1) + memory_low (2)
 											+ memory_low (3) + memory_low (4) + memory_low (5)
 											+ memory_low (6);
 					  
-					  check_sum_high :=  memory_high (0) + memory_high (1) + memory_high (2)
+					  check_sum_in_high :=  memory_high (0) + memory_high (1) + memory_high (2)
 											 + memory_high (3) + memory_high (4) + memory_high (5)
 											 + memory_high (6);
 											
 											
-		--============================================================saving checked data									
-					  if (   ( ( check_sum_low and "01111111" ) =  memory_low (7) )  and
-							   ( ( check_sum_high and "01111111" )=  memory_high (7) )     ) then
+--=========================================================================saving checked data									
+					  if (   ( ( check_sum_in_low  and "01111111" ) =  memory_low  (7) ) and
+							   ( ( check_sum_in_high and "01111111" ) =  memory_high (7) )     ) then
+								
+								Vx	   <= memory_high (0) & memory_low (0) ;
+								Vy	   <= memory_high (1) & memory_low (1) ;
+								Wr	   <= memory_high (2) & memory_low (2) ;
+								alpha	<= memory_high (3) & memory_low (3) ;
+								GVx	<= memory_high (4) & memory_low (4) ;
+								GVy	<= memory_high (5) & memory_low (5) ;
+								GWr	<= memory_high (6) & memory_low (6) ;
 	
-					  end if;
+					  end if ;
 
 					  state <= s0 ;
 						
@@ -195,67 +223,102 @@ architecture Behavioral of micro_com2 is
 			 if (data_clk = '0' and data_clk_flag = '1') then
 			 
 			 data_clk_flag <= '0' ;
-			 DATA_OUT(6 downto 0) <= DATA_IN;
+
 				case state is 
 
 				 when s0 =>
 				 when s1 => 
+--						check_sum_out_high :=   calman_W3 ( 15 downto 8 ) + calman_W2 ( 15 downto 8 )
+--													 + calman_W1 ( 15 downto 8 ) + calman_W0 ( 15 downto 8 )
+--													 + calman_Wr ( 15 downto 8 ) + calman_Vy ( 15 downto 8 )
+--													 + calman_Vx ( 15 downto 8 ) ;
+--													 
+--				      check_sum_out_low  :=   calman_W3 ( 7  downto 0 ) + calman_W2 ( 7  downto 0 )
+--													 + calman_W1 ( 7  downto 0 ) + calman_W0 ( 7  downto 0 )
+--													 + calman_Wr ( 7  downto 0 ) + calman_Vy ( 7  downto 0 )
+--													 + calman_Vx ( 7  downto 0 ) ;
+--													 
+--						high_data_out (0)  :=   calman_Vx ( 14 downto 8 ) ; 
+--						high_data_out (1)  :=   calman_Vy ( 14 downto 8 ) ;
+--						high_data_out (2)  :=   calman_Wr ( 14 downto 8 ) ;
+--						high_data_out (3)  :=   calman_W0 ( 14 downto 8 ) ;
+--						high_data_out (4)  :=   calman_W1 ( 14 downto 8 ) ;
+--						high_data_out (5)  :=   calman_W2 ( 14 downto 8 ) ;
+--						high_data_out (6)  :=   calman_W3 ( 14 downto 8 ) ;
+--						high_data_out (7)  :=   calman_W3 ( 15 ) & calman_W2 ( 15 )
+--													 & calman_W1 ( 15 ) & calman_W0 ( 15 )
+--													 & calman_Wr ( 15 ) & calman_Vy ( 15 )
+--													 & calman_Vx ( 15 ) ;
+--						high_data_out (8)  :=   check_sum_out_high ( 6 downto 0 ) ;
+--						
+--						low_data_out  (0)  :=   calman_Vx ( 6  downto 0 ) ; 
+--						low_data_out  (1)  :=   calman_Vy ( 6  downto 0 ) ;
+--						low_data_out  (2)  :=   calman_Wr ( 6  downto 0 ) ;
+--						low_data_out  (3)  :=   calman_W0 ( 6  downto 0 ) ;
+--						low_data_out  (4)  :=   calman_W1 ( 6  downto 0 ) ;
+--						low_data_out  (5)  :=   calman_W2 ( 6  downto 0 ) ;
+--						low_data_out  (6)  :=   calman_W3 ( 6  downto 0 ) ;
+--						low_data_out  (7)  :=   calman_W3 ( 7  ) & calman_W2 ( 7  )
+--													 & calman_W1 ( 7  ) & calman_W0 ( 7  )
+--													 & calman_Wr ( 7  ) & calman_Vy ( 7  )
+--													 & calman_Vx ( 7  ) ;
+--						low_data_out  (8)  :=   check_sum_out_low  ( 6 downto 0 ) ;
+--						
 --				 when s2 =>
---						DATA_OUT(6 downto 0) <= DATA_IN;
+--						DATA_OUT <= high_data_out (0);
 --	
 --				 when s3 =>
---					  DATA_OUT(6 downto 0) := DATA_IN;
+--					   DATA_OUT <= high_data_out (1);
 --						
 --				 when s4 =>
---					  low_data_in (20 downto 14) := DATA_IN;
+--					   DATA_OUT <= high_data_out (2);
 --						
 --				 when s5 =>
---					  low_data_in (27 downto 21) := DATA_IN;
+--					   DATA_OUT <= high_data_out (3);
 --						
 --				 when s6 =>
---					  low_data_in (34 downto 28) := DATA_IN;
+--					   DATA_OUT <= high_data_out (4);
 --					  
 --				 when s7 =>
---					  low_data_in (41 downto 35) := DATA_IN;
+--					   DATA_OUT <= high_data_out (5);
 --					  
 --				 when s8 =>
---					  low_data_in (48 downto 42) := DATA_IN;
+--					   DATA_OUT <= high_data_out (6);
 --					  
 --				 when s9 =>
---					  low_data_in (55 downto 49) := DATA_IN;
+--					   DATA_OUT <= high_data_out (7);
 --					  
 --				 when s10 =>
---					  low_data_in (62 downto 56) := DATA_IN;
---					  
---						  
+--					   DATA_OUT <= high_data_out (8);
+--					    
 --				 when s11 =>
---						high_data_in (6 downto 0) := DATA_IN;
+--					   DATA_OUT <= high_data_out (0);
 --	
 --				 when s12 =>
---					  high_data_in (13 downto 7) := DATA_IN;
+--					   DATA_OUT <= high_data_out (1);
 --						
 --				 when s13 =>
---					  high_data_in (20 downto 14) := DATA_IN;
+--					   DATA_OUT <= high_data_out (2);
 --						
 --				 when s14 =>
---					  high_data_in (27 downto 21) := DATA_IN;
+--					   DATA_OUT <= low_data_out  (3);
 --						
 --				 when s15 =>
---					  high_data_in (34 downto 28) := DATA_IN;
+--					   DATA_OUT <= low_data_out  (4);
 --					  
 --				 when s16 =>
---					  high_data_in (41 downto 35) := DATA_IN;
+--					   DATA_OUT <= low_data_out  (5);
 --					  
 --				 when s17 =>
---					  high_data_in (48 downto 42) := DATA_IN;
+--					   DATA_OUT <= low_data_out  (6);
 --					  
 --				 when s18 =>
---					  high_data_in (55 downto 49) := DATA_IN;
+--					   DATA_OUT <= low_data_out  (7);
 --					  
 --				 when s19 =>
---					  high_data_in (62 downto 56) := DATA_IN;
+--					   DATA_OUT <= low_data_out  (8);
 				 when others =>
-				 DATA_OUT(6 downto 0) <= DATA_IN;
+				  DATA_OUT <= data_in;
 			end case;
 			
 			end if;

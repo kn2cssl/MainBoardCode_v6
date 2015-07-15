@@ -146,10 +146,26 @@
 --						STARTBIT_FLG : in std_logic;
 --						FREE_WHEELS : out std_logic 
 						--LED  : out std_logic_vector(3 downto 0)
-						data_clk : in std_logic ;
+						data_clk : in std_logic;
 						CLK : in std_logic;
 						DATA_IN : in std_logic_vector(6 downto 0);
-						DATA_OUT: OUT std_logic_vector(6 downto 0) 
+						DATA_OUT: OUT std_logic_vector(6 downto 0);
+						--generated data in FPGA
+						calman_Vx : in std_logic_vector(15 downto 0);
+						calman_Vy : in std_logic_vector(15 downto 0);
+						calman_Wr : in std_logic_vector(15 downto 0);
+						calman_W0 : in std_logic_vector(15 downto 0);
+						calman_W1 : in std_logic_vector(15 downto 0);
+						calman_W2 : in std_logic_vector(15 downto 0);
+						calman_W3 : in std_logic_vector(15 downto 0);
+						--generated data in camera and gyro
+						Vx        : out std_logic_vector(15 downto 0);
+						Vy        : out std_logic_vector(15 downto 0);
+						Wr        : out std_logic_vector(15 downto 0);
+						alpha     : out std_logic_vector(15 downto 0);
+						GVx       : out std_logic_vector(15 downto 0);
+						GVy       : out std_logic_vector(15 downto 0);
+						GWr       : out std_logic_vector(15 downto 0)
 						);
 				end component;
 				
@@ -177,13 +193,22 @@
 			signal SPEED4 : std_logic_vector(15 downto 0):=(others=>'0'); --"1111110000011000";--
 			
 --       new controller & connection
-			signal VX     : std_logic_vector(15 downto 0):=(others=>'0');
-			signal VY     : std_logic_vector(15 downto 0):=(others=>'0');
-			signal W      : std_logic_vector(15 downto 0):=(others=>'0');
-			signal ALPHA  : std_logic_vector(15 downto 0):=(others=>'0');
-			signal JVX    : std_logic_vector(15 downto 0):=(others=>'0');
-			signal JVY    : std_logic_vector(15 downto 0):=(others=>'0');
-			signal JW     : std_logic_vector(15 downto 0):=(others=>'0');
+						--generated data in FPGA
+			signal calman_Vx : std_logic_vector(15 downto 0);
+			signal calman_Vy : std_logic_vector(15 downto 0);
+			signal calman_Wr : std_logic_vector(15 downto 0);
+			signal calman_W0 : std_logic_vector(15 downto 0);
+			signal calman_W1 : std_logic_vector(15 downto 0);
+			signal calman_W2 : std_logic_vector(15 downto 0);
+			signal calman_W3 : std_logic_vector(15 downto 0);
+						--generated data in camera and gyro
+			signal Vx        : std_logic_vector(15 downto 0);
+			signal Vy        : std_logic_vector(15 downto 0);
+			signal Wr        : std_logic_vector(15 downto 0);
+			signal alpha     : std_logic_vector(15 downto 0);
+			signal GVx       : std_logic_vector(15 downto 0);
+			signal GVy       : std_logic_vector(15 downto 0);
+			signal GWr       : std_logic_vector(15 downto 0);
 			
 			signal MS1_show: std_logic_vector(15 downto 0):="1010101010101010";
 			signal MS_show: std_logic_vector(15 downto 0):=(others=>'0');
@@ -249,10 +274,14 @@
 				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M4,kp_M=>kp_M4);
 
 		--	--FT245
-			  FT245:Write_to_USB port map(DATA1_IN =>ms1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
+			  FT245:Write_to_USB port map(DATA1_IN=>ms1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
 
 			--micro_com2
-			  prl_com:micro_com2 port map(DATA_CLK=>DATA_CLK,CLK=>clk,DATA_IN=>DATA_IN,DATA_OUT=>data_out);
+			  prl_com:micro_com2 port map( DATA_CLK=>DATA_CLK , CLK=>clk , DATA_IN=>DATA_IN , DATA_OUT=>data_out ,
+			  calman_Vx=>calman_Vx , calman_Vy=>calman_Vy , calman_Wr=>calman_Wr , calman_W0=>calman_W0 , 
+			  calman_W1=>calman_W1 , calman_W2=>calman_W2 , calman_W3=>calman_W3 , Vx=>Vx , Vy=>Vy , Wr=>Wr , 
+			  alpha=>alpha , GVx=>GVx , GVy=>GVy , GWr=>GWr );
+			  
 			  
 			  ILA1 : ila port map ( CONTROL => CONTROL1, CLK => CLK,  TRIG0 => DATA_INs );
 				
@@ -270,6 +299,13 @@
 					begin
                if rising_edge (clk) then 
 					data_ins <= data_in & DATA_TEST & "00";
+					   calman_Vx <= Vx;
+						calman_Vy <= Vy;
+						calman_Wr <= Wr;
+						calman_W0 <= alpha;
+						calman_W1 <= GVx;
+						calman_W2 <= GVy;
+						calman_W3 <= GWr;
 					end if;
 					
 					end process;

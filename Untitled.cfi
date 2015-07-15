@@ -2,10 +2,10 @@
 # Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 SOFTWARE_VERSION P.20131013
-DATE            07/13/2015 - 18:10
+DATE            07/15/2015 - 12:48
 SOURCE          D:\GitHub\Yashil-fpga\Untitled.mcs
 DEVICE          XCF04S
 DATA_WIDTH      8
 FILL_DATA       0xFF
-SIGNATURE       0x04F4076C
+SIGNATURE       0x04EC723C
 START_ADDRESS   0x00000000 END_ADDRESS 0x00033DA7 DIRECTION_UP   "D:/GitHub/Yashil-fpga/m.bit" 3s400tq144

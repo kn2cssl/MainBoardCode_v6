@@ -1,5 +1,3 @@
-vhdl work "D:\GitHub\Yashil-fpga\ipcore_dir\ila.vhd"
-vhdl work "D:\GitHub\Yashil-fpga\ipcore_dir\ICON.vhd"
 vhdl work "D:\GitHub\Yashil-fpga\pwm.vhd"
 vhdl work "D:\GitHub\Yashil-fpga\Write_to_USB.vhd"
 vhdl work "D:\GitHub\Yashil-fpga\micro_com2.vhd"
