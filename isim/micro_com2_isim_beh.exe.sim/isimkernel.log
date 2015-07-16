@@ -1,0 +1,28 @@
+Command line:
+   micro_com2_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  53833
+
+Wed Jul 15 18:48:53 2015
+
+
+ Elaboration Time: 0.203125 sec
+
+ Current Memory Usage: 1017.43 Meg
+
+ Total Signals          : 20
+ Total Nets             : 242
+ Total Signal Drivers   : 10
+ Total Blocks           : 4
+ Total Primitive Blocks : 4
+ Total Processes        : 1
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 620
+
+ Total Simulation Time: 0.265625 sec
+
+ Current Memory Usage: 702.8 Meg
+
+Wed Jul 15 18:50:07 2015
+

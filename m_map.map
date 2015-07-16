@@ -9,7 +9,7 @@ Target Device  : xc3s400
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Wed Jul 15 12:43:30 2015
+Mapped Date    : Thu Jul 16 17:32:21 2015
 
 Mapping design into LUTs...
 Running directed packing...
@@ -24,17 +24,17 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           643 out of   7,168    8%
-  Number of 4 input LUTs:             2,626 out of   7,168   36%
+  Number of Slice Flip Flops:           648 out of   7,168    9%
+  Number of 4 input LUTs:             2,623 out of   7,168   36%
 Logic Distribution:
-  Number of occupied Slices:          1,584 out of   3,584   44%
-    Number of Slices containing only related logic:   1,584 out of   1,584 100%
-    Number of Slices containing unrelated logic:          0 out of   1,584   0%
+  Number of occupied Slices:          1,585 out of   3,584   44%
+    Number of Slices containing only related logic:   1,585 out of   1,585 100%
+    Number of Slices containing unrelated logic:          0 out of   1,585   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,961 out of   7,168   41%
-    Number used as logic:             2,624
+  Total Number of 4 input LUTs:       2,958 out of   7,168   41%
+    Number used as logic:             2,620
     Number used as a route-thru:        335
-    Number used as Shift registers:       2
+    Number used as Shift registers:       3
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -43,9 +43,9 @@ Logic Distribution:
   Number of MULT18X18s:                  16 out of      16  100%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.42
+Average Fanout of Non-Clock Nets:                2.41
 
-Peak Memory Usage:  333 MB
+Peak Memory Usage:  329 MB
 Total REAL time to MAP completion:  4 secs 
 Total CPU time to MAP completion:   4 secs 
 

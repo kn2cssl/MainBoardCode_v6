@@ -43,33 +43,37 @@ end micro_com2;
 architecture Behavioral of micro_com2 is
    type memory8 is array (0 to 3) of std_logic_vector(7 downto 0);
 	type memory is array (0 to 8) of std_logic_vector (7 downto 0);
-	type temp is array (0 to 8) of std_logic_vector (6 downto 0);
+	type temp is array (0 to 40) of std_logic_vector (6 downto 0);
 
 	type state_machine is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19);
-	signal motor_rpm_high : memory8 :=("00000000","00000000","00000000","00000000");
-	signal motor_rpm_low  : memory8 :=("00000000","00000000","00000000","00000000");
-	signal motor_rpm_tmp  : std_logic_vector(7 downto 0); 
-	signal startbyte_low	 : std_logic_vector(7 downto 0);
-	signal state : state_machine :=s0;
-	signal cnt : std_logic:='0';
+--	signal motor_rpm_high : memory8 :=("00000000","00000000","00000000","00000000");
+--	signal motor_rpm_low  : memory8 :=("00000000","00000000","00000000","00000000");
+--	signal motor_rpm_tmp  : std_logic_vector(7 downto 0); 
+--	signal startbyte_low	 : std_logic_vector(7 downto 0);
+	--signal state : state_machine :=s0;
+--	signal cnt : std_logic:='0';
 	signal data_clk_flag : std_logic:='0';
+	signal state  : integer range 0 to 19 := 0;
 
 	begin
 	
 
 	process(CLK) 
 		--------------new protocol
-	variable stage          : integer := 0;
-	variable low_data_out    : temp;
-	variable high_data_out   : temp;
-	variable low_data_in    : temp;
-	variable high_data_in   : temp;
-	variable memory_low     : memory ;
-	variable memory_high    : memory ;
+--	variable state              : state_machine :=s0;
+	variable stage              : integer := 0;
+	variable low_data_out       : temp;
+	variable high_data_out      : temp;
+	variable low_data_in        : temp;
+	variable high_data_in       : temp;
+	variable memory_low         : memory ;
+	variable memory_high        : memory ;
 	variable check_sum_out_low  : std_logic_vector(7 downto 0);
 	variable check_sum_out_high : std_logic_vector(7 downto 0);
-	variable check_sum_in_low  : std_logic_vector(7 downto 0);
-	variable check_sum_in_high : std_logic_vector(7 downto 0);
+	variable check_sum_in_low   : std_logic_vector(7 downto 0);
+	variable check_sum_in_high  : std_logic_vector(7 downto 0);
+	variable TEST  : std_logic_vector(6 downto 0):=(others=>'0');
+	variable nextstate  : integer range 0 to 19 := 0;
 
 	    begin
 			
@@ -82,87 +86,95 @@ architecture Behavioral of micro_com2 is
 			 
 				 case state is 
 				 
-				 when s0 =>	--checking first start sign
-					  if (DATA_IN (6 downto 0) = "1010101") then
-						  state <= s1 ;	
-						  end if ;
+				 when 0 =>	--checking first start sign
+--					  if (DATA_IN (6 downto 0) = "1010101") then
+--						  nextstate := 1 ;	
+--					  else
+--					     nextstate := 0 ;
+--					  end if ;
+                 nextstate := 1 ;
 						  
-				 when s1 => --checking second start sign
-					  if (DATA_IN (6 downto 0) = "1010101") then
-						  state <= s2 ;	
-						  end if ; 
-						  
-				 when s2 =>	--1st low 7 bits
-					  low_data_in (0) := DATA_IN;
-					  state <= s3 ;
+				 when 1 => --checking second start sign
+--					  if (DATA_IN (6 downto 0) = "1010101") then
+--						  nextstate := 2 ;
+--					  else
+--					     nextstate := 0 ;  
+--					  end if ; 
+					  nextstate := 2 ;  
+					  
+				 when 2 =>	--1st high 7 bits
+					  high_data_in (0) := DATA_IN;
+					  nextstate := 3 ;
 	
-				 when s3 => --2nd low 7 bits
-					  low_data_in (1) := DATA_IN;
-					  state <= s4 ;
-						
-				 when s4 => --3rd low 7 bits
-					  low_data_in (2) := DATA_IN;
-					  state <= s5 ;
-						
-				 when s5 =>	--4th low 7 bits
-					  low_data_in (3) := DATA_IN;
-					  state <= s6 ;
-						
-				 when s6 => --5th low 7 bits
-					  low_data_in (4) := DATA_IN;
-					  state <= s7 ;
-					  
-				 when s7 => --6th low 7 bits
-					  low_data_in (5) := DATA_IN;
-					  state <= s8 ;
-					  
-				 when s8 => --7th low 7 bits
-					  low_data_in (6) := DATA_IN;
-					  state <= s9 ;
-					  
-				 when s9 => --compound low 7 bits
-					  low_data_in (7) := DATA_IN;
-					  state <= s10 ;
-					  
-				 when s10 => --check sum low 7 bits
-					  low_data_in (8) := DATA_IN;
-					  state <= s11 ;
-						  
-						  
-				 when s11 => --1st high 7 bits
-						high_data_in (0) := DATA_IN;
-						state <= s12 ;
-	
-				 when s12 => --2nd high 7 bits
+				 when 3 => --2nd high 7 bits
 					  high_data_in (1) := DATA_IN;
-					  state <= s13 ;
+					  nextstate := 4 ;
 						
-				 when s13 => --3rd high 7 bits
+				 when 4 => --3rd high 7 bits
 					  high_data_in (2) := DATA_IN;
-					  state <= s14 ;
+					  nextstate := 5 ;
 						
-				 when s14 => --4th high 7 bits
+				 when 5 =>	--4th high 7 bits
 					  high_data_in (3) := DATA_IN;
-					  state <= s15 ;
+					  nextstate := 6 ;
 						
-				 when s15 => --5th high 7 bits
+				 when 6 => --5th high 7 bits
 					  high_data_in (4) := DATA_IN;
-					  state <= s16 ;
+					  nextstate := 7 ;
 					  
-				 when s16 => --6th high 7 bits
+				 when 7 => --6th high 7 bits
 					  high_data_in (5) := DATA_IN;
-					  state <= s17 ;
+					  nextstate := 8 ;
 					  
-				 when s17 => --7th high 7 bits
+				 when 8 => --7th high 7 bits
 					  high_data_in (6) := DATA_IN;
-					  state <= s18 ;
+					  nextstate := 9 ;
 					  
-				 when s18 => --compound high 7 bits
+				 when 9 => --compound high 7 bits
 					  high_data_in (7) := DATA_IN;
-					  state <= s19 ;
+					  nextstate := 10 ;
 					  
-				 when s19 => --check sum high 7 bits
+				 when 10 => --check sum high 7 bits
 					  high_data_in (8) := DATA_IN;
+					  nextstate := 11 ;
+						  
+						  
+				 when 11 => --1st low 7 bits
+						low_data_in (0) := DATA_IN;
+						nextstate := 12 ;
+	
+				 when 12 => --2nd low 7 bits
+					  low_data_in (1) := DATA_IN;
+					  nextstate := 13 ;
+						
+				 when 13 => --3rd low 7 bits
+					  low_data_in (2) := DATA_IN;
+					  nextstate := 14 ;
+						
+				 when 14 => --4th low 7 bits
+					  low_data_in (3) := DATA_IN;
+					  nextstate := 15 ;
+						
+				 when 15 => --5th low 7 bits
+					  low_data_in (4) := DATA_IN;
+					  nextstate := 16 ;
+					  
+				 when 16 => --6th low 7 bits
+					  low_data_in (5) := DATA_IN;
+					  nextstate := 17 ;
+					  
+				 when 17 => --7th low 7 bits
+					  low_data_in (6) := DATA_IN;
+					  nextstate := 18 ;
+					  
+				 when 18 => --compound low 7 bits
+					  low_data_in (state) := DATA_IN;
+					  nextstate := 19 ;
+					  TEST := NOT TEST;
+					  
+				 when 19 => --check sum low 7 bits
+				     DATA_OUT <= TEST;
+					  low_data_in (8) := DATA_IN;
 					  
 --=======================================================================generating check_sum
 					  memory_low (0):= low_data_in (7) (0) & low_data_in (0) ;
@@ -206,15 +218,13 @@ architecture Behavioral of micro_com2 is
 								GWr	<= memory_high (6) & memory_low (6) ;
 	
 					  end if ;
-
-					  state <= s0 ;
-						
-				  when others =>
-					  state <= s0;		      
-					  
+	
+					  nextstate := 0 ;
 					  
 				end case;
-	
+				
+				state <= nextstate ;
+				
 			end if;
 			
 			
@@ -224,102 +234,107 @@ architecture Behavioral of micro_com2 is
 			 
 			 data_clk_flag <= '0' ;
 
-				case state is 
-
-				 when s0 =>
-				 when s1 => 
---						check_sum_out_high :=   calman_W3 ( 15 downto 8 ) + calman_W2 ( 15 downto 8 )
---													 + calman_W1 ( 15 downto 8 ) + calman_W0 ( 15 downto 8 )
---													 + calman_Wr ( 15 downto 8 ) + calman_Vy ( 15 downto 8 )
---													 + calman_Vx ( 15 downto 8 ) ;
---													 
---				      check_sum_out_low  :=   calman_W3 ( 7  downto 0 ) + calman_W2 ( 7  downto 0 )
---													 + calman_W1 ( 7  downto 0 ) + calman_W0 ( 7  downto 0 )
---													 + calman_Wr ( 7  downto 0 ) + calman_Vy ( 7  downto 0 )
---													 + calman_Vx ( 7  downto 0 ) ;
---													 
---						high_data_out (0)  :=   calman_Vx ( 14 downto 8 ) ; 
---						high_data_out (1)  :=   calman_Vy ( 14 downto 8 ) ;
---						high_data_out (2)  :=   calman_Wr ( 14 downto 8 ) ;
---						high_data_out (3)  :=   calman_W0 ( 14 downto 8 ) ;
---						high_data_out (4)  :=   calman_W1 ( 14 downto 8 ) ;
---						high_data_out (5)  :=   calman_W2 ( 14 downto 8 ) ;
---						high_data_out (6)  :=   calman_W3 ( 14 downto 8 ) ;
---						high_data_out (7)  :=   calman_W3 ( 15 ) & calman_W2 ( 15 )
---													 & calman_W1 ( 15 ) & calman_W0 ( 15 )
---													 & calman_Wr ( 15 ) & calman_Vy ( 15 )
---													 & calman_Vx ( 15 ) ;
---						high_data_out (8)  :=   check_sum_out_high ( 6 downto 0 ) ;
+--				case state is 
+--
+--				 when 0 =>
+--				      --DATA_OUT <= data_in;
+--				 when 1 => 
+--				      --DATA_OUT <= data_in;
+----						check_sum_out_high :=   calman_W3 ( 15 downto 8 ) + calman_W2 ( 15 downto 8 )
+----													 + calman_W1 ( 15 downto 8 ) + calman_W0 ( 15 downto 8 )
+----													 + calman_Wr ( 15 downto 8 ) + calman_Vy ( 15 downto 8 )
+----													 + calman_Vx ( 15 downto 8 ) ;
+----													 
+----				      check_sum_out_low  :=   calman_W3 ( 7  downto 0 ) + calman_W2 ( 7  downto 0 )
+----													 + calman_W1 ( 7  downto 0 ) + calman_W0 ( 7  downto 0 )
+----													 + calman_Wr ( 7  downto 0 ) + calman_Vy ( 7  downto 0 )
+----													 + calman_Vx ( 7  downto 0 ) ;
+----													 
+----						high_data_out (0)  :=   calman_Vx ( 14 downto 8 ) ; 
+----						high_data_out (1)  :=   calman_Vy ( 14 downto 8 ) ;
+----						high_data_out (2)  :=   calman_Wr ( 14 downto 8 ) ;
+----						high_data_out (3)  :=   calman_W0 ( 14 downto 8 ) ;
+----						high_data_out (4)  :=   calman_W1 ( 14 downto 8 ) ;
+----						high_data_out (5)  :=   calman_W2 ( 14 downto 8 ) ;
+----						high_data_out (6)  :=   calman_W3 ( 14 downto 8 ) ;
+----						high_data_out (7)  :=   calman_W3 ( 15 ) & calman_W2 ( 15 )
+----													 & calman_W1 ( 15 ) & calman_W0 ( 15 )
+----													 & calman_Wr ( 15 ) & calman_Vy ( 15 )
+----													 & calman_Vx ( 15 ) ;
+----						high_data_out (8)  :=   check_sum_out_high ( 6 downto 0 ) ;
+----						
+----						low_data_out  (0)  :=   calman_Vx ( 6  downto 0 ) ; 
+----						low_data_out  (1)  :=   calman_Vy ( 6  downto 0 ) ;
+----						low_data_out  (2)  :=   calman_Wr ( 6  downto 0 ) ;
+----						low_data_out  (3)  :=   calman_W0 ( 6  downto 0 ) ;
+----						low_data_out  (4)  :=   calman_W1 ( 6  downto 0 ) ;
+----						low_data_out  (5)  :=   calman_W2 ( 6  downto 0 ) ;
+----						low_data_out  (6)  :=   calman_W3 ( 6  downto 0 ) ;
+----						low_data_out  (7)  :=   calman_W3 ( 7  ) & calman_W2 ( 7  )
+----													 & calman_W1 ( 7  ) & calman_W0 ( 7  )
+----													 & calman_Wr ( 7  ) & calman_Vy ( 7  )
+----													 & calman_Vx ( 7  ) ;
+----						low_data_out  (8)  :=   check_sum_out_low  ( 6 downto 0 ) ;
 --						
---						low_data_out  (0)  :=   calman_Vx ( 6  downto 0 ) ; 
---						low_data_out  (1)  :=   calman_Vy ( 6  downto 0 ) ;
---						low_data_out  (2)  :=   calman_Wr ( 6  downto 0 ) ;
---						low_data_out  (3)  :=   calman_W0 ( 6  downto 0 ) ;
---						low_data_out  (4)  :=   calman_W1 ( 6  downto 0 ) ;
---						low_data_out  (5)  :=   calman_W2 ( 6  downto 0 ) ;
---						low_data_out  (6)  :=   calman_W3 ( 6  downto 0 ) ;
---						low_data_out  (7)  :=   calman_W3 ( 7  ) & calman_W2 ( 7  )
---													 & calman_W1 ( 7  ) & calman_W0 ( 7  )
---													 & calman_Wr ( 7  ) & calman_Vy ( 7  )
---													 & calman_Vx ( 7  ) ;
---						low_data_out  (8)  :=   check_sum_out_low  ( 6 downto 0 ) ;
---						
---				 when s2 =>
---						DATA_OUT <= high_data_out (0);
+--				 when 2 =>
+--						DATA_OUT <= "0001101";--high_data_out (0);
 --	
---				 when s3 =>
---					   DATA_OUT <= high_data_out (1);
+--				 when 3 =>
+--					   DATA_OUT <= "0001011";--high_data_out (1);
 --						
---				 when s4 =>
---					   DATA_OUT <= high_data_out (2);
+--				 when 4 =>
+--					   DATA_OUT <= "1110101";--high_data_out (2);
 --						
---				 when s5 =>
---					   DATA_OUT <= high_data_out (3);
+--				 when 5 =>
+--					   DATA_OUT <= "0000000";--high_data_out (3);
 --						
---				 when s6 =>
---					   DATA_OUT <= high_data_out (4);
+--				 when 6 =>
+--					   DATA_OUT <= "0000000";--high_data_out (4);
 --					  
---				 when s7 =>
---					   DATA_OUT <= high_data_out (5);
+--				 when 7 =>
+--					   DATA_OUT <= "0000000";--high_data_out (5);
 --					  
---				 when s8 =>
---					   DATA_OUT <= high_data_out (6);
+--				 when 8 =>
+--					   DATA_OUT <= "0000000";--high_data_out (6);
 --					  
---				 when s9 =>
---					   DATA_OUT <= high_data_out (7);
+--				 when 9 =>
+--					   DATA_OUT <= "0000000";--high_data_out (7);
 --					  
---				 when s10 =>
---					   DATA_OUT <= high_data_out (8);
+--				 when 10 =>
+--					   DATA_OUT <= "0001101";--high_data_out (8);
 --					    
---				 when s11 =>
---					   DATA_OUT <= high_data_out (0);
+--						 
+--						 
+--						 
+--				 when 11 =>
+--					   DATA_OUT <= "1000111";--low_data_out  (0);
 --	
---				 when s12 =>
---					   DATA_OUT <= high_data_out (1);
+--				 when 12 =>
+--					   DATA_OUT <= "1001011";--low_data_out  (1);
 --						
---				 when s13 =>
---					   DATA_OUT <= high_data_out (2);
+--				 when 13 =>
+--					   DATA_OUT <= "1010111";--low_data_out  (2);
 --						
---				 when s14 =>
---					   DATA_OUT <= low_data_out  (3);
+--				 when 14 =>
+--					   DATA_OUT <= "0000000";--low_data_out  (3);
 --						
---				 when s15 =>
---					   DATA_OUT <= low_data_out  (4);
+--				 when 15 =>
+--					   DATA_OUT <= "0000000";--low_data_out  (4);
 --					  
---				 when s16 =>
---					   DATA_OUT <= low_data_out  (5);
+--				 when 16 =>
+--					   DATA_OUT <= "0000000";--low_data_out  (5);
 --					  
---				 when s17 =>
---					   DATA_OUT <= low_data_out  (6);
+--				 when 17 =>
+--					   DATA_OUT <= "0000000";--low_data_out  (6);
 --					  
---				 when s18 =>
---					   DATA_OUT <= low_data_out  (7);
+--				 when 18 =>
+--					   DATA_OUT <= "0000001";--low_data_out  (7);
 --					  
---				 when s19 =>
---					   DATA_OUT <= low_data_out  (8);
-				 when others =>
-				  DATA_OUT <= data_in;
-			end case;
+--				 when 19 =>
+--					   DATA_OUT <= "1101001";--low_data_out  (8);
+--				 when others =>
+----				  DATA_OUT <= data_in;
+--			end case;
 			
 			end if;
 		end if;

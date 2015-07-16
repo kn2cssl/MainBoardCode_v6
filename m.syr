@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: m.prj
 
@@ -142,19 +142,19 @@ Analyzing hierarchy for entity <PWM> in library <work> (architecture <behavioral
 =========================================================================
 Analyzing generic Entity <m> in library <work> (Architecture <behavioral>).
 	n = 11
-WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 264: Different binding for component: <drivermotor>. Port <M_show> does not match.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 267: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 267: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 267: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
-WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 267: Different binding for component: <drivermotor>. Port <M_show> does not match.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 270: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 270: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 270: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
-WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 270: Different binding for component: <drivermotor>. Port <M_show> does not match.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 273: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 273: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
-WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 273: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
-WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 273: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 262: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 265: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 265: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 265: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
+WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 265: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 268: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 268: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 268: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
+WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 268: Different binding for component: <drivermotor>. Port <M_show> does not match.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 271: Unconnected output port 'CLK_1MS' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 271: Unconnected output port 'HALL_OUT' of component 'drivermotor'.
+WARNING:Xst:753 - "D:/GitHub/Yashil-fpga/m.vhd" line 271: Unconnected output port 'CHECK_OUT' of component 'drivermotor'.
+WARNING:Xst:1541 - "D:/GitHub/Yashil-fpga/m.vhd" line 271: Different binding for component: <drivermotor>. Port <M_show> does not match.
 Entity <m> analyzed. Unit <m> generated.
 
 Analyzing generic Entity <drivermotor> in library <work> (Architecture <behavioral>).
@@ -222,21 +222,21 @@ WARNING:Xst:647 - Input <calman_W3> is never used. This port will be preserved a
 WARNING:Xst:647 - Input <calman_Wr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <calman_Vx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <calman_Vy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1780 - Signal <startbyte_low> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <motor_rpm_tmp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <motor_rpm_low> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <motor_rpm_high> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <high_data_in<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <low_data_in<7>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000.
+WARNING:Xst:646 - Signal <low_data_in<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <low_data_in<9:17>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <low_data_in<18>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <low_data_in<19:40>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <high_data_in<9:40>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 20                                             |
-    | Transitions        | 22                                             |
-    | Inputs             | 1                                              |
-    | Outputs            | 20                                             |
+    | Transitions        | 20                                             |
+    | Inputs             | 0                                              |
+    | Outputs            | 18                                             |
     | Clock              | CLK                       (rising_edge)        |
     | Clock enable       | state$and0000             (positive)           |
-    | Power Up State     | s0                                             |
+    | Power Up State     | 00000                                          |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
@@ -248,23 +248,24 @@ WARNING:Xst:1780 - Signal <cnt> is never used or assigned. This unconnected sign
     Found 16-bit register for signal <GWr>.
     Found 16-bit register for signal <GVx>.
     Found 16-bit register for signal <GVy>.
-    Found 8-bit adder for signal <check_sum_in_high$add0000> created at line 191.
-    Found 8-bit adder for signal <check_sum_in_high$addsub0000> created at line 191.
-    Found 8-bit adder for signal <check_sum_in_high$addsub0001> created at line 191.
-    Found 8-bit adder for signal <check_sum_in_high$addsub0002> created at line 191.
-    Found 8-bit adder for signal <check_sum_in_high$addsub0003> created at line 191.
-    Found 8-bit adder for signal <check_sum_in_high$addsub0004> created at line 191.
-    Found 8-bit adder for signal <check_sum_in_low$add0000> created at line 187.
-    Found 8-bit adder for signal <check_sum_in_low$addsub0000> created at line 187.
-    Found 8-bit adder for signal <check_sum_in_low$addsub0001> created at line 187.
-    Found 8-bit adder for signal <check_sum_in_low$addsub0002> created at line 187.
-    Found 8-bit adder for signal <check_sum_in_low$addsub0003> created at line 187.
-    Found 8-bit adder for signal <check_sum_in_low$addsub0004> created at line 187.
+    Found 8-bit adder for signal <check_sum_in_high$add0000> created at line 203.
+    Found 8-bit adder for signal <check_sum_in_high$addsub0000> created at line 203.
+    Found 8-bit adder for signal <check_sum_in_high$addsub0001> created at line 203.
+    Found 8-bit adder for signal <check_sum_in_high$addsub0002> created at line 203.
+    Found 8-bit adder for signal <check_sum_in_high$addsub0003> created at line 203.
+    Found 8-bit adder for signal <check_sum_in_high$addsub0004> created at line 203.
+    Found 8-bit adder for signal <check_sum_in_low$add0000> created at line 199.
+    Found 8-bit adder for signal <check_sum_in_low$addsub0000> created at line 199.
+    Found 8-bit adder for signal <check_sum_in_low$addsub0001> created at line 199.
+    Found 8-bit adder for signal <check_sum_in_low$addsub0002> created at line 199.
+    Found 8-bit adder for signal <check_sum_in_low$addsub0003> created at line 199.
+    Found 8-bit adder for signal <check_sum_in_low$addsub0004> created at line 199.
     Found 1-bit register for signal <data_clk_flag>.
-    Found 7-bit comparator not equal for signal <GWr$cmp_ne0000> created at line 197.
-    Found 7-bit comparator not equal for signal <GWr$cmp_ne0001> created at line 197.
-    Found 56-bit register for signal <high_data_in<0:7>>.
-    Found 63-bit register for signal <low_data_in>.
+    Found 7-bit comparator not equal for signal <GWr$cmp_ne0000> created at line 209.
+    Found 7-bit comparator not equal for signal <GWr$cmp_ne0001> created at line 209.
+    Found 63-bit register for signal <high_data_in<0:8>>.
+    Found 49-bit register for signal <low_data_in<0:6>>.
+    Found 7-bit register for signal <TEST>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred 239 D-type flip-flop(s).
@@ -672,26 +673,26 @@ Optimizing FSM <prl_com/state/FSM> on signal <state[1:20]> with one-hot encoding
 -------------------------------
  State | Encoding
 -------------------------------
- s0    | 00000000000000000001
- s1    | 00000000000000000010
- s2    | 00000000000000000100
- s3    | 00000000000000001000
- s4    | 00000000000000010000
- s5    | 00000000000000100000
- s6    | 00000000000001000000
- s7    | 00000000000010000000
- s8    | 00000000000100000000
- s9    | 00000000001000000000
- s10   | 00000000010000000000
- s11   | 00000000100000000000
- s12   | 00000001000000000000
- s13   | 00000010000000000000
- s14   | 00000100000000000000
- s15   | 00001000000000000000
- s16   | 00010000000000000000
- s17   | 00100000000000000000
- s18   | 01000000000000000000
- s19   | 10000000000000000000
+ 00000 | 00000000000000000001
+ 00001 | 00000000000000000010
+ 00010 | 00000000000000000100
+ 00011 | 00000000000000001000
+ 00100 | 00000000000000010000
+ 00101 | 00000000000000100000
+ 00110 | 00000000000001000000
+ 00111 | 00000000000010000000
+ 01000 | 00000000000100000000
+ 01001 | 00000000001000000000
+ 01010 | 00000000010000000000
+ 01011 | 00000000100000000000
+ 01100 | 00000001000000000000
+ 01101 | 00000010000000000000
+ 01110 | 00000100000000000000
+ 01111 | 00001000000000000000
+ 10000 | 00010000000000000000
+ 10001 | 00100000000000000000
+ 10010 | 01000000000000000000
+ 10011 | 10000000000000000000
 -------------------------------
 Analyzing FSM <FSM_0> for best encoding.
 Optimizing FSM <FT245/cnt1/FSM> on signal <cnt1[1:6]> with one-hot encoding.
@@ -935,6 +936,13 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <GWr_7> (without init value) has a constant value of 0 in block <micro_com2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <GVx_7> (without init value) has a constant value of 0 in block <micro_com2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <GVy_7> (without init value) has a constant value of 0 in block <micro_com2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alpha_7> (without init value) has a constant value of 0 in block <micro_com2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Wr_7> (without init value) has a constant value of 0 in block <micro_com2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Vx_7> (without init value) has a constant value of 0 in block <micro_com2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Vy_7> (without init value) has a constant value of 0 in block <micro_com2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <M_Kd_fp_0> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_1> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_Kd_fp_2> has a constant value of 0 in block <drivermotor>. This FF/Latch will be trimmed during the optimization process.
@@ -1170,6 +1178,21 @@ WARNING:Xst:2677 - Node <calman_W3_12> of sequential type is unconnected in bloc
 WARNING:Xst:2677 - Node <calman_W3_13> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <calman_W3_14> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <calman_W3_15> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_15> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_14> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_13> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_12> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_11> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_10> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_9> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_8> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_6> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_5> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_4> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_3> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_2> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_1> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/Vy_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Vx_15> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Vx_14> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Vx_13> of sequential type is unconnected in block <m>.
@@ -1178,7 +1201,6 @@ WARNING:Xst:2677 - Node <prl_com/Vx_11> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <prl_com/Vx_10> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Vx_9> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Vx_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vx_7> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Vx_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Vx_5> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Vx_4> of sequential type is unconnected in block <m>.
@@ -1194,7 +1216,6 @@ WARNING:Xst:2677 - Node <prl_com/Wr_11> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <prl_com/Wr_10> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Wr_9> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Wr_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Wr_7> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Wr_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Wr_5> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Wr_4> of sequential type is unconnected in block <m>.
@@ -1202,22 +1223,6 @@ WARNING:Xst:2677 - Node <prl_com/Wr_3> of sequential type is unconnected in bloc
 WARNING:Xst:2677 - Node <prl_com/Wr_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Wr_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/Wr_0> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_7> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/alpha_15> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/alpha_14> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/alpha_13> of sequential type is unconnected in block <m>.
@@ -1226,7 +1231,6 @@ WARNING:Xst:2677 - Node <prl_com/alpha_11> of sequential type is unconnected in 
 WARNING:Xst:2677 - Node <prl_com/alpha_10> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/alpha_9> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/alpha_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/alpha_7> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/alpha_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/alpha_5> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/alpha_4> of sequential type is unconnected in block <m>.
@@ -1242,7 +1246,6 @@ WARNING:Xst:2677 - Node <prl_com/GVy_11> of sequential type is unconnected in bl
 WARNING:Xst:2677 - Node <prl_com/GVy_10> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GVy_9> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GVy_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVy_7> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GVy_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GVy_5> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GVy_4> of sequential type is unconnected in block <m>.
@@ -1258,7 +1261,6 @@ WARNING:Xst:2677 - Node <prl_com/GVx_11> of sequential type is unconnected in bl
 WARNING:Xst:2677 - Node <prl_com/GVx_10> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GVx_9> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GVx_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVx_7> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GVx_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GVx_5> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GVx_4> of sequential type is unconnected in block <m>.
@@ -1274,7 +1276,6 @@ WARNING:Xst:2677 - Node <prl_com/GWr_11> of sequential type is unconnected in bl
 WARNING:Xst:2677 - Node <prl_com/GWr_10> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GWr_9> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GWr_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GWr_7> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GWr_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GWr_5> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/GWr_4> of sequential type is unconnected in block <m>.
@@ -1303,13 +1304,6 @@ WARNING:Xst:2677 - Node <prl_com/high_data_in_0_3> of sequential type is unconne
 WARNING:Xst:2677 - Node <prl_com/high_data_in_0_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/high_data_in_0_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/high_data_in_0_0> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_7_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_7_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_7_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_7_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_7_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_7_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_7_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_6_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_6_5> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_6_4> of sequential type is unconnected in block <m>.
@@ -1317,13 +1311,6 @@ WARNING:Xst:2677 - Node <prl_com/low_data_in_6_3> of sequential type is unconnec
 WARNING:Xst:2677 - Node <prl_com/low_data_in_6_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_6_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_6_0> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_8_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_8_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_8_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_8_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_8_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_8_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_8_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_5_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_5_5> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_5_4> of sequential type is unconnected in block <m>.
@@ -1331,20 +1318,6 @@ WARNING:Xst:2677 - Node <prl_com/low_data_in_5_3> of sequential type is unconnec
 WARNING:Xst:2677 - Node <prl_com/low_data_in_5_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_5_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_5_0> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_3_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_3_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_3_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_3_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_3_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_3_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_3_0> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_2_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_2_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_2_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_2_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_2_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_2_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/low_data_in_2_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_4_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_4_5> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_4_4> of sequential type is unconnected in block <m>.
@@ -1352,6 +1325,27 @@ WARNING:Xst:2677 - Node <prl_com/low_data_in_4_3> of sequential type is unconnec
 WARNING:Xst:2677 - Node <prl_com/low_data_in_4_2> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_4_1> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/low_data_in_4_0> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/high_data_in_8_6> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/high_data_in_8_5> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/high_data_in_8_4> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/high_data_in_8_3> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/high_data_in_8_2> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/high_data_in_8_1> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/high_data_in_8_0> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_2_6> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_2_5> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_2_4> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_2_3> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_2_2> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_2_1> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_2_0> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_3_6> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_3_5> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_3_4> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_3_3> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_3_2> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_3_1> of sequential type is unconnected in block <m>.
+WARNING:Xst:2677 - Node <prl_com/low_data_in_3_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/high_data_in_7_6> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/high_data_in_7_5> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <prl_com/high_data_in_7_4> of sequential type is unconnected in block <m>.
@@ -1433,17 +1427,17 @@ Final Macro Processing ...
 
 Processing Unit <m> :
 	Found 2-bit shift register for signal <FT245/cnt1_FSM_FFd6>.
-	Found 17-bit shift register for signal <prl_com/state_FSM_FFd1>.
+	Found 19-bit shift register for signal <prl_com/state_FSM_FFd2>.
 Unit <m> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 641
- Flip-Flops                                            : 641
+# Registers                                            : 646
+ Flip-Flops                                            : 646
 # Shift Registers                                      : 2
- 17-bit shift register                                 : 1
+ 19-bit shift register                                 : 1
  2-bit shift register                                  : 1
 
 =========================================================================
@@ -1473,34 +1467,35 @@ Design Statistics
 # IOs                              : 94
 
 Cell Usage :
-# BELS                             : 6868
+# BELS                             : 6871
 #      GND                         : 1
-#      INV                         : 534
+#      INV                         : 541
 #      LUT1                        : 331
-#      LUT2                        : 720
+#      LUT2                        : 719
 #      LUT2_D                      : 8
 #      LUT2_L                      : 8
 #      LUT3                        : 740
 #      LUT3_D                      : 16
-#      LUT4                        : 603
+#      LUT4                        : 596
 #      LUT4_D                      : 8
-#      LUT4_L                      : 8
+#      LUT4_L                      : 12
 #      MULT_AND                    : 12
 #      MUXCY                       : 2183
 #      MUXF5                       : 7
 #      VCC                         : 1
 #      XORCY                       : 1688
-# FlipFlops/Latches                : 643
+# FlipFlops/Latches                : 648
 #      FD                          : 72
-#      FDE                         : 414
+#      FDE                         : 419
 #      FDR                         : 92
 #      FDRE                        : 65
-# Shift Registers                  : 2
+# Shift Registers                  : 3
 #      SRL16E                      : 2
+#      SRLC16E                     : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 70
-#      IBUF                        : 23
+# IO Buffers                       : 63
+#      IBUF                        : 16
 #      OBUF                        : 47
 # MULTs                            : 16
 #      MULT18X18                   : 16
@@ -1511,13 +1506,13 @@ Device utilization summary:
 
 Selected Device : 3s400tq144-4 
 
- Number of Slices:                     1565  out of   3584    43%  
- Number of Slice Flip Flops:            643  out of   7168     8%  
- Number of 4 input LUTs:               2978  out of   7168    41%  
-    Number used as logic:              2976
-    Number used as Shift registers:       2
+ Number of Slices:                     1563  out of   3584    43%  
+ Number of Slice Flip Flops:            648  out of   7168     9%  
+ Number of 4 input LUTs:               2982  out of   7168    41%  
+    Number used as logic:              2979
+    Number used as Shift registers:       3
  Number of IOs:                          94
- Number of bonded IOBs:                  71  out of     97    73%  
+ Number of bonded IOBs:                  64  out of     97    65%  
  Number of MULT18X18s:                   16  out of     16   100%  
  Number of GCLKs:                         1  out of      8    12%  
 
@@ -1542,7 +1537,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 645   |
+clk                                | BUFGP                  | 651   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1553,8 +1548,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 31.655ns (Maximum Frequency: 31.591MHz)
-   Minimum input arrival time before clock: 5.966ns
+   Minimum period: 31.107ns (Maximum Frequency: 32.147MHz)
+   Minimum input arrival time before clock: 4.455ns
    Maximum output required time after clock: 9.274ns
    Maximum combinational path delay: 9.519ns
 
@@ -1564,16 +1559,16 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 31.655ns (frequency: 31.591MHz)
-  Total number of paths / destination ports: 7177885303 / 1247
+  Clock period: 31.107ns (frequency: 32.147MHz)
+  Total number of paths / destination ports: 7177885320 / 1266
 -------------------------------------------------------------------------
-Delay:               31.655ns (Levels of Logic = 35)
+Delay:               31.107ns (Levels of Logic = 36)
   Source:            driver4/M_RPM_DIR_0 (FF)
-  Destination:       driver4/M_PID_10 (FF)
+  Destination:       driver4/M_PID_8 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: driver4/M_RPM_DIR_0 to driver4/M_PID_10
+  Data Path: driver4/M_RPM_DIR_0 to driver4/M_PID_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -1609,36 +1604,35 @@ Delay:               31.655ns (Levels of Logic = 35)
      MUXCY:S->O            1   0.500   0.000  driver4/Msub_M_PD_sub0000_cy<0> (driver4/Msub_M_PD_sub0000_cy<0>)
      MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<1> (driver4/Msub_M_PD_sub0000_cy<1>)
      MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<2> (driver4/Msub_M_PD_sub0000_cy<2>)
-     XORCY:CI->O           6   0.904   1.342  driver4/Msub_M_PD_sub0000_xor<3> (driver4/M_PD_sub0000<3>)
-     LUT2:I0->O            1   0.551   0.869  driver4/Madd_M_PD_ABS_addsub0000_Madd_cy<4>11_SW0 (N76)
-     LUT4:I2->O            1   0.551   0.827  driver4/M_PID_mux0002<0>_SW0 (N68)
-     LUT4:I3->O            1   0.551   0.000  driver4/M_PID_mux0002<0> (driver4/M_PID_mux0002<0>)
-     FDE:D                     0.203          driver4/M_PID_10
+     XORCY:CI->O           6   0.904   1.029  driver4/Msub_M_PD_sub0000_xor<3> (driver4/M_PD_sub0000<3>)
+     LUT4_D:I3->LO         1   0.551   0.126  driver4/M_PID_mux0002<6>_SW0 (N198)
+     LUT4:I3->O            3   0.551   0.975  driver4/Madd_M_PD_ABS_addsub0000_Madd_cy<6>11 (driver4/Madd_M_PD_ABS_addsub0000_Madd_cy<6>)
+     LUT4:I2->O            1   0.551   0.000  driver4/M_PID_mux0002<2>1 (driver4/M_PID_mux0002<2>1)
+     MUXF5:I1->O           1   0.360   0.000  driver4/M_PID_mux0002<2>_f5 (driver4/M_PID_mux0002<2>)
+     FDE:D                     0.203          driver4/M_PID_8
     ----------------------------------------
-    Total                     31.655ns (18.387ns logic, 13.268ns route)
-                                       (58.1% logic, 41.9% route)
+    Total                     31.107ns (18.747ns logic, 12.360ns route)
+                                       (60.3% logic, 39.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 73 / 55
+  Total number of paths / destination ports: 51 / 51
 -------------------------------------------------------------------------
-Offset:              5.966ns (Levels of Logic = 4)
-  Source:            DATA_IN<2> (PAD)
-  Destination:       prl_com/state_FSM_FFd20 (FF)
+Offset:              4.455ns (Levels of Logic = 2)
+  Source:            DATA_CLK (PAD)
+  Destination:       prl_com/data_clk_flag (FF)
   Destination Clock: clk rising
 
-  Data Path: DATA_IN<2> to prl_com/state_FSM_FFd20
+  Data Path: DATA_CLK to prl_com/data_clk_flag
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.821   1.216  DATA_IN_2_IBUF (DATA_IN_2_IBUF)
-     LUT4:I0->O            1   0.551   0.827  prl_com/state_cmp_eq0000_SW0 (N2)
-     LUT4:I3->O            3   0.551   1.246  prl_com/state_cmp_eq0000 (prl_com/state_cmp_eq0000)
-     LUT2:I0->O            1   0.551   0.000  prl_com/state_FSM_FFd18-In1 (prl_com/state_FSM_FFd18-In)
-     FDE:D                     0.203          prl_com/state_FSM_FFd18
+     IBUF:I->O             4   0.821   1.256  DATA_CLK_IBUF (DATA_CLK_IBUF)
+     LUT2:I0->O            1   0.551   0.801  prl_com/data_clk_flag_and00001 (prl_com/data_clk_flag_and0000)
+     FDRE:R                    1.026          prl_com/data_clk_flag
     ----------------------------------------
-    Total                      5.966ns (2.677ns logic, 3.289ns route)
-                                       (44.9% logic, 55.1% route)
+    Total                      4.455ns (2.398ns logic, 2.057ns route)
+                                       (53.8% logic, 46.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -1685,13 +1679,13 @@ Delay:               9.519ns (Levels of Logic = 4)
 
 
 Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 21.35 secs
+Total CPU time to Xst completion: 20.78 secs
  
 --> 
 
-Total memory usage is 302456 kilobytes
+Total memory usage is 298832 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  750 (   0 filtered)
+Number of warnings :  743 (   0 filtered)
 Number of infos    :   46 (   0 filtered)
 
