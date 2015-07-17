@@ -167,18 +167,18 @@ architecture Behavioral of micro_com2 is
 											  + calman_Wr ( 7  downto 0 ) + calman_Vy ( 7  downto 0 )
 											  + calman_Vx ( 7  downto 0 ) ;
 											 
-				 send_packet (2)  :=   "0000001";--calman_Vx ( 14 downto 8 ) ; 
-				 send_packet (3)  :=   "0000010";--calman_Vy ( 14 downto 8 ) ;
-				 send_packet (4)  :=   "0000011";--calman_Wr ( 14 downto 8 ) ;
-				 send_packet (5)  :=   "0000100";--calman_W0 ( 14 downto 8 ) ;
-				 send_packet (6)  :=   "0000101";--calman_W1 ( 14 downto 8 ) ;
-				 send_packet (7)  :=   "0000110";--calman_W2 ( 14 downto 8 ) ;
-				 send_packet (8)  :=   "0000111";--calman_W3 ( 14 downto 8 ) ;
-				 send_packet (9)  :=   "0001000";--calman_W3 ( 15 ) & calman_W2 ( 15 )
-										   --& calman_W1 ( 15 ) & calman_W0 ( 15 )
-											--& calman_Wr ( 15 ) & calman_Vy ( 15 )
-										   --& calman_Vx ( 15 ) ;
-				 send_packet (10)  :=  "0001001";--check_sum_out_high ( 6 downto 0 ) ;
+				 send_packet (2)  :=   calman_Vx ( 14 downto 8 ) ; 
+				 send_packet (3)  :=   calman_Vy ( 14 downto 8 ) ;
+				 send_packet (4)  :=   calman_Wr ( 14 downto 8 ) ;
+				 send_packet (5)  :=   calman_W0 ( 14 downto 8 ) ;
+				 send_packet (6)  :=   calman_W1 ( 14 downto 8 ) ;
+				 send_packet (7)  :=   calman_W2 ( 14 downto 8 ) ;
+				 send_packet (8)  :=   calman_W3 ( 14 downto 8 ) ;
+				 send_packet (9)  :=   calman_W3 ( 15 ) & calman_W2 ( 15 )
+										   & calman_W1 ( 15 ) & calman_W0 ( 15 )
+											& calman_Wr ( 15 ) & calman_Vy ( 15 )
+										   & calman_Vx ( 15 ) ;
+				 send_packet (10)  :=  check_sum_out_high ( 6 downto 0 ) ;
 				
 				 send_packet  (11)  :=   calman_Vx ( 6  downto 0 ) ; 
 				 send_packet  (12)  :=   calman_Vy ( 6  downto 0 ) ;

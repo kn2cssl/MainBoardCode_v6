@@ -9,22 +9,22 @@ Target Device  : xc3s400
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Fri Jul 17 16:31:01 2015
+Mapped Date    : Fri Jul 17 16:48:10 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           931 out of   7,168   12%
-  Number of 4 input LUTs:             2,842 out of   7,168   39%
+  Number of Slice Flip Flops:         1,113 out of   7,168   15%
+  Number of 4 input LUTs:             2,998 out of   7,168   41%
 Logic Distribution:
-  Number of occupied Slices:          1,847 out of   3,584   51%
-    Number of Slices containing only related logic:   1,847 out of   1,847 100%
-    Number of Slices containing unrelated logic:          0 out of   1,847   0%
+  Number of occupied Slices:          2,034 out of   3,584   56%
+    Number of Slices containing only related logic:   2,034 out of   2,034 100%
+    Number of Slices containing unrelated logic:          0 out of   2,034   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       3,177 out of   7,168   44%
-    Number used as logic:             2,841
+  Total Number of 4 input LUTs:       3,333 out of   7,168   46%
+    Number used as logic:             2,997
     Number used as a route-thru:        335
     Number used as Shift registers:       1
 
@@ -35,11 +35,11 @@ Logic Distribution:
   Number of MULT18X18s:                  16 out of      16  100%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.41
+Average Fanout of Non-Clock Nets:                2.42
 
-Peak Memory Usage:  319 MB
-Total REAL time to MAP completion:  10 secs 
-Total CPU time to MAP completion:   9 secs 
+Peak Memory Usage:  329 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   4 secs 
 
 NOTES:
 

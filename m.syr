@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: m.prj
 
@@ -174,15 +174,6 @@ Analyzing Entity <Write_to_USB> in library <work> (Architecture <behavioral>).
 Entity <Write_to_USB> analyzed. Unit <Write_to_USB> generated.
 
 Analyzing Entity <micro_com2> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <send_packet<10>> in unit <micro_com2> has a constant value of 0001001 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <send_packet<9>> in unit <micro_com2> has a constant value of 0001000 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <send_packet<8>> in unit <micro_com2> has a constant value of 0000111 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <send_packet<7>> in unit <micro_com2> has a constant value of 0000110 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <send_packet<6>> in unit <micro_com2> has a constant value of 0000101 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <send_packet<5>> in unit <micro_com2> has a constant value of 0000100 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <send_packet<4>> in unit <micro_com2> has a constant value of 0000011 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <send_packet<3>> in unit <micro_com2> has a constant value of 0000010 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <send_packet<2>> in unit <micro_com2> has a constant value of 0000001 during circuit operation. The register is replaced by logic.
 Entity <micro_com2> analyzed. Unit <micro_com2> generated.
 
 Analyzing Entity <ila> in library <work> (Architecture <ila_a>).
@@ -224,13 +215,6 @@ Unit <Write_to_USB> synthesized.
 
 Synthesizing Unit <micro_com2>.
     Related source file is "D:/GitHub/Yashil-fpga/micro_com2.vhd".
-WARNING:Xst:647 - Input <calman_W0<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <calman_W1<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <calman_W2<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <calman_W3<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <calman_Wr<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <calman_Vx<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <calman_Vy<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <send_packet<0:1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <send_packet<20:40>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <receive_packet<0:1>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -256,6 +240,12 @@ WARNING:Xst:1780 - Signal <receive_packet<20:40>> is never used or assigned. Thi
     Found 8-bit adder for signal <check_sum_in_low$addsub0002> created at line 124.
     Found 8-bit adder for signal <check_sum_in_low$addsub0003> created at line 124.
     Found 8-bit adder for signal <check_sum_in_low$addsub0004> created at line 124.
+    Found 8-bit adder for signal <check_sum_out_high$add0000> created at line 160.
+    Found 8-bit adder for signal <check_sum_out_high$addsub0000> created at line 160.
+    Found 8-bit adder for signal <check_sum_out_high$addsub0001> created at line 160.
+    Found 8-bit adder for signal <check_sum_out_high$addsub0002> created at line 160.
+    Found 8-bit adder for signal <check_sum_out_high$addsub0003> created at line 160.
+    Found 8-bit adder for signal <check_sum_out_high$addsub0004> created at line 160.
     Found 8-bit adder for signal <check_sum_out_low$add0000> created at line 165.
     Found 8-bit adder for signal <check_sum_out_low$addsub0000> created at line 165.
     Found 8-bit adder for signal <check_sum_out_low$addsub0001> created at line 165.
@@ -267,14 +257,14 @@ WARNING:Xst:1780 - Signal <receive_packet<20:40>> is never used or assigned. Thi
     Found 7-bit comparator not equal for signal <GWr$cmp_ne0000> created at line 129.
     Found 7-bit comparator not equal for signal <GWr$cmp_ne0001> created at line 129.
     Found 119-bit register for signal <receive_packet<2:18>>.
-    Found 63-bit register for signal <send_packet<11:19>>.
+    Found 126-bit register for signal <send_packet<2:19>>.
     Found 5-bit register for signal <state>.
     Found 5-bit adder for signal <state$addsub0000> created at line 94.
     Found 5-bit comparator greater for signal <state$cmp_gt0000> created at line 90.
     Found 5-bit comparator less for signal <state$cmp_lt0000> created at line 90.
     Summary:
-	inferred 307 D-type flip-flop(s).
-	inferred  19 Adder/Subtractor(s).
+	inferred 370 D-type flip-flop(s).
+	inferred  25 Adder/Subtractor(s).
 	inferred   5 Comparator(s).
 Unit <micro_com2> synthesized.
 
@@ -618,7 +608,7 @@ Macro Statistics
  16x20-bit multiplier                                  : 4
  20x16-bit multiplier                                  : 4
  27x11-bit multiplier                                  : 4
-# Adders/Subtractors                                   : 91
+# Adders/Subtractors                                   : 97
  16-bit adder                                          : 28
  16-bit addsub                                         : 4
  16-bit subtractor                                     : 16
@@ -628,14 +618,14 @@ Macro Statistics
  28-bit subtractor                                     : 4
  31-bit adder                                          : 4
  5-bit adder                                           : 1
- 8-bit adder                                           : 18
+ 8-bit adder                                           : 24
 # Counters                                             : 13
  11-bit up counter                                     : 4
  16-bit up counter                                     : 5
  17-bit up counter                                     : 4
 # Accumulators                                         : 4
  27-bit up accumulator                                 : 4
-# Registers                                            : 142
+# Registers                                            : 151
  1-bit register                                        : 58
  11-bit register                                       : 4
  16-bit register                                       : 35
@@ -643,7 +633,7 @@ Macro Statistics
  3-bit register                                        : 8
  4-bit register                                        : 4
  5-bit register                                        : 1
- 7-bit register                                        : 27
+ 7-bit register                                        : 36
  8-bit register                                        : 1
 # Comparators                                          : 145
  11-bit comparator greatequal                          : 4
@@ -848,118 +838,6 @@ WARNING:Xst:2677 - Node <RPM_DIFF_11> of sequential type is unconnected in block
 WARNING:Xst:2677 - Node <RPM_DIFF_12> of sequential type is unconnected in block <driver4>.
 WARNING:Xst:2677 - Node <RPM_DIFF_13> of sequential type is unconnected in block <driver4>.
 WARNING:Xst:2677 - Node <RPM_DIFF_14> of sequential type is unconnected in block <driver4>.
-WARNING:Xst:2677 - Node <GWr_8> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GWr_9> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GWr_10> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GWr_11> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GWr_12> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GWr_13> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GWr_14> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GWr_15> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVx_8> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVx_9> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVx_10> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVx_11> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVx_12> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVx_13> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVx_14> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVx_15> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVy_8> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVy_9> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVy_10> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVy_11> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVy_12> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVy_13> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVy_14> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <GVy_15> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <alpha_8> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <alpha_9> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <alpha_10> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <alpha_11> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <alpha_12> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <alpha_13> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <alpha_14> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <alpha_15> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Wr_8> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Wr_9> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Wr_10> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Wr_11> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Wr_12> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Wr_13> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Wr_14> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Wr_15> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vx_8> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vx_9> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vx_10> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vx_11> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vx_12> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vx_13> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vx_14> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vx_15> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vy_8> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vy_9> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vy_10> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vy_11> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vy_12> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vy_13> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vy_14> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <Vy_15> of sequential type is unconnected in block <prl_com>.
-WARNING:Xst:2677 - Node <calman_Wr_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_15> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <RPM_DIFF_0> of sequential type is unconnected in block <drivermotor>.
 WARNING:Xst:2677 - Node <RPM_DIFF_1> of sequential type is unconnected in block <drivermotor>.
 WARNING:Xst:2677 - Node <RPM_DIFF_2> of sequential type is unconnected in block <drivermotor>.
@@ -986,7 +864,7 @@ Macro Statistics
  16x20-bit multiplier                                  : 4
  20x16-bit multiplier                                  : 4
  27x11-bit multiplier                                  : 4
-# Adders/Subtractors                                   : 91
+# Adders/Subtractors                                   : 97
  11-bit adder                                          : 4
  16-bit adder                                          : 28
  16-bit addsub                                         : 4
@@ -996,16 +874,16 @@ Macro Statistics
  27-bit subtractor                                     : 4
  28-bit subtractor                                     : 4
  5-bit adder                                           : 1
- 7-bit adder                                           : 9
- 8-bit adder                                           : 9
+ 7-bit adder                                           : 12
+ 8-bit adder                                           : 12
 # Counters                                             : 13
  11-bit up counter                                     : 4
  16-bit up counter                                     : 5
  17-bit up counter                                     : 4
 # Accumulators                                         : 4
  27-bit up accumulator                                 : 4
-# Registers                                            : 924
- Flip-Flops                                            : 924
+# Registers                                            : 987
+ Flip-Flops                                            : 987
 # Comparators                                          : 145
  11-bit comparator greatequal                          : 4
  16-bit comparator equal                               : 4
@@ -1159,125 +1037,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver1/CHANGE> has
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver2/CHANGE> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver3/CHANGE> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <driver4/CHANGE> has a constant value of 0 in block <m>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <calman_Wr_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Wr_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vx_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_Vy_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W0_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W1_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W2_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <calman_W3_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vy_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vx_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vx_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vx_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vx_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vx_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vx_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vx_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Vx_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Wr_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Wr_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Wr_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Wr_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Wr_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Wr_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Wr_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/Wr_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/alpha_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/alpha_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/alpha_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/alpha_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/alpha_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/alpha_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/alpha_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/alpha_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVy_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVy_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVy_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVy_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVy_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVy_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVy_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVy_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVx_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVx_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVx_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVx_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVx_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVx_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVx_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GVx_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GWr_15> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GWr_14> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GWr_13> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GWr_12> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GWr_11> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GWr_10> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GWr_9> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/GWr_8> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/receive_packet_9_6> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/receive_packet_9_5> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/receive_packet_9_4> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/receive_packet_9_3> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/receive_packet_9_2> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/receive_packet_9_1> of sequential type is unconnected in block <m>.
-WARNING:Xst:2677 - Node <prl_com/receive_packet_9_0> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver4/hall_out_s> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver3/hall_out_s> of sequential type is unconnected in block <m>.
 WARNING:Xst:2677 - Node <driver2/hall_out_s> of sequential type is unconnected in block <m>.
@@ -1288,23 +1047,23 @@ WARNING:Xst:2677 - Node <driver1/M_P_OVERFLOW> of sequential type is unconnected
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <driver3/M_Kd_fp_10> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver3/M_Kd_fp_7> 
+INFO:Xst:2261 - The FF/Latch <driver4/M_Kd_fp_10> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver4/M_Kd_fp_7> 
 INFO:Xst:2261 - The FF/Latch <driver4/STATE1_1> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver4/hall_state_past_1> 
 INFO:Xst:2261 - The FF/Latch <driver4/STATE1_2> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver4/hall_state_past_2> 
 INFO:Xst:2261 - The FF/Latch <driver4/STATE1_0> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver4/hall_state_past_0> 
 INFO:Xst:2261 - The FF/Latch <driver2/STATE1_0> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver2/hall_state_past_0> 
-INFO:Xst:2261 - The FF/Latch <driver1/M_Kd_fp_10> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver1/M_Kd_fp_7> 
 INFO:Xst:2261 - The FF/Latch <driver2/STATE1_1> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver2/hall_state_past_1> 
 INFO:Xst:2261 - The FF/Latch <driver2/STATE1_2> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver2/hall_state_past_2> 
-INFO:Xst:2261 - The FF/Latch <driver4/M_Kd_fp_10> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver4/M_Kd_fp_7> 
+INFO:Xst:2261 - The FF/Latch <driver2/M_Kd_fp_10> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver2/M_Kd_fp_7> 
+INFO:Xst:2261 - The FF/Latch <driver3/M_Kd_fp_10> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver3/M_Kd_fp_7> 
 INFO:Xst:2261 - The FF/Latch <driver1/STATE1_1> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver1/hall_state_past_1> 
 INFO:Xst:2261 - The FF/Latch <driver3/STATE1_0> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver3/hall_state_past_0> 
 INFO:Xst:2261 - The FF/Latch <driver1/STATE1_2> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver1/hall_state_past_2> 
 INFO:Xst:2261 - The FF/Latch <driver1/STATE1_0> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver1/hall_state_past_0> 
-INFO:Xst:2261 - The FF/Latch <driver2/M_Kd_fp_10> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver2/M_Kd_fp_7> 
 INFO:Xst:2261 - The FF/Latch <driver3/STATE1_1> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver3/hall_state_past_1> 
 INFO:Xst:2261 - The FF/Latch <driver3/STATE1_2> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver3/hall_state_past_2> 
-Found area constraint ratio of 100 (+ 5) on block m, actual ratio is 50.
+INFO:Xst:2261 - The FF/Latch <driver1/M_Kd_fp_10> in Unit <m> is equivalent to the following FF/Latch, which will be removed : <driver1/M_Kd_fp_7> 
+Found area constraint ratio of 100 (+ 5) on block m, actual ratio is 54.
 
 Final Macro Processing ...
 
@@ -1316,8 +1075,8 @@ Unit <m> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 930
- Flip-Flops                                            : 930
+# Registers                                            : 1112
+ Flip-Flops                                            : 1112
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -1348,26 +1107,27 @@ Design Statistics
 # IOs                              : 94
 
 Cell Usage :
-# BELS                             : 7303
+# BELS                             : 7558
 #      GND                         : 1
-#      INV                         : 534
+#      INV                         : 538
 #      LUT1                        : 331
-#      LUT2                        : 813
-#      LUT2_D                      : 8
-#      LUT2_L                      : 4
-#      LUT3                        : 784
-#      LUT3_D                      : 20
-#      LUT4                        : 678
-#      LUT4_D                      : 8
-#      LUT4_L                      : 12
+#      LUT2                        : 850
+#      LUT2_D                      : 12
+#      LUT2_L                      : 8
+#      LUT3                        : 821
+#      LUT3_D                      : 32
+#      LUT3_L                      : 12
+#      LUT4                        : 729
+#      LUT4_D                      : 4
+#      LUT4_L                      : 20
 #      MULT_AND                    : 12
-#      MUXCY                       : 2281
-#      MUXF5                       : 23
+#      MUXCY                       : 2331
+#      MUXF5                       : 28
 #      VCC                         : 1
-#      XORCY                       : 1793
-# FlipFlops/Latches                : 931
-#      FD                          : 128
-#      FDE                         : 646
+#      XORCY                       : 1828
+# FlipFlops/Latches                : 1113
+#      FD                          : 184
+#      FDE                         : 772
 #      FDR                         : 92
 #      FDRE                        : 65
 # Shift Registers                  : 1
@@ -1386,10 +1146,10 @@ Device utilization summary:
 
 Selected Device : 3s400tq144-4 
 
- Number of Slices:                     1700  out of   3584    47%  
- Number of Slice Flip Flops:            931  out of   7168    12%  
- Number of 4 input LUTs:               3193  out of   7168    44%  
-    Number used as logic:              3192
+ Number of Slices:                     1850  out of   3584    51%  
+ Number of Slice Flip Flops:           1113  out of   7168    15%  
+ Number of 4 input LUTs:               3358  out of   7168    46%  
+    Number used as logic:              3357
     Number used as Shift registers:       1
  Number of IOs:                          94
  Number of bonded IOBs:                  71  out of     97    73%  
@@ -1417,7 +1177,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 932   |
+clk                                | BUFGP                  | 1114  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1428,8 +1188,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 31.378ns (Maximum Frequency: 31.870MHz)
-   Minimum input arrival time before clock: 8.116ns
+   Minimum period: 30.986ns (Maximum Frequency: 32.272MHz)
+   Minimum input arrival time before clock: 9.684ns
    Maximum output required time after clock: 9.274ns
    Maximum combinational path delay: 9.519ns
 
@@ -1439,16 +1199,16 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 31.378ns (frequency: 31.870MHz)
-  Total number of paths / destination ports: 7181881053 / 1660
+  Clock period: 30.986ns (frequency: 32.272MHz)
+  Total number of paths / destination ports: 7652951609 / 1961
 -------------------------------------------------------------------------
-Delay:               31.378ns (Levels of Logic = 36)
+Delay:               30.986ns (Levels of Logic = 58)
   Source:            driver4/M_RPM_DIR_0 (FF)
-  Destination:       driver4/M_PID_8 (FF)
+  Destination:       driver4/M_PID_7 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: driver4/M_RPM_DIR_0 to driver4/M_PID_8
+  Data Path: driver4/M_RPM_DIR_0 to driver4/M_PID_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -1477,44 +1237,67 @@ Delay:               31.378ns (Levels of Logic = 36)
      MUXCY:S->O            1   0.500   0.000  driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_cy<28> (driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_cy<28>)
      XORCY:CI->O           4   0.904   1.256  driver4/Mmult_LIMIT_KP_fp_mult00000_Madd_xor<29> (driver4/LIMIT_KP_fp_mult0000<29>)
      LUT4:I0->O            1   0.551   0.000  driver4/Mcompar_M_P_cmp_ge0000_lut<5> (driver4/Mcompar_M_P_cmp_ge0000_lut<5>)
-     MUXCY:S->O            1   0.739   0.869  driver4/Mcompar_M_P_cmp_ge0000_cy<5> (driver4/Mcompar_M_P_cmp_ge0000_cy<5>)
-     LUT3:I2->O           53   0.551   2.168  driver4/Mcompar_M_P_cmp_ge0000_cy<7>1 (driver4/M_P_cmp_ge0000)
+     MUXCY:S->O            2   0.739   1.072  driver4/Mcompar_M_P_cmp_ge0000_cy<5> (driver4/Mcompar_M_P_cmp_ge0000_cy<5>)
+     LUT3:I1->O            5   0.551   1.116  driver4/Mcompar_M_P_cmp_ge0000_cy<7>1_1 (driver4/Mcompar_M_P_cmp_ge0000_cy<7>1)
      LUT3:I1->O            1   0.551   0.996  driver4/M_P_mux0001<0>1 (driver4/M_P_mux0001<0>)
      LUT2:I1->O            1   0.551   0.000  driver4/Msub_M_PD_sub0000_lut<0> (driver4/Msub_M_PD_sub0000_lut<0>)
      MUXCY:S->O            1   0.500   0.000  driver4/Msub_M_PD_sub0000_cy<0> (driver4/Msub_M_PD_sub0000_cy<0>)
      MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<1> (driver4/Msub_M_PD_sub0000_cy<1>)
      MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<2> (driver4/Msub_M_PD_sub0000_cy<2>)
-     XORCY:CI->O           6   0.904   1.029  driver4/Msub_M_PD_sub0000_xor<3> (driver4/M_PD_sub0000<3>)
-     LUT4_D:I3->LO         1   0.551   0.126  driver4/M_PID_mux0002<6>_SW0 (N234)
-     LUT4:I3->O            3   0.551   1.246  driver4/Madd_M_PD_ABS_addsub0000_Madd_cy<6>11 (driver4/Madd_M_PD_ABS_addsub0000_Madd_cy<6>)
-     LUT4:I0->O            1   0.551   0.000  driver4/M_PID_mux0002<2>2 (driver4/M_PID_mux0002<2>2)
-     MUXF5:I0->O           1   0.360   0.000  driver4/M_PID_mux0002<2>_f5 (driver4/M_PID_mux0002<2>)
-     FDE:D                     0.203          driver4/M_PID_8
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<3> (driver4/Msub_M_PD_sub0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<4> (driver4/Msub_M_PD_sub0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<5> (driver4/Msub_M_PD_sub0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<6> (driver4/Msub_M_PD_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<7> (driver4/Msub_M_PD_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<8> (driver4/Msub_M_PD_sub0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<9> (driver4/Msub_M_PD_sub0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<10> (driver4/Msub_M_PD_sub0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<11> (driver4/Msub_M_PD_sub0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<12> (driver4/Msub_M_PD_sub0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<13> (driver4/Msub_M_PD_sub0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<14> (driver4/Msub_M_PD_sub0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<15> (driver4/Msub_M_PD_sub0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<16> (driver4/Msub_M_PD_sub0000_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<17> (driver4/Msub_M_PD_sub0000_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<18> (driver4/Msub_M_PD_sub0000_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<19> (driver4/Msub_M_PD_sub0000_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<20> (driver4/Msub_M_PD_sub0000_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<21> (driver4/Msub_M_PD_sub0000_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<22> (driver4/Msub_M_PD_sub0000_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<23> (driver4/Msub_M_PD_sub0000_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<24> (driver4/Msub_M_PD_sub0000_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<25> (driver4/Msub_M_PD_sub0000_cy<25>)
+     MUXCY:CI->O           0   0.064   0.000  driver4/Msub_M_PD_sub0000_cy<26> (driver4/Msub_M_PD_sub0000_cy<26>)
+     XORCY:CI->O          13   0.904   1.365  driver4/Msub_M_PD_sub0000_xor<27> (driver4/M_PD_sub0000<27>)
+     LUT2:I1->O            1   0.551   0.869  driver4/M_PID_mux0002<0>21 (driver4/N25)
+     LUT4:I2->O            1   0.551   0.000  driver4/M_PID_mux0002<4>36 (driver4/M_PID_mux0002<4>)
+     FDE:D                     0.203          driver4/M_PID_6
     ----------------------------------------
-    Total                     31.378ns (18.747ns logic, 12.631ns route)
-                                       (59.7% logic, 40.3% route)
+    Total                     30.986ns (19.372ns logic, 11.614ns route)
+                                       (62.5% logic, 37.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 794 / 390
+  Total number of paths / destination ports: 1319 / 523
 -------------------------------------------------------------------------
-Offset:              8.116ns (Levels of Logic = 4)
+Offset:              9.684ns (Levels of Logic = 5)
   Source:            DATA_CLK (PAD)
-  Destination:       prl_com/receive_packet_13_6 (FF)
+  Destination:       prl_com/Vy_15 (FF)
   Destination Clock: clk rising
 
-  Data Path: DATA_CLK to prl_com/receive_packet_13_6
+  Data Path: DATA_CLK to prl_com/Vy_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             7   0.821   1.261  DATA_CLK_IBUF (DATA_CLK_IBUF)
-     LUT2:I1->O           12   0.551   1.457  prl_com/GWr_not0001111 (prl_com/data_clk_flag_and0001)
-     LUT4:I0->O            4   0.551   1.256  prl_com/receive_packet_12_not000111 (prl_com/N22)
-     LUT3:I0->O            7   0.551   1.066  prl_com/receive_packet_5_not00011 (prl_com/receive_packet_5_not0001)
-     FDE:CE                    0.602          prl_com/receive_packet_5_0
+     IBUF:I->O             4   0.821   1.112  DATA_CLK_IBUF (DATA_CLK_IBUF)
+     LUT2:I1->O           11   0.551   1.212  prl_com/receive_packet_12_not0001111 (prl_com/data_clk_flag_and0001)
+     LUT4:I2->O            4   0.551   1.256  prl_com/GWr_not000121 (prl_com/N41)
+     LUT4:I0->O            1   0.551   0.000  prl_com/GWr_not0001_wg_lut<7> (prl_com/GWr_not0001_wg_lut<7>)
+     MUXCY:S->O          112   0.717   2.311  prl_com/GWr_not0001_wg_cy<7> (prl_com/GWr_not0001)
+     FDE:CE                    0.602          prl_com/GWr_0
     ----------------------------------------
-    Total                      8.116ns (3.076ns logic, 5.040ns route)
-                                       (37.9% logic, 62.1% route)
+    Total                      9.684ns (3.793ns logic, 5.891ns route)
+                                       (39.2% logic, 60.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -1560,14 +1343,14 @@ Delay:               9.519ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 53.00 secs
-Total CPU time to Xst completion: 53.17 secs
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 22.73 secs
  
 --> 
 
-Total memory usage is 331268 kilobytes
+Total memory usage is 316040 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  637 (   0 filtered)
-Number of infos    :   55 (   0 filtered)
+Number of warnings :  399 (   0 filtered)
+Number of infos    :   46 (   0 filtered)
 
