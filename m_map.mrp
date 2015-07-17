@@ -9,24 +9,24 @@ Target Device  : xc3s400
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 16 17:32:21 2015
+Mapped Date    : Fri Jul 17 16:31:01 2015
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           648 out of   7,168    9%
-  Number of 4 input LUTs:             2,623 out of   7,168   36%
+  Number of Slice Flip Flops:           931 out of   7,168   12%
+  Number of 4 input LUTs:             2,842 out of   7,168   39%
 Logic Distribution:
-  Number of occupied Slices:          1,585 out of   3,584   44%
-    Number of Slices containing only related logic:   1,585 out of   1,585 100%
-    Number of Slices containing unrelated logic:          0 out of   1,585   0%
+  Number of occupied Slices:          1,847 out of   3,584   51%
+    Number of Slices containing only related logic:   1,847 out of   1,847 100%
+    Number of Slices containing unrelated logic:          0 out of   1,847   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,958 out of   7,168   41%
-    Number used as logic:             2,620
+  Total Number of 4 input LUTs:       3,177 out of   7,168   44%
+    Number used as logic:             2,841
     Number used as a route-thru:        335
-    Number used as Shift registers:       3
+    Number used as Shift registers:       1
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -37,9 +37,9 @@ Logic Distribution:
 
 Average Fanout of Non-Clock Nets:                2.41
 
-Peak Memory Usage:  329 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  319 MB
+Total REAL time to MAP completion:  10 secs 
+Total CPU time to MAP completion:   9 secs 
 
 NOTES:
 
@@ -84,7 +84,7 @@ Section 2 - Warnings
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network STARTBIT_FLG has no load.
-INFO:LIT:395 - The above info message is repeated 29 more times for the
+INFO:LIT:395 - The above info message is repeated 22 more times for the
    following (max. 5 shown):
    HALL4_COUNT<4>,
    HALL4_COUNT<3>,

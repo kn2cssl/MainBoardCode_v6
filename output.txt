@@ -2,10 +2,9 @@ Storage Target: Xilinx Flash/PROM
 Storage Family: Platform Flash
 xcf04s          [4 M]
 FF
-Untitled
+NEW PROTOCOL
 D:\GitHub\Yashil-fpga\
 
 MCS
 No
-S
-No
+o

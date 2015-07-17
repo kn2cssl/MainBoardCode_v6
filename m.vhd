@@ -257,6 +257,8 @@
 			SIGNAL DATA_TEST: std_logic_vector(6 downto 0) ;
 		begin
 		
+		
+--	DATA_INs <= DATA_IN & "000000000";
 		 
 			--M1		
 				driver1:drivermotor port map(HALL1=>HALL11,HALL2=>HALL21,HALL3=>HALL31,CLK=>CLK,hall_OUT=>hall_OUT,CHECK_OUT=> CHECK_OUT,
@@ -297,13 +299,13 @@
 					begin
                if rising_edge (clk) then 
 					data_ins <= data_in & DATA_TEST & "00";
-					   calman_Vx <= Vx;--"0000110111000111";--
-						calman_Vy <= Vy;--"0000101101001011";--
-						calman_Wr <= Wr;--"0111010101010111";--
-						calman_W0 <= alpha;--"0000000000000000";--
-						calman_W1 <= GVx;--"0000000000000000";--
-						calman_W2 <= GVy;--"0000000000000000";--
-						calman_W3 <= GWr;--"0000000000000000";--
+					   calman_Vx <= Vx;
+						calman_Vy <= Vy;
+						calman_Wr <= Wr;
+						calman_W0 <= alpha;
+						calman_W1 <= GVx;
+						calman_W2 <= GVy;
+						calman_W3 <= GWr;
 					end if;
 					
 					end process;
