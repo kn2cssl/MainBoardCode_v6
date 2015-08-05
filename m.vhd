@@ -299,13 +299,13 @@
 					begin
                if rising_edge (clk) then 
 					data_ins <= data_in & DATA_TEST & "00";
-					   calman_Vx <= Vx;
+					   calman_Vx <= MS_SHOW;--Vx;
 						calman_Vy <= Vy;
 						calman_Wr <= Wr;
-						calman_W0 <= alpha;
-						calman_W1 <= GVx;
-						calman_W2 <= GVy;
-						calman_W3 <= GWr;
+						calman_W0 <= M1_SHOW ;
+						calman_W1 <= M2_SHOW ;
+						calman_W2 <= M3_SHOW ;
+						calman_W3 <= M4_SHOW ;
 					end if;
 					
 					end process;
