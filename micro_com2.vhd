@@ -66,10 +66,10 @@ architecture Behavioral of micro_com2 is
 	variable send_packet        : temp;
 	variable memory_low         : memory ;
 	variable memory_high        : memory ;
-	variable check_sum_out_low  : std_logic_vector(7 downto 0);
-	variable check_sum_out_high : std_logic_vector(7 downto 0);
-	variable check_sum_in_low   : std_logic_vector(7 downto 0);
-	variable check_sum_in_high  : std_logic_vector(7 downto 0);
+	variable check_sum_out_low  : std_logic_vector(6 downto 0);
+	variable check_sum_out_high : std_logic_vector(6 downto 0);
+	variable check_sum_in_low   : std_logic_vector(6 downto 0);
+	variable check_sum_in_high  : std_logic_vector(6 downto 0);
 	variable TEST  : std_logic_vector(6 downto 0):=(others=>'0');
 	variable nextstate  : integer range 0 to 19 := 0;
 
@@ -117,17 +117,17 @@ architecture Behavioral of micro_com2 is
 					  memory_low  (7):= '0' & receive_packet (19) ;
 					  
 					  
-					  check_sum_in_high :=  memory_high (0) + memory_high (1) + memory_high (2)
-											    + memory_high (3) + memory_high (4) + memory_high (5)
-											    + memory_high (6);
+					  check_sum_in_high :=  receive_packet (2) + receive_packet (3) + receive_packet (4)
+											    + receive_packet (5) + receive_packet (6) + receive_packet (7)
+											    + receive_packet (8) + receive_packet (9) ;
 					  
-					  check_sum_in_low :=  memory_low (0) + memory_low (1) + memory_low (2)
-											   + memory_low (3) + memory_low (4) + memory_low (5)
-											   + memory_low (6);
+					  check_sum_in_low :=  receive_packet (11) + receive_packet (12) + receive_packet (13)
+											   + receive_packet (14) + receive_packet (15) + receive_packet (16)
+											   + receive_packet (17) + receive_packet (18) ;
 					  						
 --=========================================================================saving checked data									
-						  if (   ( ( check_sum_in_low  and "01111111" ) =  memory_low  (7) ) and
-									( ( check_sum_in_high and "01111111" ) =  memory_high (7) )     ) then
+						  if (   (  check_sum_in_low   =  receive_packet (19) ) and
+									(  check_sum_in_high  =  receive_packet (10) ) ) then
 									
 									Vx	   <= memory_high (0) & memory_low (0) ;
 									Vy	   <= memory_high (1) & memory_low (1) ;
@@ -157,15 +157,9 @@ architecture Behavioral of micro_com2 is
 			 
 			 
 			 if (state = 0) then
-			    check_sum_out_high :=   calman_W3 ( 15 downto 8 ) + calman_W2 ( 15 downto 8 )
-				  							  + calman_W1 ( 15 downto 8 ) + calman_W0 ( 15 downto 8 )
-											  + calman_Wr ( 15 downto 8 ) + calman_Vy ( 15 downto 8 )
-											  + calman_Vx ( 15 downto 8 ) ;
+			    
 											 
-				 check_sum_out_low  :=   calman_W3 ( 7  downto 0 ) + calman_W2 ( 7  downto 0 )
-				 							  + calman_W1 ( 7  downto 0 ) + calman_W0 ( 7  downto 0 )
-											  + calman_Wr ( 7  downto 0 ) + calman_Vy ( 7  downto 0 )
-											  + calman_Vx ( 7  downto 0 ) ;
+				 
 											 
 				 send_packet (2)  :=   calman_Vx ( 14 downto 8 ) ; 
 				 send_packet (3)  :=   calman_Vy ( 14 downto 8 ) ;
@@ -175,10 +169,15 @@ architecture Behavioral of micro_com2 is
 				 send_packet (7)  :=   calman_W2 ( 14 downto 8 ) ;
 				 send_packet (8)  :=   calman_W3 ( 14 downto 8 ) ;
 				 send_packet (9)  :=   calman_W3 ( 15 ) & calman_W2 ( 15 )
-										   & calman_W1 ( 15 ) & calman_W0 ( 15 )
-											& calman_Wr ( 15 ) & calman_Vy ( 15 )
-										   & calman_Vx ( 15 ) ;
-				 send_packet (10)  :=  check_sum_out_high ( 6 downto 0 ) ;
+				 						   & calman_W1 ( 15 ) & calman_W0 ( 15 )
+				 							& calman_Wr ( 15 ) & calman_Vy ( 15 )
+				 						   & calman_Vx ( 15 ) ;
+			    check_sum_out_high := send_packet (2) + send_packet (3)
+			 							   + send_packet (4) + send_packet (5)
+			 							   + send_packet (6) + send_packet (7)
+										   + send_packet (8) + send_packet (9) ;
+				 send_packet (10)   := check_sum_out_high  ;
+				 
 				
 				 send_packet  (11)  :=   calman_Vx ( 6  downto 0 ) ; 
 				 send_packet  (12)  :=   calman_Vy ( 6  downto 0 ) ;
@@ -191,7 +190,11 @@ architecture Behavioral of micro_com2 is
 				 							  & calman_W1 ( 7  ) & calman_W0 ( 7  )
 											  & calman_Wr ( 7  ) & calman_Vy ( 7  )
 											  & calman_Vx ( 7  ) ;
-				 send_packet  (19)  :=   check_sum_out_low  ( 6 downto 0 ) ;
+		       check_sum_out_low  :=   send_packet  (11) + send_packet  (12)
+				 							  + send_packet  (13) + send_packet  (14)
+											  + send_packet  (15) + send_packet  (16)
+											  + send_packet  (17) + send_packet  (18) ;
+				 send_packet  (19)  :=   check_sum_out_low ;
 				
 				
 --						  test := not test ;-- test
