@@ -520,11 +520,11 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					  end process;
 					  				
 					
-						     M_SHOW  <=
-										     M_RPM_DIR                               when TEST_KEY="00" else                              
-										     signed("0000"& M_KD_fp(15 downto 4))     when TEST_KEY="01" else              
-										     signed(speed)                           when TEST_KEY="10" else 
-                 				        signed("000000"& M_KP_fp(19 DOWNTO 10)) when TEST_KEY="11" ;								  -- t     
+						     M_SHOW  <= M_RPM_DIR;
+--										     M_RPM_DIR                               when TEST_KEY="00" else                              
+--										     signed("0000"& M_KD_fp(15 downto 4))     when TEST_KEY="01" else              
+--										     signed(speed)                           when TEST_KEY="10" else 
+--                 				        signed("000000"& M_KP_fp(19 DOWNTO 10)) when TEST_KEY="11" ;								  -- t     
 										
 										 										 
 										 

@@ -132,10 +132,10 @@ architecture Behavioral of micro_com2 is
 									Vx	   <= memory_high (0) & memory_low (0) ;
 									Vy	   <= memory_high (1) & memory_low (1) ;
 									Wr	   <= memory_high (2) & memory_low (2) ;
-									alpha	<= memory_high (3) & memory_low (3) ;
-									GVx	<= memory_high (4) & memory_low (4) ;
-									GVy	<= memory_high (5) & memory_low (5) ;
-									GWr	<= memory_high (6) & memory_low (6) ;
+									GVx	<= memory_high (3) & memory_low (3) ;
+									GVy	<= memory_high (4) & memory_low (4) ;
+									GWr	<= memory_high (5) & memory_low (5) ;
+									alpha	<= memory_high (6) & memory_low (6) ;
 						  end if ;
 					  
 					  else
