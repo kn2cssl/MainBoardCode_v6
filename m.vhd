@@ -313,6 +313,12 @@
 						calman_W1 <= M2_SHOW ;
 						calman_W2 <= M3_SHOW ;
 						calman_W3 <= M4_SHOW ;
+						
+						if ( SPEED1 = "100000010"   ) and ( SPEED2 = "1100000100") then
+							FREE_WHEELS_S <= '1' ;
+						else
+							FREE_WHEELS_S <= '0' ;
+						end if ;
 					end if;
 					
 					end process;
