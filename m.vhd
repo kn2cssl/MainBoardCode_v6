@@ -310,6 +310,7 @@
 						W2 <= M3_SHOW ;
 						W3 <= M4_SHOW ;
 						
+--						if ( SPEED1 = "1"   ) and ( SPEED2 = "10") and( SPEED3 = "11") and ( SPEED4 = "100") then
 						if ( SPEED1 = "100000010"   ) and ( SPEED2 = "1100000100") then
 							FREE_WHEELS_S <= '1' ;
 						else
