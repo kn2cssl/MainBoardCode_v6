@@ -36,3 +36,6 @@ Icon
 .Trashes
 
 *.bit
+*.bgn
+*.bld
+*.cmd_log

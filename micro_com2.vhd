@@ -1,7 +1,13 @@
+--library IEEE;
+--use IEEE.STD_LOGIC_1164.ALL;
+--use IEEE.STD_LOGIC_ARITH.ALL;
+--use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+	use IEEE.STD_LOGIC_1164.ALL;
+	use IEEE.STD_LOGIC_unsigned.ALL;
+	use IEEE.STD_LOGIC_arith.ALL;
 
 entity micro_com2 is
 port (
@@ -21,21 +27,21 @@ port (
 	DATA_IN : in std_logic_vector(6 downto 0);
 	DATA_OUT: OUT std_logic_vector(6 downto 0);
 	--generated data in FPGA
-   calman_Vx : in std_logic_vector(15 downto 0);
-	calman_Vy : in std_logic_vector(15 downto 0);
-	calman_Wr : in std_logic_vector(15 downto 0);
-	calman_W0 : in std_logic_vector(15 downto 0);
-	calman_W1 : in std_logic_vector(15 downto 0);
-	calman_W2 : in std_logic_vector(15 downto 0);
-	calman_W3 : in std_logic_vector(15 downto 0);
+						W0_sp        : out std_logic_vector(15 downto 0);
+						W1_sp        : out std_logic_vector(15 downto 0);
+						W2_sp        : out std_logic_vector(15 downto 0);
+						W3_sp        : out std_logic_vector(15 downto 0);
+						SB_sp        : out std_logic_vector(15 downto 0);
+--						GVy       : out std_logic_vector(15 downto 0);
+--						GWr       : out std_logic_vector(15 downto 0)
 	--generated data in camera and gyro
-	Vx        : out std_logic_vector(15 downto 0);
-	Vy        : out std_logic_vector(15 downto 0);
-	Wr        : out std_logic_vector(15 downto 0);
-	alpha     : out std_logic_vector(15 downto 0);
-	GVx       : out std_logic_vector(15 downto 0);
-	GVy       : out std_logic_vector(15 downto 0);
-	GWr       : out std_logic_vector(15 downto 0)
+						W0 : in std_logic_vector(15 downto 0);
+						W1 : in std_logic_vector(15 downto 0);
+						W2 : in std_logic_vector(15 downto 0);
+						W3 : in std_logic_vector(15 downto 0);
+						SB : in std_logic_vector(15 downto 0)
+--						calman_W2 : in std_logic_vector(15 downto 0);
+--						calman_W3 : in std_logic_vector(15 downto 0);
 	
 	);
 end micro_com2;
@@ -53,7 +59,7 @@ architecture Behavioral of micro_com2 is
 	--signal state : state_machine :=s0;
 --	signal cnt : std_logic:='0';
 	signal data_clk_flag : std_logic:='0';
-	signal state  : integer range 0 to 19 := 0;
+	signal state  : integer range 0 to 17 := 0;
 
 	begin
 	
@@ -66,12 +72,12 @@ architecture Behavioral of micro_com2 is
 	variable send_packet        : temp;
 	variable memory_low         : memory ;
 	variable memory_high        : memory ;
-	variable check_sum_out_low  : std_logic_vector(6 downto 0);
-	variable check_sum_out_high : std_logic_vector(6 downto 0);
-	variable check_sum_in_low   : std_logic_vector(6 downto 0);
-	variable check_sum_in_high  : std_logic_vector(6 downto 0);
+	variable MAKsumB_out  : std_logic_vector(15 downto 0);
+	variable MAKsumA_out : std_logic_vector(15 downto 0);
+	variable MAKsumB_in   : std_logic_vector(15 downto 0);
+	variable MAKsumA_in  : std_logic_vector(15 downto 0);
 	variable TEST  : std_logic_vector(6 downto 0):=(others=>'0');
-	variable nextstate  : integer range 0 to 19 := 0;
+	variable nextstate  : integer range 0 to 17 := 0;
 
 	    begin
 			
@@ -89,11 +95,11 @@ architecture Behavioral of micro_com2 is
 					  elsif (DATA_IN  = "1010101") and (state = 1) then--
 						  state <= 2 ;	
 					  
-					  elsif ( state > 1 ) and (state < 19) then
+					  elsif ( state > 1 ) and (state < 17) then
 					      receive_packet (state) := DATA_IN ;
 							state <= state + 1 ;
 							
-			        elsif (state = 19) then
+			        elsif (state = 17) then
 					      receive_packet (state) := DATA_IN ;
 --					      data_out <= test;
 					      state <= 0 ;
@@ -105,37 +111,35 @@ architecture Behavioral of micro_com2 is
 					  memory_high (4):= receive_packet (9) (4) & receive_packet (6) ;
 					  memory_high (5):= receive_packet (9) (5) & receive_packet (7) ;
 					  memory_high (6):= receive_packet (9) (6) & receive_packet (8) ;
-					  memory_high (7):= '0' & receive_packet (10) ;
+--					  memory_high (7):= '0' & receive_packet (10) ;
 					  
-					  memory_low  (0):= receive_packet (18) (0) & receive_packet (11) ;
-					  memory_low  (1):= receive_packet (18) (1) & receive_packet (12) ;
-					  memory_low  (2):= receive_packet (18) (2) & receive_packet (13) ;
-					  memory_low  (3):= receive_packet (18) (3) & receive_packet (14) ;
-					  memory_low  (4):= receive_packet (18) (4) & receive_packet (15) ;
-					  memory_low  (5):= receive_packet (18) (5) & receive_packet (16) ;
-					  memory_low  (6):= receive_packet (18) (6) & receive_packet (17) ;
-					  memory_low  (7):= '0' & receive_packet (19) ;
+					  memory_low  (0):= receive_packet (17) (0) & receive_packet (10) ;
+					  memory_low  (1):= receive_packet (17) (1) & receive_packet (11) ;
+					  memory_low  (2):= receive_packet (17) (2) & receive_packet (12) ;
+					  memory_low  (3):= receive_packet (17) (3) & receive_packet (13) ;
+					  memory_low  (4):= receive_packet (17) (4) & receive_packet (14) ;
+					  memory_low  (5):= receive_packet (17) (5) & receive_packet (15) ;
+					  memory_low  (6):= receive_packet (17) (6) & receive_packet (16) ;
+--					  memory_low  (7):= '0' & receive_packet (19) ;
 					  
 					  
-					  check_sum_in_high :=  receive_packet (2) + receive_packet (3) + receive_packet (4)
-											    + receive_packet (5) + receive_packet (6) + receive_packet (7)
-											    + receive_packet (8) + receive_packet (9) ;
+					  MAKsumA_in :=  ("00000000" & memory_high (0)) + ("00000000" & memory_high (1)) + ("00000000" & memory_high (2)) + ("00000000" & memory_high (3)) + ("00000000" & memory_high (4))
+									   + ("00000000" & memory_low  (0)) + ("00000000" & memory_low  (1)) + ("00000000" & memory_low  (2)) + ("00000000" & memory_low  (3)) + ("00000000" & memory_low  (4));
 					  
-					  check_sum_in_low :=  receive_packet (11) + receive_packet (12) + receive_packet (13)
-											   + receive_packet (14) + receive_packet (15) + receive_packet (16)
-											   + receive_packet (17) + receive_packet (18) ;
+					  MAKsumB_in :=  ("00000000" & memory_high (0))*"1010" + ("00000000" & memory_high (1))*"1001" + ("00000000" & memory_high (2))*"1000" + ("00000000" & memory_high (3))*"0111" + ("00000000" & memory_high (4))*"0110"
+									   + ("00000000" & memory_low  (0))*"0101" + ("00000000" & memory_low  (1))*"0100" + ("00000000" & memory_low  (2))*"0011" + ("00000000" & memory_low  (3))*"0010" + ("00000000" & memory_low  (4));
 					  						
 --=========================================================================saving checked data									
-						  if (   (  check_sum_in_low   =  receive_packet (19) ) and
-									(  check_sum_in_high  =  receive_packet (10) ) ) then
+						  if (   (  MAKsumB_in   =  memory_high (6) & memory_low (6) ) and
+									(  MAKsumA_in   =  memory_high (5) & memory_low (5) ) ) then
 									
-									Vx	   <= memory_high (0) & memory_low (0) ;
-									Vy	   <= memory_high (1) & memory_low (1) ;
-									Wr	   <= memory_high (2) & memory_low (2) ;
-									GVx	<= memory_high (3) & memory_low (3) ;
-									GVy	<= memory_high (4) & memory_low (4) ;
-									GWr	<= memory_high (5) & memory_low (5) ;
-									alpha	<= memory_high (6) & memory_low (6) ;
+									W0_sp	   <= memory_high (0) & memory_low (0) ;
+									W1_sp	   <= memory_high (1) & memory_low (1) ;
+									W2_sp	   <= memory_high (2) & memory_low (2) ;
+									W3_sp		<= memory_high (3) & memory_low (3) ;
+									SB_sp		<= memory_high (4) & memory_low (4) ;
+--									GWr	<= memory_high (5) & memory_low (5) ;
+--									alpha	<= memory_high (6) & memory_low (6) ;
 						  end if ;
 					  
 					  else
@@ -158,43 +162,41 @@ architecture Behavioral of micro_com2 is
 			 
 			 if (state = 0) then
 			    
-											 
+				 MAKsumA_out := ("00000000" & W0( 15 downto 8 )) + ("00000000" & W1( 15 downto 8 )) + ("00000000" & W2( 15 downto 8 )) + ("00000000" & W3( 15 downto 8 )) + ("00000000" & SB( 15 downto 8 ))
+			 					  + ("00000000" & W0( 7 downto 0  )) + ("00000000" & W1( 7 downto 0  )) + ("00000000" & W2( 7 downto 0  )) + ("00000000" & W3( 7 downto 0  )) + ("00000000" & SB( 7 downto 0  )) ;
+
+				 MAKsumB_out := ("00000000" & W0( 15 downto 8 ))*"1010" + ("00000000" & W1( 15 downto 8 ))*"1001" + ("00000000" & W2( 15 downto 8 ))*"1000" + ("00000000" & W3( 15 downto 8 ))*"0111" + ("00000000" & SB( 15 downto 8 ))*"0110"
+			 					  + ("00000000" & W0( 7 downto 0  ))*"0101" + ("00000000" & W1( 7 downto 0  ))*"0100" + ("00000000" & W2( 7 downto 0  ))*"0011" + ("00000000" & W3( 7 downto 0  ))*"0010" + ("00000000" & SB( 7 downto 0  )) ;
 				 
 											 
-				 send_packet (2)  :=   calman_Vx ( 14 downto 8 ) ; 
-				 send_packet (3)  :=   calman_Vy ( 14 downto 8 ) ;
-				 send_packet (4)  :=   calman_Wr ( 14 downto 8 ) ;
-				 send_packet (5)  :=   calman_W0 ( 14 downto 8 ) ;
-				 send_packet (6)  :=   calman_W1 ( 14 downto 8 ) ;
-				 send_packet (7)  :=   calman_W2 ( 14 downto 8 ) ;
-				 send_packet (8)  :=   calman_W3 ( 14 downto 8 ) ;
-				 send_packet (9)  :=   calman_W3 ( 15 ) & calman_W2 ( 15 )
-				 						   & calman_W1 ( 15 ) & calman_W0 ( 15 )
-				 							& calman_Wr ( 15 ) & calman_Vy ( 15 )
-				 						   & calman_Vx ( 15 ) ;
-			    check_sum_out_high := send_packet (2) + send_packet (3)
-			 							   + send_packet (4) + send_packet (5)
-			 							   + send_packet (6) + send_packet (7)
-										   + send_packet (8) + send_packet (9) ;
-				 send_packet (10)   := check_sum_out_high  ;
+				 send_packet (2)  :=   W0 ( 14 downto 8 ) ; 
+				 send_packet (3)  :=   W1 ( 14 downto 8 ) ;
+				 send_packet (4)  :=   W2 ( 14 downto 8 ) ;
+				 send_packet (5)  :=   W3 ( 14 downto 8 ) ;
+				 send_packet (6)  :=   SB ( 14 downto 8 ) ;
+				 send_packet (7)  :=   MAKsumA_out ( 14 downto 8 ) ;
+				 send_packet (8)  :=   MAKsumB_out ( 14 downto 8 ) ;
+				 send_packet (9)  :=   W0 ( 15 ) & W1 ( 15 )
+				 						   & W2 ( 15 ) & W3 ( 15 )
+				 							& SB ( 15 ) & MAKsumA_out ( 15 )
+				 						   & MAKsumB_out ( 15 ) ;
+			    
+--				 send_packet (10)   := MAKsumA_out  ;
 				 
 				
-				 send_packet  (11)  :=   calman_Vx ( 6  downto 0 ) ; 
-				 send_packet  (12)  :=   calman_Vy ( 6  downto 0 ) ;
-				 send_packet  (13)  :=   calman_Wr ( 6  downto 0 ) ;
-				 send_packet  (14)  :=   calman_W0 ( 6  downto 0 ) ;
-				 send_packet  (15)  :=   calman_W1 ( 6  downto 0 ) ;
-				 send_packet  (16)  :=   calman_W2 ( 6  downto 0 ) ;
-				 send_packet  (17)  :=   calman_W3 ( 6  downto 0 ) ;
-				 send_packet  (18)  :=   calman_W3 ( 7  ) & calman_W2 ( 7  )
-				 							  & calman_W1 ( 7  ) & calman_W0 ( 7  )
-											  & calman_Wr ( 7  ) & calman_Vy ( 7  )
-											  & calman_Vx ( 7  ) ;
-		       check_sum_out_low  :=   send_packet  (11) + send_packet  (12)
-				 							  + send_packet  (13) + send_packet  (14)
-											  + send_packet  (15) + send_packet  (16)
-											  + send_packet  (17) + send_packet  (18) ;
-				 send_packet  (19)  :=   check_sum_out_low ;
+				 send_packet  (10)  :=   W0 ( 6  downto 0 ) ; 
+				 send_packet  (11)  :=   W1 ( 6  downto 0 ) ;
+				 send_packet  (12)  :=   W2 ( 6  downto 0 ) ;
+				 send_packet  (13)  :=   W3 ( 6  downto 0 ) ;
+				 send_packet  (14)  :=   SB ( 6  downto 0 ) ;
+				 send_packet  (15)  :=   MAKsumA_out ( 6  downto 0 ) ;
+				 send_packet  (16)  :=   MAKsumB_out ( 6  downto 0 ) ;
+				 send_packet  (17)  :=   W0 ( 7  ) & W1 ( 7  )
+				 							  & W2 ( 7  ) & W3 ( 7  )
+											  & SB ( 7  ) & MAKsumA_out ( 7  )
+											  & MAKsumB_out ( 7  ) ;
+		       
+--				 send_packet  (19)  :=   MAKsumB_out ;
 				
 				
 --						  test := not test ;-- test

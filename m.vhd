@@ -151,21 +151,21 @@
 						DATA_IN : in std_logic_vector(6 downto 0);
 						DATA_OUT: OUT std_logic_vector(6 downto 0);
 						--generated data in FPGA
-						calman_Vx : in std_logic_vector(15 downto 0);
-						calman_Vy : in std_logic_vector(15 downto 0);
-						calman_Wr : in std_logic_vector(15 downto 0);
-						calman_W0 : in std_logic_vector(15 downto 0);
-						calman_W1 : in std_logic_vector(15 downto 0);
-						calman_W2 : in std_logic_vector(15 downto 0);
-						calman_W3 : in std_logic_vector(15 downto 0);
+						W0 : in std_logic_vector(15 downto 0);
+						W1 : in std_logic_vector(15 downto 0);
+						W2 : in std_logic_vector(15 downto 0);
+						W3 : in std_logic_vector(15 downto 0);
+						SB : in std_logic_vector(15 downto 0);
+--						calman_W2 : in std_logic_vector(15 downto 0);
+--						calman_W3 : in std_logic_vector(15 downto 0);
 						--generated data in camera and gyro
-						Vx        : out std_logic_vector(15 downto 0);
-						Vy        : out std_logic_vector(15 downto 0);
-						Wr        : out std_logic_vector(15 downto 0);
-						alpha     : out std_logic_vector(15 downto 0);
-						GVx       : out std_logic_vector(15 downto 0);
-						GVy       : out std_logic_vector(15 downto 0);
-						GWr       : out std_logic_vector(15 downto 0)
+						W0_sp        : out std_logic_vector(15 downto 0);
+						W1_sp        : out std_logic_vector(15 downto 0);
+						W2_sp        : out std_logic_vector(15 downto 0);
+						W3_sp     : out std_logic_vector(15 downto 0);
+						SB_sp       : out std_logic_vector(15 downto 0)
+--						GVy       : out std_logic_vector(15 downto 0);
+--						GWr       : out std_logic_vector(15 downto 0)
 						);
 				end component;
 				
@@ -194,21 +194,21 @@
 			
 --       new controller & connection
 						--generated data in FPGA
-			signal calman_Vx : std_logic_vector(15 downto 0);
-			signal calman_Vy : std_logic_vector(15 downto 0);
-			signal calman_Wr : std_logic_vector(15 downto 0);
-			signal calman_W0 : std_logic_vector(15 downto 0);
-			signal calman_W1 : std_logic_vector(15 downto 0);
-			signal calman_W2 : std_logic_vector(15 downto 0);
-			signal calman_W3 : std_logic_vector(15 downto 0);
+			signal W0 : std_logic_vector(15 downto 0);
+			signal W1 : std_logic_vector(15 downto 0);
+			signal W2 : std_logic_vector(15 downto 0);
+			signal W3 : std_logic_vector(15 downto 0);
+			signal SB : std_logic_vector(15 downto 0);
+--			signal calman_W2 : std_logic_vector(15 downto 0);
+--			signal calman_W3 : std_logic_vector(15 downto 0);
 						--generated data in camera and gyro
-			signal Vx        : std_logic_vector(15 downto 0);
-			signal Vy        : std_logic_vector(15 downto 0);
-			signal Wr        : std_logic_vector(15 downto 0);
-			signal alpha     : std_logic_vector(15 downto 0);
-			signal GVx       : std_logic_vector(15 downto 0);
-			signal GVy       : std_logic_vector(15 downto 0);
-			signal GWr       : std_logic_vector(15 downto 0);
+			signal W0_sp        : std_logic_vector(15 downto 0);
+			signal W1_sp        : std_logic_vector(15 downto 0);
+			signal W2_sp        : std_logic_vector(15 downto 0);
+			signal W3_sp     : std_logic_vector(15 downto 0);
+			signal SB_sp       : std_logic_vector(15 downto 0);
+--			signal GVy       : std_logic_vector(15 downto 0);
+--			signal GWr       : std_logic_vector(15 downto 0);
 			
 			signal MS1_show: std_logic_vector(15 downto 0):="1010101010101010";
 			signal MS_show: std_logic_vector(15 downto 0):=(others=>'0');
@@ -278,9 +278,9 @@
 
 			--micro_com2
 			  prl_com:micro_com2 port map( DATA_CLK=>DATA_CLK , CLK=>clk , DATA_IN=>DATA_IN , DATA_OUT=>data_out ,
-			  calman_Vx=>calman_Vx , calman_Vy=>calman_Vy , calman_Wr=>calman_Wr , calman_W0=>calman_W0 , 
-			  calman_W1=>calman_W1 , calman_W2=>calman_W2 , calman_W3=>calman_W3 , Vx=>Vx , Vy=>Vy , Wr=>Wr , 
-			  alpha=>alpha , GVx=>GVx , GVy=>GVy , GWr=>GWr );
+			  W0=>W0 , W1=>W1 , W2=>W2 , W3=>W3 , 
+			  SB=>SB , W0_sp=>W0_sp , W1_sp=>W1_sp , W2_sp=>W2_sp , 
+			  W3_sp=>W3_sp , SB_sp=>SB_sp);
 			  
 			  
 			  ILA1 : ila port map ( CONTROL => CONTROL1, CLK => CLK,  TRIG0 => DATA_INs );
@@ -300,19 +300,15 @@
                if rising_edge (clk) then 
 					data_ins <= data_in & DATA_TEST & "00";
 						
-						SPEED1 <= Vx  ;
-						SPEED2 <= Vy  ;
-						SPEED3 <= GVx ;
-						SPEED4 <= GVy ;
+						SPEED1 <= W0_sp  ;
+						SPEED2 <= W1_sp  ;
+						SPEED3 <= W2_sp ;
+						SPEED4 <= W3_sp ;
 						
-					   calman_Vx <= Vx;
-						calman_Vy <= Vy;
-						calman_Wr <= Wr;
-						
-						calman_W0 <= M1_SHOW ;
-						calman_W1 <= M2_SHOW ;
-						calman_W2 <= M3_SHOW ;
-						calman_W3 <= M4_SHOW ;
+						W0 <= M1_SHOW ;
+						W1 <= M2_SHOW ;
+						W2 <= M3_SHOW ;
+						W3 <= M4_SHOW ;
 						
 						if ( SPEED1 = "100000010"   ) and ( SPEED2 = "1100000100") then
 							FREE_WHEELS_S <= '1' ;
