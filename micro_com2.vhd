@@ -60,6 +60,7 @@ architecture Behavioral of micro_com2 is
 --	signal cnt : std_logic:='0';
 	signal data_clk_flag : std_logic:='0';
 	signal state  : integer range 0 to 17 := 0;
+	signal send_packet : temp;
 
 	begin
 	
@@ -69,7 +70,6 @@ architecture Behavioral of micro_com2 is
 --	variable state              : state_machine :=s0;
 	variable stage              : integer := 0;
 	variable receive_packet     : temp;
-	variable send_packet        : temp;
 	variable memory_low         : memory ;
 	variable memory_high        : memory ;
 	variable MAKsumB_out  : std_logic_vector(15 downto 0);
@@ -157,6 +157,7 @@ architecture Behavioral of micro_com2 is
 			 
 			 
 			 if (state = 0) then
+			 DATA_OUT <= "1111111" ;
 			    
 				 MAKsumA_out := ("00000000" & W0( 15 downto 8 )) + ("00000000" & W1( 15 downto 8 )) + ("00000000" & W2( 15 downto 8 )) + ("00000000" & W3( 15 downto 8 )) + ("00000000" & SB( 15 downto 8 ))
 			 					  + ("00000000" & W0( 7 downto 0  )) + ("00000000" & W1( 7 downto 0  )) + ("00000000" & W2( 7 downto 0  )) + ("00000000" & W3( 7 downto 0  )) + ("00000000" & SB( 7 downto 0  )) ;
@@ -165,39 +166,36 @@ architecture Behavioral of micro_com2 is
 			 					  + ("00000000" & W0( 7 downto 0  ))*"0101" + ("00000000" & W1( 7 downto 0  ))*"0100" + ("00000000" & W2( 7 downto 0  ))*"0011" + ("00000000" & W3( 7 downto 0  ))*"0010" + ("00000000" & SB( 7 downto 0  )) ;
 				 
 				
-				 send_packet (2)   :=   MAKsumB_out ( 15 )& MAKsumA_out ( 15 ) &
+				 send_packet (2)   <=   MAKsumB_out ( 15 )& MAKsumA_out ( 15 ) &
 											   SB ( 15 ) & W3 ( 15 ) & W2 ( 15 ) & 
 											   W1 ( 15 ) & W0 ( 15 ) ;
-				 send_packet (3)   :=   MAKsumB_out ( 7 )& MAKsumA_out ( 7 ) &
+				 send_packet (3)   <=   MAKsumB_out ( 7 )& MAKsumA_out ( 7 ) &
 										 	   SB ( 7 ) & W3 ( 7 ) & W2 ( 7 ) & 
 											   W1 ( 7 ) & W0 ( 7 ) ;
-				 send_packet (4)   :=   W0 ( 14 downto 8 ) ; 
-				 send_packet (5)   :=   W1 ( 14 downto 8 ) ;
-				 send_packet (6)   :=   W2 ( 14 downto 8 ) ;
-				 send_packet (7)   :=   W3 ( 14 downto 8 ) ;
-				 send_packet (8)   :=   SB ( 14 downto 8 ) ;
-				 send_packet (9)   :=   MAKsumA_out ( 14 downto 8 ) ;
-				 send_packet (10)  :=   MAKsumB_out ( 14 downto 8 ) ;
+				 send_packet (4)   <=   W0 ( 14 downto 8 ) ; 
+				 send_packet (5)   <=   W1 ( 14 downto 8 ) ;
+				 send_packet (6)   <=   W2 ( 14 downto 8 ) ;
+				 send_packet (7)   <=   W3 ( 14 downto 8 ) ;
+				 send_packet (8)   <=   SB ( 14 downto 8 ) ;
+				 send_packet (9)   <=   MAKsumA_out ( 14 downto 8 ) ;
+				 send_packet (10)  <=   MAKsumB_out ( 14 downto 8 ) ;
 			
-				 send_packet (11)  :=   W0 ( 6  downto 0 ) ; 
-				 send_packet (12)  :=   W1 ( 6  downto 0 ) ;
-				 send_packet (13)  :=   W2 ( 6  downto 0 ) ;
-				 send_packet (14)  :=   W3 ( 6  downto 0 ) ;
-				 send_packet (15)  :=   SB ( 6  downto 0 ) ;
-				 send_packet (16)  :=   MAKsumA_out ( 6  downto 0 ) ;
-				 send_packet (17)  :=   MAKsumB_out ( 6  downto 0 ) ;
+				 send_packet (11)  <=   W0 ( 6  downto 0 ) ; 
+				 send_packet (12)  <=   W1 ( 6  downto 0 ) ;
+				 send_packet (13)  <=   W2 ( 6  downto 0 ) ;
+				 send_packet (14)  <=   W3 ( 6  downto 0 ) ;
+				 send_packet (15)  <=   SB ( 6  downto 0 ) ;
+				 send_packet (16)  <=   MAKsumA_out ( 6  downto 0 ) ;
+				 send_packet (17)  <=   MAKsumB_out ( 6  downto 0 ) ;
 				 
 			
 				
 --						  test := not test ;-- test
 						  
-						  
 			  elsif  (state = 1) then
 			  elsif ( state > 1 ) then		
 --			  data_out <= test; -- test
-			  DATA_OUT <= send_packet (state) ;	
-			  else 
-			  DATA_OUT <= "1111111" ;	
+			  DATA_OUT <= send_packet (state) ;				  	
 			  end if;
 			
 			end if;

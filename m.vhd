@@ -305,6 +305,8 @@
 						SPEED3 <= W2_sp ;
 						SPEED4 <= W3_sp ;
 						
+						SB <= W0_sp  ;
+						
 						W0 <= M1_SHOW ;
 						W1 <= M2_SHOW ;
 						W2 <= M3_SHOW ;
