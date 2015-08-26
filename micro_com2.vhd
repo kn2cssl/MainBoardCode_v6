@@ -104,24 +104,21 @@ architecture Behavioral of micro_com2 is
 --					      data_out <= test;
 					      state <= 0 ;
 --=======================================================================generating check_sum
-					  memory_high (0):= receive_packet (9) (0) & receive_packet (2) ;
-					  memory_high (1):= receive_packet (9) (1) & receive_packet (3) ;
-					  memory_high (2):= receive_packet (9) (2) & receive_packet (4) ;
-					  memory_high (3):= receive_packet (9) (3) & receive_packet (5) ;
-					  memory_high (4):= receive_packet (9) (4) & receive_packet (6) ;
-					  memory_high (5):= receive_packet (9) (5) & receive_packet (7) ;
-					  memory_high (6):= receive_packet (9) (6) & receive_packet (8) ;
---					  memory_high (7):= '0' & receive_packet (10) ;
+					  memory_high (0):= receive_packet (2) (0) & receive_packet (4)  ;
+					  memory_high (1):= receive_packet (2) (1) & receive_packet (5)  ;
+					  memory_high (2):= receive_packet (2) (2) & receive_packet (6)  ;
+					  memory_high (3):= receive_packet (2) (3) & receive_packet (7)  ;
+					  memory_high (4):= receive_packet (2) (4) & receive_packet (8)  ;
+					  memory_high (5):= receive_packet (2) (5) & receive_packet (9)  ;
+					  memory_high (6):= receive_packet (2) (6) & receive_packet (10) ;
 					  
-					  memory_low  (0):= receive_packet (17) (0) & receive_packet (10) ;
-					  memory_low  (1):= receive_packet (17) (1) & receive_packet (11) ;
-					  memory_low  (2):= receive_packet (17) (2) & receive_packet (12) ;
-					  memory_low  (3):= receive_packet (17) (3) & receive_packet (13) ;
-					  memory_low  (4):= receive_packet (17) (4) & receive_packet (14) ;
-					  memory_low  (5):= receive_packet (17) (5) & receive_packet (15) ;
-					  memory_low  (6):= receive_packet (17) (6) & receive_packet (16) ;
---					  memory_low  (7):= '0' & receive_packet (19) ;
-					  
+					  memory_low  (0):= receive_packet (3) (0) & receive_packet (11) ;
+					  memory_low  (1):= receive_packet (3) (1) & receive_packet (12) ;
+					  memory_low  (2):= receive_packet (3) (2) & receive_packet (13) ;
+					  memory_low  (3):= receive_packet (3) (3) & receive_packet (14) ;
+					  memory_low  (4):= receive_packet (3) (4) & receive_packet (15) ;
+					  memory_low  (5):= receive_packet (3) (5) & receive_packet (16) ;
+					  memory_low  (6):= receive_packet (3) (6) & receive_packet (17) ;					  
 					  
 					  MAKsumA_in :=  ("00000000" & memory_high (0)) + ("00000000" & memory_high (1)) + ("00000000" & memory_high (2)) + ("00000000" & memory_high (3)) + ("00000000" & memory_high (4))
 									   + ("00000000" & memory_low  (0)) + ("00000000" & memory_low  (1)) + ("00000000" & memory_low  (2)) + ("00000000" & memory_low  (3)) + ("00000000" & memory_low  (4));
@@ -138,8 +135,7 @@ architecture Behavioral of micro_com2 is
 									W2_sp	   <= memory_high (2) & memory_low (2) ;
 									W3_sp		<= memory_high (3) & memory_low (3) ;
 									SB_sp		<= memory_high (4) & memory_low (4) ;
---									GWr	<= memory_high (5) & memory_low (5) ;
---									alpha	<= memory_high (6) & memory_low (6) ;
+
 						  end if ;
 					  
 					  else
@@ -168,34 +164,30 @@ architecture Behavioral of micro_com2 is
 				 MAKsumB_out := ("00000000" & W0( 15 downto 8 ))*"1010" + ("00000000" & W1( 15 downto 8 ))*"1001" + ("00000000" & W2( 15 downto 8 ))*"1000" + ("00000000" & W3( 15 downto 8 ))*"0111" + ("00000000" & SB( 15 downto 8 ))*"0110"
 			 					  + ("00000000" & W0( 7 downto 0  ))*"0101" + ("00000000" & W1( 7 downto 0  ))*"0100" + ("00000000" & W2( 7 downto 0  ))*"0011" + ("00000000" & W3( 7 downto 0  ))*"0010" + ("00000000" & SB( 7 downto 0  )) ;
 				 
-											 
-				 send_packet (2)  :=   W0 ( 14 downto 8 ) ; 
-				 send_packet (3)  :=   W1 ( 14 downto 8 ) ;
-				 send_packet (4)  :=   W2 ( 14 downto 8 ) ;
-				 send_packet (5)  :=   W3 ( 14 downto 8 ) ;
-				 send_packet (6)  :=   SB ( 14 downto 8 ) ;
-				 send_packet (7)  :=   MAKsumA_out ( 14 downto 8 ) ;
-				 send_packet (8)  :=   MAKsumB_out ( 14 downto 8 ) ;
-				 send_packet (9)  :=   MAKsumB_out ( 15 )& MAKsumA_out ( 15 ) &
-											  SB ( 15 ) & W3 ( 15 ) & W2 ( 15 ) & 
-											  W1 ( 15 ) & W0 ( 15 ) ;
-			    
---				 send_packet (10)   := MAKsumA_out  ;
+				
+				 send_packet (2)   :=   MAKsumB_out ( 15 )& MAKsumA_out ( 15 ) &
+											   SB ( 15 ) & W3 ( 15 ) & W2 ( 15 ) & 
+											   W1 ( 15 ) & W0 ( 15 ) ;
+				 send_packet (3)   :=   MAKsumB_out ( 7 )& MAKsumA_out ( 7 ) &
+										 	   SB ( 7 ) & W3 ( 7 ) & W2 ( 7 ) & 
+											   W1 ( 7 ) & W0 ( 7 ) ;
+				 send_packet (4)   :=   W0 ( 14 downto 8 ) ; 
+				 send_packet (5)   :=   W1 ( 14 downto 8 ) ;
+				 send_packet (6)   :=   W2 ( 14 downto 8 ) ;
+				 send_packet (7)   :=   W3 ( 14 downto 8 ) ;
+				 send_packet (8)   :=   SB ( 14 downto 8 ) ;
+				 send_packet (9)   :=   MAKsumA_out ( 14 downto 8 ) ;
+				 send_packet (10)  :=   MAKsumB_out ( 14 downto 8 ) ;
+			
+				 send_packet (11)  :=   W0 ( 6  downto 0 ) ; 
+				 send_packet (12)  :=   W1 ( 6  downto 0 ) ;
+				 send_packet (13)  :=   W2 ( 6  downto 0 ) ;
+				 send_packet (14)  :=   W3 ( 6  downto 0 ) ;
+				 send_packet (15)  :=   SB ( 6  downto 0 ) ;
+				 send_packet (16)  :=   MAKsumA_out ( 6  downto 0 ) ;
+				 send_packet (17)  :=   MAKsumB_out ( 6  downto 0 ) ;
 				 
-				
-				 send_packet  (10)  :=   W0 ( 6  downto 0 ) ; 
-				 send_packet  (11)  :=   W1 ( 6  downto 0 ) ;
-				 send_packet  (12)  :=   W2 ( 6  downto 0 ) ;
-				 send_packet  (13)  :=   W3 ( 6  downto 0 ) ;
-				 send_packet  (14)  :=   SB ( 6  downto 0 ) ;
-				 send_packet  (15)  :=   MAKsumA_out ( 6  downto 0 ) ;
-				 send_packet  (16)  :=   MAKsumB_out ( 6  downto 0 ) ;
-				 send_packet  (17)  :=   MAKsumB_out ( 7 )& MAKsumA_out ( 7 ) &
-											  SB ( 7 ) & W3 ( 7 ) & W2 ( 7 ) & 
-											  W1 ( 7 ) & W0 ( 7 ) ;
-		       
---				 send_packet  (19)  :=   MAKsumB_out ;
-				
+			
 				
 --						  test := not test ;-- test
 						  
@@ -204,8 +196,8 @@ architecture Behavioral of micro_com2 is
 			  elsif ( state > 1 ) then		
 --			  data_out <= test; -- test
 			  DATA_OUT <= send_packet (state) ;	
---			  else 
---			  DATA_OUT <= "1111111" ;	
+			  else 
+			  DATA_OUT <= "1111111" ;	
 			  end if;
 			
 			end if;
