@@ -176,10 +176,9 @@ architecture Behavioral of micro_com2 is
 				 send_packet (6)  :=   SB ( 14 downto 8 ) ;
 				 send_packet (7)  :=   MAKsumA_out ( 14 downto 8 ) ;
 				 send_packet (8)  :=   MAKsumB_out ( 14 downto 8 ) ;
-				 send_packet (9)  :=   W0 ( 15 ) & W1 ( 15 )
-				 						   & W2 ( 15 ) & W3 ( 15 )
-				 							& SB ( 15 ) & MAKsumA_out ( 15 )
-				 						   & MAKsumB_out ( 15 ) ;
+				 send_packet (9)  :=   MAKsumB_out ( 15 )& MAKsumA_out ( 15 ) &
+											  SB ( 15 ) & W3 ( 15 ) & W2 ( 15 ) & 
+											  W1 ( 15 ) & W0 ( 15 ) ;
 			    
 --				 send_packet (10)   := MAKsumA_out  ;
 				 
@@ -191,10 +190,9 @@ architecture Behavioral of micro_com2 is
 				 send_packet  (14)  :=   SB ( 6  downto 0 ) ;
 				 send_packet  (15)  :=   MAKsumA_out ( 6  downto 0 ) ;
 				 send_packet  (16)  :=   MAKsumB_out ( 6  downto 0 ) ;
-				 send_packet  (17)  :=   W0 ( 7  ) & W1 ( 7  )
-				 							  & W2 ( 7  ) & W3 ( 7  )
-											  & SB ( 7  ) & MAKsumA_out ( 7  )
-											  & MAKsumB_out ( 7  ) ;
+				 send_packet  (17)  :=   MAKsumB_out ( 7 )& MAKsumA_out ( 7 ) &
+											  SB ( 7 ) & W3 ( 7 ) & W2 ( 7 ) & 
+											  W1 ( 7 ) & W0 ( 7 ) ;
 		       
 --				 send_packet  (19)  :=   MAKsumB_out ;
 				
@@ -205,7 +203,9 @@ architecture Behavioral of micro_com2 is
 			  elsif  (state = 1) then
 			  elsif ( state > 1 ) then		
 --			  data_out <= test; -- test
-			  DATA_OUT <= send_packet (state) ;			  
+			  DATA_OUT <= send_packet (state) ;	
+--			  else 
+--			  DATA_OUT <= "1111111" ;	
 			  end if;
 			
 			end if;
