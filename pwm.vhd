@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_unsigned.ALL;
 use IEEE.STD_LOGIC_arith.ALL;
 
 entity pwm is
-	generic (n:integer range 1 to 11 := 11);
+	generic (n:integer range 1 to 12 := 12);
 	port (oc_in: in std_logic_vector (n-1 downto 0);
 			oc_out: out std_logic;
 			clk: in std_logic);
