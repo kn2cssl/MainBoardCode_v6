@@ -18,16 +18,10 @@
 			M3p:out std_logic;
 			M3n:out std_logic;
 			HALL_OUT:out std_logic;
-			CLK_1MS:out std_logic;
-			CHECK_OUT:out std_logic;
 			SPEED :in std_logic_vector(15 downto 0);
 			M_show:out signed (15 downto 0);
-			ERR_M  :out std_logic_vector(15 downto 0);
-			kp_M   :in std_logic_vector(19 downto 0);	
-		   --HALL_COUNT :in std_logic_vector(4 downto 0);
 			LED   :out std_logic_vector(3 downto 0);
 			FREE_WHEEL : in std_logic;
-			--kp_in      : in std_logic_vector(15 downto 0);
 			TEST_KEY   : in std_logic_vector(3 downto 2)
 			 );
 	end drivermotor;
@@ -63,53 +57,15 @@
 	
 	signal HALL_COUNT : std_logic_vector(15 downto 0):=(others=>'0'); 
 	
-	signal hall1_past  : std_logic;
-   --signal hall2_past  : std_logic;
-   --signal hall3_past  : std_logic;	
+	signal hall1_past  : std_logic;	
    signal DIR         : std_logic;
-	signal M_P_OVERFLOW: std_logic;
-	--signal led_S       : std_logic:='0';
-	signal CLK_S     : std_logic:='0';
-	signal CHECK     : std_logic:='0';
-	
 	
 	signal M_PID       : std_logic_vector(n-1 DOWNTO 0)  :=(others=>'0');	
-
-	signal M_Kp_fp     : signed(19 downto 0):= "00000000011010000000";--(others=>'0'); --10.10 --BIT ALAMAT DARAD!!
-	signal M_Kd_fp     : signed(15 downto 0):= "0000000000000000";--12.4  
-
 	
-	constant MAX_PWM             : std_logic_vector(10 downto 0):= "11111111111";  
-	
-	constant MAX_P               : integer range 0 to 2047 := 2047; 
-	constant MAX_P_MINUS         : integer range -2047 to 0:= -2047;
-	
-	
-	constant T_1MS     : std_logic_vector(15 downto 0):= "1100001101010000";  
+	constant T_1MS     : std_logic_vector(15 downto 0):= "1100001101010000"; -- 50000 
 	constant T_500US   : std_logic_vector(15 downto 0):= "0110000110101000";
 	
-	 constant lim500 : signed(15 DOWNTO 0) := "0000000111110100";--500 
-	 constant lim300 : signed(15 DOWNTO 0) := "0000000100101100";--300 
-	 constant lim20  : signed(15 DOWNTO 0) := "0000000000010100";--20
-	 constant lim200 : signed(15 DOWNTO 0) := "0000000011001000";--200  
-	 constant lim50  : signed(15 DOWNTO 0) := "0000000000110010";--50
-	 constant lim0   : signed(15 DOWNTO 0) := "0000000000000000";--0   
-	 constant lim499 : signed(15 DOWNTO 0) := "0000000111110011";--499 
-	 constant lim400 : signed(15 DOWNTO 0) := "0000000110010000";--400  	
-	 constant lim10  : signed(15 DOWNTO 0) := "0000000000001010";--10  
-	 constant lim15  : signed(15 DOWNTO 0) := "0000000000001111";--15  
-	 constant lim100 : signed(15 DOWNTO 0) := "0000000001100100";--100
-	 constant lim40  : signed(15 DOWNTO 0) := "0000000000101000";--40
-	 constant lim1250: std_logic_vector(15 DOWNTO 0) := "0000010011100010";--1250
-	 constant lim150 : signed(15 DOWNTO 0) := "0000000010010110";--150
-	 constant lim5   : signed(15 DOWNTO 0) := "0000000000000101";--5
-    constant lim1   : signed(15 DOWNTO 0) := "0000000000000001";--1	
-	 constant lim_minus15: signed(15 DOWNTO 0) := "1111111111110001";-- -15
-
-	 
-		
-	 signal  M_ERROR   : signed(15 DOWNTO 0) :=(others=>'0'); --for show
-    signal  RPM_DIFF_show   : signed (15 DOWNTO 0)  :=(others=>'0');  --for show
+	constant lim1250: std_logic_vector(15 DOWNTO 0) := "0000010011100010";--60 * 1000 / 3.8 / 48 = 328.947 ~ 329
 	
 	begin
 	

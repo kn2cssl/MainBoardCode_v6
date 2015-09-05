@@ -151,5 +151,5 @@ NET "TEST_KEY[0]"    LOC = "P130";
 ##NET "IO15"                LOC = "P113";
 
 NET "HALL_OUT"                LOC ="P116";
-NET "CLK_1MS"                 LOC ="P113";
-NET "CHECK_OUT"                   LOC ="P119";
+##NET "CLK_1MS"                 LOC ="P113";
+##NET "CHECK_OUT"                   LOC ="P119";

@@ -20,8 +20,6 @@
 					M3p1:out std_logic;
 					M3n1:out std_logic;
 					HALL_OUT:out std_logic;
-					CLK_1MS:out std_logic;
-					CHECK_OUT:out std_logic;
 					
 					HALL1_COUNT :in std_logic_vector(4 downto 0);
 					HALL2_COUNT :in std_logic_vector(4 downto 0);
@@ -103,9 +101,7 @@
 					M2n:out std_logic;
 					M3p:out std_logic;
 					M3n:out std_logic;
-					CLK_1MS:out std_logic;
 					HALL_OUT:out std_logic;
-					CHECK_OUT:out std_logic;
 
 					SPEED:in std_logic_vector(15 downto 0);
 					M_show:out std_logic_vector(15 downto 0);
@@ -132,18 +128,6 @@
 			 
 			 component micro_com2 is
 				port (
---						CLK : in std_logic;
---						RPM_IN : in std_logic_vector(7 downto 0);
---						CLK_PAR : in std_logic;
---						PARITY_IN : in std_logic;
---						MOTOR_NUM : in std_logic_vector(1 downto 0);
---						RPM1 : out std_logic_vector(15 downto 0);
---						RPM2 : out std_logic_vector(15 downto 0);
---						RPM3 : out std_logic_vector(15 downto 0);
---						RPM4 : out std_logic_vector(15 downto 0);
---						STARTBIT_FLG : in std_logic;
---						FREE_WHEELS : out std_logic 
-						--LED  : out std_logic_vector(3 downto 0)
 						data_clk : in std_logic;
 						CLK : in std_logic;
 						DATA_IN : in std_logic_vector(6 downto 0);
@@ -154,16 +138,12 @@
 						W2 : in std_logic_vector(15 downto 0);
 						W3 : in std_logic_vector(15 downto 0);
 						SB : in std_logic_vector(15 downto 0);
---						calman_W2 : in std_logic_vector(15 downto 0);
---						calman_W3 : in std_logic_vector(15 downto 0);
-						--generated data in camera and gyro
+
 						W0_sp        : out std_logic_vector(15 downto 0);
 						W1_sp        : out std_logic_vector(15 downto 0);
 						W2_sp        : out std_logic_vector(15 downto 0);
 						W3_sp     : out std_logic_vector(15 downto 0);
 						SB_sp       : out std_logic_vector(15 downto 0)
---						GVy       : out std_logic_vector(15 downto 0);
---						GWr       : out std_logic_vector(15 downto 0)
 						);
 				end component;
 				
@@ -205,8 +185,6 @@
 			signal W2_sp        : std_logic_vector(15 downto 0);
 			signal W3_sp     : std_logic_vector(15 downto 0);
 			signal SB_sp       : std_logic_vector(15 downto 0);
---			signal GVy       : std_logic_vector(15 downto 0);
---			signal GWr       : std_logic_vector(15 downto 0);
 			
 			signal MS1_show: std_logic_vector(15 downto 0):="1010101010101010";
 			signal MS_show: std_logic_vector(15 downto 0):=(others=>'0');
@@ -240,18 +218,9 @@
 			constant T_400ns:  std_logic_vector(15 downto 0):="0000000000010100";
 			constant T_600ns:  std_logic_vector(15 downto 0):="0000000000011110";
 			constant T_800ns:  std_logic_vector(15 downto 0):="0000000000101000";
-   
-
-			signal ERR_M1   : std_logic_vector(15 downto 0):=(others=>'0');
-			signal  kp_M1   : std_logic_vector(19 downto 0):=(others=>'0');	
-			signal ERR_M2   : std_logic_vector(15 downto 0):=(others=>'0');
-			signal  kp_M2   : std_logic_vector(19 downto 0):=(others=>'0');
-			signal ERR_M3   : std_logic_vector(15 downto 0):=(others=>'0');
-			signal  kp_M3   : std_logic_vector(19 downto 0):=(others=>'0');
-			signal ERR_M4   : std_logic_vector(15 downto 0):=(others=>'0');
-			signal  kp_M4   : std_logic_vector(19 downto 0):=(others=>'0');
+  
          signal  CONTROL1 : STD_LOGIC_VECTOR(35 DOWNTO 0);
-			signal DATA_INs :  std_logic_vector(15 downto 0);
+--			signal DATA_INs :  std_logic_vector(15 downto 0);
 			SIGNAL DATA_TEST: std_logic_vector(6 downto 0) ;
 		begin
 		
@@ -259,8 +228,8 @@
 --	DATA_INs <= DATA_IN & "000000000";
 		 
 			--M1		
-				driver1:drivermotor port map(HALL1=>HALL11,HALL2=>HALL21,HALL3=>HALL31,CLK=>CLK,hall_OUT=>hall_OUT,CHECK_OUT=> CHECK_OUT,
-				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY(3 DOWNTO 2), CLK_1MS=>CLK_1MS,M_show=>M1_show, LED=>LED1);--, kp_in => speed2);
+				driver1:drivermotor port map(HALL1=>HALL11,HALL2=>HALL21,HALL3=>HALL31,CLK=>CLK,hall_OUT=>hall_OUT,
+				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M1_show, LED=>LED1);--, kp_in => speed2);
 			--M2	
 				driver2:drivermotor port map(HALL1=>HALL12,HALL2=>HALL22,HALL3=>HALL32,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M2_show, LED=>LED2,-- kp_in => speed2,
 				M1P=>M1P2,M1N=>M1N2,M2P=>M2P2,M2N=>M2N2,M3P=>M3P2,M3N=>M3N2,SPEED=>SPEED2,FREE_WHEEL => FREE_WHEELS_S);	
@@ -281,22 +250,15 @@
 			  W3_sp=>W3_sp , SB_sp=>SB_sp);
 			  
 			  
-			  ILA1 : ila port map ( CONTROL => CONTROL1, CLK => CLK,  TRIG0 => DATA_INs );
+--			  ILA1 : ila port map ( CONTROL => CONTROL1, CLK => CLK,  TRIG0 => DATA_INs );
 				
-          ICON1: ICON  port map (  CONTROL0 => CONTROL1);
---		 --DIVIDER
---			 DIVIDER1:DIVIDER port map (clk => clk_280,rfd => rfd1,dividend => dividend1,divisor => divisor1,quotient => quotient1,fractional => fractional1);
---		 
---			
---			
---		--CLK_200M
---			Inst_clk_200M: clk_200M port map(CLKIN_IN =>clk ,RST_IN => RST_IN ,CLKFX_OUT =>CLKFX_OUT ,CLK0_OUT =>CLK0_OUT  );
---		
+--         ICON1: ICON  port map (  CONTROL0 => CONTROL1);
+	
 
 			   process(clk)  
 					begin
                if rising_edge (clk) then 
-					data_ins <= data_in & DATA_TEST & "00";
+--					data_ins <= data_in & DATA_TEST & "00";
 						
 						SPEED1 <= W0_sp  ;
 						SPEED2 <= W1_sp  ;
@@ -319,34 +281,7 @@
 					end if;
 					
 					end process;
-					
-					
- --TIMER:			process(clk)  
---					begin	
---					if rising_edge (clk) then 
---					TIME_COUNT <=  TIME_COUNT+'1';
---					if(TIME_COUNT = T_20ns) then
---					
---					divisor1  <=  ERR_M1;
---					
---					elsif(TIME_COUNT = T_200ns) then
---					kp_M1 <= quotient1(19 downto 0); 
---					divisor1  <=  ERR_M2;
---					
---					elsif(TIME_COUNT = T_400ns) then
---					kp_M2 <= quotient1(19 downto 0);  
---					divisor1  <=   ERR_M3;
---					
---					elsif(TIME_COUNT = T_600ns) then
---					kp_M3 <= quotient1(19 downto 0); 
---					divisor1  <=   ERR_M4;
---					
---					elsif(TIME_COUNT = T_800ns) then
---				   kp_M4 <= quotient1(19 downto 0);    
---               TIME_COUNT <= (others=>'0');
---					end if;	
---					end if;				 
---					end process;		
+						
 		  
 			--test hall for each motor
 			
