@@ -104,6 +104,7 @@
 					HALL_OUT:out std_logic;
 
 					SPEED:in std_logic_vector(15 downto 0);
+					ocr_length:in std_logic_vector (7 downto 0 );
 					M_show:out std_logic_vector(15 downto 0);
 					--HALL_COUNT :in std_logic_vector(4 downto 0);
 					LED:out std_logic_vector(3 downto 0);
@@ -142,8 +143,9 @@
 						W0_sp        : out std_logic_vector(15 downto 0);
 						W1_sp        : out std_logic_vector(15 downto 0);
 						W2_sp        : out std_logic_vector(15 downto 0);
-						W3_sp     : out std_logic_vector(15 downto 0);
-						SB_sp       : out std_logic_vector(15 downto 0)
+						W3_sp        : out std_logic_vector(15 downto 0);
+						SB_sp        : out std_logic_vector(7  downto 0);
+						ocr_length   : out std_logic_vector(7  downto 0)
 						);
 				end component;
 				
@@ -183,8 +185,9 @@
 			signal W0_sp        : std_logic_vector(15 downto 0);
 			signal W1_sp        : std_logic_vector(15 downto 0);
 			signal W2_sp        : std_logic_vector(15 downto 0);
-			signal W3_sp     : std_logic_vector(15 downto 0);
-			signal SB_sp       : std_logic_vector(15 downto 0);
+			signal W3_sp        : std_logic_vector(15 downto 0);
+			signal SB_sp        : std_logic_vector(7  downto 0);
+			signal ocr_length   : std_logic_vector(7  downto 0);
 			
 			signal MS1_show: std_logic_vector(15 downto 0):="1010101010101010";
 			signal MS_show: std_logic_vector(15 downto 0):=(others=>'0');
@@ -229,16 +232,16 @@
 		 
 			--M1		
 				driver1:drivermotor port map(HALL1=>HALL11,HALL2=>HALL21,HALL3=>HALL31,CLK=>CLK,hall_OUT=>hall_OUT,
-				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M1_show, LED=>LED1);--, kp_in => speed2);
+				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M1_show, LED=>LED1 , ocr_length=>ocr_length);--, kp_in => speed2);
 			--M2	
 				driver2:drivermotor port map(HALL1=>HALL12,HALL2=>HALL22,HALL3=>HALL32,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M2_show, LED=>LED2,-- kp_in => speed2,
-				M1P=>M1P2,M1N=>M1N2,M2P=>M2P2,M2N=>M2N2,M3P=>M3P2,M3N=>M3N2,SPEED=>SPEED2,FREE_WHEEL => FREE_WHEELS_S);	
+				M1P=>M1P2,M1N=>M1N2,M2P=>M2P2,M2N=>M2N2,M3P=>M3P2,M3N=>M3N2,SPEED=>SPEED2,FREE_WHEEL => FREE_WHEELS_S , ocr_length=>ocr_length);	
 			--M3	
 				driver3:drivermotor port map(HALL1=>HALL13,HALL2=>HALL23,HALL3=>HALL33,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M3_show, LED=>LED3,-- kp_in => speed2,
-				M1P=>M1P3,M1N=>M1N3,M2P=>M2P3,M2N=>M2N3,M3P=>M3P3,M3N=>M3N3,SPEED=>SPEED3,FREE_WHEEL => FREE_WHEELS_S);
+				M1P=>M1P3,M1N=>M1N3,M2P=>M2P3,M2N=>M2N3,M3P=>M3P3,M3N=>M3N3,SPEED=>SPEED3,FREE_WHEEL => FREE_WHEELS_S , ocr_length=>ocr_length);
 			--M4	
 				driver4:drivermotor port map(HALL1=>HALL14,HALL2=>HALL24,HALL3=>HALL34,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M4_show, LED=>LED4, --kp_in => speed2,
-				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S);
+				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S , ocr_length=>ocr_length);
 
 		--	--FT245
 			  FT245:Write_to_USB port map(DATA1_IN=>ms1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
@@ -247,7 +250,7 @@
 			  prl_com:micro_com2 port map( DATA_CLK=>DATA_CLK , CLK=>clk , DATA_IN=>DATA_IN , DATA_OUT=>data_out ,
 			  W0=>W0 , W1=>W1 , W2=>W2 , W3=>W3 , 
 			  SB=>SB , W0_sp=>W0_sp , W1_sp=>W1_sp , W2_sp=>W2_sp , 
-			  W3_sp=>W3_sp , SB_sp=>SB_sp);
+			  W3_sp=>W3_sp , SB_sp=>SB_sp , ocr_length=>ocr_length);
 			  
 			  
 --			  ILA1 : ila port map ( CONTROL => CONTROL1, CLK => CLK,  TRIG0 => DATA_INs );
@@ -264,6 +267,7 @@
 						SPEED2 <= W1_sp  ;
 						SPEED3 <= W2_sp ;
 						SPEED4 <= W3_sp ;
+						
 						
 						SB <= W0_sp  ;
 						

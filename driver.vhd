@@ -6,7 +6,6 @@
  --  use ieee.numeric_std.ALL;
 
 	entity drivermotor is
-	generic (n:integer range 1 to 12:= 12);
 	port( clk:in std_logic;
 			HALL1:in std_logic;
 			HALL2:in std_logic;
@@ -19,6 +18,7 @@
 			M3n:out std_logic;
 			HALL_OUT:out std_logic;
 			SPEED :in std_logic_vector(15 downto 0);
+			ocr_length:in std_logic_vector (7 downto 0 );
 			M_show:out signed (15 downto 0);
 			LED   :out std_logic_vector(3 downto 0);
 			FREE_WHEEL : in std_logic;
@@ -31,10 +31,10 @@
    
 		
 	component PWM is
-	generic (n:integer range 1 to 12:= 12);
 	port (
 		  CLK   : in std_logic;
-		  OC_IN : in std_logic_vector (n-1 downto 0);
+		  OC_IN : in std_logic_vector (15 downto 0);
+		  ocr_length:in std_logic_vector (7 downto 0 );
 		  OC_OUT: out std_logic
 		  );
    end component;
@@ -60,7 +60,7 @@
 	signal hall1_past  : std_logic;	
    signal DIR         : std_logic;
 	
-	signal M_PID       : std_logic_vector(n-1 DOWNTO 0)  :=(others=>'0');	
+	signal M_PID       : std_logic_vector(15 DOWNTO 0)  :=(others=>'0');	
 	
 	constant T_1MS     : std_logic_vector(15 downto 0):= "1100001101010000"; -- 50000 
 	constant T_500US   : std_logic_vector(15 downto 0):= "0110000110101000";
@@ -69,7 +69,7 @@
 																	  --0000010011100010 = 1250
 	begin
 	
-	PWM_1:PWM port map (OC_IN =>M_PID ,CLK =>CLK  ,OC_OUT=>PWM_S  );
+	PWM_1:PWM port map (OC_IN =>M_PID ,CLK =>CLK  ,OC_OUT=>PWM_S , ocr_length=>ocr_length);
 	
 -- help : counting number of hall sensors interupts per 1ms
 	read_sensors:process(clk,HALL1,HALL2,HALL3,DIR)
