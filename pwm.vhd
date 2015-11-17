@@ -40,8 +40,8 @@ begin
 	process(Clk)
    begin
 		if rising_edge(Clk) then
-			Cnt_1 <= Cnt_1+1;
-			if (Cnt_1 = ocr_length & "00000000") then
+			Cnt_1 <= Cnt_1 + 1;
+			if (Cnt_1 > ocr_length & "00000000") then
 			   Cnt_1 <= "0000000000000000";
 			end if;
 		end if;
