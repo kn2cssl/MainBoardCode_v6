@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "F:/GitHub/FPGA/driver1/maincodev6/tm1_isim_beh.exe" -prj "F:/GitHub/FPGA/driver1/maincodev6/tm1_beh.prj" "work.tm1" 
+-intstyle "ise" -incremental -o "D:/GitHub/Yashil-fpga/test_isim_beh.exe" -prj "D:/GitHub/Yashil-fpga/test_beh.prj" "work.test" 

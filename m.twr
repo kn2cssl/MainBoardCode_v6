@@ -44,36 +44,27 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-CLK_PAR     |   10.509(R)|    0.164(R)|clk_BUFGP         |   0.000|
-HALL11      |    5.412(R)|   -0.343(R)|clk_BUFGP         |   0.000|
-HALL12      |    3.310(R)|   -0.454(R)|clk_BUFGP         |   0.000|
-HALL13      |    2.781(R)|   -0.220(R)|clk_BUFGP         |   0.000|
-HALL14      |    2.212(R)|    1.157(R)|clk_BUFGP         |   0.000|
-HALL21      |    4.868(R)|    0.042(R)|clk_BUFGP         |   0.000|
-HALL22      |    2.272(R)|   -0.088(R)|clk_BUFGP         |   0.000|
-HALL23      |    2.294(R)|    0.487(R)|clk_BUFGP         |   0.000|
-HALL24      |    0.410(R)|    1.149(R)|clk_BUFGP         |   0.000|
-HALL31      |    1.792(R)|    0.035(R)|clk_BUFGP         |   0.000|
-HALL32      |    1.153(R)|    0.546(R)|clk_BUFGP         |   0.000|
-HALL33      |    1.671(R)|    0.132(R)|clk_BUFGP         |   0.000|
-HALL34      |    0.320(R)|    1.219(R)|clk_BUFGP         |   0.000|
-MOTOR_NUM<0>|    6.543(R)|   -0.900(R)|clk_BUFGP         |   0.000|
-MOTOR_NUM<1>|    6.566(R)|   -0.781(R)|clk_BUFGP         |   0.000|
-PARITY_IN   |    6.968(R)|   -0.681(R)|clk_BUFGP         |   0.000|
-RPM_IN<0>   |    6.041(R)|    0.599(R)|clk_BUFGP         |   0.000|
-RPM_IN<1>   |    6.556(R)|    1.240(R)|clk_BUFGP         |   0.000|
-RPM_IN<2>   |    5.996(R)|    1.166(R)|clk_BUFGP         |   0.000|
-RPM_IN<3>   |    5.985(R)|    1.215(R)|clk_BUFGP         |   0.000|
-RPM_IN<4>   |    5.402(R)|    1.017(R)|clk_BUFGP         |   0.000|
-RPM_IN<5>   |    4.789(R)|    1.084(R)|clk_BUFGP         |   0.000|
-RPM_IN<6>   |    5.506(R)|    0.812(R)|clk_BUFGP         |   0.000|
-RPM_IN<7>   |    5.272(R)|    0.733(R)|clk_BUFGP         |   0.000|
-STARTBIT_FLG|    9.707(R)|   -0.965(R)|clk_BUFGP         |   0.000|
-TEST_KEY<0> |    5.913(R)|   -1.954(R)|clk_BUFGP         |   0.000|
-TEST_KEY<1> |    6.369(R)|   -2.309(R)|clk_BUFGP         |   0.000|
-TEST_KEY<2> |   10.899(R)|   -3.430(R)|clk_BUFGP         |   0.000|
-TEST_KEY<3> |    9.973(R)|   -3.605(R)|clk_BUFGP         |   0.000|
-TXE         |    3.892(R)|   -1.064(R)|clk_BUFGP         |   0.000|
+DATA_CLK    |    8.544(R)|   -0.545(R)|clk_BUFGP         |   0.000|
+DATA_IN<0>  |    5.659(R)|    1.167(R)|clk_BUFGP         |   0.000|
+DATA_IN<1>  |    5.807(R)|    0.925(R)|clk_BUFGP         |   0.000|
+DATA_IN<2>  |    5.927(R)|    1.168(R)|clk_BUFGP         |   0.000|
+DATA_IN<3>  |    6.693(R)|    0.604(R)|clk_BUFGP         |   0.000|
+DATA_IN<4>  |    5.982(R)|    0.781(R)|clk_BUFGP         |   0.000|
+DATA_IN<5>  |    5.710(R)|    1.234(R)|clk_BUFGP         |   0.000|
+DATA_IN<6>  |    5.405(R)|    0.861(R)|clk_BUFGP         |   0.000|
+HALL11      |    2.799(R)|    0.307(R)|clk_BUFGP         |   0.000|
+HALL12      |    3.020(R)|    0.147(R)|clk_BUFGP         |   0.000|
+HALL13      |    3.099(R)|    0.055(R)|clk_BUFGP         |   0.000|
+HALL14      |    1.956(R)|    0.909(R)|clk_BUFGP         |   0.000|
+HALL21      |    2.370(R)|   -0.407(R)|clk_BUFGP         |   0.000|
+HALL22      |    2.619(R)|    0.015(R)|clk_BUFGP         |   0.000|
+HALL23      |    3.031(R)|    0.151(R)|clk_BUFGP         |   0.000|
+HALL24      |    0.741(R)|    0.882(R)|clk_BUFGP         |   0.000|
+HALL31      |    1.611(R)|    0.186(R)|clk_BUFGP         |   0.000|
+HALL32      |    1.703(R)|    0.106(R)|clk_BUFGP         |   0.000|
+HALL33      |    0.961(R)|    0.706(R)|clk_BUFGP         |   0.000|
+HALL34      |    0.647(R)|    0.957(R)|clk_BUFGP         |   0.000|
+TXE         |    4.386(R)|   -0.484(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -81,43 +72,46 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-DATA_USB<0> |   11.314(R)|clk_BUFGP         |   0.000|
-DATA_USB<1> |   10.911(R)|clk_BUFGP         |   0.000|
-DATA_USB<2> |   10.238(R)|clk_BUFGP         |   0.000|
-DATA_USB<3> |   10.742(R)|clk_BUFGP         |   0.000|
-DATA_USB<4> |   10.316(R)|clk_BUFGP         |   0.000|
-DATA_USB<5> |   10.094(R)|clk_BUFGP         |   0.000|
-DATA_USB<6> |   10.636(R)|clk_BUFGP         |   0.000|
-DATA_USB<7> |   10.162(R)|clk_BUFGP         |   0.000|
-HALL_OUT    |    8.455(R)|clk_BUFGP         |   0.000|
-LED<1>      |   15.021(R)|clk_BUFGP         |   0.000|
-LED<2>      |   15.068(R)|clk_BUFGP         |   0.000|
-LED<3>      |   13.886(R)|clk_BUFGP         |   0.000|
-M1n1        |   13.241(R)|clk_BUFGP         |   0.000|
-M1n2        |   11.413(R)|clk_BUFGP         |   0.000|
-M1n3        |   12.468(R)|clk_BUFGP         |   0.000|
-M1n4        |   10.552(R)|clk_BUFGP         |   0.000|
-M1p1        |   13.966(R)|clk_BUFGP         |   0.000|
-M1p2        |   10.834(R)|clk_BUFGP         |   0.000|
-M1p3        |   12.289(R)|clk_BUFGP         |   0.000|
-M1p4        |   10.691(R)|clk_BUFGP         |   0.000|
-M2n1        |   13.037(R)|clk_BUFGP         |   0.000|
-M2n2        |   10.721(R)|clk_BUFGP         |   0.000|
-M2n3        |   11.258(R)|clk_BUFGP         |   0.000|
-M2n4        |   10.813(R)|clk_BUFGP         |   0.000|
-M2p1        |   13.849(R)|clk_BUFGP         |   0.000|
-M2p2        |   11.465(R)|clk_BUFGP         |   0.000|
-M2p3        |   11.748(R)|clk_BUFGP         |   0.000|
-M2p4        |   10.444(R)|clk_BUFGP         |   0.000|
-M3n1        |   12.828(R)|clk_BUFGP         |   0.000|
-M3n2        |   11.403(R)|clk_BUFGP         |   0.000|
-M3n3        |   12.511(R)|clk_BUFGP         |   0.000|
-M3n4        |   10.444(R)|clk_BUFGP         |   0.000|
-M3p1        |   12.941(R)|clk_BUFGP         |   0.000|
-M3p2        |   11.249(R)|clk_BUFGP         |   0.000|
-M3p3        |   11.575(R)|clk_BUFGP         |   0.000|
-M3p4        |   10.465(R)|clk_BUFGP         |   0.000|
-USB_WR      |   10.606(R)|clk_BUFGP         |   0.000|
+DATA_OUT<0> |    9.624(R)|clk_BUFGP         |   0.000|
+DATA_OUT<1> |    9.554(R)|clk_BUFGP         |   0.000|
+DATA_OUT<2> |   10.611(R)|clk_BUFGP         |   0.000|
+DATA_OUT<3> |   10.793(R)|clk_BUFGP         |   0.000|
+DATA_OUT<4> |   10.680(R)|clk_BUFGP         |   0.000|
+DATA_OUT<5> |    9.930(R)|clk_BUFGP         |   0.000|
+DATA_OUT<6> |    9.591(R)|clk_BUFGP         |   0.000|
+DATA_USB<4> |    9.929(R)|clk_BUFGP         |   0.000|
+DATA_USB<5> |    8.409(R)|clk_BUFGP         |   0.000|
+DATA_USB<6> |    9.218(R)|clk_BUFGP         |   0.000|
+DATA_USB<7> |    8.449(R)|clk_BUFGP         |   0.000|
+HALL_OUT    |    8.454(R)|clk_BUFGP         |   0.000|
+LED<1>      |   15.455(R)|clk_BUFGP         |   0.000|
+LED<2>      |   15.102(R)|clk_BUFGP         |   0.000|
+LED<3>      |   14.082(R)|clk_BUFGP         |   0.000|
+M1n1        |   12.890(R)|clk_BUFGP         |   0.000|
+M1n2        |   11.408(R)|clk_BUFGP         |   0.000|
+M1n3        |   12.362(R)|clk_BUFGP         |   0.000|
+M1n4        |   10.952(R)|clk_BUFGP         |   0.000|
+M1p1        |   11.639(R)|clk_BUFGP         |   0.000|
+M1p2        |   10.994(R)|clk_BUFGP         |   0.000|
+M1p3        |   12.258(R)|clk_BUFGP         |   0.000|
+M1p4        |   10.150(R)|clk_BUFGP         |   0.000|
+M2n1        |   12.056(R)|clk_BUFGP         |   0.000|
+M2n2        |   11.565(R)|clk_BUFGP         |   0.000|
+M2n3        |   12.270(R)|clk_BUFGP         |   0.000|
+M2n4        |   11.554(R)|clk_BUFGP         |   0.000|
+M2p1        |   11.311(R)|clk_BUFGP         |   0.000|
+M2p2        |   11.164(R)|clk_BUFGP         |   0.000|
+M2p3        |   12.412(R)|clk_BUFGP         |   0.000|
+M2p4        |   10.327(R)|clk_BUFGP         |   0.000|
+M3n1        |   12.379(R)|clk_BUFGP         |   0.000|
+M3n2        |   11.941(R)|clk_BUFGP         |   0.000|
+M3n3        |   12.145(R)|clk_BUFGP         |   0.000|
+M3n4        |   11.724(R)|clk_BUFGP         |   0.000|
+M3p1        |   11.528(R)|clk_BUFGP         |   0.000|
+M3p2        |   11.740(R)|clk_BUFGP         |   0.000|
+M3p3        |   11.720(R)|clk_BUFGP         |   0.000|
+M3p4        |   10.379(R)|clk_BUFGP         |   0.000|
+USB_WR      |    9.763(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -125,30 +119,30 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   29.861|         |         |         |
+clk            |   30.819|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-TEST_KEY<0>    |LED<1>         |   12.121|
-TEST_KEY<0>    |LED<2>         |   12.441|
-TEST_KEY<0>    |LED<3>         |   12.625|
-TEST_KEY<1>    |LED<1>         |   12.303|
-TEST_KEY<1>    |LED<2>         |   12.971|
-TEST_KEY<1>    |LED<3>         |   12.878|
+TEST_KEY<0>    |LED<1>         |   12.315|
+TEST_KEY<0>    |LED<2>         |   12.306|
+TEST_KEY<0>    |LED<3>         |   11.652|
+TEST_KEY<1>    |LED<1>         |   12.106|
+TEST_KEY<1>    |LED<2>         |   12.552|
+TEST_KEY<1>    |LED<3>         |   11.822|
 ---------------+---------------+---------+
 
 
-Analysis completed Sat Mar 28 15:32:33 2015 
+Analysis completed Fri Jul 17 16:49:01 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 222 MB
+Peak Memory Usage: 205 MB
 
 
 

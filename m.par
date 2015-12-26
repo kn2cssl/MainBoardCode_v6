@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-VIDA::  Sat Mar 28 15:31:22 2015
+KAMIN::  Fri Jul 17 16:48:17 2015
 
 par -w -intstyle ise -ol high -t 1 m_map.ncd m.ncd m.pcf 
 
@@ -25,11 +25,11 @@ Device speed data version:  "PRODUCTION 1.39 2013-10-13".
 Device Utilization Summary:
 
    Number of BUFGMUXs                        1 out of 8      12%
-   Number of External IOBs                  71 out of 97     73%
-      Number of LOCed IOBs                  71 out of 71    100%
+   Number of External IOBs                  73 out of 97     75%
+      Number of LOCed IOBs                  73 out of 73    100%
 
    Number of MULT18X18s                     16 out of 16    100%
-   Number of Slices                       2108 out of 3584   58%
+   Number of Slices                       2034 out of 3584   56%
       Number of SLICEMs                      1 out of 1792    1%
 
 
@@ -39,50 +39,52 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 3 secs 
-Finished initial Timing Analysis.  REAL time: 3 secs 
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
 
+WARNING:Par:288 - The signal TEST_KEY<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal TEST_KEY<3>_IBUF has no load.  PAR will not attempt to route this signal.
 
 Starting Placer
-Total REAL time at the beginning of Placer: 3 secs 
-Total CPU  time at the beginning of Placer: 3 secs 
+Total REAL time at the beginning of Placer: 2 secs 
+Total CPU  time at the beginning of Placer: 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:36203be4) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:e85b47d8) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:36203be4) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:e85b47d8) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:36203be4) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:e85b47d8) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:aeff4525) REAL time: 5 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:b6c23a7) REAL time: 3 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:aeff4525) REAL time: 5 secs 
+Phase 5.36  Local Placement Optimization (Checksum:b6c23a7) REAL time: 3 secs 
 
 Phase 6.8  Global Placement
-....................
-.......................................
-..
-...........................................................................................
-....
+.................
+............................................
 ...
-Phase 6.8  Global Placement (Checksum:11ad8890) REAL time: 18 secs 
+............................................................................
+....
+....
+Phase 6.8  Global Placement (Checksum:982e3b15) REAL time: 10 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:11ad8890) REAL time: 18 secs 
+Phase 7.5  Local Placement Optimization (Checksum:982e3b15) REAL time: 10 secs 
 
 Phase 8.18  Placement Optimization
-Phase 8.18  Placement Optimization (Checksum:cb944939) REAL time: 27 secs 
+Phase 8.18  Placement Optimization (Checksum:fa690d57) REAL time: 15 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:cb944939) REAL time: 27 secs 
+Phase 9.5  Local Placement Optimization (Checksum:fa690d57) REAL time: 15 secs 
 
-Total REAL time to Placer completion: 27 secs 
-Total CPU  time to Placer completion: 27 secs 
+Total REAL time to Placer completion: 15 secs 
+Total CPU  time to Placer completion: 15 secs 
 Writing design to file m.ncd
 
 
@@ -90,28 +92,26 @@ Writing design to file m.ncd
 Starting Router
 
 
-Phase  1  : 13137 unrouted;      REAL time: 29 secs 
+Phase  1  : 12034 unrouted;      REAL time: 16 secs 
 
-Phase  2  : 12313 unrouted;      REAL time: 29 secs 
+Phase  2  : 11122 unrouted;      REAL time: 16 secs 
 
-Phase  3  : 5153 unrouted;      REAL time: 31 secs 
+Phase  3  : 4368 unrouted;      REAL time: 18 secs 
 
-Phase  4  : 5271 unrouted; (Par is working to improve performance)     REAL time: 33 secs 
+Phase  4  : 4440 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 51 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 33 secs 
 
 Updating file: m.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 54 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 35 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 58 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 36 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 59 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 36 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 
-
-Total REAL time to Router completion: 1 mins 
-Total CPU time to Router completion: 59 secs 
+Total REAL time to Router completion: 36 secs 
+Total CPU time to Router completion: 36 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -129,7 +129,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP |      BUFGMUX6| No   |  519 |  0.020     |  1.034      |
+|           clk_BUFGP |      BUFGMUX6| No   |  621 |  0.020     |  1.034      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -149,8 +149,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|    29.861ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.824ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|    30.819ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.779ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -166,16 +166,18 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 1 mins 1 secs 
-Total CPU time to PAR completion: 1 mins 1 secs 
+WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Peak Memory Usage:  324 MB
+Total REAL time to PAR completion: 37 secs 
+Total CPU time to PAR completion: 37 secs 
+
+Peak Memory Usage:  350 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 0
+Number of warning messages: 4
 Number of info messages: 1
 
 Writing design to file m.ncd

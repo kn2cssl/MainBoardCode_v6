@@ -5,19 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="1731" delta="unknown" >"F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" Line 393: found &apos;<arg fmt="%d" index="1">3</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;&gt;&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;&gt;&quot;</arg>
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1731" delta="unknown" >"F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" Line 396: found &apos;<arg fmt="%d" index="1">3</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;&gt;&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;&gt;&quot;</arg>
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1731" delta="unknown" >"F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" Line 400: found &apos;<arg fmt="%d" index="1">3</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;&gt;&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;&gt;&quot;</arg>
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1731" delta="unknown" >"F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" Line 412: found &apos;<arg fmt="%d" index="1">3</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;&lt;&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;&lt;&quot;</arg>
-</msg>
-
-<msg type="error" file="HDLCompiler" num="854" delta="unknown" >"F:/GitHub/FPGA/driver1/maincodev6/driver.vhd" Line 29: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="Simulator" num="0" delta="unknown" >Unable to copy libPortabilityNOSH.dll to the simulation executable directory: <arg fmt="%s" index="1">boost::filesystem::copy_file: The system cannot find the path specified, &quot;isim\test_isim_beh.exe.sim\libPortability.dll&quot;</arg>.
 </msg>
 
 </messages>

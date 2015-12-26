@@ -1,8 +1,8 @@
 INTSTYLE=impact
-INFILE=D:\github\MainBoardCode_v6\impact.xsl
-OUTFILE=D:\github\MainBoardCode_v6\impact.xsl
+INFILE=D:\GitHub\Yashil-fpga\impact.xsl
+OUTFILE=D:\GitHub\Yashil-fpga\impact.xsl
 FAMILY=Multiple
 PART=Multiple
-WORKINGDIR=D:\github\MainBoardCode_v6
+WORKINGDIR=D:\GitHub\Yashil-fpga
 LICENSE=iMPACT
 USER_INFO=iMPACT

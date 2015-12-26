@@ -50,18 +50,36 @@ NET "M1P4"   LOC="P23";
 
 
 #MICRO TO FPGA
-NET "RPM_IN[0]"       LOC = "P63";
-NET "RPM_IN[1]"       LOC = "P60";
-NET "RPM_IN[2]"       LOC = "P59";
-NET "RPM_IN[3]"       LOC = "P56";
-NET "RPM_IN[4]"       LOC = "P55";
-NET "RPM_IN[5]"       LOC = "P53";
-NET "RPM_IN[6]"       LOC = "P52";
-NET "RPM_IN[7]"       LOC = "P51";
-NET "clk_par"           LOC = "P46";
-NET "parity_in"         LOC = "P44";
-NET "motor_num[0]"      LOC = "P50";
-NET "motor_num[1]"      LOC = "P47";
+#NET "RPM_IN[0]"       LOC = "P63";
+#NET "RPM_IN[1]"       LOC = "P60";
+#NET "RPM_IN[2]"       LOC = "P59";
+#NET "RPM_IN[3]"       LOC = "P56";
+#NET "RPM_IN[4]"       LOC = "P55";
+#NET "RPM_IN[5]"       LOC = "P53";
+#NET "RPM_IN[6]"       LOC = "P52";
+#NET "RPM_IN[7]"       LOC = "P51";
+#NET "clk_par"           LOC = "P46";
+#NET "parity_in"         LOC = "P44";
+#NET "motor_num[0]"      LOC = "P50";
+#NET "motor_num[1]"      LOC = "P47";
+NET "DATA_IN[0]"       LOC = "P63";
+NET "DATA_IN[1]"       LOC = "P60";
+NET "DATA_IN[2]"       LOC = "P59";
+NET "DATA_IN[3]"       LOC = "P56";
+NET "DATA_IN[4]"       LOC = "P55";
+NET "DATA_IN[5]"       LOC = "P53";
+NET "DATA_IN[6]"       LOC = "P52";
+
+NET "DATA_CLK"       LOC = "P51";
+
+NET "DATA_OUT[0]"       LOC = "P46";
+NET "DATA_OUT[1]"       LOC = "P44";
+NET "DATA_OUT[2]"       LOC = "P70";
+NET "DATA_OUT[3]"       LOC = "P69";
+NET "DATA_OUT[4]"       LOC = "P68";
+NET "DATA_OUT[5]"       LOC = "P50";
+NET "DATA_OUT[6]"       LOC = "P47";
+
 
 #MICRO TO PC
 NET "Data_USB[0]"       LOC = "P84";
@@ -81,7 +99,7 @@ NET "USB_WR"            LOC = "P95";
 ##NET "MOSI1"           LOC = "P70";
 ##NET "MISO1"           LOC = "P69";
 ##NET "SCK1"            LOC = "P68";
-NET "STARTBIT_FLG"      LOC = "P68";
+#NET "STARTBIT_FLG"      LOC = "P68";
 ##
 ##
 ###SPI2
@@ -133,5 +151,5 @@ NET "TEST_KEY[0]"    LOC = "P130";
 ##NET "IO15"                LOC = "P113";
 
 NET "HALL_OUT"                LOC ="P116";
-NET "CLK_1MS"                 LOC ="P113";
-NET "CHECK_OUT"                   LOC ="P119";
+##NET "CLK_1MS"                 LOC ="P113";
+##NET "CHECK_OUT"                   LOC ="P119";

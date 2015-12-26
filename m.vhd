@@ -6,7 +6,7 @@
 
 
 		entity m is
-		generic (n:integer range 1 to 11 := 11);
+
 		  port(  clk:in std_logic;
 				--MOTOR1
 					HALL11:in std_logic;
@@ -20,8 +20,6 @@
 					M3p1:out std_logic;
 					M3n1:out std_logic;
 					HALL_OUT:out std_logic;
-					CLK_1MS:out std_logic;
-					CHECK_OUT:out std_logic;
 					
 					HALL1_COUNT :in std_logic_vector(4 downto 0);
 					HALL2_COUNT :in std_logic_vector(4 downto 0);
@@ -71,10 +69,15 @@
 					USB_WR 	 : out std_logic;	
 					TXE		 : in  std_logic;	
 		--		 micro_com
-					RPM_IN    : in std_logic_vector(7 downto 0);
-					CLK_PAR   : in std_logic;
-					PARITY_IN : in std_logic;
-					MOTOR_NUM : in std_logic_vector(1 downto 0);
+--					RPM_IN    : in std_logic_vector(7 downto 0);
+--					CLK_PAR   : in std_logic;
+--					PARITY_IN : in std_logic;
+--					MOTOR_NUM : in std_logic_vector(1 downto 0);
+					DATA_IN   : in std_logic_vector(6 downto 0);
+					DATA_CLK	 : in std_logic ;
+					DATA_OUT	 : out std_logic_vector(6 downto 0);
+					
+
 					STARTBIT_FLG : in std_logic;
 				 --LED
 					LED:out std_logic_vector(3 downto 0);
@@ -98,13 +101,10 @@
 					M2n:out std_logic;
 					M3p:out std_logic;
 					M3n:out std_logic;
-					CLK_1MS:out std_logic;
 					HALL_OUT:out std_logic;
-					CHECK_OUT:out std_logic;
-					
-		         ERR_M  :out std_logic_vector(15 downto 0);
-			      kp_M   :in std_logic_vector(19 downto 0);	
+
 					SPEED:in std_logic_vector(15 downto 0);
+					ocr_length:in std_logic_vector (7 downto 0 );
 					M_show:out std_logic_vector(15 downto 0);
 					--HALL_COUNT :in std_logic_vector(4 downto 0);
 					LED:out std_logic_vector(3 downto 0);
@@ -129,41 +129,40 @@
 			 
 			 component micro_com2 is
 				port (
+						data_clk : in std_logic;
 						CLK : in std_logic;
-						RPM_IN : in std_logic_vector(7 downto 0);
-						CLK_PAR : in std_logic;
-						PARITY_IN : in std_logic;
-						MOTOR_NUM : in std_logic_vector(1 downto 0);
-						RPM1 : out std_logic_vector(15 downto 0);
-						RPM2 : out std_logic_vector(15 downto 0);
-						RPM3 : out std_logic_vector(15 downto 0);
-						RPM4 : out std_logic_vector(15 downto 0);
-						STARTBIT_FLG : in std_logic;
-						FREE_WHEELS : out std_logic 
-						--LED  : out std_logic_vector(3 downto 0)
+						DATA_IN : in std_logic_vector(6 downto 0);
+						DATA_OUT: OUT std_logic_vector(6 downto 0);
+						--generated data in FPGA
+						W0 : in std_logic_vector(15 downto 0);
+						W1 : in std_logic_vector(15 downto 0);
+						W2 : in std_logic_vector(15 downto 0);
+						W3 : in std_logic_vector(15 downto 0);
+						SB : in std_logic_vector(15 downto 0);
+
+						W0_sp        : out std_logic_vector(15 downto 0);
+						W1_sp        : out std_logic_vector(15 downto 0);
+						W2_sp        : out std_logic_vector(15 downto 0);
+						W3_sp        : out std_logic_vector(15 downto 0);
+						SB_sp        : out std_logic_vector(7  downto 0);
+						ocr_length   : out std_logic_vector(7  downto 0)
 						);
 				end component;
 				
-				component DIVIDER is
-			port (
-					clk: in std_logic;
-					rfd: out std_logic;
-					dividend: in std_logic_vector(31 downto 0);
-					divisor: in std_logic_vector(15 downto 0);
-					quotient: out std_logic_vector(31 downto 0);
-					fractional: out std_logic_vector(15 downto 0)
-				  );
-			END COMPONENT; 
 			
-			 COMPONENT clk_200M
-			PORT(
-				CLKIN_IN : IN std_logic;
-				RST_IN : IN std_logic;          
-				CLKFX_OUT : OUT std_logic;
-			--	CLKIN_IBUFG_OUT : OUT std_logic;
-				CLK0_OUT : OUT std_logic
-				);
-			END COMPONENT;
+					component ila IS
+		  PORT (
+			 CONTROL : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0);
+			 CLK : IN STD_LOGIC;
+			 TRIG0 : IN STD_LOGIC_VECTOR(15 DOWNTO 0));
+
+		end component;
+
+		component ICON
+		  PORT (
+			 CONTROL0 : INOUT STD_LOGIC_VECTOR(35 DOWNTO 0));
+
+		end component;
 
 
 			
@@ -173,6 +172,24 @@
 			signal SPEED3 : std_logic_vector(15 downto 0):=(others=>'0'); --"0001000110010100";----"0000001111100100"; 
 			signal SPEED4 : std_logic_vector(15 downto 0):=(others=>'0'); --"1111110000011000";--
 			
+--       new controller & connection
+						--generated data in FPGA
+			signal W0 : std_logic_vector(15 downto 0);
+			signal W1 : std_logic_vector(15 downto 0);
+			signal W2 : std_logic_vector(15 downto 0);
+			signal W3 : std_logic_vector(15 downto 0);
+			signal SB : std_logic_vector(15 downto 0);
+--			signal calman_W2 : std_logic_vector(15 downto 0);
+--			signal calman_W3 : std_logic_vector(15 downto 0);
+						--generated data in camera and gyro
+			signal W0_sp        : std_logic_vector(15 downto 0);
+			signal W1_sp        : std_logic_vector(15 downto 0);
+			signal W2_sp        : std_logic_vector(15 downto 0);
+			signal W3_sp        : std_logic_vector(15 downto 0);
+			signal SB_sp        : std_logic_vector(7  downto 0);
+			signal ocr_length   : std_logic_vector(7  downto 0);
+			
+			signal MS1_show: std_logic_vector(15 downto 0):="1010101010101010";
 			signal MS_show: std_logic_vector(15 downto 0):=(others=>'0');
 			signal M1_show: std_logic_vector(15 downto 0):=(others=>'0'); 
 		   signal M2_show: std_logic_vector(15 downto 0):=(others=>'0'); 
@@ -204,84 +221,71 @@
 			constant T_400ns:  std_logic_vector(15 downto 0):="0000000000010100";
 			constant T_600ns:  std_logic_vector(15 downto 0):="0000000000011110";
 			constant T_800ns:  std_logic_vector(15 downto 0):="0000000000101000";
-   
-
-			signal ERR_M1   : std_logic_vector(15 downto 0):=(others=>'0');
-			signal  kp_M1   : std_logic_vector(19 downto 0):=(others=>'0');	
-			signal ERR_M2   : std_logic_vector(15 downto 0):=(others=>'0');
-			signal  kp_M2   : std_logic_vector(19 downto 0):=(others=>'0');
-			signal ERR_M3   : std_logic_vector(15 downto 0):=(others=>'0');
-			signal  kp_M3   : std_logic_vector(19 downto 0):=(others=>'0');
-			signal ERR_M4   : std_logic_vector(15 downto 0):=(others=>'0');
-			signal  kp_M4   : std_logic_vector(19 downto 0):=(others=>'0');
-
+  
+         signal  CONTROL1 : STD_LOGIC_VECTOR(35 DOWNTO 0);
+--			signal DATA_INs :  std_logic_vector(15 downto 0);
+			SIGNAL DATA_TEST: std_logic_vector(6 downto 0) ;
 		begin
 		
 		
-		
+--	DATA_INs <= DATA_IN & "000000000";
 		 
 			--M1		
-				driver1:drivermotor port map(HALL1=>HALL11,HALL2=>HALL21,HALL3=>HALL31,CLK=>CLK,hall_OUT=>hall_OUT,CHECK_OUT=> CHECK_OUT,
-				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY(3 DOWNTO 2),ERR_M=>ERR_M1,kp_M=>kp_M1 , CLK_1MS=>CLK_1MS,M_show=>M1_show, LED=>LED1);--, kp_in => speed2);
+				driver1:drivermotor port map(HALL1=>HALL11,HALL2=>HALL21,HALL3=>HALL31,CLK=>CLK,hall_OUT=>hall_OUT,
+				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M1_show, LED=>LED1 , ocr_length=>ocr_length);--, kp_in => speed2);
 			--M2	
 				driver2:drivermotor port map(HALL1=>HALL12,HALL2=>HALL22,HALL3=>HALL32,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M2_show, LED=>LED2,-- kp_in => speed2,
-				M1P=>M1P2,M1N=>M1N2,M2P=>M2P2,M2N=>M2N2,M3P=>M3P2,M3N=>M3N2,SPEED=>SPEED2,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M2,kp_M=>kp_M2);	
+				M1P=>M1P2,M1N=>M1N2,M2P=>M2P2,M2N=>M2N2,M3P=>M3P2,M3N=>M3N2,SPEED=>SPEED2,FREE_WHEEL => FREE_WHEELS_S , ocr_length=>ocr_length);	
 			--M3	
 				driver3:drivermotor port map(HALL1=>HALL13,HALL2=>HALL23,HALL3=>HALL33,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M3_show, LED=>LED3,-- kp_in => speed2,
-				M1P=>M1P3,M1N=>M1N3,M2P=>M2P3,M2N=>M2N3,M3P=>M3P3,M3N=>M3N3,SPEED=>SPEED3,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M3,kp_M=>kp_M3);
+				M1P=>M1P3,M1N=>M1N3,M2P=>M2P3,M2N=>M2N3,M3P=>M3P3,M3N=>M3N3,SPEED=>SPEED3,FREE_WHEEL => FREE_WHEELS_S , ocr_length=>ocr_length);
 			--M4	
 				driver4:drivermotor port map(HALL1=>HALL14,HALL2=>HALL24,HALL3=>HALL34,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M4_show, LED=>LED4, --kp_in => speed2,
-				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M4,kp_M=>kp_M4);
+				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S , ocr_length=>ocr_length);
 
 		--	--FT245
-			  FT245:Write_to_USB port map(DATA1_IN =>MS_SHOW,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
+			  FT245:Write_to_USB port map(DATA1_IN=>ms1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
 
 			--micro_com2
-			  prl_com:micro_com2 port map(CLK=>CLK,RPM_IN=>RPM_IN,CLK_PAR=>CLK_PAR,PARITY_IN=>PARITY_IN,MOTOR_NUM=>MOTOR_NUM,FREE_WHEELS => FREE_WHEELS_S,STARTBIT_FLG=>STARTBIT_FLG,
-				 RPM1(15 downto 0)=>SPEED1,
-				 RPM2(15 downto 0)=>SPEED2,
-				 RPM3(15 downto 0)=>SPEED3,
-				 RPM4(15 downto 0)=>SPEED4
-				);
+			  prl_com:micro_com2 port map( DATA_CLK=>DATA_CLK , CLK=>clk , DATA_IN=>DATA_IN , DATA_OUT=>data_out ,
+			  W0=>W0 , W1=>W1 , W2=>W2 , W3=>W3 , 
+			  SB=>SB , W0_sp=>W0_sp , W1_sp=>W1_sp , W2_sp=>W2_sp , 
+			  W3_sp=>W3_sp , SB_sp=>SB_sp , ocr_length=>ocr_length);
+			  
+			  
+--			  ILA1 : ila port map ( CONTROL => CONTROL1, CLK => CLK,  TRIG0 => DATA_INs );
 				
---				
---		 --DIVIDER
---			 DIVIDER1:DIVIDER port map (clk => clk_280,rfd => rfd1,dividend => dividend1,divisor => divisor1,quotient => quotient1,fractional => fractional1);
---		 
---			
---			
---		--CLK_200M
---			Inst_clk_200M: clk_200M port map(CLKIN_IN =>clk ,RST_IN => RST_IN ,CLKFX_OUT =>CLKFX_OUT ,CLK0_OUT =>CLK0_OUT  );
---		
---		
---
--- 
--- TIMER:			process(clk)  
---					begin	
---					if rising_edge (clk) then 
---					TIME_COUNT <=  TIME_COUNT+'1';
---					if(TIME_COUNT = T_20ns) then
---					
---					divisor1  <=  ERR_M1;
---					
---					elsif(TIME_COUNT = T_200ns) then
---					kp_M1 <= quotient1(19 downto 0); 
---					divisor1  <=  ERR_M2;
---					
---					elsif(TIME_COUNT = T_400ns) then
---					kp_M2 <= quotient1(19 downto 0);  
---					divisor1  <=   ERR_M3;
---					
---					elsif(TIME_COUNT = T_600ns) then
---					kp_M3 <= quotient1(19 downto 0); 
---					divisor1  <=   ERR_M4;
---					
---					elsif(TIME_COUNT = T_800ns) then
---				   kp_M4 <= quotient1(19 downto 0);    
---               TIME_COUNT <= (others=>'0');
---					end if;	
---					end if;				 
---					end process;		
+--         ICON1: ICON  port map (  CONTROL0 => CONTROL1);
+	
+
+			   process(clk)  
+					begin
+               if rising_edge (clk) then 
+--					data_ins <= data_in & DATA_TEST & "00";
+						
+						SPEED1 <= W0_sp  ;
+						SPEED2 <= W1_sp  ;
+						SPEED3 <= W2_sp ;
+						SPEED4 <= W3_sp ;
+						
+						
+						SB <= W0_sp  ;
+						
+						W0 <= M1_SHOW ;
+						W1 <= M2_SHOW ;
+						W2 <= M3_SHOW ;
+						W3 <= M4_SHOW ;
+						
+--						if ( SPEED1 = "1"   ) and ( SPEED2 = "10") and( SPEED3 = "11") and ( SPEED4 = "100") then
+						if ( SPEED1 = "100000010"   ) and ( SPEED2 = "1100000100") then
+							FREE_WHEELS_S <= '1' ;
+						else
+							FREE_WHEELS_S <= '0' ;
+						end if ;
+					end if;
+					
+					end process;
+						
 		  
 			--test hall for each motor
 			
