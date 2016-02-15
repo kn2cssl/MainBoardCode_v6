@@ -6,7 +6,7 @@
 
 
 		entity m is
-
+		generic (n:integer range 1 to 11 := 11);
 		  port(  clk:in std_logic;
 				--MOTOR1
 					HALL11:in std_logic;
@@ -106,7 +106,9 @@
 					CLK_1MS:out std_logic;
 					HALL_OUT:out std_logic;
 					CHECK_OUT:out std_logic;
-
+					
+		         ERR_M  :out std_logic_vector(15 downto 0);
+			      kp_M   :in std_logic_vector(19 downto 0);	
 					SPEED:in std_logic_vector(15 downto 0);
 					M_show:out std_logic_vector(15 downto 0);
 					--HALL_COUNT :in std_logic_vector(4 downto 0);
@@ -260,16 +262,16 @@
 		 
 			--M1		
 				driver1:drivermotor port map(HALL1=>HALL11,HALL2=>HALL21,HALL3=>HALL31,CLK=>CLK,hall_OUT=>hall_OUT,CHECK_OUT=> CHECK_OUT,
-				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY(3 DOWNTO 2), CLK_1MS=>CLK_1MS,M_show=>M1_show, LED=>LED1);--, kp_in => speed2);
+				M1P=>M1P1,M1N=>M1N1,M2P=>M2P1,M2N=>M2N1,M3P=>M3P1,M3N=>M3N1,SPEED=>SPEED1,FREE_WHEEL => FREE_WHEELS_S,TEST_KEY => TEST_KEY(3 DOWNTO 2),ERR_M=>ERR_M1,kp_M=>kp_M1 , CLK_1MS=>CLK_1MS,M_show=>M1_show, LED=>LED1);--, kp_in => speed2);
 			--M2	
 				driver2:drivermotor port map(HALL1=>HALL12,HALL2=>HALL22,HALL3=>HALL32,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M2_show, LED=>LED2,-- kp_in => speed2,
-				M1P=>M1P2,M1N=>M1N2,M2P=>M2P2,M2N=>M2N2,M3P=>M3P2,M3N=>M3N2,SPEED=>SPEED2,FREE_WHEEL => FREE_WHEELS_S);	
+				M1P=>M1P2,M1N=>M1N2,M2P=>M2P2,M2N=>M2N2,M3P=>M3P2,M3N=>M3N2,SPEED=>SPEED2,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M2,kp_M=>kp_M2);	
 			--M3	
 				driver3:drivermotor port map(HALL1=>HALL13,HALL2=>HALL23,HALL3=>HALL33,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M3_show, LED=>LED3,-- kp_in => speed2,
-				M1P=>M1P3,M1N=>M1N3,M2P=>M2P3,M2N=>M2N3,M3P=>M3P3,M3N=>M3N3,SPEED=>SPEED3,FREE_WHEEL => FREE_WHEELS_S);
+				M1P=>M1P3,M1N=>M1N3,M2P=>M2P3,M2N=>M2N3,M3P=>M3P3,M3N=>M3N3,SPEED=>SPEED3,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M3,kp_M=>kp_M3);
 			--M4	
 				driver4:drivermotor port map(HALL1=>HALL14,HALL2=>HALL24,HALL3=>HALL34,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M4_show, LED=>LED4, --kp_in => speed2,
-				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S);
+				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S,ERR_M=>ERR_M4,kp_M=>kp_M4);
 
 		--	--FT245
 			  FT245:Write_to_USB port map(DATA1_IN=>ms1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
