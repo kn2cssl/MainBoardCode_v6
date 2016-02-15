@@ -65,8 +65,8 @@
 	constant T_1MS     : std_logic_vector(15 downto 0):= "1100001101010000"; -- 50000 
 	constant T_500US   : std_logic_vector(15 downto 0):= "0110000110101000";
 	
-	constant hall_to_rpm: std_logic_vector(15 DOWNTO 0) := "0000000101001001";--60 * 1000 / 3.8 / 48 = 328.947 ~ 329
-																	  --0000010011100010 = 1250
+	constant lim1250: std_logic_vector(15 DOWNTO 0) := "0000010011100010";--60 * 1000 / 3.8 / 48 = 328.947 ~ 329
+	
 	begin
 	
 	PWM_1:PWM port map (OC_IN =>M_PID ,CLK =>CLK  ,OC_OUT=>PWM_S  );
@@ -185,7 +185,7 @@ CALCULATE_SPEED:process(clk,CLK_TIMER)
 					 
 						M_RPM_DIR_LAST  <= RPM_F(26 DOWNTO 11);
 						RPM_LAST := RPM_F;
-						RPM_H    := ((HALL_COUNT * hall_to_rpm)& "00000000000");
+						RPM_H    := ((HALL_COUNT * lim1250)& "00000000000");
 						
 						if(RPM_DIR='1')then
 							RPM_HS   :=signed('0'-RPM_H);
