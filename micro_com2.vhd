@@ -31,8 +31,7 @@ port (
 						W1_sp        : out std_logic_vector(15 downto 0);
 						W2_sp        : out std_logic_vector(15 downto 0);
 						W3_sp        : out std_logic_vector(15 downto 0);
-						SB_sp        : out std_logic_vector(7  downto 0);
-						ocr_length   : out std_logic_vector(7  downto 0);
+						SB_sp        : out std_logic_vector(15 downto 0);
 --						GVy       : out std_logic_vector(15 downto 0);
 --						GWr       : out std_logic_vector(15 downto 0)
 	--generated data in camera and gyro
@@ -135,8 +134,7 @@ architecture Behavioral of micro_com2 is
 									W1_sp	   <= memory_high (1) & memory_low (1) ;
 									W2_sp	   <= memory_high (2) & memory_low (2) ;
 									W3_sp		<= memory_high (3) & memory_low (3) ;
-									SB_sp		<= memory_high (4) ;
-									ocr_length <= memory_low (4) ;
+									SB_sp		<= memory_high (4) & memory_low (4) ;
 
 						  end if ;
 					  
