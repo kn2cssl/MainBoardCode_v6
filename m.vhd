@@ -8,7 +8,7 @@
 		entity m is
 
 		  port(  clk:in std_logic;
-				--MOTOR1
+				 --MOTOR1
 					HALL11:in std_logic;
 					HALL21:in std_logic;
 					HALL31:in std_logic;
@@ -19,14 +19,8 @@
 					M2n1:out std_logic;
 					M3p1:out std_logic;
 					M3n1:out std_logic;
-					HALL_OUT:out std_logic;
-					
-					HALL1_COUNT :in std_logic_vector(4 downto 0);
-					HALL2_COUNT :in std_logic_vector(4 downto 0);
-					HALL3_COUNT :in std_logic_vector(4 downto 0);
-					HALL4_COUNT :in std_logic_vector(4 downto 0);
 				
-					--MOTOR2	
+				 --MOTOR2	
 					HALL12:in std_logic;
 					HALL22:in std_logic;
 					HALL32:in std_logic;
@@ -38,8 +32,7 @@
 					M3p2:out std_logic;
 					M3n2:out std_logic;
 					
-			
-				--MOTOR3	
+			  	 --MOTOR3	
 					HALL13:in std_logic;
 					HALL23:in std_logic;
 					HALL33:in std_logic;
@@ -51,8 +44,7 @@
 					M3p3:out std_logic;
 					M3n3:out std_logic;
 				
-				
-				--MOTOR4	
+				 --MOTOR4	
 					HALL14:in std_logic;
 					HALL24:in std_logic;
 					HALL34:in std_logic;
@@ -63,16 +55,21 @@
 					M2n4:out std_logic;
 					M3p4:out std_logic;
 					M3n4:out std_logic;	
---			 
+					
+			    --All motors
+					HALL_OUT:out std_logic;
+					
+					HALL1_COUNT :in std_logic_vector(4 downto 0);
+					HALL2_COUNT :in std_logic_vector(4 downto 0);
+					HALL3_COUNT :in std_logic_vector(4 downto 0);
+					HALL4_COUNT :in std_logic_vector(4 downto 0);
+			 
 				 --FT245  	
 					DATA_USB	 :	out std_logic_vector(7 downto 0);
 					USB_WR 	 : out std_logic;	
-					TXE		 : in  std_logic;	
-		--		 micro_com
---					RPM_IN    : in std_logic_vector(7 downto 0);
---					CLK_PAR   : in std_logic;
---					PARITY_IN : in std_logic;
---					MOTOR_NUM : in std_logic_vector(1 downto 0);
+					TXE		 : in  std_logic;
+					
+		       --micro_com
 					DATA_IN   : in std_logic_vector(6 downto 0);
 					DATA_CLK	 : in std_logic ;
 					DATA_OUT	 : out std_logic_vector(6 downto 0);
