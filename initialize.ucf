@@ -48,6 +48,17 @@ NET "M2P4"   LOC="P25";
 NET "M1N4"   LOC="P24";
 NET "M1P4"   LOC="P23";
 
+##M5
+NET "HALL15" LOC="";
+NET "HALL25" LOC="";
+NET "HALL35" LOC="";
+NET "M3N5"   LOC="";
+NET "M3P5"   LOC="";
+NET "M2N5"   LOC="";
+NET "M2P5"   LOC="";
+NET "M1N5"   LOC="";
+NET "M1P5"   LOC="";
+
 
 #MICRO TO FPGA
 #NET "RPM_IN[0]"       LOC = "P63";

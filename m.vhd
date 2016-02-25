@@ -63,6 +63,19 @@
 					M2n4:out std_logic;
 					M3p4:out std_logic;
 					M3n4:out std_logic;	
+				
+				
+				--MOTOR5	
+					HALL15:in std_logic;
+					HALL25:in std_logic;
+					HALL35:in std_logic;
+					
+					M1p5:out std_logic;
+					M1n5:out std_logic;
+					M2p5:out std_logic;
+					M2n5:out std_logic;
+					M3p5:out std_logic;
+					M3n5:out std_logic;
 --			 
 				 --FT245  	
 					DATA_USB	 :	out std_logic_vector(7 downto 0);
@@ -104,7 +117,6 @@
 					HALL_OUT:out std_logic;
 
 					SPEED:in std_logic_vector(15 downto 0);
-					ocr_length:in std_logic_vector (7 downto 0 );
 					M_show:out std_logic_vector(15 downto 0);
 					--HALL_COUNT :in std_logic_vector(4 downto 0);
 					LED:out std_logic_vector(3 downto 0);
@@ -144,8 +156,7 @@
 						W1_sp        : out std_logic_vector(15 downto 0);
 						W2_sp        : out std_logic_vector(15 downto 0);
 						W3_sp        : out std_logic_vector(15 downto 0);
-						SB_sp        : out std_logic_vector(7  downto 0);
-						ocr_length   : out std_logic_vector(7  downto 0)
+						SB_sp        : out std_logic_vector(15 downto 0);
 						);
 				end component;
 				
@@ -172,6 +183,7 @@
 			signal SPEED3 : std_logic_vector(15 downto 0):=(others=>'0'); --"0001000110010100";----"0000001111100100"; 
 			signal SPEED4 : std_logic_vector(15 downto 0):=(others=>'0'); --"1111110000011000";--
 			
+			
 --       new controller & connection
 						--generated data in FPGA
 			signal W0 : std_logic_vector(15 downto 0);
@@ -186,8 +198,7 @@
 			signal W1_sp        : std_logic_vector(15 downto 0);
 			signal W2_sp        : std_logic_vector(15 downto 0);
 			signal W3_sp        : std_logic_vector(15 downto 0);
-			signal SB_sp        : std_logic_vector(7  downto 0);
-			signal ocr_length   : std_logic_vector(7  downto 0);
+			signal SB_sp        : std_logic_vector(15  downto 0);
 			
 			signal MS1_show: std_logic_vector(15 downto 0):="1010101010101010";
 			signal MS_show: std_logic_vector(15 downto 0):=(others=>'0');
@@ -242,7 +253,7 @@
 			--M4	
 				driver4:drivermotor port map(HALL1=>HALL14,HALL2=>HALL24,HALL3=>HALL34,CLK=>CLK,TEST_KEY => TEST_KEY(3 DOWNTO 2),M_show=>M4_show, LED=>LED4, --kp_in => speed2,
 				M1P=>M1P4,M1N=>M1N4,M2P=>M2P4,M2N=>M2N4,M3P=>M3P4,M3N=>M3N4,SPEED=>SPEED4,FREE_WHEEL => FREE_WHEELS_S , ocr_length=>ocr_length);
-
+			
 		--	--FT245
 			  FT245:Write_to_USB port map(DATA1_IN=>ms1_show,DATA_USB=>DATA_USB,USB_WR=>USB_WR,TXE=>TXE,CLK_USB=>CLK);		 
 

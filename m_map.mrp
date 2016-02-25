@@ -9,36 +9,36 @@ Target Device  : xc3s400
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Fri Jul 17 16:48:10 2015
+Mapped Date    : Thu Feb 25 11:05:32 2016
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:         1,113 out of   7,168   15%
-  Number of 4 input LUTs:             2,998 out of   7,168   41%
+  Number of Slice Flip Flops:           876 out of   7,168   12%
+  Number of 4 input LUTs:             1,411 out of   7,168   19%
 Logic Distribution:
-  Number of occupied Slices:          2,034 out of   3,584   56%
-    Number of Slices containing only related logic:   2,034 out of   2,034 100%
-    Number of Slices containing unrelated logic:          0 out of   2,034   0%
+  Number of occupied Slices:          1,154 out of   3,584   32%
+    Number of Slices containing only related logic:   1,154 out of   1,154 100%
+    Number of Slices containing unrelated logic:          0 out of   1,154   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       3,333 out of   7,168   46%
-    Number used as logic:             2,997
-    Number used as a route-thru:        335
+  Total Number of 4 input LUTs:       1,735 out of   7,168   24%
+    Number used as logic:             1,410
+    Number used as a route-thru:        324
     Number used as Shift registers:       1
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 73 out of      97   75%
+  Number of bonded IOBs:                 71 out of      97   73%
   Number of MULT18X18s:                  16 out of      16  100%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.42
+Average Fanout of Non-Clock Nets:                2.36
 
-Peak Memory Usage:  329 MB
-Total REAL time to MAP completion:  4 secs 
+Peak Memory Usage:  256 MB
+Total REAL time to MAP completion:  6 secs 
 Total CPU time to MAP completion:   4 secs 
 
 NOTES:
@@ -84,13 +84,13 @@ Section 2 - Warnings
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network STARTBIT_FLG has no load.
-INFO:LIT:395 - The above info message is repeated 22 more times for the
+INFO:LIT:395 - The above info message is repeated 31 more times for the
    following (max. 5 shown):
-   HALL4_COUNT<4>,
-   HALL4_COUNT<3>,
-   HALL4_COUNT<2>,
-   HALL4_COUNT<1>,
-   HALL4_COUNT<0>
+   M1n5,
+   M1p5,
+   M2n5,
+   M2p5,
+   M3n5
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -99,7 +99,7 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   6 block(s) optimized away
+   2 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -108,10 +108,6 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
-MUXCY 		driver1/Maddsub_M_ERR_mux0000_cy<0>
-MUXCY 		driver2/Maddsub_M_ERR_mux0000_cy<0>
-MUXCY 		driver3/Maddsub_M_ERR_mux0000_cy<0>
-MUXCY 		driver4/Maddsub_M_ERR_mux0000_cy<0>
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -123,8 +119,6 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CHECK_OUT                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| CLK_1MS                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | DATA_CLK                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | DATA_IN<0>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | DATA_IN<1>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
