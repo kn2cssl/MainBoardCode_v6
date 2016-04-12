@@ -45,7 +45,8 @@
 	signal hall_out_s  : std_logic:='0';
    signal STATE1      : std_logic_vector(3 downto 0); 
 	signal STATE      : std_logic_vector(3 downto 0);
-	signal hall_state  : std_logic_vector(2 downto 0); 
+	signal hall_state  : std_logic_vector(2 downto 0);
+	signal hall_state_watcher  : std_logic_vector(2 downto 0);
    signal hall_state_past  : std_logic_vector(2 downto 0); 
  
   	signal M_RPM_DIR      : signed(15 DOWNTO 0)  :=(others=>'0'); 
@@ -56,6 +57,7 @@
 	signal TIMER_COUNT : std_logic_vector(16 downto 0):=(others=>'0');
 	
 	signal HALL_COUNT : std_logic_vector(15 downto 0):=(others=>'0'); 
+	signal hall_watcher : std_logic_vector(11 downto 0):=(others=>'0'); 
 	
 	signal hall1_past  : std_logic;	
    signal DIR         : std_logic;
@@ -77,9 +79,26 @@
 				  begin
 				  if rising_edge (clk)then
 				  hall_state <= (HALL3 & HALL2 & HALL1);
+				  
 				  if(hall_state /= hall_state_past) then
+				  
+				  if ( hall_watcher = "000000000000") then
+				  hall_state_watcher <= hall_state;
+				  end if ;
+				  
+				  if (hall_state_watcher = hall_state) then
+				  hall_watcher <= hall_watcher + 1;
+				  else
+				  hall_watcher <= "000000000000" ;
+				  end if ;
+				  
+				  if ( hall_watcher = "000100000000" ) then
+				  hall_state_past <= hall_state;
 				  hall_count <= hall_count+1;
 				  hall_out_S<= not hall_out_s;
+				  hall_watcher <= "000000000000" ;
+				  end if ;
+				  
 				  end if;
 				  
 				  if(clk_timer='1')then
@@ -94,7 +113,7 @@
 				  end if;
 				  
 				  LED(3 downto 1) <= hall_state;
-				  hall_state_past <= hall_state;
+				  
 				  end if;	  
 				  end process;
 					  
