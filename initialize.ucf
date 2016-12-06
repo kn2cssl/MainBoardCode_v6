@@ -2,51 +2,51 @@
 NET "clk" LOC = "P127";
 
 ##M1
-NET "HALL11" LOC="P82";
-NET "HALL21" LOC="P83";
-NET "HALL31" LOC="P80";
-NET "M3N1"   LOC="P79";
-NET "M3P1"   LOC="P78";
-NET "M2N1"   LOC="P77";
-NET "M2P1"   LOC="P76";
-NET "M1N1"   LOC="P74";
-NET "M1P1"   LOC="P73";
+NET "HALL11" LOC="P125";
+NET "HALL21" LOC="P124";
+NET "HALL31" LOC="P123";
+NET "M3N1"   LOC="P122";
+NET "M3P1"   LOC="P119";
+NET "M2N1"   LOC="P118";
+NET "M2P1"   LOC="P116";
+NET "M1N1"   LOC="P113";
+NET "M1P1"   LOC="P112";
 #
 ##M2
-NET "HALL12" LOC="P108";
-NET "HALL22" LOC="P112";
-NET "HALL32" LOC="P107";
-NET "M3N2"   LOC="P105";
-NET "M3P2"   LOC="P104";
-NET "M2N2"   LOC="P103";
-NET "M2P2"   LOC="P102";
-NET "M1N2"   LOC="P100";
-NET "M1P2"   LOC="P99";
+NET "HALL12" LOC="P141";
+NET "HALL22" LOC="P140";
+NET "HALL32" LOC="P137";
+NET "M3N2"   LOC="P135";
+NET "M3P2"   LOC="P132";
+NET "M2N2"   LOC="P131";
+NET "M2P2"   LOC="P130";
+NET "M1N2"   LOC="P129";
+NET "M1P2"   LOC="P128";
 
 
 ##M3
-NET "HALL13" LOC="P10";
-NET "HALL23" LOC="P11";
-NET "HALL33" LOC="P8";
-NET "M3N3"   LOC="P7";
-NET "M3P3"   LOC="P6";
-NET "M2N3"   LOC="P5";
-NET "M2P3"   LOC="P4";
-NET "M1N3"   LOC="P2";
-NET "M1P3"   LOC="P1";
+NET "HALL13" LOC="P47";
+NET "HALL23" LOC="P46";
+NET "HALL33" LOC="P44";
+NET "M3N3"   LOC="P41";
+NET "M3P3"   LOC="P40";
+NET "M2N3"   LOC="P36";
+NET "M2P3"   LOC="P35";
+NET "M1N3"   LOC="P33";
+NET "M1P3"   LOC="P32";
 #
 #
 ##
 ##M4
-NET "HALL14" LOC="P31";
-NET "HALL24" LOC="P32";
-NET "HALL34" LOC="P30";
-NET "M3N4"   LOC="P28";
-NET "M3P4"   LOC="P27";
-NET "M2N4"   LOC="P26";
-NET "M2P4"   LOC="P25";
-NET "M1N4"   LOC="P24";
-NET "M1P4"   LOC="P23";
+NET "HALL14" LOC="P70";
+NET "HALL24" LOC="P69";
+NET "HALL34" LOC="P68";
+NET "M3N4"   LOC="P63";
+NET "M3P4"   LOC="P60";
+NET "M2N4"   LOC="P59";
+NET "M2P4"   LOC="P56";
+NET "M1N4"   LOC="P55";
+NET "M1P4"   LOC="P53";
 
 
 #MICRO TO FPGA
@@ -62,38 +62,38 @@ NET "M1P4"   LOC="P23";
 #NET "parity_in"         LOC = "P44";
 #NET "motor_num[0]"      LOC = "P50";
 #NET "motor_num[1]"      LOC = "P47";
-NET "DATA_IN[0]"       LOC = "P63";
-NET "DATA_IN[1]"       LOC = "P60";
-NET "DATA_IN[2]"       LOC = "P59";
-NET "DATA_IN[3]"       LOC = "P56";
-NET "DATA_IN[4]"       LOC = "P55";
-NET "DATA_IN[5]"       LOC = "P53";
-NET "DATA_IN[6]"       LOC = "P52";
+NET "DATA_IN[0]"       LOC = "P21";
+NET "DATA_IN[1]"       LOC = "P20";
+NET "DATA_IN[2]"       LOC = "P18";
+NET "DATA_IN[3]"       LOC = "P13";
+NET "DATA_IN[4]"       LOC = "P11";
+NET "DATA_IN[5]"       LOC = "P8";
+NET "DATA_IN[6]"       LOC = "P7";
 
-NET "DATA_CLK"       LOC = "P51";
+NET "DATA_CLK"       LOC = "P6";
 
-NET "DATA_OUT[0]"       LOC = "P46";
-NET "DATA_OUT[1]"       LOC = "P44";
-NET "DATA_OUT[2]"       LOC = "P70";
-NET "DATA_OUT[3]"       LOC = "P69";
-NET "DATA_OUT[4]"       LOC = "P68";
-NET "DATA_OUT[5]"       LOC = "P50";
-NET "DATA_OUT[6]"       LOC = "P47";
+NET "DATA_OUT[0]"       LOC = "P31";
+NET "DATA_OUT[1]"       LOC = "P30";
+NET "DATA_OUT[2]"       LOC = "P28";
+NET "DATA_OUT[3]"       LOC = "P27";
+NET "DATA_OUT[4]"       LOC = "P26";
+NET "DATA_OUT[5]"       LOC = "P25";
+NET "DATA_OUT[6]"       LOC = "P24";
 
 
 #MICRO TO PC
-NET "Data_USB[0]"       LOC = "P84";
-NET "Data_USB[1]"       LOC = "P87";
-NET "Data_USB[2]"       LOC = "P86";
-NET "Data_USB[3]"       LOC = "P93";
-NET "Data_USB[4]"       LOC = "P85";
-NET "Data_USB[5]"       LOC = "P90";
-NET "Data_USB[6]"       LOC = "P92";
-NET "Data_USB[7]"       LOC = "P89";
-#NET "USB_RXF"          LOC = "P98";
-NET "TXE"               LOC = "P97";
-#NET "USB_RD"           LOC = "P96";
-NET "USB_WR"            LOC = "P95";
+##NET "Data_USB[0]"       LOC = "P84";
+##NET "Data_USB[1]"       LOC = "P87";
+##NET "Data_USB[2]"       LOC = "P86";
+##NET "Data_USB[3]"       LOC = "P93";
+##NET "Data_USB[4]"       LOC = "P85";
+##NET "Data_USB[5]"       LOC = "P90";
+##NET "Data_USB[6]"       LOC = "P92";
+##NET "Data_USB[7]"       LOC = "P89";
+##NET "USB_RXF"          LOC = "P98";
+##NET "TXE"               LOC = "P97";
+##NET "USB_RD"           LOC = "P96";
+##NET "USB_WR"            LOC = "P95";
 
 ###SPI1
 ##NET "MOSI1"           LOC = "P70";
@@ -119,17 +119,17 @@ NET "USB_WR"            LOC = "P95";
 ##NET "SEG1DP"         LOC = "P21";
 
 #LED
-NET "led[0]"         LOC = "P40";
-NET "led[1]"         LOC = "P36";
-NET "led[2]"         LOC = "P35";
-NET "led[3]"         LOC = "P33";
+NET "led[0]"         LOC = "P87";
+NET "led[1]"         LOC = "P90";
+NET "led[2]"         LOC = "P92";
+NET "led[3]"         LOC = "P50";
 
 
 #MENU
-NET "TEST_KEY[3]"    LOC = "P141";
-NET "TEST_KEY[2]"    LOC = "P140";
-NET "TEST_KEY[1]"    LOC = "P131";
-NET "TEST_KEY[0]"    LOC = "P130";
+NET "TEST_KEY[3]"    LOC = "P97";
+NET "TEST_KEY[2]"    LOC = "P99";
+NET "TEST_KEY[1]"    LOC = "P102";
+NET "TEST_KEY[0]"    LOC = "P104";
 
 
 
@@ -150,6 +150,6 @@ NET "TEST_KEY[0]"    LOC = "P130";
 ##NET "IO14"                LOC = "P116";
 ##NET "IO15"                LOC = "P113";
 
-NET "HALL_OUT"                LOC ="P116";
+##NET "HALL_OUT"                LOC ="P116";
 ##NET "CLK_1MS"                 LOC ="P113";
 ##NET "CHECK_OUT"                   LOC ="P119";
