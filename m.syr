@@ -1,16 +1,16 @@
-Release 14.7 - xst P.20131013 (nt64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.49 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.49 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
  
 --> Reading design: m.prj
 
@@ -104,16 +104,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/m is now defined in a different file.  It was defined in "D:/GitHub/Yashil-fpga/m.vhd", and is now defined in "E:/Reza/Documents/github/Yashil-fpga/m.vhd".
-WARNING:HDLParsers:3607 - Unit work/m/Behavioral is now defined in a different file.  It was defined in "D:/GitHub/Yashil-fpga/m.vhd", and is now defined in "E:/Reza/Documents/github/Yashil-fpga/m.vhd".
-WARNING:HDLParsers:3607 - Unit work/drivermotor is now defined in a different file.  It was defined in "D:/GitHub/Yashil-fpga/driver.vhd", and is now defined in "E:/Reza/Documents/github/Yashil-fpga/driver.vhd".
-WARNING:HDLParsers:3607 - Unit work/drivermotor/Behavioral is now defined in a different file.  It was defined in "D:/GitHub/Yashil-fpga/driver.vhd", and is now defined in "E:/Reza/Documents/github/Yashil-fpga/driver.vhd".
-WARNING:HDLParsers:3607 - Unit work/micro_com2 is now defined in a different file.  It was defined in "D:/GitHub/Yashil-fpga/micro_com2.vhd", and is now defined in "E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd".
-WARNING:HDLParsers:3607 - Unit work/micro_com2/Behavioral is now defined in a different file.  It was defined in "D:/GitHub/Yashil-fpga/micro_com2.vhd", and is now defined in "E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd".
-WARNING:HDLParsers:3607 - Unit work/Write_to_USB is now defined in a different file.  It was defined in "D:/GitHub/Yashil-fpga/Write_to_USB.vhd", and is now defined in "E:/Reza/Documents/github/Yashil-fpga/Write_to_USB.vhd".
-WARNING:HDLParsers:3607 - Unit work/Write_to_USB/Behavioral is now defined in a different file.  It was defined in "D:/GitHub/Yashil-fpga/Write_to_USB.vhd", and is now defined in "E:/Reza/Documents/github/Yashil-fpga/Write_to_USB.vhd".
-WARNING:HDLParsers:3607 - Unit work/pwm is now defined in a different file.  It was defined in "D:/GitHub/Yashil-fpga/pwm.vhd", and is now defined in "E:/Reza/Documents/github/Yashil-fpga/pwm.vhd".
-WARNING:HDLParsers:3607 - Unit work/pwm/Behavioral is now defined in a different file.  It was defined in "D:/GitHub/Yashil-fpga/pwm.vhd", and is now defined in "E:/Reza/Documents/github/Yashil-fpga/pwm.vhd".
 Compiling vhdl file "E:/Reza/Documents/github/Yashil-fpga/pwm.vhd" in Library work.
 Architecture behavioral of Entity pwm is up to date.
 Compiling vhdl file "E:/Reza/Documents/github/Yashil-fpga/driver.vhd" in Library work.
@@ -788,13 +778,13 @@ Delay:               9.519ns (Levels of Logic = 4)
 
 
 Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 16.14 secs
+Total CPU time to Xst completion: 15.50 secs
  
 --> 
 
-Total memory usage is 343204 kilobytes
+Total memory usage is 338912 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   81 (   0 filtered)
+Number of warnings :   71 (   0 filtered)
 Number of infos    :   22 (   0 filtered)
 

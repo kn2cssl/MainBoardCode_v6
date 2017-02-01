@@ -5,125 +5,95 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/m</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/GitHub/Yashil-fpga/m.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">223</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/m/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/GitHub/Yashil-fpga/m.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">226</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">HALL_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/drivermotor</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/GitHub/Yashil-fpga/driver.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">E:/Reza/Documents/github/Yashil-fpga/driver.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">226</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/drivermotor/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/GitHub/Yashil-fpga/driver.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">E:/Reza/Documents/github/Yashil-fpga/driver.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">229</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">HALL_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/micro_com2</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/GitHub/Yashil-fpga/micro_com2.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">229</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/micro_com2/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/GitHub/Yashil-fpga/micro_com2.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">232</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">HALL_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Write_to_USB</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/GitHub/Yashil-fpga/Write_to_USB.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">E:/Reza/Documents/github/Yashil-fpga/Write_to_USB.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">232</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Write_to_USB/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/GitHub/Yashil-fpga/Write_to_USB.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">E:/Reza/Documents/github/Yashil-fpga/Write_to_USB.vhd</arg>&quot;.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/driver.vhd</arg>&quot; line <arg fmt="%d" index="2">207</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">RPM_H</arg>&gt; has a width of <arg fmt="%d" index="4">27</arg> bits but assigned expression is <arg fmt="%d" index="5">43</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/pwm</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/GitHub/Yashil-fpga/pwm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">E:/Reza/Documents/github/Yashil-fpga/pwm.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/pwm/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">D:/GitHub/Yashil-fpga/pwm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">E:/Reza/Documents/github/Yashil-fpga/pwm.vhd</arg>&quot;.
-</msg>
-
-<msg type="warning" file="Xst" num="1541" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">223</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">226</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">HALL_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="1541" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">226</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">229</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">HALL_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="1541" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">229</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
-</msg>
-
-<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">232</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">HALL_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">drivermotor</arg>&apos;.
-</msg>
-
-<msg type="warning" file="Xst" num="1541" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/m.vhd</arg>&quot; line <arg fmt="%d" index="2">232</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">drivermotor</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M_show</arg>&gt; does not match.
-</msg>
-
-<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/driver.vhd</arg>&quot; line <arg fmt="%d" index="2">207</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">RPM_H</arg>&gt; has a width of <arg fmt="%d" index="4">27</arg> bits but assigned expression is <arg fmt="%d" index="5">43</arg>-bit wide.
-</msg>
-
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/driver.vhd</arg>&quot; line <arg fmt="%d" index="2">226</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/driver.vhd</arg>&quot; line <arg fmt="%d" index="2">226</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;SPEED&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">MAKsumB_in</arg>&gt; has a width of <arg fmt="%d" index="4">16</arg> bits but assigned expression is <arg fmt="%d" index="5">20</arg>-bit wide.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">MAKsumB_in</arg>&gt; has a width of <arg fmt="%d" index="4">16</arg> bits but assigned expression is <arg fmt="%d" index="5">20</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">MAKsumB_out</arg>&gt; has a width of <arg fmt="%d" index="4">16</arg> bits but assigned expression is <arg fmt="%d" index="5">20</arg>-bit wide.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">MAKsumB_out</arg>&gt; has a width of <arg fmt="%d" index="4">16</arg> bits but assigned expression is <arg fmt="%d" index="5">20</arg>-bit wide.
 </msg>
 
-<msg type="info" file="Xst" num="1607" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">send_packet</arg>&gt; may be accessed with an index that does not cover the full array size.
+<msg type="info" file="Xst" num="1607" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">send_packet</arg>&gt; may be accessed with an index that does not cover the full array size.
 </msg>
 
-<msg type="warning" file="Xst" num="1781" delta="new" >Signal &lt;<arg fmt="%s" index="1">send_packet&lt;0:1&gt;</arg>&gt; is used but never assigned. Tied to default value.
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">send_packet&lt;0:1&gt;</arg>&gt; is used but never assigned. Tied to default value.
 </msg>
 
-<msg type="warning" file="Xst" num="1781" delta="new" >Signal &lt;<arg fmt="%s" index="1">send_packet&lt;18:40&gt;</arg>&gt; is used but never assigned. Tied to default value.
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">send_packet&lt;18:40&gt;</arg>&gt; is used but never assigned. Tied to default value.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">receive_packet&lt;0:1&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">receive_packet&lt;17&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">receive_packet&lt;17&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">receive_packet&lt;18:40&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">receive_packet&lt;18:40&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">167</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="new" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">E:/Reza/Documents/github/Yashil-fpga/micro_com2.vhd</arg>&quot; line <arg fmt="%d" index="2">127</arg>: The result of a <arg fmt="%d" index="3">16</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">TEST_KEY</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">TEST_KEY</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="1305" delta="old" >Output &lt;<arg fmt="%s" index="1">LED&lt;0&gt;</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
@@ -132,7 +102,7 @@
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">STATE</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">M_RPM_DIR_LAST</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">M_RPM_DIR_LAST</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">STARTBIT_FLG</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -168,7 +138,7 @@
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">dividend1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">SB_sp</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">SB_sp</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">RST_IN</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -180,10 +150,10 @@
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">MS1_show</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">1010101010101010</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">DATA_TEST</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">DATA_TEST</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">CONTROL1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">CONTROL1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">CLK_280</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -216,52 +186,52 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">hall1_past</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">drivermotor</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;hall_state_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_6&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_6&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_10&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_11&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_12&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_9&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_9&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_13&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_13&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_14&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_14&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_15&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">SPEED1_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">m</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SB_3&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">DATA_USB_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Write_to_USB</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -270,10 +240,10 @@
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">DATA_USB_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Write_to_USB</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">send_packet_9_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">micro_com2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">send_packet_9_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">micro_com2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">send_packet_2_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">micro_com2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">send_packet_2_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">micro_com2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">DATA_USB_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Write_to_USB</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -282,28 +252,28 @@
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">DATA_USB_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">Write_to_USB</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">prl_com/SB_sp_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">driver4/hall_out_s</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">m</arg>&gt;.

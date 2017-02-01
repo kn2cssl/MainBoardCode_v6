@@ -1,8 +1,8 @@
 INTSTYLE=impact
 INFILE=E:\Reza\Documents\github\Yashil-fpga\impact.xsl
 OUTFILE=E:\Reza\Documents\github\Yashil-fpga\impact.xsl
-FAMILY=Multiple
-PART=Multiple
+FAMILY=None
+PART=None
 WORKINGDIR=E:\Reza\Documents\github\Yashil-fpga
 LICENSE=iMPACT
 USER_INFO=iMPACT

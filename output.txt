@@ -2,10 +2,12 @@ Storage Target: Xilinx Flash/PROM
 Storage Family: Platform Flash
 xcf04s          [4 M]
 FF
-V7.1
-E:\Reza\Documents\github\Yashil-fpga/
+MainPCBV72
+E:\Reza\Documents\github\Yashil-fpga\
 
 MCS
 No
+
+
 
 o
